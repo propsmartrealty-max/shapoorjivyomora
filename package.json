@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/prepare-pages.mjs",
+    "build:pages": "next build && node scripts/prepare-pages.mjs",
     "start": "next start",
     "lint": "eslint",
     "build:worker": "opennextjs-cloudflare build",
     "deploy:worker": "opennextjs-cloudflare deploy",
     "preview:worker": "opennextjs-cloudflare preview",
-    "pages:dev": "wrangler pages dev .next",
-    "pages:deploy": "wrangler pages deploy"
+    "pages:dev": "wrangler pages dev dist",
+    "pages:deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
