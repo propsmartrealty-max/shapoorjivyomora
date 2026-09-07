@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const data = await req.json();
+    const data = (await req.json()) as Record<string, any>;
 
     // Clean data
     const { _honey, ...cleanData } = data;

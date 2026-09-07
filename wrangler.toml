@@ -1,0 +1,10 @@
+name = "shapoorjivyomora"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+PROJECT_NAME = "Shapoorji Pallonji Joyville Vyomora"
+DEFAULT_RECIPIENT_EMAIL = "propsmartrealty@gmail.com"
+SALES_PHONE = "+91-7744009295"
+MAHARERA_REG = "PR1260002600999"
+BASE_URL = "https://www.shapoorji-vyomora.com"

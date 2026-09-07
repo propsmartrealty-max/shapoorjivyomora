@@ -1,0 +1,37 @@
+# Cloudflare Pages Declarative Edge Headers
+
+# Global Security & SEO Headers for All Routes
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Robots-Tag: all
+  Access-Control-Allow-Origin: *
+
+# High-Performance Cache for Next.js Static Chunks
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache for Static Media Assets
+/images/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# Cache for Icons & Favicons
+/icon.svg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Sitemaps & Robots (Always Fresh)
+/robots.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: text/plain; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Content-Type: application/manifest+json; charset=utf-8
