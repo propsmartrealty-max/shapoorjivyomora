@@ -168,128 +168,88 @@ export default function StructuredData() {
           "validFrom": "2024-01-01"
         }
       },
-      // Google Product Schema 1: 2 BHK
+      // Real Estate Residence Schema 1: 2 BHK
       {
-        "@type": "Product",
+        "@type": "Apartment",
         "@id": "https://www.shapoorji-vyomora.com/#2bhk-luxury-unit",
         "name": "Joyville Vyomora 2 BHK Grande (Joy 3.0) - Shapoorji Pallonji Hinjewadi",
         "description": "Premium 2 BHK smart luxury apartment in Hinjewadi Phase 1 with home automation, master bedroom with wooden flooring, grand balcony, and Italian modular fittings.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
-        "category": "Apartments",
-        "sku": "SP-VYOMORA-2BHK",
-        "mpn": "JOY3-2BHK-001",
-        "brand": {
-          "@type": "Brand",
-          "name": "Shapoorji Pallonji Joyville Homes"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": 4.9,
-          "reviewCount": 82,
-          "bestRating": 5,
-          "worstRating": 1
+        "numberOfRooms": 2,
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 685,
+          "unitCode": "FTK"
         },
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": 8499000,
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "availability": "https://schema.org/InStock"
         }
       },
-      // Google Product Schema 2: 3 BHK
+      // Real Estate Residence Schema 2: 3 BHK
       {
-        "@type": "Product",
+        "@type": "Apartment",
         "@id": "https://www.shapoorji-vyomora.com/#3bhk-luxury-unit",
         "name": "Joyville Vyomora 3 BHK Luxury Suite (Joy 3.0) - Shapoorji Pallonji Mahalunge",
         "description": "Spacious 3 BHK luxury apartment in Mahalunge-Hinjewadi IT corridor with panoramic hill views, dual master suites, utility balcony, and access to 32,000 sq.ft. clubhouse.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
-        "category": "Apartments",
-        "sku": "SP-VYOMORA-3BHK",
-        "mpn": "JOY3-3BHK-002",
-        "brand": {
-          "@type": "Brand",
-          "name": "Shapoorji Pallonji Joyville Homes"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": 4.9,
-          "reviewCount": 64,
-          "bestRating": 5,
-          "worstRating": 1
+        "numberOfRooms": 3,
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 1052,
+          "unitCode": "FTK"
         },
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": 12500000,
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "availability": "https://schema.org/InStock"
         }
       },
-      // Google Product Schema 3: 4 BHK & Sky Duplex
+      // Real Estate Residence Schema 3: 4 BHK & Sky Duplex
       {
-        "@type": "Product",
+        "@type": "Apartment",
         "@id": "https://www.shapoorji-vyomora.com/#4bhk-sky-suite",
         "name": "Joyville Vyomora 4 BHK Royale & Sky Duplex (Joy 3.0) - Shapoorji Pallonji Baner",
         "description": "Presidential 4 BHK luxury sky residence and duplex in Baner-Mahalunge with double-height living room, private terrace deck, staff quarters, and dedicated EV charging bays.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
-        "category": "Apartments",
-        "sku": "SP-VYOMORA-4BHK",
-        "mpn": "JOY3-4BHK-003",
-        "brand": {
-          "@type": "Brand",
-          "name": "Shapoorji Pallonji Joyville Homes"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": 5.0,
-          "reviewCount": 28,
-          "bestRating": 5,
-          "worstRating": 1
+        "numberOfRooms": 4,
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 1600,
+          "unitCode": "FTK"
         },
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": 18500000,
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "availability": "https://schema.org/InStock"
         }
       },
-      // Google Product Schema 4: 5 BHK Sky Villa
+      // Real Estate Residence Schema 4: 5 BHK Sky Villa
       {
-        "@type": "Product",
+        "@type": "Apartment",
         "@id": "https://www.shapoorji-vyomora.com/#5bhk-sky-villa",
         "name": "Joyville Vyomora 5 BHK Sky Villa Penthouse (Joy 3.0) - Shapoorji Pallonji Pune",
         "description": "Ultra luxury 5 BHK penthouse villa overlooking the Mula river and Hinjewadi skyline with private plunge pool, personal elevator access, and bespoke interior concierge.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
-        "category": "Apartments",
-        "sku": "SP-VYOMORA-5BHK-VILLA",
-        "mpn": "JOY3-5BHK-004",
-        "brand": {
-          "@type": "Brand",
-          "name": "Shapoorji Pallonji Joyville Homes"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": 5.0,
-          "reviewCount": 10,
-          "bestRating": 5,
-          "worstRating": 1
+        "numberOfRooms": 5,
+        "floorSize": {
+          "@type": "QuantitativeValue",
+          "value": 2200,
+          "unitCode": "FTK"
         },
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": 25000000,
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "availability": "https://schema.org/InStock"
         }
       },
       // Google LocalBusiness & Experience Centre
