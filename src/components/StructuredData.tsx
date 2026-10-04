@@ -216,8 +216,17 @@ export default function StructuredData() {
         "sameAs": [
           "https://www.facebook.com/shapoorjipallonji/",
           "https://twitter.com/shapoorjipallonji",
-          "https://www.instagram.com/shapoorjipallonji/"
+          "https://www.instagram.com/shapoorjipallonji/",
+          "https://en.wikipedia.org/wiki/Shapoorji_Pallonji_Group",
+          "https://www.wikidata.org/wiki/Q7489427",
+          "https://en.wikipedia.org/wiki/Hinjawadi",
+          "https://en.wikipedia.org/wiki/Rajiv_Gandhi_Infotech_Park",
+          "https://maharera.mahaonline.gov.in"
         ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", "h2", "p"]
+        },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
@@ -246,6 +255,16 @@ export default function StructuredData() {
         "url": "https://www.shapoorji-vyomora.com",
         "telephone": "+91-7744009295",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
+        "sameAs": [
+          "https://en.wikipedia.org/wiki/Shapoorji_Pallonji_Group",
+          "https://en.wikipedia.org/wiki/Hinjawadi",
+          "https://en.wikipedia.org/wiki/Rajiv_Gandhi_Infotech_Park"
+        ],
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Pune", "sameAs": "https://en.wikipedia.org/wiki/Pune" },
+          { "@type": "AdministrativeArea", "name": "Hinjawadi", "sameAs": "https://en.wikipedia.org/wiki/Hinjawadi" },
+          { "@type": "AdministrativeArea", "name": "Mahalunge", "sameAs": "https://en.wikipedia.org/wiki/Mahalunge" }
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Off Maan Village Road, Near Phase 1, Rajiv Gandhi Infotech Park, Mahalunge-Hinjewadi",
