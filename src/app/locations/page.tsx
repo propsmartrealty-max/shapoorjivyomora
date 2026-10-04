@@ -34,7 +34,7 @@ export default function LocationsPage() {
     { label: "Presidential Penthouses", href: "/market/mahalunge/penthouses/price-trends" },
     { label: "Apartments near Infosys Circle", href: "/market/infosys-circle-hinjewadi/2bhk-flats/location-benefits" },
     { label: "Residences near Metro Line 3", href: "/market/hinjewadi-metro/luxury-apartments/connectivity" },
-    { label: "Homes near Balewadi High Street", href: "/market/balewadi-high-street/3bhk-apartments/lifestyle" },
+    { label: "Homes near Balewadi High Street", href: "/market/balewadi-high-street/3bhk-apartments/urban-lifestyle" },
     { label: "Best Flats for IT Professionals", href: "/market/rajiv-gandhi-infotech-park/best-flats-for-it-professionals/rental-yield" }
   ];
 

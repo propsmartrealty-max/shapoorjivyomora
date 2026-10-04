@@ -119,6 +119,56 @@ export const TOP_CURATED_MARKET_COMBOS = [
   { location: "usa", configuration: "high-roi-investment", topic: "nri-investment" },
   { location: "singapore", configuration: "luxury-sky-villas", topic: "nri-investment" },
   { location: "london", configuration: "sky-duplex", topic: "nri-investment" },
+
+  // Footer & Directory Semantic Crawl Links
+  { location: "mahalunge", configuration: "luxury-apartments", topic: "property-investment" },
+  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "location-benefits" },
+  { location: "wakad", configuration: "3bhk-in-mahalunge", topic: "floor-plans" },
+  { location: "balewadi-high-street", configuration: "sky-duplex", topic: "future-growth" },
+  { location: "rajiv-gandhi-infotech-park", configuration: "luxury-apartments", topic: "connectivity" },
+  { location: "baner", configuration: "4bhk-in-baner", topic: "brochure-download" },
+  { location: "pune-west", configuration: "sky-duplex", topic: "amenities" },
+  { location: "pune", configuration: "5bhk-sky-villas", topic: "masterplan" },
+  { location: "pune", configuration: "5bhk-sky-villas", topic: "future-growth" },
+  { location: "hinjewadi", configuration: "best-flats-for-it-professionals", topic: "investment-roi" },
+  { location: "mahalunge", configuration: "4bhk-in-mahalunge", topic: "investment-roi" },
+  { location: "hinjewadi", configuration: "simplex-luxury-homes", topic: "masterplan" },
+  { location: "mahalunge", configuration: "penthouses", topic: "price-trends" },
+  { location: "infosys-circle-hinjewadi", configuration: "2bhk-flats", topic: "location-benefits" },
+  { location: "hinjewadi-metro", configuration: "luxury-apartments", topic: "connectivity" },
+  { location: "balewadi-high-street", configuration: "3bhk-apartments", topic: "urban-lifestyle" },
+
+  // Shapoorji Pallonji Entire Pune Developer Synthesis
+  { location: "hinjewadi", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "shapoorji-pallonji-projects", topic: "floor-plans" },
+  { location: "pune", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+  { location: "pune-west", configuration: "shapoorji-pallonji-projects", topic: "amenities" },
+  { location: "hinjewadi", configuration: "joyville-homes", topic: "price-trends" },
+  { location: "mahalunge", configuration: "joyville-homes", topic: "floor-plans" },
+  { location: "pune", configuration: "joyville-homes", topic: "possession-date" },
+  { location: "bavdhan", configuration: "shapoorji-pallonji-projects", topic: "connectivity" },
+
+  // HTML Sitemap Hub Links (100% Pre-rendered Coverage)
+  { location: "hinjewadi", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "mahalunge", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "baner", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "wakad", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "balewadi", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "pimpri-chinchwad", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "aundh", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "pashan", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "bavdhan", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "sus", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "punawale", configuration: "luxury-apartments", topic: "investment-roi" },
+  { location: "tathawade", configuration: "luxury-apartments", topic: "investment-roi" },
+
+  // NRI Investor Portals
+  { location: "dubai", configuration: "luxury-apartments", topic: "nri-investment" },
+  { location: "usa", configuration: "luxury-apartments", topic: "nri-investment" },
+  { location: "singapore", configuration: "luxury-apartments", topic: "nri-investment" },
+  { location: "uk", configuration: "luxury-apartments", topic: "nri-investment" },
+  { location: "london", configuration: "luxury-apartments", topic: "nri-investment" },
+  { location: "kuwait", configuration: "luxury-apartments", topic: "nri-investment" },
 ];
 
 // Deterministic Pseudo-Random Number Generator based on string seed

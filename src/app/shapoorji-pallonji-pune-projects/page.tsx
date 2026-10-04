@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Shapoorji Pallonji Projects in Pune | Joyville Homes Pune Complete Portfolio",
   description: "Explore all Shapoorji Pallonji and Joyville Homes projects in Pune. Comprehensive guide to Vyomora Hinjewadi, Sensorium, Hadapsar Annexe, Wildstone, Celestian, and Vanaha Bavdhan.",
   keywords: [
+    "joy 3.0 hinjewadi",
+    "joyville 3.0 pune",
+    "shapoorji joy 3.0",
     "shapoorji pallonji projects in pune",
     "shapoorji pallonji real estate pune",
     "joyville homes pune",
@@ -25,7 +28,8 @@ export const metadata: Metadata = {
     "joyville homes price list pune",
     "shapoorji pallonji hinjewadi",
     "shapoorji pallonji mahalunge",
-    "best shapoorji pallonji project to invest in pune"
+    "best shapoorji pallonji project to invest in pune",
+    "shapoorji pallonji upcoming projects pune 2026"
   ],
   alternates: {
     canonical: "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects",
@@ -47,14 +51,14 @@ export const metadata: Metadata = {
 const puneProjects = [
   {
     id: "vyomora",
-    name: "Shapoorji Pallonji Joyville Vyomora",
-    badge: "Flagship Luxury New Launch",
-    location: "Mahalunge - Hinjewadi Phase 1, West Pune",
-    typology: "2, 3, 4 BHK, Sky Duplex & 5 BHK Sky Villas",
-    carpetArea: "685 - 1,600+ sq. ft.",
-    price: "₹78 Lakhs - ₹2.50 Cr+",
-    status: "New Launch / Pre-Booking",
-    highlights: ["32,000+ sq. ft. Clubhouse", "5 Mins to Rajiv Gandhi IT Park", "Metro Line 3 Connectivity", "Smart Home Automation"],
+    name: "Shapoorji Pallonji Joyville Vyomora (Joy 3.0)",
+    badge: "Joy 3.0 Flagship New Launch",
+    location: "Hinjewadi Phase 1 / Maan Road, West Pune",
+    typology: "2, 3, 4 BHK & Luxury Sky Duplexes",
+    carpetArea: "685 - 1,467+ sq. ft.",
+    price: "₹84.99 Lakhs - ₹2.16 Cr* (Joy 3.0 Pricing)",
+    status: "New Launch / Possession Dec 2029",
+    highlights: ["32,000+ sq. ft. Clubhouse", "Mula Riverfront Promenade", "5 Mins to Rajiv Gandhi IT Park & Metro", "Smart Home Automation"],
     rera: "PR1260002600999",
     featured: true,
     link: "/"
@@ -182,7 +186,7 @@ export default function ShapoorjiPuneProjectsPage() {
             "name": "What is the price range of Shapoorji Pallonji projects in Pune?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Pune homes range from ₹45 Lakhs for 1 BHK & compact 2 BHK units at Hadapsar Annexe up to ₹2.50 Cr+ for ultra-luxury 4 BHKs, Sky Duplexes, and Golf Villas at Joyville Vyomora Hinjewadi and Vanaha Bavdhan."
+              "text": "Shapoorji Pallonji Pune homes range from ₹45 Lakhs for 1 BHK units at Hadapsar Annexe up to ₹2.16 Cr+ for ultra-luxury 2, 3 & 4 BHK residences, Sky Duplexes, and Golf Villas at Joyville Vyomora Hinjewadi (Joy 3.0 starting at ₹84.99 L*) and Vanaha Bavdhan."
             }
           }
         ]
