@@ -132,6 +132,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   headers.set('X-Edge-Country', country);
   headers.set('X-Edge-City', city);
   headers.set('X-Edge-Bot', isSearchBot ? 'true' : 'false');
+  headers.set('X-Content-Type-Options', 'nosniff');
+  headers.set('X-Frame-Options', 'SAMEORIGIN');
+  headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), browsing-topics=()');
+  headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
   headers.set('Cache-Control', 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400');
 
   return new Response(transformedResponse.body, {

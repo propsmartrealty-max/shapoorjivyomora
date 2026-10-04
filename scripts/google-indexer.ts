@@ -107,14 +107,36 @@ async function main() {
     }
   }
 
-  // Ensure within quota limit
-  if (urlsToSubmit.length > QUOTA_LIMIT) {
-    urlsToSubmit = urlsToSubmit.slice(0, QUOTA_LIMIT);
-  }
+  // Sort priority: Hubs & Articles first, then programmatic
+  const priorityOrder = [
+    `${BASE_URL}/`,
+    `${BASE_URL}/residences`,
+    `${BASE_URL}/amenities`,
+    `${BASE_URL}/location`,
+    `${BASE_URL}/masterplan`,
+    `${BASE_URL}/west-pune-real-estate`,
+    `${BASE_URL}/shapoorji-pallonji-pune-projects`,
+    `${BASE_URL}/investment-calculator`,
+    `${BASE_URL}/contact`,
+    `${BASE_URL}/articles`,
+  ];
 
-  console.log(`📦 Preparing to submit ${urlsToSubmit.length} URLs to Google...`);
+  urlsToSubmit.sort((a, b) => {
+    const aPriority = priorityOrder.indexOf(a);
+    const bPriority = priorityOrder.indexOf(b);
+    if (aPriority !== -1 && bPriority !== -1) return aPriority - bPriority;
+    if (aPriority !== -1) return -1;
+    if (bPriority !== -1) return 1;
+    if (a.includes('/articles/') && !b.includes('/articles/')) return -1;
+    if (!a.includes('/articles/') && b.includes('/articles/')) return 1;
+    return 0;
+  });
+
+  console.log(`📦 Preparing to submit up to ${QUOTA_LIMIT} URLs to Google...`);
 
   let successCount = 0;
+  let quotaReached = false;
+
   for (const url of urlsToSubmit) {
     try {
       await indexing.urlNotifications.publish({
@@ -124,19 +146,27 @@ async function main() {
         },
       });
       successCount++;
-      // Sleep to prevent rate limit spikes (e.g. 500ms)
-      await new Promise(r => setTimeout(r, 500));
+      process.stdout.write(`  ✅ [Google Indexing API] ${url}\n`);
+      // Gentle pacing to avoid burst rate limiting
+      await new Promise(r => setTimeout(r, 250));
     } catch (error: any) {
-      console.error(`❌ Failed to submit ${url}:`, error.message || error);
+      if (error?.message?.includes('Quota exceeded') || error?.code === 429) {
+        console.log(`\n⏳ Daily Google Indexing API quota (200 requests/day) reached.`);
+        console.log(`   ${successCount} URLs were accepted today. Next quota reset is at midnight PST.`);
+        quotaReached = true;
+        break;
+      } else {
+        console.error(`  ❌ Failed to submit ${url}:`, error.message || error);
+      }
     }
   }
 
-  console.log(`✅ Successfully submitted ${successCount} URLs.`);
+  console.log(`\n🎉 Google Indexing run finished: ${successCount} URLs submitted${quotaReached ? ' (daily quota reached)' : ''}.`);
   
   // Update state
   state.lastIndexSubmitted = (state.lastIndexSubmitted || 0) + successCount;
   state.lastRun = new Date().toISOString();
-  state.totalSubmitted = successCount;
+  state.totalSubmittedToday = successCount;
   saveState(state);
 }
 

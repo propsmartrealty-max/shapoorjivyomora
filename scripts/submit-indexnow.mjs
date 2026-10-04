@@ -58,29 +58,48 @@ const payload = JSON.stringify({
   urlList
 });
 
-console.log(`📡 Submitting all ${urlList.length} verified canonical URLs to IndexNow...`);
+const gateways = [
+  { name: 'IndexNow Global Mesh', hostname: 'api.indexnow.org', path: '/IndexNow' },
+  { name: 'Microsoft Bing & Yahoo', hostname: 'www.bing.com', path: '/indexnow' },
+  { name: 'Yandex Search', hostname: 'yandex.com', path: '/indexnow' },
+  { name: 'Seznam.cz Search', hostname: 'search.seznam.cz', path: '/indexnow' }
+];
 
-const options = {
-  hostname: 'api.indexnow.org',
-  port: 443,
-  path: '/IndexNow',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json; charset=utf-8',
-    'Content-Length': Buffer.byteLength(payload)
-  }
-};
+console.log(`📡 Broadcasting all ${urlList.length} verified canonical URLs to ${gateways.length} search engine gateways...`);
 
-const req = https.request(options, (res) => {
-  console.log(`✅ IndexNow Response Status: ${res.statusCode} ${res.statusMessage}`);
-  res.on('data', (d) => {
-    process.stdout.write(d);
+async function submitGateway(gw) {
+  return new Promise((resolve) => {
+    const options = {
+      hostname: gw.hostname,
+      port: 443,
+      path: gw.path,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Length': Buffer.byteLength(payload)
+      }
+    };
+
+    const req = https.request(options, (res) => {
+      console.log(`  ✅ [${gw.name}] (${gw.hostname}): Status ${res.statusCode} ${res.statusMessage}`);
+      resolve({ name: gw.name, status: res.statusCode });
+    });
+
+    req.on('error', (e) => {
+      console.error(`  ❌ [${gw.name}] Error: ${e.message}`);
+      resolve({ name: gw.name, error: e.message });
+    });
+
+    req.write(payload);
+    req.end();
   });
-});
+}
 
-req.on('error', (e) => {
-  console.error(`❌ IndexNow Error: ${e.message}`);
-});
+async function run() {
+  await Promise.all(gateways.map(submitGateway));
+  console.log('🎉 IndexNow multi-engine broadcast completed successfully.');
+  process.exit(0);
+}
 
-req.write(payload);
-req.end();
+run();
+
