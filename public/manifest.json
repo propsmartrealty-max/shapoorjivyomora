@@ -1,12 +1,27 @@
 {
-  "name": "Shapoorji Pallonji Joyville Vyomora",
+  "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0)",
   "short_name": "Vyomora",
-  "description": "Luxury 2BHK, 3BHK, 4BHK & Duplex residences in Mahalunge-Hinjewadi corridor, Pune.",
+  "description": "Luxury 2 BHK, 3 BHK, 4 BHK & Duplex residences in Mahalunge-Hinjewadi corridor, Pune.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#050c17",
+  "theme_color": "#C5A059",
   "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
     {
       "src": "/icon.svg",
       "sizes": "any",

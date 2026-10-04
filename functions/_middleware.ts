@@ -6,6 +6,7 @@ interface Env {
   SALES_PHONE?: string;
   MAHARERA_REG?: string;
   BASE_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
 }
 
 // Edge Bot & Crawler Detection Pattern
@@ -49,7 +50,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 
   // 4. Ultra-Advanced Cloudflare Edge HTMLRewriter Transformations
   const rewriter = new HTMLRewriter()
-    // A. Head Injection: Preconnect, DNS-Prefetch, and Verified Robots Directives
+    // A. Head Injection: Preconnect, Favicon, Web Analytics, GA4, and Verified Robots Directives
     .on('head', {
       element(head) {
         // High-priority DNS prefetch & preconnect for sub-second Core Web Vitals
@@ -57,6 +58,9 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           `<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
            <link rel="dns-prefetch" href="https://shapoorjirealestate.com" />
+           <link rel="icon" href="/favicon.ico" sizes="any" />
+           <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+           <link rel="apple-touch-icon" href="/icon.svg" />
            <meta name="cf-edge-processed" content="true" />
            <meta name="cf-edge-location" content="${country}" />`,
           { html: true }
@@ -79,6 +83,20 @@ export const onRequest: PagesFunction<Env> = async (context) => {
             { html: true }
           );
         }
+
+        // GA4 Dynamic Edge Injection (if configured in environment)
+        if (env.NEXT_PUBLIC_GA_ID) {
+          head.append(
+            `<script async src="https://www.googletagmanager.com/gtag/js?id=${env.NEXT_PUBLIC_GA_ID}"></script>
+             <script>
+               window.dataLayer = window.dataLayer || [];
+               function gtag(){dataLayer.push(arguments);}
+               gtag('js', new Date());
+               gtag('config', '${env.NEXT_PUBLIC_GA_ID}');
+             </script>`,
+            { html: true }
+          );
+        }
       }
     })
     // B. Edge Entity Keyword Reinforcement for Title & Meta Tags
@@ -97,7 +115,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         }
       }
     })
-    // C. Inject Edge-Computed Structured Knowledge Graph for Search Bots
+    // C. Inject Edge-Computed Structured Knowledge Graph with Rating & Offers for Search Bots
     .on('body', {
       element(body) {
         const edgeSchema = {
@@ -112,13 +130,29 @@ export const onRequest: PagesFunction<Env> = async (context) => {
             "Joyville Vyomora Joy 3.0",
             "Shapoorji Vyomara",
             "Shapoorji Pallonji Vyomara",
-            "Joyville Vyomara Hinjewadi",
+            "Joyville Vyomora Hinjewadi",
             "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
             "Joyville Homes Vyomora Pune"
           ],
           "description": "Ultra luxury 2BHK, 3BHK, 4BHK and Sky Duplex apartments in Hinjewadi Phase 1, Pune from ₹84.99 Lakhs with a 32,000+ sq. ft. clubhouse by Shapoorji Pallonji Real Estate. Possession: Dec 2029.",
           "url": "https://www.shapoorji-vyomora.com",
           "telephone": env.SALES_PHONE || "+91-7744009295",
+          "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
+          "priceRange": "₹84.99 L* - ₹2.50 Cr*",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "148",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "8499000",
+            "highPrice": "25000000",
+            "offerCount": "240"
+          },
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Off Maan Village Road, Near Phase 1, Rajiv Gandhi Infotech Park",
@@ -139,8 +173,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           }
         };
 
+        // Cloudflare Web Analytics Beacon (Site Token: c37033c129a04f96b75fc9b727658477)
+        const analyticsBeacon = `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c37033c129a04f96b75fc9b727658477"}'></script>`;
+
         body.append(
-          `<script type="application/ld+json" id="cf-edge-schema">${JSON.stringify(edgeSchema)}</script>`,
+          `<script type="application/ld+json" id="cf-edge-schema">${JSON.stringify(edgeSchema)}</script>${analyticsBeacon}`,
           { html: true }
         );
       }
@@ -151,7 +188,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 
   // 6. Set Enterprise Edge Headers
   const headers = new Headers(transformedResponse.headers);
-  headers.set('X-Edge-Engine', 'Cloudflare Pages HTMLRewriter v2.0');
+  headers.set('X-Edge-Engine', 'Cloudflare Pages HTMLRewriter v2.1');
   headers.set('X-Edge-Country', country);
   headers.set('X-Edge-City', city);
   headers.set('X-Edge-Bot', isSearchBot ? 'true' : 'false');

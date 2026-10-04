@@ -5,6 +5,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 dotenv.config();
+dotenv.config({ path: path.resolve(process.cwd(), '.env.local') });
 
 const BASE_URL = 'https://www.shapoorji-vyomora.com';
 const QUOTA_LIMIT = 200; // Google Indexing API daily limit
