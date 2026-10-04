@@ -115,71 +115,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         }
       }
     })
-    // C. Inject Edge-Computed Structured Knowledge Graph with Rating & Offers for Search Bots
+    // C. Inject Cloudflare Web Analytics Beacon
     .on('body', {
       element(body) {
-        const edgeSchema = {
-          "@context": "https://schema.org",
-          "@type": "ApartmentComplex",
-          "@id": "https://www.shapoorji-vyomora.com/#edge-project-entity",
-          "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0)",
-          "alternateName": [
-            "Joy 3.0",
-            "Joyville 3.0",
-            "Joy 3.0 Hinjewadi",
-            "Joyville Vyomora Joy 3.0",
-            "Shapoorji Vyomara",
-            "Shapoorji Pallonji Vyomara",
-            "Joyville Vyomora Hinjewadi",
-            "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
-            "Joyville Homes Vyomora Pune"
-          ],
-          "description": "Ultra luxury 2BHK, 3BHK, 4BHK and Sky Duplex apartments in Hinjewadi Phase 1, Pune from ₹84.99 Lakhs with a 32,000+ sq. ft. clubhouse by Shapoorji Pallonji Real Estate. Possession: Dec 2029.",
-          "url": "https://www.shapoorji-vyomora.com",
-          "telephone": env.SALES_PHONE || "+91-7744009295",
-          "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
-          "priceRange": "₹84.99 L* - ₹2.50 Cr*",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "148",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "INR",
-            "lowPrice": "8499000",
-            "highPrice": "25000000",
-            "offerCount": "240"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Off Maan Village Road, Near Phase 1, Rajiv Gandhi Infotech Park",
-            "addressLocality": "Hinjewadi, Pune",
-            "addressRegion": "Maharashtra",
-            "postalCode": "411057",
-            "addressCountry": "IN"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "18.5912",
-            "longitude": "73.7389"
-          },
-          "identifier": {
-            "@type": "PropertyValue",
-            "name": "MahaRERA Registration",
-            "value": env.MAHARERA_REG || "PR1260002600999"
-          }
-        };
-
-        // Cloudflare Web Analytics Beacon (Site Token: c37033c129a04f96b75fc9b727658477)
         const analyticsBeacon = `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c37033c129a04f96b75fc9b727658477"}'></script>`;
-
-        body.append(
-          `<script type="application/ld+json" id="cf-edge-schema">${JSON.stringify(edgeSchema)}</script>${analyticsBeacon}`,
-          { html: true }
-        );
+        body.append(analyticsBeacon, { html: true });
       }
     });
 
