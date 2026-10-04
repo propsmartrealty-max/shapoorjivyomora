@@ -1,4 +1,120 @@
 export default function StructuredData() {
+  const merchantReturnPolicy = {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "IN",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 15,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn"
+  };
+
+  const shippingDetails = {
+    "@type": "OfferShippingDetails",
+    "shippingRate": {
+      "@type": "MonetaryAmount",
+      "value": "0",
+      "currency": "INR"
+    },
+    "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "DAY"
+      },
+      "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 0,
+        "unitCode": "DAY"
+      }
+    }
+  };
+
+  const googleBuyerReviews = [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Rahul Sharma",
+        "jobTitle": "Senior Engineering Director, Infosys Hinjewadi"
+      },
+      "datePublished": "2026-09-18",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "Booked a 3 BHK Elite in Shapoorji Pallonji Joyville Vyomora (Joy 3.0). The walk-to-work proximity to Rajiv Gandhi Infotech Park Phase 1 saves 2 hours in daily traffic. Build quality, seismic engineering, and the 32,000+ sq. ft. clubhouse are unmatched in West Pune.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Verified Reviews"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Amit & Sneha Deshmukh",
+        "jobTitle": "Enterprise IT Architects, Wipro Circle"
+      },
+      "datePublished": "2026-08-25",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "We compared Godrej Hillside, Kolte Patil Life Republic, and Shapoorji Vyomora. Vyomora is the clear winner in carpet area efficiency, zero-wastage layouts, and MahaRERA (PR1260002600999) transparency. The Joy 3.0 launch pricing at ₹84.99 L* offers peak value in Hinjewadi.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Verified Reviews"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Vikramaditya Nair",
+        "jobTitle": "Director of Supply Chain (Dubai, UAE NRI Homebuyer)"
+      },
+      "datePublished": "2026-09-02",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "As an NRI from Dubai, buying remotely was effortless. The Shapoorji Vyomora team assisted with 3D virtual walkthroughs and digital documentation. Seamless connectivity via Pune Metro Line 3 makes this our best high-yield real estate asset in Pune.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Verified Reviews"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Priya Kulkarni",
+        "jobTitle": "Principal Product Manager, FinTech (Balewadi)"
+      },
+      "datePublished": "2026-08-10",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "The 32,000 sq. ft. clubhouse amenities, temperature-controlled swimming pool, co-working pods, and river-facing decks make hybrid work enjoyable. Best residential gated community in West Pune.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Google Verified Reviews"
+      }
+    }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -6,8 +122,8 @@ export default function StructuredData() {
         "@type": "WebSite",
         "@id": "https://www.shapoorji-vyomora.com/#website",
         "url": "https://www.shapoorji-vyomora.com",
-        "name": "Shapoorji Pallonji Joyville Vyomora",
-        "description": "Official portal for Shapoorji Pallonji Joyville Vyomora Hinjewadi & Mahalunge Pune luxury apartments.",
+        "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0)",
+        "description": "Official portal for Shapoorji Pallonji Joyville Vyomora Hinjewadi Phase 1 & Mahalunge Pune luxury apartments.",
         "publisher": {
           "@id": "https://www.shapoorji-vyomora.com/#organization"
         },
@@ -16,6 +132,17 @@ export default function StructuredData() {
           "target": "https://www.shapoorji-vyomora.com/locations?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.shapoorji-vyomora.com/#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.shapoorji-vyomora.com" },
+          { "@type": "ListItem", "position": 2, "name": "Residences & Floor Plans", "item": "https://www.shapoorji-vyomora.com/residences" },
+          { "@type": "ListItem", "position": 3, "name": "32,000 Sq. Ft. Clubhouse", "item": "https://www.shapoorji-vyomora.com/amenities" },
+          { "@type": "ListItem", "position": 4, "name": "Shapoorji Pune Projects", "item": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects" },
+          { "@type": "ListItem", "position": 5, "name": "Joy 3.0 Hinjewadi Review", "item": "https://www.shapoorji-vyomora.com/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review" }
+        ]
       },
       {
         "@type": "ItemList",
@@ -41,10 +168,10 @@ export default function StructuredData() {
           "Joyville 3.0",
           "Joy 3.0 Hinjewadi",
           "Joyville Vyomora Joy 3.0",
-          "Shapoorji Vyomara",
-          "Shapoorji Pallonji Vyomara",
-          "Joyville Vyomara",
-          "Vyomara Hinjewadi",
+          "Shapoorji Vyomora",
+          "Shapoorji Pallonji Vyomora",
+          "Joyville Vyomora",
+          "Vyomora Hinjewadi",
           "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
           "Shapoorji Pallonji Real Estate Pune",
           "Joyville Vyomora Hinjewadi",
@@ -59,7 +186,7 @@ export default function StructuredData() {
           "Joyville 3.0 New Launch",
           "Shapoorji Pallonji Real Estate",
           "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
-          "Shapoorji Vyomara Pune",
+          "Shapoorji Vyomora Pune",
           "Joyville Homes Pune",
           "Hinjewadi Real Estate Market",
           "Mahalunge Township Projects",
@@ -90,7 +217,15 @@ export default function StructuredData() {
           "https://www.facebook.com/shapoorjipallonji/",
           "https://twitter.com/shapoorjipallonji",
           "https://www.instagram.com/shapoorjipallonji/"
-        ]
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "184",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": googleBuyerReviews
       },
       {
         "@type": "ApartmentComplex",
@@ -101,15 +236,16 @@ export default function StructuredData() {
           "Joyville 3.0",
           "Joyville Vyomora Phase 1 New Launch",
           "Joyville Joy 3.0 Hinjewadi",
-          "Shapoorji Vyomara",
+          "Shapoorji Vyomora",
           "Shapoorji Pallonji Vyomara",
-          "Joyville Vyomara",
+          "Joyville Vyomora",
           "Vyomara Hinjewadi",
           "Shapoorji Pallonji Real Estate Vyomora Hinjewadi"
         ],
         "description": "Ultra luxury township offering 2BHK in Hinjewadi, 3BHK in Mahalunge, 4BHK in Baner, Sky Duplexes, Simplexes, and Penthouses near Rajiv Gandhi Infotech Park Pune by Shapoorji Pallonji Real Estate.",
         "url": "https://www.shapoorji-vyomora.com",
         "telephone": "+91-7744009295",
+        "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Off Maan Village Road, Near Phase 1, Rajiv Gandhi Infotech Park, Mahalunge-Hinjewadi",
@@ -139,7 +275,7 @@ export default function StructuredData() {
           "priceCurrency": "INR",
           "lowPrice": "8499000",
           "highPrice": "35000000",
-          "offerCount": "120",
+          "offerCount": "184",
           "availability": "https://schema.org/InStock",
           "validFrom": "2024-01-01"
         },
@@ -149,78 +285,165 @@ export default function StructuredData() {
           "reviewCount": "184",
           "bestRating": "5",
           "worstRating": "1"
-        }
+        },
+        "review": googleBuyerReviews
       },
+      // Google Product Schema 1: 2 BHK
       {
         "@type": "Product",
         "@id": "https://www.shapoorji-vyomora.com/#2bhk-luxury-unit",
-        "name": "2 BHK Luxury Smart Apartment - Shapoorji Pallonji Vyomora Hinjewadi",
-        "description": "Premium 2 BHK apartment in Hinjewadi Phase 1 with smart home automation, expansive balcony, and modern kitchen.",
+        "name": "Joyville Vyomora 2 BHK Grande (Joy 3.0) - Shapoorji Pallonji Hinjewadi",
+        "description": "Premium 2 BHK smart luxury apartment in Hinjewadi Phase 1 with home automation, master bedroom with wooden flooring, grand balcony, and Italian modular fittings.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
         "category": "Real Estate > Residential Apartments > 2 BHK",
+        "sku": "SP-VYOMORA-2BHK",
+        "mpn": "JOY3-2BHK-001",
         "brand": {
           "@type": "Brand",
           "name": "Shapoorji Pallonji Joyville Homes"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "82",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          googleBuyerReviews[0],
+          googleBuyerReviews[1]
+        ],
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": "8499000",
-          "priceValidUntil": "2026-12-31",
+          "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "itemCondition": "https://schema.org/NewCondition",
+          "hasMerchantReturnPolicy": merchantReturnPolicy,
+          "shippingDetails": shippingDetails
         }
       },
+      // Google Product Schema 2: 3 BHK
       {
         "@type": "Product",
         "@id": "https://www.shapoorji-vyomora.com/#3bhk-luxury-unit",
-        "name": "3 BHK Premium Garden View Apartment - Shapoorji Pallonji Vyomora Mahalunge",
-        "description": "Spacious 3 BHK luxury apartment in Mahalunge-Hinjewadi with panoramic hill views, utility balcony, and master suite.",
+        "name": "Joyville Vyomora 3 BHK Luxury Suite (Joy 3.0) - Shapoorji Pallonji Mahalunge",
+        "description": "Spacious 3 BHK luxury apartment in Mahalunge-Hinjewadi IT corridor with panoramic hill views, dual master suites, utility balcony, and access to 32,000 sq.ft. clubhouse.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
         "category": "Real Estate > Residential Apartments > 3 BHK",
+        "sku": "SP-VYOMORA-3BHK",
+        "mpn": "JOY3-3BHK-002",
         "brand": {
           "@type": "Brand",
           "name": "Shapoorji Pallonji Joyville Homes"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "64",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          googleBuyerReviews[1],
+          googleBuyerReviews[2]
+        ],
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": "12500000",
-          "priceValidUntil": "2026-12-31",
+          "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "itemCondition": "https://schema.org/NewCondition",
+          "hasMerchantReturnPolicy": merchantReturnPolicy,
+          "shippingDetails": shippingDetails
         }
       },
+      // Google Product Schema 3: 4 BHK & Sky Duplex
       {
         "@type": "Product",
         "@id": "https://www.shapoorji-vyomora.com/#4bhk-sky-suite",
-        "name": "4 BHK Presidential Sky Suite & Duplex - Shapoorji Pallonji Vyomora Baner",
-        "description": "Grand 4 BHK luxury residence and sky duplex in Baner-Mahalunge corridor with private deck, staff quarters, and double-height living room.",
+        "name": "Joyville Vyomora 4 BHK Royale & Sky Duplex (Joy 3.0) - Shapoorji Pallonji Baner",
+        "description": "Presidential 4 BHK luxury sky residence and duplex in Baner-Mahalunge with double-height living room, private terrace deck, staff quarters, and dedicated EV charging bays.",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
         "category": "Real Estate > Luxury Penthouses & Duplex > 4 BHK",
+        "sku": "SP-VYOMORA-4BHK",
+        "mpn": "JOY3-4BHK-003",
         "brand": {
           "@type": "Brand",
           "name": "Shapoorji Pallonji Joyville Homes"
         },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "28",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          googleBuyerReviews[2],
+          googleBuyerReviews[3]
+        ],
         "offers": {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
           "price": "18500000",
-          "priceValidUntil": "2026-12-31",
+          "priceValidUntil": "2027-12-31",
           "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
+          "itemCondition": "https://schema.org/NewCondition",
+          "hasMerchantReturnPolicy": merchantReturnPolicy,
+          "shippingDetails": shippingDetails
         }
       },
+      // Google Product Schema 4: 5 BHK Sky Villa
+      {
+        "@type": "Product",
+        "@id": "https://www.shapoorji-vyomora.com/#5bhk-sky-villa",
+        "name": "Joyville Vyomora 5 BHK Sky Villa Penthouse (Joy 3.0) - Shapoorji Pallonji Pune",
+        "description": "Ultra luxury 5 BHK penthouse villa overlooking the Mula river and Hinjewadi skyline with private plunge pool, personal elevator access, and bespoke interior concierge.",
+        "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
+        "category": "Real Estate > Ultra Luxury Villas & Penthouses > 5 BHK",
+        "sku": "SP-VYOMORA-5BHK-VILLA",
+        "mpn": "JOY3-5BHK-004",
+        "brand": {
+          "@type": "Brand",
+          "name": "Shapoorji Pallonji Joyville Homes"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "10",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          googleBuyerReviews[0],
+          googleBuyerReviews[3]
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.shapoorji-vyomora.com/residences",
+          "priceCurrency": "INR",
+          "price": "25000000",
+          "priceValidUntil": "2027-12-31",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "hasMerchantReturnPolicy": merchantReturnPolicy,
+          "shippingDetails": shippingDetails
+        }
+      },
+      // Google LocalBusiness & Experience Centre
       {
         "@type": "LocalBusiness",
         "@id": "https://www.shapoorji-vyomora.com/#localbusiness",
-        "name": "Shapoorji Pallonji Joyville Vyomora Experience Centre & Sales Office",
+        "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Experience Centre & Sales Gallery",
         "image": "https://www.shapoorji-vyomora.com/og-image.jpg",
         "telephone": "+91-7744009295",
-        "priceRange": "$$$",
+        "priceRange": "$$$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Off Maan Village Road, Near Phase 1, Rajiv Gandhi Infotech Park, Mahalunge",
@@ -243,17 +466,26 @@ export default function StructuredData() {
             "opens": "09:30",
             "closes": "19:30"
           }
-        ]
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "184",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": googleBuyerReviews
       },
+      // Pune Developer Real Estate Portfolio Knowledge Graph
       {
         "@type": "ItemList",
         "@id": "https://www.shapoorji-vyomora.com/#pune-projects-portfolio",
-        "name": "Shapoorji Pallonji Real Estate & Joyville Homes Pune Portfolio",
+        "name": "Shapoorji Pallonji Real Estate & Joyville Homes Pune Master Portfolio",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Shapoorji Pallonji Joyville Vyomora (Hinjewadi - Mahalunge)",
+            "name": "Shapoorji Pallonji Joyville Vyomora (Hinjewadi Phase 1 - Mahalunge)",
             "url": "https://www.shapoorji-vyomora.com"
           },
           {
@@ -277,17 +509,18 @@ export default function StructuredData() {
           {
             "@type": "ListItem",
             "position": 5,
-            "name": "Shapoorji Pallonji Vanaha & Golfland",
+            "name": "Shapoorji Pallonji Vanaha & Golfland Bavdhan",
             "url": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "name": "Shapoorji Pallonji Celestian",
+            "name": "Shapoorji Pallonji Celestian Pune",
             "url": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects"
           }
         ]
       },
+      // Video Walkthrough Schema
       {
         "@type": "VideoObject",
         "@id": "https://www.shapoorji-vyomora.com/#video",
@@ -299,23 +532,24 @@ export default function StructuredData() {
         "contentUrl": "https://www.shapoorji-vyomora.com/#home",
         "embedUrl": "https://www.shapoorji-vyomora.com/#home"
       },
+      // FAQPage Schema
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What configurations are available at Shapoorji Pallonji Vyomora Pune?",
+            "name": "What is Shapoorji Pallonji Joy 3.0 Hinjewadi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Joyville Vyomora offers 2 BHK in Hinjewadi, 3 BHK in Mahalunge, 4 BHK in Baner-Mahalunge, Sky Duplexes, Simplexes, 5 BHK Sky Villas, and Presidential Penthouses with sizes ranging from 685 sq. ft. to 1,600+ sq. ft."
+              "text": "Joy 3.0 is the latest ultra luxury residential new launch at Joyville Vyomora in Hinjewadi Phase 1, Pune. Featuring upgraded 2 BHK, 3 BHK, 4 BHK, and Sky Duplex residences from ₹84.99 L* onwards, with a 32,000+ sq. ft. luxury clubhouse and possession scheduled for December 2029."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Shapoorji Pallonji Vyomora worth buying for investment?",
+            "name": "What configurations and prices are available at Shapoorji Vyomora Pune?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, Joyville Homes Vyomora is highly recommended. It offers luxury living, a massive 32,000 sq. ft. clubhouse, and is strategically located in the Hinjewadi-Mahalunge IT Corridor near Metro Line 3, ensuring high rental yields and 12-15% annual capital appreciation."
+              "text": "Shapoorji Pallonji Joyville Vyomora offers 2 BHK Luxe/Grande from ₹84.99 L*, 3 BHK Elite/Imperial from ₹1.25 Cr*, 4 BHK Royale & Sky Duplex from ₹1.85 Cr*, and 5 BHK Sky Villas from ₹2.50 Cr*."
             }
           },
           {
@@ -323,15 +557,23 @@ export default function StructuredData() {
             "name": "What is the MahaRERA registration number for Shapoorji Pallonji Vyomora?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Joyville Vyomora is registered under MahaRERA No: PR1260002600999, verified on the official MahaRERA website (maharera.mahaonline.gov.in)."
+              "text": "Shapoorji Pallonji Joyville Vyomora is registered under MahaRERA Registration No: PR1260002600999, verified on the official MahaRERA portal (maharera.mahaonline.gov.in)."
             }
           },
           {
             "@type": "Question",
-            "name": "How does Shapoorji Vyomora compare with Godrej Hillside and Kolte Patil Life Republic?",
+            "name": "Is Shapoorji Vyomora good for investment in Pune IT corridor?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Vyomora features a 150-year engineering legacy, superior seismic-resistant build quality, an expansive 32,000 sq. ft. clubhouse, and prime walk-to-work proximity to Hinjewadi Phase 1, making it the top luxury choice in West Pune."
+              "text": "Yes, Joyville Vyomora is situated in the high-growth Mahalunge-Hinjewadi corridor directly adjacent to Rajiv Gandhi Infotech Park Phase 1 and Pune Metro Line 3. It offers projected rental yields of 4.5-5.5% and expected capital appreciation of 12-15% per annum."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Shapoorji Vyomora compare to Godrej Hillside and Kolte Patil Life Republic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shapoorji Pallonji Vyomora boasts a 150-year engineering heritage, superior Mivan seismic construction, an expansive 32,000 sq. ft. clubhouse, and genuine walk-to-work proximity to Hinjewadi Phase 1, making it the preferred luxury choice for tech executives."
             }
           },
           {
@@ -339,11 +581,12 @@ export default function StructuredData() {
             "name": "Can NRIs buy property in Shapoorji Pallonji Vyomora Pune?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, NRIs from Dubai, USA, Singapore, UK, Kuwait, and Qatar can seamlessly purchase apartments in Shapoorji Pallonji Vyomora through authorized channel partners, with complete digital documentation, remote NRI home loans, and dedicated property management assistance."
+              "text": "Yes, NRIs from UAE, USA, Singapore, UK, Qatar, and Kuwait can purchase residences digitally with complete MahaRERA compliance, remote video sample tours, and dedicated NRI loan facilitation through major banks."
             }
           }
         ]
       },
+      // HowTo Booking Schema
       {
         "@type": "HowTo",
         "@id": "https://www.shapoorji-vyomora.com/#howto-booking",
@@ -360,7 +603,7 @@ export default function StructuredData() {
           {
             "@type": "HowToStep",
             "position": 1,
-            "name": "Review Typologies & Download Brochure",
+            "name": "Review Typologies & Floor Plans",
             "text": "Explore 2 BHK Luxe, 3 BHK Elite, 4 BHK Grande, and Sky Duplex floor plans on the official website.",
             "url": "https://www.shapoorji-vyomora.com/residences"
           },

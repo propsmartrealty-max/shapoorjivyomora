@@ -4,6 +4,7 @@ import Story from "@/components/home/Story";
 import Amenities from "@/components/home/Amenities";
 import MasterLayout from "@/components/home/MasterLayout";
 import Pricing from "@/components/home/Pricing";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import Specifications from "@/components/home/Specifications";
 import Location from "@/components/home/Location";
 import Connectivity from "@/components/home/Connectivity";
@@ -25,6 +26,7 @@ export default function Home() {
       <Amenities />
       <MasterLayout />
       <Pricing />
+      <GoogleReviews />
       <Specifications />
       <Location />
       <Connectivity />
