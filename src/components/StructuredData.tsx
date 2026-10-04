@@ -37,6 +37,10 @@ export default function StructuredData() {
         "@id": "https://www.shapoorji-vyomora.com/#organization",
         "name": "Shapoorji Pallonji Joyville Homes Vyomora",
         "alternateName": [
+          "Joy 3.0",
+          "Joyville 3.0",
+          "Joy 3.0 Hinjewadi",
+          "Joyville Vyomora Joy 3.0",
           "Shapoorji Vyomara",
           "Shapoorji Pallonji Vyomara",
           "Joyville Vyomara",
@@ -48,9 +52,11 @@ export default function StructuredData() {
           "Joyville Homes Pune"
         ],
         "url": "https://www.shapoorji-vyomora.com",
-        "priceRange": "INR 78 Lakhs - 2.50 Cr+",
+        "priceRange": "INR 84.99 Lakhs - 2.50 Cr+",
         "description": "Ultra luxury 2BHK, 3BHK, 4BHK, Sky Duplex, Simplex, and 5BHK Sky Villa apartments in Hinjewadi and Mahalunge, Pune by Shapoorji Pallonji Real Estate.",
         "knowsAbout": [
+          "Joy 3.0 Hinjewadi",
+          "Joyville 3.0 New Launch",
           "Shapoorji Pallonji Real Estate",
           "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
           "Shapoorji Vyomara Pune",
@@ -89,8 +95,12 @@ export default function StructuredData() {
       {
         "@type": "ApartmentComplex",
         "@id": "https://www.shapoorji-vyomora.com/#project",
-        "name": "Vyomora by Shapoorji Pallonji Joyville",
+        "name": "Vyomora by Shapoorji Pallonji Joyville (Joy 3.0)",
         "alternateName": [
+          "Joy 3.0",
+          "Joyville 3.0",
+          "Joyville Vyomora Phase 1 New Launch",
+          "Joyville Joy 3.0 Hinjewadi",
           "Shapoorji Vyomara",
           "Shapoorji Pallonji Vyomara",
           "Joyville Vyomara",
@@ -127,7 +137,7 @@ export default function StructuredData() {
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "INR",
-          "lowPrice": "7800000",
+          "lowPrice": "8499000",
           "highPrice": "35000000",
           "offerCount": "120",
           "availability": "https://schema.org/InStock",
@@ -156,7 +166,7 @@ export default function StructuredData() {
           "@type": "Offer",
           "url": "https://www.shapoorji-vyomora.com/residences",
           "priceCurrency": "INR",
-          "price": "7800000",
+          "price": "8499000",
           "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/InStock",
           "itemCondition": "https://schema.org/NewCondition"

@@ -57,6 +57,70 @@ export const SEOTopics = [
   "vs-shapoorji-wildstone", "shapoorji-pallonji-pune-projects", "joyville-homes-pune"
 ];
 
+// Curated High-Intent Combinations for Static Pre-Rendering & Verified Sitemap Indexation
+export const TOP_CURATED_MARKET_COMBOS = [
+  // Hinjewadi Phase 1 Core Queries
+  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "floor-plans" },
+  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "possession-date" },
+  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "rera-details" },
+  { location: "hinjewadi-phase-1", configuration: "3bhk-apartments", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "3bhk-apartments", topic: "floor-plans" },
+  { location: "hinjewadi-phase-1", configuration: "3bhk-apartments", topic: "possession-date" },
+  { location: "hinjewadi-phase-1", configuration: "sky-duplex", topic: "floor-plans" },
+  { location: "hinjewadi-phase-1", configuration: "sky-duplex", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "new-launch-projects", topic: "brochure-download" },
+  { location: "hinjewadi-phase-1", configuration: "luxury-apartments", topic: "amenities" },
+
+  // Hinjewadi Main Market
+  { location: "hinjewadi", configuration: "2bhk-in-hinjewadi", topic: "price-trends" },
+  { location: "hinjewadi", configuration: "2bhk-in-hinjewadi", topic: "floor-plans" },
+  { location: "hinjewadi", configuration: "2bhk-in-hinjewadi", topic: "possession-date" },
+  { location: "hinjewadi", configuration: "3bhk-apartments", topic: "price-trends" },
+  { location: "hinjewadi", configuration: "3bhk-apartments", topic: "floor-plans" },
+  { location: "hinjewadi", configuration: "4bhk-luxury-homes", topic: "floor-plans" },
+  { location: "hinjewadi", configuration: "sky-duplex", topic: "price-trends" },
+  { location: "hinjewadi", configuration: "new-launch-projects", topic: "price-trends" },
+  { location: "hinjewadi", configuration: "joyville-homes", topic: "rera-details" },
+
+  // Mahalunge High-Intent
+  { location: "mahalunge", configuration: "3bhk-in-mahalunge", topic: "price-trends" },
+  { location: "mahalunge", configuration: "3bhk-in-mahalunge", topic: "floor-plans" },
+  { location: "mahalunge", configuration: "3bhk-in-mahalunge", topic: "possession-date" },
+  { location: "mahalunge", configuration: "2bhk-flats", topic: "price-trends" },
+  { location: "mahalunge", configuration: "4bhk-in-mahalunge", topic: "floor-plans" },
+  { location: "mahalunge", configuration: "luxury-townships", topic: "amenities" },
+
+  // Baner High-Intent
+  { location: "baner", configuration: "4bhk-in-baner", topic: "price-trends" },
+  { location: "baner", configuration: "4bhk-in-baner", topic: "floor-plans" },
+  { location: "baner", configuration: "3bhk-apartments", topic: "price-trends" },
+  { location: "baner", configuration: "sky-duplex", topic: "floor-plans" },
+
+  // Wakad & Balewadi Connectivity
+  { location: "wakad", configuration: "2bhk-flats", topic: "price-trends" },
+  { location: "wakad", configuration: "3bhk-apartments", topic: "connectivity" },
+  { location: "balewadi", configuration: "3bhk-apartments", topic: "price-trends" },
+  { location: "balewadi", configuration: "4bhk-luxury-homes", topic: "floor-plans" },
+
+  // Rajiv Gandhi Infotech Park & Maan Road
+  { location: "rajiv-gandhi-infotech-park", configuration: "2bhk-in-hinjewadi", topic: "connectivity" },
+  { location: "rajiv-gandhi-infotech-park", configuration: "best-flats-for-it-professionals", topic: "rental-yield" },
+  { location: "maan-road", configuration: "new-launch-projects", topic: "price-trends" },
+  { location: "maan-road", configuration: "2bhk-in-hinjewadi", topic: "floor-plans" },
+
+  // Pune West & Highway Corridor
+  { location: "pune-west", configuration: "luxury-apartments", topic: "price-trends" },
+  { location: "pune-west", configuration: "sky-duplex", topic: "floor-plans" },
+  { location: "pune-mumbai-highway", configuration: "investment-property", topic: "capital-appreciation" },
+
+  // Global NRI High Yield
+  { location: "dubai", configuration: "high-roi-investment", topic: "nri-investment" },
+  { location: "usa", configuration: "high-roi-investment", topic: "nri-investment" },
+  { location: "singapore", configuration: "luxury-sky-villas", topic: "nri-investment" },
+  { location: "london", configuration: "sky-duplex", topic: "nri-investment" },
+];
+
 // Deterministic Pseudo-Random Number Generator based on string seed
 function pseudoRandom(seed: string): number {
   let hash = 0;

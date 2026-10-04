@@ -6,15 +6,15 @@ import Link from "next/link";
 import { Download } from "lucide-react";
 
 const pricingData = [
-  { typology: "2 BHK (LUXE)", area: "684.91", price: "₹88.19 Lacs - ₹95.28 Lacs" },
+  { typology: "2 BHK (LUXE)", area: "684.91", price: "₹84.99 Lacs - ₹95.28 Lacs" },
   { typology: "2 BHK (SMART)", area: "749.60", price: "₹96.54 Lacs - ₹1.02 CR" },
   { typology: "2 BHK (GRANDE)", area: "780-785", price: "₹1.00 CR - ₹1.09 CR" },
   { typology: "2 BHK (ROYALE)", area: "838.95", price: "₹1.07 CR - ₹1.16 CR" },
-  { typology: "3 BHK (SELECT)", area: "1052", price: "₹1.36 CR - ₹1.46 CR" },
+  { typology: "3 BHK (SELECT)", area: "1052", price: "₹1.32 CR - ₹1.46 CR" },
   { typology: "3 BHK (ELITE)", area: "1,090.72", price: "₹1.41 CR - ₹1.52 CR" },
   { typology: "3 BHK REFUGE", area: "1037-1254", price: "₹1.34 CR - ₹1.69 CR" },
   { typology: "3 BHK (IMPERIAL)", area: "1184-1186", price: "₹1.54 CR - ₹1.70 CR" },
-  { typology: "3 BHK DUPLEX", area: "1459-1467", price: "₹1.96 CR - ₹2.16 CR" },
+  { typology: "3 BHK DUPLEX", area: "1459-1467", price: "₹1.89 CR - ₹2.16 CR" },
 ];
 
 export default function Pricing() {
@@ -32,13 +32,13 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-4 block">
-            Pricing & Configurations
+            Joy 3.0 Pricing & Configurations
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-6">
             Intelligent Spaces. <span className="text-[#C5A059] italic">Impeccable Value.</span>
           </h2>
           <p className="text-[#1e2338]/80 font-light max-w-2xl mx-auto">
-            Discover thoughtfully crafted residences with layouts optimized for modern living. Choose from our diverse range of 2 & 3 BHK configurations.
+            Discover thoughtfully crafted residences with layouts optimized for modern living. Choose from our diverse range of 2 & 3 BHK configurations starting from <strong>₹84.99 Lakhs* onwards</strong>.
           </p>
         </motion.div>
 

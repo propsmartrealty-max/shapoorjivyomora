@@ -1,7 +1,15 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SEOLocations, SEONRILocations, SEOConfigurations, SEOTopics, generateSEOContent } from "@/lib/programmaticSEO";
+import { SEOLocations, SEONRILocations, SEOConfigurations, SEOTopics, TOP_CURATED_MARKET_COMBOS, generateSEOContent } from "@/lib/programmaticSEO";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+
+export async function generateStaticParams() {
+  return TOP_CURATED_MARKET_COMBOS.map((combo) => ({
+    location: combo.location,
+    configuration: combo.configuration,
+    topic: combo.topic,
+  }));
+}
 
 interface Props {
   params: Promise<{

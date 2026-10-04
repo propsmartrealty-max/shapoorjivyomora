@@ -1,35 +1,74 @@
-import { SEOLocations, SEONRILocations, SEOConfigurations, SEOTopics } from '@/lib/programmaticSEO';
+import { seoArticles } from '@/data/seoArticles';
+import { TOP_CURATED_MARKET_COMBOS } from '@/lib/programmaticSEO';
 
 export async function GET() {
   const baseUrl = 'https://www.shapoorji-vyomora.com';
-  const URLS_PER_SITEMAP = 2500;
+  const currentDate = new Date().toISOString();
 
-  const allLocations = [...SEOLocations, ...SEONRILocations];
-  
-  // We have 48 locations * 20 configs * 25 topics = ~24,000 programmatic combinations
-  const totalProgrammaticUrls = allLocations.length * SEOConfigurations.length * SEOTopics.length;
-  
-  // Calculate total chunks needed
-  const totalChunks = Math.ceil(totalProgrammaticUrls / URLS_PER_SITEMAP);
+  const coreRoutes = [
+    { path: '/', priority: '1.0', changefreq: 'daily' },
+    { path: '/residences', priority: '0.9', changefreq: 'weekly' },
+    { path: '/amenities', priority: '0.9', changefreq: 'weekly' },
+    { path: '/masterplan', priority: '0.9', changefreq: 'weekly' },
+    { path: '/specifications', priority: '0.8', changefreq: 'monthly' },
+    { path: '/location', priority: '0.9', changefreq: 'weekly' },
+    { path: '/locations', priority: '0.8', changefreq: 'weekly' },
+    { path: '/shapoorji-pallonji-pune-projects', priority: '0.9', changefreq: 'weekly' },
+    { path: '/investment-calculator', priority: '0.8', changefreq: 'monthly' },
+    { path: '/vision', priority: '0.8', changefreq: 'monthly' },
+    { path: '/lifestyle', priority: '0.8', changefreq: 'monthly' },
+    { path: '/gallery', priority: '0.8', changefreq: 'weekly' },
+    { path: '/sustainability', priority: '0.8', changefreq: 'monthly' },
+    { path: '/updates', priority: '0.9', changefreq: 'weekly' },
+    { path: '/contact', priority: '0.9', changefreq: 'weekly' },
+    { path: '/articles', priority: '0.8', changefreq: 'weekly' },
+    { path: '/sitemap', priority: '0.7', changefreq: 'weekly' },
+  ];
 
-  // Generate sitemap index XML
-  let sitemapIndexXML = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-  for (let i = 0; i < totalChunks; i++) {
-    sitemapIndexXML += `
-  <sitemap>
-    <loc>${baseUrl}/sitemaps/${i}.xml</loc>
-  </sitemap>`;
+  // 1. Core Project Landing Pages
+  for (const route of coreRoutes) {
+    const loc = route.path === '/' ? `${baseUrl}/` : `${baseUrl}${route.path}`;
+    xml += `
+  <url>
+    <loc>${loc}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`;
   }
 
-  sitemapIndexXML += `\n</sitemapindex>`;
+  // 2. High-Authority Real Estate Deep-Dive Articles
+  for (const article of seoArticles) {
+    xml += `
+  <url>
+    <loc>${baseUrl}/articles/${article.slug}</loc>
+    <lastmod>${new Date(article.date).toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>`;
+  }
 
-  return new Response(sitemapIndexXML, {
+  // 3. Verified Pre-rendered High-Intent Market Pages
+  for (const combo of TOP_CURATED_MARKET_COMBOS) {
+    xml += `
+  <url>
+    <loc>${baseUrl}/market/${combo.location}/${combo.configuration}/${combo.topic}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>`;
+  }
+
+  xml += `\n</urlset>`;
+
+  return new Response(xml, {
     status: 200,
     headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate',
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
     },
   });
 }

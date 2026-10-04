@@ -62,15 +62,16 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="max-w-5xl"
         >
-          <div className="inline-block mb-3 px-4 py-1.5 rounded-full border border-[#C5A059]/40 bg-[#C5A059]/10 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full border border-[#C5A059]/40 bg-[#C5A059]/10 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#0A192F] uppercase">
-              Shapoorji Pallonji Real Estate • Hinjewadi Phase 1, Pune
+              Joy 3.0 New Launch • Phase 1 Residences from ₹84.99 L*
             </span>
           </div>
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#0A192F] leading-[1.1] tracking-tight mb-6">
-            Shapoorji Pallonji Vyomora <br className="hidden sm:inline" />
+            Shapoorji Pallonji Joyville Vyomora <br className="hidden sm:inline" />
             <span className="text-gradient block text-2xl sm:text-4xl md:text-5xl mt-3 font-normal">
-              Luxury 2, 3 & 4 BHK Apartments in Hinjewadi
+              Joy 3.0 • Luxury 2, 3 & 4 BHK in Hinjewadi Phase 1
             </span>
           </h1>
           
@@ -80,7 +81,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 1 }}
             className="text-lg md:text-xl text-[#1e2338]/80 max-w-3xl mx-auto font-light leading-relaxed mb-10"
           >
-            Experience <strong>Shapoorji Pallonji Real Estate Vyomora Hinjewadi</strong> — luxury 2 BHK, 3 BHK, 4 BHK & Sky Duplexes with a monumental 32,000+ sq. ft. clubhouse near Rajiv Gandhi Infotech Park & Mahalunge, West Pune.
+            Welcome to <strong>Joyville Vyomora (Joy 3.0) by Shapoorji Pallonji Real Estate</strong> — luxury river-facing 2 BHK, 3 BHK, 4 BHK & Sky Duplexes with a monumental 32,000+ sq. ft. clubhouse in Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, Pune. Possession: Dec 2029 | MahaRERA: PR1260002600999.
           </motion.h2>
           
           <motion.div

@@ -33,7 +33,7 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.shapoorji-vyomora.com'),
   alternates: {
-    canonical: 'https://www.shapoorji-vyomora.com',
+    canonical: 'https://www.shapoorji-vyomora.com/',
   },
   applicationName: "Shapoorji Pallonji Vyomora",
   authors: [{ name: "Shapoorji Pallonji Real Estate", url: "https://shapoorjirealestate.com" }],
@@ -49,12 +49,17 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: "Vyomora",
   },
-  title: "Shapoorji Pallonji Vyomora Hinjewadi | Premium Joyville Homes Pune",
-  description: "Invest in Shapoorji Pallonji Joyville Homes Vyomora Hinjewadi. Discover luxury 2BHK, 3BHK, 4BHK apartments near Rajiv Gandhi Infotech Park, West Pune. Download the floor plan and brochure today.",
+  title: "Shapoorji Pallonji Joyville Vyomora Hinjewadi (Joy 3.0) | Official Website Pune",
+  description: "Official portal for Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. Luxury 2, 3 & 4 BHK apartments from ₹84.99 L* near Rajiv Gandhi Infotech Park. 32,000+ sq. ft. clubhouse, river-facing towers. Possession Dec 2029. MahaRERA: PR1260002600999.",
   keywords: [
-    "Shapoorji Vyomara",
-    "Shapoorji Pallonji Vyomara",
-    "Joyville Vyomara",
+    "Joy 3.0",
+    "Joyville 3.0",
+    "Joy 3.0 Hinjewadi",
+    "Joyville Vyomora Joy 3.0",
+    "Shapoorji Joy 3.0",
+    "Shapoorji Vyomora",
+    "Shapoorji Pallonji Vyomora",
+    "Joyville Vyomora",
     "Vyomara Hinjewadi",
     "Shapoorji Vyomara Pune",
     "Joyville Vyomara Hinjewadi",
@@ -83,6 +88,8 @@ export const metadata: Metadata = {
     "Shapoorji Pallonji Vyomora Floor Plan",
     "Vyomora Hinjewadi Pre Launch Price",
     "Vyomora Hinjewadi Brochure Download",
+    "Shapoorji Vyomora Possession Date",
+    "Joyville Vyomora Phase 1 New Launch",
     "Pune Real Estate",
     "Pune Property Market",
     "Property Investment in Pune",
@@ -101,9 +108,9 @@ export const metadata: Metadata = {
     "Top Properties in West Pune"
   ],
   openGraph: {
-    title: "Shapoorji Pallonji Vyomora | Joyville Homes Hinjewadi Vyomora",
-    description: "Shapoorji Pallonji Vyomora is the ultimate luxury real estate project in Pune. Discover premium 2, 3 & 4 BHK apartments at Joyville Homes Hinjewadi Vyomora.",
-    url: "https://www.shapoorji-vyomora.com",
+    title: "Shapoorji Pallonji Joyville Vyomora Hinjewadi | Joy 3.0 Luxury Residences",
+    description: "Official portal of Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. 2, 3 & 4 BHK river-facing residences from ₹84.99 L* with 32,000 sq.ft. clubhouse. MahaRERA: PR1260002600999.",
+    url: "https://www.shapoorji-vyomora.com/",
     siteName: "Shapoorji Pallonji Vyomora",
     images: [
       {
@@ -118,8 +125,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shapoorji Pallonji Vyomora | Premium Residences Pune",
-    description: "Luxury homes and premium apartments in the Hinjewadi IT Corridor.",
+    title: "Shapoorji Pallonji Joyville Vyomora Hinjewadi (Joy 3.0) | Pune",
+    description: "Luxury 2, 3 & 4 BHK homes in Hinjewadi Phase 1 from ₹84.99 L*. 32,000+ sq. ft clubhouse.",
     images: ["https://www.shapoorji-vyomora.com/og-image.jpg"],
   },
   robots: {

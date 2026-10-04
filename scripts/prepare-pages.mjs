@@ -27,8 +27,8 @@ if (fs.existsSync(nextStaticDir)) {
   fs.cpSync(nextStaticDir, distNextStatic, { recursive: true });
 }
 
-// 3. Process & Flatten HTML Pages
-function processHtmlDir(currentDir, targetBase) {
+// 3. Process & Flatten HTML Pages and Route Bodies (.xml, .txt, .webmanifest)
+function processNextServerDir(currentDir, targetBase) {
   if (!fs.existsSync(currentDir)) return;
   const entries = fs.readdirSync(currentDir, { withFileTypes: true });
 
@@ -36,7 +36,7 @@ function processHtmlDir(currentDir, targetBase) {
     const fullPath = path.join(currentDir, entry.name);
 
     if (entry.isDirectory()) {
-      processHtmlDir(fullPath, targetBase);
+      processNextServerDir(fullPath, targetBase);
     } else if (entry.name.endsWith('.html')) {
       const relPath = path.relative(nextAppDir, fullPath);
       
@@ -56,13 +56,42 @@ function processHtmlDir(currentDir, targetBase) {
         const directDest = path.join(distDir, parentDir, `${baseName}.html`);
         fs.copyFileSync(fullPath, directDest);
       }
+    } else if (entry.name.endsWith('.body')) {
+      // e.g. sitemap.xml.body -> dist/sitemap.xml
+      const realName = entry.name.replace(/\.body$/, '');
+      const relPath = path.relative(nextAppDir, path.join(currentDir, realName));
+      const dest = path.join(distDir, relPath);
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.copyFileSync(fullPath, dest);
+      console.log(`  📄 Output static route: ${relPath} (${fs.statSync(dest).size} bytes)`);
     }
   }
 }
 
-processHtmlDir(nextAppDir, distDir);
+processNextServerDir(nextAppDir, distDir);
 
-// 4. Copy Cloudflare Declarative Configs
+// 4. Verify & Guarantee sitemap.xml exists
+const distSitemapPath = path.join(distDir, 'sitemap.xml');
+if (!fs.existsSync(distSitemapPath) || fs.statSync(distSitemapPath).size < 100) {
+  console.log('⚠️ Generating fallback standalone sitemap.xml in dist...');
+  const baseUrl = 'https://www.shapoorji-vyomora.com';
+  const now = new Date().toISOString();
+  const defaultUrls = [
+    '/', '/residences', '/amenities', '/masterplan', '/specifications',
+    '/location', '/locations', '/shapoorji-pallonji-pune-projects',
+    '/investment-calculator', '/vision', '/lifestyle', '/gallery',
+    '/sustainability', '/updates', '/contact', '/articles', '/sitemap'
+  ];
+  let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  for (const u of defaultUrls) {
+    sitemapXml += `\n  <url>\n    <loc>${baseUrl}${u === '/' ? '/' : u}</loc>\n    <lastmod>${now}</lastmod>\n    <changefreq>${u === '/' ? 'daily' : 'weekly'}</changefreq>\n    <priority>${u === '/' ? '1.0' : '0.8'}</priority>\n  </url>`;
+  }
+  sitemapXml += `\n</urlset>`;
+  fs.writeFileSync(distSitemapPath, sitemapXml, 'utf8');
+}
+console.log(`✅ sitemap.xml verified in dist (${fs.statSync(distSitemapPath).size} bytes)`);
+
+// 5. Copy Cloudflare Declarative Configs
 for (const file of ['_headers', '_routes.json']) {
   const src = path.join(rootDir, file);
   if (fs.existsSync(src)) {

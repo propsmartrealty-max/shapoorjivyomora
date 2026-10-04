@@ -87,11 +87,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         if (url.pathname === '/') {
           if (isNri) {
             title.setInnerContent(
-              'Shapoorji Pallonji Vyomora Hinjewadi | Official NRI Investor Portal Pune'
+              'Shapoorji Pallonji Joyville Vyomora Hinjewadi (Joy 3.0) | Official NRI Investor Portal'
             );
           } else {
             title.setInnerContent(
-              'Shapoorji Pallonji Real Estate Vyomora Hinjewadi | Joyville Homes Pune'
+              'Shapoorji Pallonji Joyville Vyomora Hinjewadi (Joy 3.0) | Official Website Pune'
             );
           }
         }
@@ -104,15 +104,19 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           "@context": "https://schema.org",
           "@type": "ApartmentComplex",
           "@id": "https://www.shapoorji-vyomora.com/#edge-project-entity",
-          "name": "Shapoorji Pallonji Joyville Vyomora",
+          "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0)",
           "alternateName": [
+            "Joy 3.0",
+            "Joyville 3.0",
+            "Joy 3.0 Hinjewadi",
+            "Joyville Vyomora Joy 3.0",
             "Shapoorji Vyomara",
             "Shapoorji Pallonji Vyomara",
             "Joyville Vyomara Hinjewadi",
             "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
             "Joyville Homes Vyomora Pune"
           ],
-          "description": "Ultra luxury 2BHK, 3BHK, 4BHK and Sky Duplex apartments in Hinjewadi-Mahalunge, Pune with a 32,000+ sq. ft. clubhouse by Shapoorji Pallonji Real Estate.",
+          "description": "Ultra luxury 2BHK, 3BHK, 4BHK and Sky Duplex apartments in Hinjewadi Phase 1, Pune from ₹84.99 Lakhs with a 32,000+ sq. ft. clubhouse by Shapoorji Pallonji Real Estate. Possession: Dec 2029.",
           "url": "https://www.shapoorji-vyomora.com",
           "telephone": env.SALES_PHONE || "+91-7744009295",
           "address": {
