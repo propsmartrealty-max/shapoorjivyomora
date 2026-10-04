@@ -672,5 +672,110 @@ export const seoArticles: SEOArticle[] = [
         </p>
       </div>
     ),
+  },
+  {
+    id: "16",
+    slug: "shapoorji-pallonji-pune-projects-price-list-and-new-launches-2026",
+    title: "Shapoorji Pallonji Pune Projects: Complete 2026 Price List, RERA Numbers & Upcoming Launches",
+    metaDescription: "Comprehensive 2026 price list and launch calendar for all Shapoorji Pallonji projects in Pune: Joyville Vyomora (Joy 3.0), Sensorium, Hadapsar Annexe, Vanaha Bavdhan, and Wildstone. Compare carpet rates and MahaRERA numbers.",
+    keywords: [
+      "shapoorji pallonji pune price list",
+      "joyville homes pune prices",
+      "all shapoorji projects in pune",
+      "shapoorji upcoming projects pune 2026",
+      "shapoorji vyomora price sheet",
+      "joyville sensorium price",
+      "shapoorji vanaha bavdhan price",
+      "joyville hadapsar price list",
+      "shapoorji pallonji new launch pune",
+      "shapoorji pallonji real estate pune"
+    ],
+    excerpt: "The authoritative 2026 buyer guide to every Shapoorji Pallonji and Joyville Homes residential development across Pune: configuration pricing, RERA numbers, construction status, and upcoming launches.",
+    date: "2026-10-04",
+    content: (
+      <div className="space-y-6">
+        <p>
+          For buyers and investors evaluating property across Maharashtra, <strong>Shapoorji Pallonji Real Estate</strong> represents the gold standard of architectural integrity, engineering precision, and timely delivery. Across Pune, the developer operates flagship masterplanned townships catering to IT professionals, corporate executives, and NRI investors in <strong>Hinjewadi, Mahalunge, Bavdhan, and Hadapsar</strong>.
+        </p>
+        <h2 className="text-2xl font-serif text-[#0A192F] mt-8 mb-4">Master Price List: All Shapoorji Pallonji Pune Projects (2026)</h2>
+        <div className="overflow-x-auto not-prose my-6">
+          <table className="w-full text-left text-xs border border-gray-200 rounded-lg">
+            <thead className="bg-[#0A192F] text-white">
+              <tr>
+                <th className="py-3 px-3">Project Name</th>
+                <th className="py-3 px-3">Micro-Market</th>
+                <th className="py-3 px-3">Configurations</th>
+                <th className="py-3 px-3">Carpet Area (sq. ft.)</th>
+                <th className="py-3 px-3">Starting Price*</th>
+                <th className="py-3 px-3">MahaRERA No.</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              <tr className="bg-[#C5A059]/10 font-medium">
+                <td className="py-3 px-3 font-bold text-[#0A192F]">Joyville Vyomora (Joy 3.0)</td>
+                <td className="py-3 px-3">Hinjewadi Phase 1 / Maan</td>
+                <td className="py-3 px-3">2, 3, 4 BHK & Sky Duplex</td>
+                <td className="py-3 px-3">685 - 1,467+</td>
+                <td className="py-3 px-3 font-bold text-[#0A192F]">₹84.99 L*</td>
+                <td className="py-3 px-3 text-emerald-700 font-bold">PR1260002600999</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-3 font-semibold text-[#0A192F]">Joyville Sensorium</td>
+                <td className="py-3 px-3">Hinjewadi Phase 1</td>
+                <td className="py-3 px-3">2 & 3 BHK</td>
+                <td className="py-3 px-3">700 - 1,050</td>
+                <td className="py-3 px-3">₹75.00 L*</td>
+                <td className="py-3 px-3">P52100024965</td>
+              </tr>
+              <tr className="bg-gray-50/50">
+                <td className="py-3 px-3 font-semibold text-[#0A192F]">Joyville Hadapsar Annexe</td>
+                <td className="py-3 px-3">Hadapsar - Manjri</td>
+                <td className="py-3 px-3">1, 2 & 3 BHK</td>
+                <td className="py-3 px-3">430 - 890</td>
+                <td className="py-3 px-3">₹45.00 L*</td>
+                <td className="py-3 px-3">P52100026451</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-3 font-semibold text-[#0A192F]">Shapoorji Wildstone</td>
+                <td className="py-3 px-3">Bavdhan West</td>
+                <td className="py-3 px-3">2 & 3 BHK</td>
+                <td className="py-3 px-3">750 - 1,120</td>
+                <td className="py-3 px-3">₹85.00 L*</td>
+                <td className="py-3 px-3">P52100030012</td>
+              </tr>
+              <tr className="bg-gray-50/50">
+                <td className="py-3 px-3 font-semibold text-[#0A192F]">Shapoorji Vanaha & Golfland</td>
+                <td className="py-3 px-3">Bavdhan - Oxford Valley</td>
+                <td className="py-3 px-3">1, 2, 3, 4 BHK & Golf Villas</td>
+                <td className="py-3 px-3">500 - 2,200</td>
+                <td className="py-3 px-3">₹55.00 L*</td>
+                <td className="py-3 px-3">P52100028033</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-3 font-semibold text-[#0A192F]">Shapoorji Celestian</td>
+                <td className="py-3 px-3">Bavdhan West</td>
+                <td className="py-3 px-3">3 & 4 BHK Sky Suites</td>
+                <td className="py-3 px-3">1,050 - 1,450</td>
+                <td className="py-3 px-3">₹1.20 Cr*</td>
+                <td className="py-3 px-3">P52100029544</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 className="text-2xl font-serif text-[#0A192F] mt-8 mb-4">Why Joyville Vyomora (Joy 3.0) Leads the Entire Pune Portfolio</h2>
+        <p>
+          While each development serves specific regional demand, <strong>Joyville Vyomora (Joy 3.0) in Hinjewadi Phase 1 / Mahalunge</strong> represents Shapoorji Pallonji&apos;s crowning flagship for multiple decisive reasons:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Highest Capital Appreciation Potential:</strong> Positioned in the epicentre of the Rajiv Gandhi IT Park Phase 1 with Metro Line 3 station within 1 km.</li>
+          <li><strong>Largest Amenities Footprint:</strong> Sprawling 32,000+ sq. ft. multi-level clubhouse with infinity pool, co-working pods, and riverfront promenade.</li>
+          <li><strong>Exclusive Typologies:</strong> Ultra-luxury Sky Duplexes and Simplexes that combine bungalow privacy with high-rise security.</li>
+          <li><strong>Joy 3.0 Inaugural Pricing:</strong> Early pre-launch price window starting at ₹84.99 L* offering maximum upside before standard market escalation.</li>
+        </ul>
+        <p>
+          For complete project brochures, floor plans, and VIP site visit scheduling across Shapoorji Pallonji&apos;s Pune developments, visit <a href="/shapoorji-pallonji-pune-projects" className="text-[#C5A059] font-semibold underline">Shapoorji Pallonji Pune Projects Master Hub</a>.
+        </p>
+      </div>
+    ),
   }
 ];

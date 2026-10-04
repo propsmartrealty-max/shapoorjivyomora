@@ -147,6 +147,14 @@ export const TOP_CURATED_MARKET_COMBOS = [
   { location: "mahalunge", configuration: "joyville-homes", topic: "floor-plans" },
   { location: "pune", configuration: "joyville-homes", topic: "possession-date" },
   { location: "bavdhan", configuration: "shapoorji-pallonji-projects", topic: "connectivity" },
+  { location: "bavdhan", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+  { location: "hadapsar", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+  { location: "hadapsar", configuration: "joyville-homes", topic: "investment-roi" },
+  { location: "pune", configuration: "shapoorji-pallonji-projects", topic: "rera-details" },
+  { location: "pune", configuration: "shapoorji-pallonji-projects", topic: "investment-roi" },
+  { location: "mahalunge", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+  { location: "baner", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+  { location: "wakad", configuration: "shapoorji-pallonji-projects", topic: "connectivity" },
 
   // HTML Sitemap Hub Links (100% Pre-rendered Coverage)
   { location: "hinjewadi", configuration: "luxury-apartments", topic: "investment-roi" },
