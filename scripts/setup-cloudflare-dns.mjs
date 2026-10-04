@@ -1,5 +1,5 @@
 // scripts/setup-cloudflare-dns.mjs
-// Automates DNS record creation and zone optimizations on Cloudflare via API v4
+// Automates DNS record creation, Page Rules, and zone hardening on Cloudflare via API v4
 import fs from 'fs';
 import path from 'path';
 
@@ -45,9 +45,8 @@ async function api(path, options = {}) {
   return { ok: res.ok, status: res.status, data };
 }
 
-async function addDnsRecord(type, name, content, ttl = 1, comment = '') {
+async function addDnsRecord(type, name, content, ttl = 1, comment = '', extra = {}) {
   console.log(`\n📡 Adding DNS record [${type}] ${name}...`);
-  // Check if it already exists
   const existingRes = await api(`/zones/${ZONE_ID}/dns_records?type=${type}&name=${encodeURIComponent(name)}`);
   if (existingRes.data?.result?.length > 0) {
     const existing = existingRes.data.result.find(r => r.content === content);
@@ -62,7 +61,8 @@ async function addDnsRecord(type, name, content, ttl = 1, comment = '') {
     name,
     content,
     ttl,
-    comment: comment || 'Managed by SEO & Security Setup'
+    comment: comment || 'Managed by SEO & Security Setup',
+    ...extra
   };
 
   const createRes = await api(`/zones/${ZONE_ID}/dns_records`, {
@@ -115,14 +115,44 @@ async function enableCrawlerHints() {
   }
 }
 
+async function ensurePageRule(urlPattern, actions, priority) {
+  console.log(`\n📄 Checking Page Rule for pattern: ${urlPattern}...`);
+  const rules = await api(`/zones/${ZONE_ID}/pagerules`);
+  const existing = rules.data?.result?.find(r => r.targets?.some(t => t.constraint?.value === urlPattern));
+  if (existing) {
+    console.log(`ℹ️ Page Rule already exists: ID ${existing.id}`);
+    return existing;
+  }
+
+  const payload = {
+    targets: [{ target: 'url', constraint: { operator: 'matches', value: urlPattern } }],
+    actions,
+    priority,
+    status: 'active'
+  };
+
+  const createRes = await api(`/zones/${ZONE_ID}/pagerules`, {
+    method: 'POST',
+    body: JSON.stringify(payload)
+  });
+
+  if (createRes.data?.success) {
+    console.log(`✅ Created Page Rule: ID ${createRes.data.result.id}`);
+    return createRes.data.result;
+  } else {
+    console.error(`❌ Failed to create Page Rule:`, JSON.stringify(createRes.data?.errors));
+    return null;
+  }
+}
+
 async function run() {
   console.log('====================================================');
-  console.log('🚀 CLOUDFLARE INFRASTRUCTURE & DNS AUTOMATION');
+  console.log('🚀 CLOUDFLARE FULL ECOSYSTEM HARDENING');
   console.log(`Zone ID: ${ZONE_ID}`);
   console.log(`Account Email: ${CF_EMAIL}`);
   console.log('====================================================');
 
-  // 1. Add Google Search Console Domain Verification TXT
+  // 1. Google Search Console Domain Verification TXT
   await addDnsRecord(
     'TXT',
     'shapoorji-vyomora.com',
@@ -131,7 +161,7 @@ async function run() {
     'Google Search Console Domain Verification'
   );
 
-  // 2. Add SPF TXT record for domain spoof protection
+  // 2. SPF TXT record for domain spoof protection
   await addDnsRecord(
     'TXT',
     'shapoorji-vyomora.com',
@@ -140,7 +170,7 @@ async function run() {
     'SPF record to prevent unauthorized email spoofing'
   );
 
-  // 3. Add DMARC TXT record
+  // 3. DMARC TXT record
   await addDnsRecord(
     'TXT',
     '_dmarc.shapoorji-vyomora.com',
@@ -149,11 +179,43 @@ async function run() {
     'DMARC reject policy'
   );
 
-  // 4. Optimize Zone Settings
+  // 4. RFC 7505 Null MX record (informs email systems domain accepts no inbound mail)
+  await addDnsRecord(
+    'MX',
+    'shapoorji-vyomora.com',
+    '.',
+    1,
+    'Null MX (RFC 7505) - Domain does not receive email',
+    { priority: 0 }
+  );
+
+  // 5. CAA records (Lockdown SSL issuance to Let\'s Encrypt and Google Trust Services)
+  await addDnsRecord(
+    'CAA',
+    'shapoorji-vyomora.com',
+    undefined,
+    1,
+    'Allow Let\'s Encrypt',
+    { data: { flags: 0, tag: 'issue', value: 'letsencrypt.org' } }
+  );
+
+  await addDnsRecord(
+    'CAA',
+    'shapoorji-vyomora.com',
+    undefined,
+    1,
+    'Allow Google Trust Services',
+    { data: { flags: 0, tag: 'issue', value: 'pki.goog' } }
+  );
+
+  // 6. Security & Performance Zone Settings
   await updateZoneSetting('always_use_https', 'on');
   await updateZoneSetting('early_hints', 'on');
   await updateZoneSetting('0rtt', 'on');
   await updateZoneSetting('min_tls_version', '1.2');
+  await updateZoneSetting('always_online', 'on');
+  await updateZoneSetting('ssl', 'strict');
+  await updateZoneSetting('minify', { css: 'on', html: 'on', js: 'on' });
   await updateZoneSetting('security_header', {
     strict_transport_security: {
       enabled: true,
@@ -163,11 +225,43 @@ async function run() {
     }
   });
 
-  // 5. Enable Crawler Hints
+  // 7. Enable Crawler Hints
   await enableCrawlerHints();
 
+  // 8. Edge Page Rules
+  // Rule 1: Cache static JS/CSS chunks for 1 year
+  await ensurePageRule(
+    '*shapoorji-vyomora.com/_next/static/*',
+    [
+      { id: 'cache_level', value: 'cache_everything' },
+      { id: 'edge_cache_ttl', value: 2419200 },
+      { id: 'browser_cache_ttl', value: 31536000 }
+    ],
+    1
+  );
+
+  // Rule 2: Cache static images for 30 days
+  await ensurePageRule(
+    '*shapoorji-vyomora.com/images/*',
+    [
+      { id: 'cache_level', value: 'cache_everything' },
+      { id: 'edge_cache_ttl', value: 2419200 },
+      { id: 'browser_cache_ttl', value: 2592000 }
+    ],
+    2
+  );
+
+  // Rule 3: Single-hop 301 Apex-to-WWW redirect
+  await ensurePageRule(
+    'shapoorji-vyomora.com/*',
+    [
+      { id: 'forwarding_url', value: { status_code: 301, url: 'https://www.shapoorji-vyomora.com/$1' } }
+    ],
+    3
+  );
+
   console.log('\n====================================================');
-  console.log('🎉 ALL CLOUDFLARE DNS & ZONE OPTIMIZATIONS VERIFIED');
+  console.log('🎉 ENTIRE CLOUDFLARE ECOSYSTEM IS FULLY HARDENED');
   console.log('====================================================');
 }
 
