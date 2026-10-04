@@ -74,7 +74,12 @@ export default async function ArticlePage({ params }: ArticleProps) {
     "@type": "Article",
     "headline": article.title,
     "description": article.metaDescription,
+    "image": [
+      `https://www.shapoorji-vyomora.com/api/og?title=${encodeURIComponent(article.title)}&subtitle=${encodeURIComponent(article.metaDescription)}`,
+      "https://www.shapoorji-vyomora.com/og-image.jpg"
+    ],
     "datePublished": article.date,
+    "dateModified": article.date,
     "author": {
       "@type": "Organization",
       "name": "Shapoorji Pallonji Real Estate",
