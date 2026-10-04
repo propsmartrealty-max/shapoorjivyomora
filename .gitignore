@@ -39,6 +39,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# credentials and keys
+*service_account*.json
+*credentials*.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+

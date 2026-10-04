@@ -14,10 +14,15 @@ const QUOTA_LIMIT = 200; // Google Indexing API daily limit
 const STATE_FILE = path.join(process.cwd(), '.seo-indexer-state.json');
 
 async function getAuthClient() {
-  const credentialsJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  let credentialsJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  const serviceAccountFile = path.resolve(process.cwd(), 'service_account.json');
   
+  if (!credentialsJson && fs.existsSync(serviceAccountFile)) {
+    credentialsJson = fs.readFileSync(serviceAccountFile, 'utf8');
+  }
+
   if (!credentialsJson) {
-    console.warn("⚠️ GOOGLE_SERVICE_ACCOUNT_JSON not found. Skipping Google Indexing API.");
+    console.warn("⚠️ GOOGLE_SERVICE_ACCOUNT_JSON or service_account.json not found. Skipping Google Indexing API.");
     return null;
   }
 
@@ -80,36 +85,32 @@ async function main() {
   const indexing = google.indexing({ version: 'v3', auth: authClient as any });
   const state = loadState();
 
-  // 3. Generate all possible URLs
-  const allLocations = [...SEOLocations, ...SEONRILocations];
-  const allProgrammaticUrls: string[] = [];
-  
-  // Hubs & Priority Pages
-  const priorityRoutes = [
-    '/', '/locations', '/investment-calculator', '/vision', '/contact'
-  ].map(r => `${BASE_URL}${r}`);
+  // 3. Load all verified URLs from dist/sitemap.xml first
+  let urlsToSubmit: string[] = [];
+  const distSitemapPath = path.join(process.cwd(), 'dist', 'sitemap.xml');
+  if (fs.existsSync(distSitemapPath)) {
+    const sitemapContent = fs.readFileSync(distSitemapPath, 'utf-8');
+    const matches = [...sitemapContent.matchAll(/<loc>(.*?)<\/loc>/g)];
+    urlsToSubmit = matches.map(m => m[1]);
+    console.log(`📋 Found ${urlsToSubmit.length} canonical URLs in dist/sitemap.xml`);
+  }
 
-  for (const location of allLocations) {
-    for (const config of SEOConfigurations) {
-      for (const topic of SEOTopics) {
-        allProgrammaticUrls.push(`${BASE_URL}/market/${location}/${config}/${topic}`);
+  if (urlsToSubmit.length === 0) {
+    // Fallback: Generate programmatic URLs
+    const allLocations = [...SEOLocations, ...SEONRILocations];
+    for (const location of allLocations) {
+      for (const config of SEOConfigurations) {
+        for (const topic of SEOTopics) {
+          urlsToSubmit.push(`${BASE_URL}/market/${location}/${config}/${topic}`);
+        }
       }
     }
   }
 
-  // Combine Priority + Next Chunk of Programmatic
-  // We want to submit the priority routes every time they change, but for daily cron, 
-  // we just iterate through the programmatic list.
-  let startIndex = state.lastIndexSubmitted;
-  let endIndex = startIndex + QUOTA_LIMIT;
-  
-  if (endIndex > allProgrammaticUrls.length) {
-    // Loop back to start if we finished all
-    endIndex = QUOTA_LIMIT;
-    startIndex = 0;
+  // Ensure within quota limit
+  if (urlsToSubmit.length > QUOTA_LIMIT) {
+    urlsToSubmit = urlsToSubmit.slice(0, QUOTA_LIMIT);
   }
-
-  const urlsToSubmit = allProgrammaticUrls.slice(startIndex, endIndex);
 
   console.log(`📦 Preparing to submit ${urlsToSubmit.length} URLs to Google...`);
 
@@ -133,7 +134,9 @@ async function main() {
   console.log(`✅ Successfully submitted ${successCount} URLs.`);
   
   // Update state
-  state.lastIndexSubmitted = endIndex;
+  state.lastIndexSubmitted = (state.lastIndexSubmitted || 0) + successCount;
+  state.lastRun = new Date().toISOString();
+  state.totalSubmitted = successCount;
   saveState(state);
 }
 
