@@ -21,6 +21,7 @@ export default function HTMLSitemapPage() {
     { name: "Masterplan & Site Layout", href: "/masterplan" },
     { name: "Specifications & Premium Finishes", href: "/specifications" },
     { name: "Location, Metro Line 3 & Transit Map", href: "/location" },
+    { name: "West Pune Real Estate Authority Hub", href: "/west-pune-real-estate" },
     { name: "Shapoorji Pallonji Pune Projects Portfolio", href: "/shapoorji-pallonji-pune-projects" },
     { name: "Investment & EMI ROI Calculator", href: "/investment-calculator" },
     { name: "Real Estate Market Articles & Research", href: "/articles" },

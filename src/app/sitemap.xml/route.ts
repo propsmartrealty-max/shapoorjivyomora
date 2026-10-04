@@ -12,6 +12,7 @@ export async function GET() {
     { path: '/masterplan', priority: '0.9', changefreq: 'weekly' },
     { path: '/specifications', priority: '0.8', changefreq: 'monthly' },
     { path: '/location', priority: '0.9', changefreq: 'weekly' },
+    { path: '/west-pune-real-estate', priority: '0.95', changefreq: 'daily' },
     { path: '/locations', priority: '0.8', changefreq: 'weekly' },
     { path: '/shapoorji-pallonji-pune-projects', priority: '0.9', changefreq: 'weekly' },
     { path: '/investment-calculator', priority: '0.8', changefreq: 'monthly' },

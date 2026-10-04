@@ -11,8 +11,8 @@ const navLinks = [
   { label: "Residences", href: "/residences" },
   { label: "Amenities", href: "/amenities" },
   { label: "Masterplan", href: "/masterplan" },
-  { label: "Specifications", href: "/specifications" },
   { label: "Location", href: "/location" },
+  { label: "West Pune Hub", href: "/west-pune-real-estate" },
   { label: "Pune Projects", href: "/shapoorji-pallonji-pune-projects" }
 ];
 

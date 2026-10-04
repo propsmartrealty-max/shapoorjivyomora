@@ -93,6 +93,7 @@ export default function Footer() {
                 { label: "32k Sq. Ft. Clubhouse", href: "/amenities" },
                 { label: "Specifications & Finishes", href: "/specifications" },
                 { label: "Location & Metro Connectivity", href: "/location" },
+                { label: "West Pune Real Estate Hub", href: "/west-pune-real-estate" },
                 { label: "Shapoorji Pune Projects", href: "/shapoorji-pallonji-pune-projects" },
                 { label: "ROI & EMI Calculator", href: "/investment-calculator" },
                 { label: "All Pune Micro-Markets", href: "/locations" },
@@ -210,12 +211,12 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Market Research & Guides</h4>
             <ul className="space-y-2 text-[11px] text-white/50">
+              <li><Link href="/west-pune-real-estate" className="text-[#C5A059] font-semibold hover:text-white transition-colors">West Pune Real Estate Market Guide 2026</Link></li>
+              <li><Link href="/articles/shapoorji-vyomora-vs-godrej-24-and-godrej-hillside-hinjewadi" className="hover:text-white transition-colors">Vyomora vs Godrej 24 & Godrej Hillside</Link></li>
+              <li><Link href="/articles/joyville-vyomora-vs-kolte-patil-life-republic-hinjewadi" className="hover:text-white transition-colors">Joyville Vyomora vs Kolte Patil Life Republic</Link></li>
+              <li><Link href="/articles/pune-metro-line-3-hinjewadi-to-shivajinagar-real-estate-impact" className="hover:text-white transition-colors">Pune Metro Line 3 Price Impact Report</Link></li>
               <li><Link href="/articles/luxury-3bhk-4bhk-duplex-apartments-in-baner-mahalunge" className="hover:text-white transition-colors">Luxury 3BHK, 4BHK & Duplex in Baner-Mahalunge</Link></li>
-              <li><Link href="/articles/3bhk-in-mahalunge-vs-4bhk-in-baner-luxury-comparison" className="hover:text-white transition-colors">3BHK in Mahalunge vs 4BHK in Baner Comparison</Link></li>
-              <li><Link href="/articles/shapoorji-vyomora-vs-godrej-hillside-vs-kolte-patil-life-republic" className="hover:text-white transition-colors">Vyomora vs Godrej Hillside vs Life Republic</Link></li>
-              <li><Link href="/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi" className="hover:text-white transition-colors">Joyville Sensorium vs Joyville Vyomora</Link></li>
               <li><Link href="/articles/nri-guide-investing-in-pune-real-estate-from-usa-dubai-uk" className="hover:text-white transition-colors">NRI Investment Guide: Dubai, USA & UK to Pune</Link></li>
-              <li><Link href="/articles/sky-duplex-simplex-5bhk-penthouses-in-west-pune-real-estate" className="hover:text-white transition-colors">Sky Duplex, Simplex & 5BHK Penthouses Guide</Link></li>
             </ul>
           </div>
         </div>
