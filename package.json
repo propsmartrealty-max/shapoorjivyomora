@@ -15,7 +15,8 @@
     "pages:deploy": "wrangler pages deploy dist",
     "index:google": "npx tsx scripts/google-indexer.ts",
     "index:indexnow": "node scripts/submit-indexnow.mjs",
-    "index:all": "npm run index:google && npm run index:indexnow"
+    "index:all": "npm run index:google && npm run index:indexnow",
+    "gsc:status": "npx tsx scripts/gsc-status.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
