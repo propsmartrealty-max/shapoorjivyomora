@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Star, ShieldCheck, MapPin, CheckCircle, ExternalLink, ThumbsUp } from "lucide-react";
 import { useState } from "react";
 
@@ -86,7 +85,7 @@ export default function GoogleReviews() {
   const filteredReviews = filter === "all" ? reviewsData : reviewsData.filter(r => r.category === filter);
 
   return (
-    <section id="reviews" className="py-24 md:py-32 bg-[#050C17] text-white relative overflow-hidden border-t border-white/10">
+    <section id="reviews" className="py-24 md:py-32 bg-[#050C17] text-white relative overflow-hidden border-t border-white/10 section-deferred">
       {/* Background ambient gold gradient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C5A059]/10 rounded-full blur-[160px] pointer-events-none" />
 
@@ -177,13 +176,9 @@ export default function GoogleReviews() {
 
         {/* Reviews Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredReviews.map((review, idx) => (
-            <motion.div
+          {filteredReviews.map((review) => (
+            <div
               key={review.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
               className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-[#C5A059]/40 rounded-xl p-6 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
@@ -228,7 +223,7 @@ export default function GoogleReviews() {
                   <span>{review.helpfulCount}</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

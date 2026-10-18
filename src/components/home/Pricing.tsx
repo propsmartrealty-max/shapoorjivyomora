@@ -1,9 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
-import { Download } from "lucide-react";
+import PricingCTA from "./PricingCTA";
 
 const pricingData = [
   { typology: "2 BHK (LUXE)", area: "684.91", price: "₹84.99 Lacs - ₹95.28 Lacs" },
@@ -19,16 +14,12 @@ const pricingData = [
 
 export default function Pricing() {
   return (
-    <section id="residences" className="py-24 md:py-32 bg-watercolor relative overflow-hidden">
+    <section id="residences" className="py-24 md:py-32 bg-watercolor relative overflow-hidden section-deferred">
       {/* Decorative background blur */}
       <div className="absolute bottom-0 left-0 w-1/2 h-full bg-[#C5A059]/10 blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <div 
           className="text-center mb-16"
         >
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-4 block">
@@ -40,7 +31,7 @@ export default function Pricing() {
           <p className="text-[#1e2338]/80 font-light max-w-2xl mx-auto">
             Discover thoughtfully crafted residences with layouts optimized for modern living. Choose from our diverse range of 2 & 3 BHK configurations starting from <strong>₹84.99 Lakhs* onwards</strong>.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/60 backdrop-blur-md rounded-sm overflow-hidden border border-[#0A192F]/10 shadow-sm">
@@ -55,12 +46,8 @@ export default function Pricing() {
                 </thead>
                 <tbody>
                   {pricingData.map((row, index) => (
-                    <motion.tr
+                    <tr
                       key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
                       className="border-b border-[#0A192F]/5 hover:bg-white/80 transition-colors group"
                     >
                       <td className="py-5 px-6 text-[#0A192F] font-medium whitespace-nowrap group-hover:text-[#8A6B2D] transition-colors">
@@ -72,7 +59,7 @@ export default function Pricing() {
                       <td className="py-5 px-6 text-[#0A192F] font-medium">
                         {row.price}
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
                 </tbody>
               </table>
@@ -85,14 +72,7 @@ export default function Pricing() {
               * Above Price excludes advance maintenance and corpus fund charges, to be paid on possession.<br />
               * All taxes are subject to change as per the applicable law prevailing at such time.
             </p>
-            <Button 
-              variant="gold" 
-              aria-label="Enquire Now for Pricing and Floor Plans"
-              className="text-sm bg-[#0A192F] text-white shrink-0"
-              onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
-            >
-              Enquire Now
-            </Button>
+            <PricingCTA />
           </div>
         </div>
       </div>

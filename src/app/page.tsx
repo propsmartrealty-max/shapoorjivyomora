@@ -10,11 +10,22 @@ import Location from "@/components/home/Location";
 import Connectivity from "@/components/home/Connectivity";
 import ShapoorjiPuneEcosystem from "@/components/home/ShapoorjiPuneEcosystem";
 import AboutDeveloper from "@/components/home/AboutDeveloper";
+import HomeFAQ from "@/components/home/HomeFAQ";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.shapoorji-vyomora.com",
+    canonical: "https://www.shapoorji-vyomora.com/",
+    languages: {
+      "en-IN": "https://www.shapoorji-vyomora.com/",
+      "en-US": "https://www.shapoorji-vyomora.com/",
+      "en-AE": "https://www.shapoorji-vyomora.com/",
+      "en-GB": "https://www.shapoorji-vyomora.com/",
+      "en-SG": "https://www.shapoorji-vyomora.com/",
+      "en-CA": "https://www.shapoorji-vyomora.com/",
+      "en-AU": "https://www.shapoorji-vyomora.com/",
+      "x-default": "https://www.shapoorji-vyomora.com/",
+    },
   },
 };
 
@@ -33,6 +44,7 @@ export default function Home() {
       <Connectivity />
       <ShapoorjiPuneEcosystem />
       <AboutDeveloper />
+      <HomeFAQ />
     </>
   );
 }

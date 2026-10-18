@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState } from "react";
 import { specificationsData } from "./specificationsData";
 import { Check } from "lucide-react";
 
@@ -10,63 +8,19 @@ type TabType = "2_3_BHK" | "Duplexes";
 
 export default function Specifications() {
   const [activeTab, setActiveTab] = useState<TabType>("2_3_BHK");
-  const containerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    
-    const ctx = gsap.context(() => {
-      // Header animation
-      gsap.fromTo(".spec-header",
-        { y: 30, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 75%",
-          }
-        }
-      );
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  // Animate content change on tab switch
-  useEffect(() => {
-    if (!contentRef.current) return;
-    
-    const cards = contentRef.current.querySelectorAll('.spec-card');
-    
-    gsap.fromTo(cards,
-      { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        stagger: 0.05,
-        ease: "power2.out",
-        clearProps: "all"
-      }
-    );
-  }, [activeTab]);
-
   const currentData = specificationsData[activeTab];
 
   return (
     <section 
       id="specifications" 
-      className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden" 
-      ref={containerRef}
+      className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden section-deferred" 
     >
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header */}
-        <div className="spec-header text-center mb-16 max-w-3xl mx-auto">
+        <div 
+          className="spec-header text-center mb-16 max-w-3xl mx-auto"
+        >
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-4 block">
             Home Specifications
           </span>
@@ -113,7 +67,7 @@ export default function Specifications() {
         </div>
 
         {/* Specifications Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6" ref={contentRef}>
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {currentData.map((category, index) => {
             const Icon = category.icon;
             return (

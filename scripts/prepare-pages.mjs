@@ -39,22 +39,39 @@ function processNextServerDir(currentDir, targetBase) {
       processNextServerDir(fullPath, targetBase);
     } else if (entry.name.endsWith('.html')) {
       const relPath = path.relative(nextAppDir, fullPath);
+      let content = fs.readFileSync(fullPath, 'utf8');
+      // Optimize Next.js hydration scripts: replace async="" with defer="" so first paint paints instantaneously without main thread blocking
+      content = content.replace(/(<script\s+[^>]*?src=[\"'][^\"']+[\"'][^>]*?)\s+async=[\"'][\"']/gi, '$1 defer=""');
+
+      // Guarantee global hreflang tags in <head> for Google global ranking
+      const hreflangTags = `
+<link rel="alternate" hreflang="en-IN" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="en-US" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="en-AE" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="en-GB" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="en-SG" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="en-CA" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="en-AU" href="https://www.shapoorji-vyomora.com/" />
+<link rel="alternate" hreflang="x-default" href="https://www.shapoorji-vyomora.com/" />`;
+      if (!content.includes('hreflang="en-IN"')) {
+        content = content.replace('</head>', `${hreflangTags}\n</head>`);
+      }
       
       if (entry.name === 'index.html') {
         const dest = path.join(distDir, relPath);
         fs.mkdirSync(path.dirname(dest), { recursive: true });
-        fs.copyFileSync(fullPath, dest);
+        fs.writeFileSync(dest, content, 'utf8');
       } else {
         // e.g. amenities.html -> dist/amenities/index.html
         const baseName = entry.name.replace(/\.html$/, '');
         const parentDir = path.dirname(relPath);
         const dest = path.join(distDir, parentDir, baseName, 'index.html');
         fs.mkdirSync(path.dirname(dest), { recursive: true });
-        fs.copyFileSync(fullPath, dest);
+        fs.writeFileSync(dest, content, 'utf8');
 
         // Also keep direct amenities.html for direct URL matching
         const directDest = path.join(distDir, parentDir, `${baseName}.html`);
-        fs.copyFileSync(fullPath, directDest);
+        fs.writeFileSync(directDest, content, 'utf8');
       }
     } else if (entry.name.endsWith('.body')) {
       // e.g. sitemap.xml.body -> dist/sitemap.xml

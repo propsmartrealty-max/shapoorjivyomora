@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
 
@@ -25,7 +24,7 @@ export default function Header() {
       setIsScrolled(window.scrollY > 30);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -44,10 +43,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-3 md:top-5 left-0 right-0 z-50 flex justify-center px-4 md:px-6 pointer-events-none">
-        <motion.div 
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        <div 
           className={`pointer-events-auto w-full max-w-6xl rounded-full transition-all duration-500 flex items-center justify-between px-5 md:px-7 py-2 md:py-2.5 ${
             isScrolled 
               ? "bg-white/92 backdrop-blur-xl border border-[#C5A059]/30 shadow-[0_10px_35px_rgba(10,25,47,0.12)]" 
@@ -55,7 +51,7 @@ export default function Header() {
           }`}
         >
           {/* Brand / Logo */}
-          <Link href="/" aria-label="Shapoorji Pallonji Joyville Vyomora Homepage" className="flex flex-col group py-0.5 shrink-0">
+          <Link href="/" prefetch={false} aria-label="Shapoorji Pallonji Joyville Vyomora Homepage" className="flex flex-col group py-0.5 shrink-0">
             <span className="text-lg md:text-xl font-serif font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#0A192F] via-[#0A192F] to-[#C5A059] group-hover:to-[#C5A059] transition-all duration-300">
               VYOMORA
             </span>
@@ -70,6 +66,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
+                prefetch={false}
                 className="px-3.5 py-1.5 rounded-full text-[11px] xl:text-xs font-bold tracking-wider uppercase text-[#0A192F]/75 hover:text-[#0A192F] hover:bg-[#C5A059]/15 transition-all duration-300 whitespace-nowrap"
               >
                 {link.label}
@@ -105,66 +102,51 @@ export default function Header() {
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
-        </motion.div>
+        </div>
       </header>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 bg-[#FDFBF7]/98 backdrop-blur-2xl flex flex-col justify-center items-center px-6 pt-24 pb-12"
-          >
-            <nav className="flex flex-col items-center space-y-4 mb-10 w-full max-w-xs">
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.label}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 + i * 0.05 }}
-                  className="w-full text-center"
-                >
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full py-2.5 px-6 rounded-full text-lg font-serif tracking-wider text-[#0A192F] hover:bg-[#C5A059]/15 hover:text-[#C5A059] transition-all"
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="flex flex-col w-full max-w-xs space-y-3"
-            >
-              <button 
-                aria-label="Enquire Now for Shapoorji Joyville Vyomora"
-                className="w-full py-3.5 rounded-full bg-[#0A192F] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#C5A059] hover:text-[#0A192F] transition-colors shadow-lg"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  window.dispatchEvent(new Event('open-enquiry-modal'));
-                }}
-              >
-                Enquire Now
-              </button>
+      <div
+        className={`fixed inset-0 z-40 bg-[#FDFBF7]/98 backdrop-blur-2xl flex flex-col justify-center items-center px-6 pt-24 pb-12 transition-all duration-300 ease-out ${
+          mobileMenuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-6 pointer-events-none"
+        }`}
+      >
+        <nav className="flex flex-col items-center space-y-4 mb-10 w-full max-w-xs">
+          {navLinks.map((link) => (
+            <div key={link.label} className="w-full text-center">
               <Link
-                href="/shapoorji-pallonji-pune-projects"
+                href={link.href}
+                prefetch={false}
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-3.5 rounded-full border border-[#0A192F]/20 text-[#0A192F] font-bold text-xs uppercase tracking-widest text-center hover:bg-black/5 transition-colors"
+                className="block w-full py-2.5 px-6 rounded-full text-lg font-serif tracking-wider text-[#0A192F] hover:bg-[#C5A059]/15 hover:text-[#C5A059] transition-all"
               >
-                All Pune Projects
+                {link.label}
               </Link>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </div>
+          ))}
+        </nav>
+
+        <div className="flex flex-col w-full max-w-xs space-y-3">
+          <button 
+            aria-label="Enquire Now for Shapoorji Joyville Vyomora"
+            className="w-full py-3.5 rounded-full bg-[#0A192F] text-white font-bold text-xs uppercase tracking-widest hover:bg-[#C5A059] hover:text-[#0A192F] transition-colors shadow-lg"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.dispatchEvent(new Event('open-enquiry-modal'));
+            }}
+          >
+            Enquire Now
+          </button>
+          <Link
+            href="/shapoorji-pallonji-pune-projects"
+            prefetch={false}
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full py-3.5 rounded-full border border-[#0A192F]/20 text-[#0A192F] font-bold text-xs uppercase tracking-widest text-center hover:bg-black/5 transition-colors"
+          >
+            All Pune Projects
+          </Link>
+        </div>
+      </div>
     </>
   );
 }

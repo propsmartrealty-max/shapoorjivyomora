@@ -1,18 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export function TrustBadge() {
   const text = "150 YEARS OF LEGACY • SHAPOORJI PALLONJI • ";
   const characters = text.split("");
 
   return (
     <div className="relative flex items-center justify-center w-32 h-32 md:w-40 md:h-40">
-      {/* Rotating Text Ring */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute w-full h-full text-[#E5D3B3] text-xs font-bold tracking-[0.2em] uppercase"
+      {/* Rotating Text Ring - 100% GPU-accelerated CSS compositor animation */}
+      <div
+        className="absolute w-full h-full text-[#E5D3B3] text-xs font-bold tracking-[0.2em] uppercase animate-[spin_20s_linear_infinite]"
       >
         {characters.map((char, i) => (
           <span
@@ -25,7 +21,7 @@ export function TrustBadge() {
             {char}
           </span>
         ))}
-      </motion.div>
+      </div>
 
       {/* Center Icon/Emblem */}
       <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border border-[#E5D3B3]/30 flex items-center justify-center bg-[#0F172A]/80 backdrop-blur-sm shadow-[0_0_15px_rgba(125,211,252,0.2)]">

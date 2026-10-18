@@ -5,27 +5,26 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
-import EnquiryModal from "@/components/EnquiryModal";
-import ExitIntentModal from "@/components/ExitIntentModal";
-import WhatsAppWidget from "@/components/WhatsAppWidget";
 import StructuredData from "@/components/StructuredData";
-import CustomCursor from "@/components/ui/CustomCursor";
+import ClientModals from "@/components/ClientModals";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  display: "optional",
+  preload: false,
   fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+  adjustFontFallback: true,
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  display: "optional",
+  preload: false,
   fallback: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+  adjustFontFallback: true,
 });
 
 export const viewport = {
@@ -37,6 +36,26 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.shapoorji-vyomora.com'),
   alternates: {
     canonical: 'https://www.shapoorji-vyomora.com/',
+    languages: {
+      'en-IN': 'https://www.shapoorji-vyomora.com/',
+      'en-US': 'https://www.shapoorji-vyomora.com/',
+      'en-AE': 'https://www.shapoorji-vyomora.com/',
+      'en-GB': 'https://www.shapoorji-vyomora.com/',
+      'en-SG': 'https://www.shapoorji-vyomora.com/',
+      'en-CA': 'https://www.shapoorji-vyomora.com/',
+      'en-AU': 'https://www.shapoorji-vyomora.com/',
+      'x-default': 'https://www.shapoorji-vyomora.com/',
+    },
+  },
+  other: {
+    'geo.region': 'IN-MH',
+    'geo.placename': 'Hinjewadi, Pune',
+    'geo.position': '18.5913;73.7389',
+    'ICBM': '18.5913, 73.7389',
+    'DC.title': 'Shapoorji Pallonji Joyville Vyomora Hinjewadi Pune',
+    'rating': 'general',
+    'distribution': 'global',
+    'revisit-after': '1 days',
   },
   applicationName: "Shapoorji Pallonji Vyomora",
   authors: [{ name: "Shapoorji Pallonji Real Estate", url: "https://shapoorjirealestate.com" }],
@@ -52,9 +71,17 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: "Vyomora",
   },
-  title: "Shapoorji Pallonji Pune | Joyville Homes Pune | Joyville Vyomora Hinjewadi",
-  description: "Official portal for Shapoorji Pallonji Real Estate Pune and Joyville Homes. Explore Joyville Vyomora Hinjewadi (Joy 3.0), Sensorium, Hadapsar Annexe, Wildstone & Celestian. Luxury 2, 3 & 4 BHK apartments from ₹84.99 L* near Rajiv Gandhi Infotech Park. MahaRERA: PR1260002600999.",
+  title: {
+    default: "Shapoorji Vyomora Hinjewadi | Joyville Homes Pune | Shapoorji Pallonji Real Estate",
+    template: "%s | Shapoorji Vyomora Hinjewadi",
+  },
+  description: "Official portal for Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. Explore luxury 2, 3 & 4 BHK apartments and sky duplexes from ₹84.99 L* with 32,000+ sq.ft. clubhouse near Rajiv Gandhi Infotech Park. MahaRERA: PR1260002600999.",
   keywords: [
+    "shapoorji vyomora hinjewadi",
+    "shapoorji pallonji vyomora hinjewadi",
+    "joyville vyomora hinjewadi",
+    "joyville vyomora hinjewadi pune",
+    "shapoorji joyville vyomora pune",
     "shapoorji pallonji pune",
     "joyville homes pune",
     "shapoorji pallonji real estate pune",
@@ -73,8 +100,8 @@ export const metadata: Metadata = {
     "Shapoorji Pallonji Vyomora",
     "Joyville Vyomora",
     "Vyomara Hinjewadi",
-    "Shapoorji Vyomara Pune",
-    "Joyville Vyomara Hinjewadi",
+    "Shapoorji Vyomora Pune",
+    "Joyville Vyomora Hinjewadi",
     "Vymora by Joyville",
     "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
     "Shapoorji Pallonji Vyomora Hinjewadi", 
@@ -165,7 +192,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/hero_bg_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
       </head>
@@ -174,18 +202,14 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <StructuredData />
-        <CustomCursor />
-        <SmoothScroll>
-          <Header />
-          <main className="flex flex-col min-h-screen">
-            {children}
-          </main>
-          <Footer />
-          <FloatingCTA />
-          <EnquiryModal />
-          <ExitIntentModal />
-          <WhatsAppWidget />
-        </SmoothScroll>
+        <Header />
+        <main className="flex flex-col min-h-screen">
+          {children}
+        </main>
+        <Footer />
+        <FloatingCTA />
+        <ClientModals />
+        <SmoothScroll />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}

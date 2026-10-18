@@ -1,52 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { ArrowRight, MapPin, Phone, Mail, CheckCircle2, Compass, Building2, Navigation } from "lucide-react";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { submitLead } from "@/lib/submitLead";
-
-const footerSchema = z.object({
-  email: z.string().email("Please enter a valid email address"),
-});
-
-type FooterFormData = z.infer<typeof footerSchema>;
+import { ArrowRight, MapPin, Phone, Building2, Navigation } from "lucide-react";
+import FooterNewsletter from "./FooterNewsletter";
 
 export default function Footer() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset
-  } = useForm<FooterFormData>({
-    resolver: zodResolver(footerSchema),
-  });
-
-  const onSubmit = async (data: FooterFormData) => {
-    setStatus("loading");
-    setErrorMessage("");
-
-    try {
-      await submitLead({
-        name: "Newsletter Subscriber",
-        phone: "Not provided",
-        email: data.email,
-        interest: "Newsletter Updates",
-        _subject: "New Newsletter Registration from Footer",
-      });
-      setStatus("success");
-      reset();
-    } catch (error) {
-      console.error(error);
-      setStatus("success");
-      reset();
-    }
-  };
 
   return (
     <footer className="bg-[#0A192F] text-white pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
@@ -58,7 +14,7 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="flex flex-col group mb-8">
+            <Link href="/" prefetch={false} className="flex flex-col group mb-8">
               <span className="text-2xl font-serif tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-[#C5A059]">
                 VYOMORA
               </span>
@@ -101,7 +57,7 @@ export default function Footer() {
                 { label: "Real Estate Articles", href: "/articles" }
               ].map((item) => (
                 <li key={item.label}>
-                  <Link href={item.href} className="text-xs text-white/70 hover:text-white flex items-center group transition-colors">
+                  <Link href={item.href} prefetch={false} className="text-xs text-white/70 hover:text-white flex items-center group transition-colors">
                     <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 ease-out text-[#C5A059]">
                       <ArrowRight size={10} />
                     </span>
@@ -142,48 +98,7 @@ export default function Footer() {
           {/* Newsletter & Brochure */}
           <div className="col-span-1">
             <h4 className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase mb-8">Get VIP Pricing</h4>
-            
-            {status === "success" ? (
-              <div className="bg-white/5 border border-[#C5A059]/30 rounded-sm p-6 text-center">
-                <CheckCircle2 className="w-8 h-8 text-[#C5A059] mx-auto mb-3" />
-                <h5 className="text-sm font-bold text-white mb-1">Subscribed!</h5>
-                <p className="text-xs text-white/80">Thank you for registering your interest.</p>
-              </div>
-            ) : (
-              <>
-                <p className="text-xs text-white/80 mb-5 font-light">
-                  Register for exclusive pre-launch pricing, unit floor plans, and priority inventory access.
-                </p>
-                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
-                  <div className="flex flex-col">
-                    <label htmlFor="footer-email" className="sr-only">Enter Your Email Address</label>
-                    <input 
-                      {...register("email")}
-                      id="footer-email"
-                      type="email" 
-                      placeholder="Enter Your Email Address" 
-                      aria-label="Enter your email address for VIP brochure and pricing"
-                      className={`bg-transparent border-b pb-2 text-sm text-white focus:outline-none transition-colors placeholder:text-white/60 rounded-none ${errors.email ? 'border-red-400 focus:border-red-400' : 'border-white/20 focus:border-[#C5A059]'}`}
-                    />
-                    {errors.email && <p className="text-red-400 text-[10px] mt-1">{errors.email.message}</p>}
-                  </div>
-                  
-                  {status === "error" && (
-                    <p className="text-red-400 text-xs">{errorMessage}</p>
-                  )}
-                  
-                  <button 
-                    type="submit" 
-                    disabled={status === "loading"}
-                    aria-label="Download Brochure and Price Sheet"
-                    className="text-left text-xs tracking-[0.15em] text-white hover:text-[#C5A059] uppercase flex items-center transition-colors group disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {status === "loading" ? "Registering..." : "Download Brochure & Price Sheet"}
-                    {!status && <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />}
-                  </button>
-                </form>
-              </>
-            )}
+            <FooterNewsletter />
           </div>
         </div>
 
@@ -192,48 +107,48 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Shapoorji Pune Ecosystem</h4>
             <ul className="space-y-2 text-[11px] text-white/80">
-              <li><Link href="/shapoorji-pallonji-pune-projects" className="text-[#C5A059] font-semibold hover:text-white transition-colors">All Shapoorji Projects in Pune</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-pune-projects-master-portfolio-guide" className="hover:text-white transition-colors">Joyville Homes Pune Portfolio Guide</Link></li>
-              <li><Link href="/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi" className="hover:text-white transition-colors">Joyville Sensorium vs Vyomora</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review" className="hover:text-white transition-colors">Joy 3.0 Hinjewadi Review &amp; Prices</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-pune-projects-price-list-and-new-launches-2026" className="hover:text-white transition-colors">Pune Price List &amp; New Launches 2026</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-joyville-vyomora-township-project-details" className="hover:text-white transition-colors">Vyomora Township Master Details</Link></li>
+              <li><Link href="/shapoorji-pallonji-pune-projects" prefetch={false} className="text-[#C5A059] font-semibold hover:text-white transition-colors">All Shapoorji Projects in Pune</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-pune-projects-master-portfolio-guide" prefetch={false} className="hover:text-white transition-colors">Joyville Homes Pune Portfolio Guide</Link></li>
+              <li><Link href="/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi" prefetch={false} className="hover:text-white transition-colors">Joyville Sensorium vs Vyomora</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review" prefetch={false} className="hover:text-white transition-colors">Joy 3.0 Hinjewadi Review &amp; Prices</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-pune-projects-price-list-and-new-launches-2026" prefetch={false} className="hover:text-white transition-colors">Pune Price List &amp; New Launches 2026</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-joyville-vyomora-township-project-details" prefetch={false} className="hover:text-white transition-colors">Vyomora Township Master Details</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Pune Micro-Markets Focus</h4>
             <ul className="space-y-2 text-[11px] text-white/80">
-              <li><Link href="/market/mahalunge/luxury-apartments/property-investment" className="hover:text-white transition-colors">Mahalunge Real Estate & Township Projects</Link></li>
-              <li><Link href="/market/hinjewadi-phase-1/2bhk-in-hinjewadi/location-benefits" className="hover:text-white transition-colors">2 BHK Flats in Hinjewadi Phase 1</Link></li>
-              <li><Link href="/market/baner/4bhk-in-baner/price-trends" className="hover:text-white transition-colors">Luxury 4 BHK Apartments in Baner</Link></li>
-              <li><Link href="/market/wakad/3bhk-in-mahalunge/floor-plans" className="hover:text-white transition-colors">Premium 3 BHK Homes near Wakad & Baner</Link></li>
-              <li><Link href="/market/balewadi-high-street/sky-duplex/future-growth" className="hover:text-white transition-colors">Sky Duplexes near Balewadi High Street</Link></li>
-              <li><Link href="/market/rajiv-gandhi-infotech-park/luxury-apartments/connectivity" className="hover:text-white transition-colors">Apartments near Rajiv Gandhi Infotech Park</Link></li>
+              <li><Link href="/market/mahalunge/luxury-apartments/property-investment" prefetch={false} className="hover:text-white transition-colors">Mahalunge Real Estate & Township Projects</Link></li>
+              <li><Link href="/market/hinjewadi-phase-1/2bhk-in-hinjewadi/location-benefits" prefetch={false} className="hover:text-white transition-colors">2 BHK Flats in Hinjewadi Phase 1</Link></li>
+              <li><Link href="/market/baner/4bhk-in-baner/price-trends" prefetch={false} className="hover:text-white transition-colors">Luxury 4 BHK Apartments in Baner</Link></li>
+              <li><Link href="/market/wakad/3bhk-in-mahalunge/floor-plans" prefetch={false} className="hover:text-white transition-colors">Premium 3 BHK Homes near Wakad & Baner</Link></li>
+              <li><Link href="/market/balewadi-high-street/sky-duplex/future-growth" prefetch={false} className="hover:text-white transition-colors">Sky Duplexes near Balewadi High Street</Link></li>
+              <li><Link href="/market/rajiv-gandhi-infotech-park/luxury-apartments/connectivity" prefetch={false} className="hover:text-white transition-colors">Apartments near Rajiv Gandhi Infotech Park</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Typologies & Luxury Residences</h4>
             <ul className="space-y-2 text-[11px] text-white/80">
-              <li><Link href="/market/hinjewadi/2bhk-in-hinjewadi/price-trends" className="hover:text-white transition-colors">2 BHK Smart Apartments in Hinjewadi</Link></li>
-              <li><Link href="/market/mahalunge/3bhk-in-mahalunge/floor-plans" className="hover:text-white transition-colors">3 BHK Premium Township Flats in Mahalunge</Link></li>
-              <li><Link href="/market/baner/4bhk-in-baner/brochure-download" className="hover:text-white transition-colors">4 BHK Luxury Sky Suites in Baner-Mahalunge</Link></li>
-              <li><Link href="/market/pune-west/sky-duplex/amenities" className="hover:text-white transition-colors">Ultra Luxury Sky Duplex & Simplex Homes</Link></li>
-              <li><Link href="/market/pune/5bhk-sky-villas/masterplan" className="hover:text-white transition-colors">5 BHK Sky Villas & Presidential Penthouses</Link></li>
-              <li><Link href="/market/hinjewadi/best-flats-for-it-professionals/investment-roi" className="hover:text-white transition-colors">Best Flats for IT Professionals in Pune</Link></li>
+              <li><Link href="/market/hinjewadi/2bhk-in-hinjewadi/price-trends" prefetch={false} className="hover:text-white transition-colors">2 BHK Smart Apartments in Hinjewadi</Link></li>
+              <li><Link href="/market/mahalunge/3bhk-in-mahalunge/floor-plans" prefetch={false} className="hover:text-white transition-colors">3 BHK Premium Township Flats in Mahalunge</Link></li>
+              <li><Link href="/market/baner/4bhk-in-baner/brochure-download" prefetch={false} className="hover:text-white transition-colors">4 BHK Luxury Sky Suites in Baner-Mahalunge</Link></li>
+              <li><Link href="/market/pune-west/sky-duplex/amenities" prefetch={false} className="hover:text-white transition-colors">Ultra Luxury Sky Duplex & Simplex Homes</Link></li>
+              <li><Link href="/market/pune/5bhk-sky-villas/masterplan" prefetch={false} className="hover:text-white transition-colors">5 BHK Sky Villas & Presidential Penthouses</Link></li>
+              <li><Link href="/market/hinjewadi/best-flats-for-it-professionals/investment-roi" prefetch={false} className="hover:text-white transition-colors">Best Flats for IT Professionals in Pune</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Market Research & Guides</h4>
             <ul className="space-y-2 text-[11px] text-white/80">
-              <li><Link href="/west-pune-real-estate" className="text-[#C5A059] font-semibold hover:text-white transition-colors">West Pune Real Estate Market Guide 2026</Link></li>
-              <li><Link href="/articles/shapoorji-vyomora-vs-godrej-24-and-godrej-hillside-hinjewadi" className="hover:text-white transition-colors">Vyomora vs Godrej 24 & Godrej Hillside</Link></li>
-              <li><Link href="/articles/joyville-vyomora-vs-kolte-patil-life-republic-hinjewadi" className="hover:text-white transition-colors">Joyville Vyomora vs Kolte Patil Life Republic</Link></li>
-              <li><Link href="/articles/pune-metro-line-3-hinjewadi-to-shivajinagar-real-estate-impact" className="hover:text-white transition-colors">Pune Metro Line 3 Price Impact Report</Link></li>
-              <li><Link href="/articles/luxury-3bhk-4bhk-duplex-apartments-in-baner-mahalunge" className="hover:text-white transition-colors">Luxury 3BHK, 4BHK & Duplex in Baner-Mahalunge</Link></li>
-              <li><Link href="/articles/nri-guide-investing-in-pune-real-estate-from-usa-dubai-uk" className="hover:text-white transition-colors">NRI Investment Guide: Dubai, USA & UK to Pune</Link></li>
+              <li><Link href="/west-pune-real-estate" prefetch={false} className="text-[#C5A059] font-semibold hover:text-white transition-colors">West Pune Real Estate Market Guide 2026</Link></li>
+              <li><Link href="/articles/shapoorji-vyomora-vs-godrej-24-and-godrej-hillside-hinjewadi" prefetch={false} className="hover:text-white transition-colors">Vyomora vs Godrej 24 & Godrej Hillside</Link></li>
+              <li><Link href="/articles/joyville-vyomora-vs-kolte-patil-life-republic-hinjewadi" prefetch={false} className="hover:text-white transition-colors">Joyville Vyomora vs Kolte Patil Life Republic</Link></li>
+              <li><Link href="/articles/pune-metro-line-3-hinjewadi-to-shivajinagar-real-estate-impact" prefetch={false} className="hover:text-white transition-colors">Pune Metro Line 3 Price Impact Report</Link></li>
+              <li><Link href="/articles/luxury-3bhk-4bhk-duplex-apartments-in-baner-mahalunge" prefetch={false} className="hover:text-white transition-colors">Luxury 3BHK, 4BHK & Duplex in Baner-Mahalunge</Link></li>
+              <li><Link href="/articles/nri-guide-investing-in-pune-real-estate-from-usa-dubai-uk" prefetch={false} className="hover:text-white transition-colors">NRI Investment Guide: Dubai, USA & UK to Pune</Link></li>
             </ul>
           </div>
         </div>
@@ -248,9 +163,9 @@ export default function Footer() {
             <div className="text-center md:text-right">
               <p className="mb-2">&copy; {new Date().getFullYear()} Shapoorji Pallonji Real Estate. All rights reserved.</p>
               <div className="flex space-x-4 justify-center md:justify-end">
-                <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                <Link href="/sitemap" className="hover:text-white transition-colors text-[#C5A059]">HTML Sitemap</Link>
+                <Link href="/privacy-policy" prefetch={false} className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms" prefetch={false} className="hover:text-white transition-colors">Terms of Service</Link>
+                <Link href="/sitemap" prefetch={false} className="hover:text-white transition-colors text-[#C5A059]">HTML Sitemap</Link>
                 <a href="#disclaimer" className="hover:text-white transition-colors">RERA Disclaimers</a>
               </div>
             </div>

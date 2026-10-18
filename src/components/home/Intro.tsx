@@ -1,64 +1,19 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 export default function Intro() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-
-  useEffect(() => {
-    if (!textRef.current) return;
-    
-    // Split text animation for luxury feel
-    const textElements = textRef.current.querySelectorAll('.reveal-text');
-    
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        textElements,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 70%",
-          }
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section id="vision" ref={sectionRef} className="relative py-32 md:py-48 bg-watercolor text-[#1e2338] overflow-hidden">
+    <section id="vision" className="relative py-32 md:py-48 bg-watercolor text-[#1e2338] overflow-hidden">
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
         <div className="w-full h-full" style={{ backgroundImage: "linear-gradient(#0A192F 1px, transparent 1px), linear-gradient(90deg, #0A192F 1px, transparent 1px)", backgroundSize: "100px 100px" }} />
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <motion.div style={{ y, opacity }} className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-8">
             The Philosophy
           </p>
           
-          <div ref={textRef} className="space-y-6">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight reveal-text text-[#0A192F]">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight text-[#0A192F]">
               An endless horizon of happiness.
             </h2>
           </div>
@@ -74,7 +29,7 @@ export default function Intro() {
               The vision is simple: create a community where scale feels expansive, yet life feels intimate.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

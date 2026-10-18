@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,21 +11,21 @@ const layoutData = [
     id: "master",
     title: "Master Layout",
     subtitle: "25 Acres of Master-Planned Brilliance",
-    image: "https://shapoorjirealestate.com/files/assets/jpegs/all_projects/vymora-by-joyville/floor-plan/floor-plan3.webp",
+    image: "/images/floor-plan3.webp",
     features: ["5 Majestic Towers", "Elevated Eco-Deck", "32,000+ sq. ft. Clubhouse", "Multi-tier Security"]
   },
   {
     id: "2bhk",
     title: "2 BHK Residences",
     subtitle: "685 Sq. Ft. (63.64 Sq. M.)",
-    image: "https://shapoorjirealestate.com/files/assets/jpegs/all_projects/vymora-by-joyville/floor-plan/floor-plan2.webp",
+    image: "/images/floor-plan2.webp",
     features: ["Spacious Living Area", "Master Suite with Walk-in Wardrobe", "Panoramic Balcony", "Vaastu Compliant"]
   },
   {
     id: "3bhk",
     title: "3 BHK & Duplex",
     subtitle: "1434 Sq. Ft. (133.22 Sq. M.)",
-    image: "https://shapoorjirealestate.com/files/assets/jpegs/all_projects/vymora-by-joyville/floor-plan/floor-plan1.webp",
+    image: "/images/floor-plan1.webp",
     features: ["Double Height Living", "Premium Fixtures", "Expansive Deck Area", "Private Study Room"]
   }
 ];
@@ -36,7 +35,7 @@ export default function MasterLayout() {
   const activeData = layoutData.find((d) => d.id === activeTab) || layoutData[0];
 
   return (
-    <section id="masterplan" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden">
+    <section id="masterplan" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden section-deferred">
       {/* Decorative background blur */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#C5A059]/5 blur-[150px] pointer-events-none" />
 
@@ -50,7 +49,7 @@ export default function MasterLayout() {
               Master Plan & <span className="text-[#8A6B2D] italic">Layouts</span>
             </h2>
           </div>
-          <Link href="/residences">
+          <Link href="/residences" prefetch={false}>
             <Button variant="outlineDark" className="group">
               View All Specifications 
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -87,59 +86,47 @@ export default function MasterLayout() {
             </div>
 
             {/* Active Features */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white/95 backdrop-blur-md p-6 rounded-sm border border-[#0A192F]/10 shadow-sm"
-              >
-                <h4 className="text-xs uppercase tracking-[0.2em] text-[#0A192F] font-bold mb-4">Highlights</h4>
-                <ul className="space-y-3">
-                  {activeData.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm font-medium text-[#0A192F]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#8A6B2D] mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            </AnimatePresence>
+            <div
+              key={activeTab}
+              className="bg-white/95 backdrop-blur-md p-6 rounded-sm border border-[#0A192F]/10 shadow-sm transition-all duration-300"
+            >
+              <h4 className="text-xs uppercase tracking-[0.2em] text-[#0A192F] font-bold mb-4">Highlights</h4>
+              <ul className="space-y-3">
+                {activeData.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-sm font-medium text-[#0A192F]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#8A6B2D] mr-3" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Image Display (Right side) */}
           <div className="lg:col-span-8">
             <div className="bg-white/40 backdrop-blur-md border border-[#0A192F]/5 shadow-sm rounded-sm p-4 md:p-8 h-[400px] md:h-[600px] relative group flex items-center justify-center">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeTab}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative w-full h-full flex items-center justify-center"
+              <div
+                key={activeTab}
+                className="relative w-full h-full flex items-center justify-center transition-all duration-300"
+              >
+                {/* Blueprint grid effect background */}
+                <div className="absolute inset-0 bg-white/5 opacity-10 pointer-events-none" />
+                
+                <Image 
+                  src={activeData.image}
+                  alt={`${activeData.title} Layout for Shapoorji Vyomora`}
+                  fill
+                  className="object-contain mix-blend-multiply opacity-90 transition-all duration-700 group-hover:scale-105"
+                />
+                
+                <Link 
+                  href="/residences" 
+                  aria-label="View enlarged residence floor plans"
+                  className="absolute bottom-4 right-4 bg-[#0A192F] text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
                 >
-                  {/* Blueprint grid effect background */}
-                  <div className="absolute inset-0 bg-white/5 opacity-10 pointer-events-none" />
-                  
-                  <Image 
-                    src={activeData.image}
-                    alt={`${activeData.title} Layout for Shapoorji Vyomora`}
-                    fill
-                    className="object-contain mix-blend-multiply opacity-90 transition-all duration-700 group-hover:scale-105"
-                  />
-                  
-                  <Link 
-                    href="/residences" 
-                    aria-label="View enlarged residence floor plans"
-                    className="absolute bottom-4 right-4 bg-[#0A192F] text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
-                  >
-                    <Maximize2 className="w-4 h-4" />
-                  </Link>
-                </motion.div>
-              </AnimatePresence>
+                  <Maximize2 className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
 

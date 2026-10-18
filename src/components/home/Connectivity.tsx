@@ -1,39 +1,9 @@
-"use client";
-
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { connectivityData } from "./connectivityData";
 
 export default function Connectivity() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const cards = containerRef.current.querySelectorAll('.connectivity-card');
-    
-    const ctx = gsap.context(() => {
-      gsap.fromTo(cards, 
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 70%",
-          }
-        }
-      );
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
-    <section id="connectivity" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden" ref={containerRef}>
+    <section id="connectivity" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden section-deferred">
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7] via-[#C5A059]/10 to-[#FDFBF7] pointer-events-none" />
 

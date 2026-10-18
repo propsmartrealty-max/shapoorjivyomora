@@ -1,14 +1,6 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { TrustBadge } from "@/components/ui/TrustBadge";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Award, Building2, History, Users } from "lucide-react";
 import Image from "next/image";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
   { value: "150+", label: "Years of Legacy", icon: <History size={32} strokeWidth={1} /> },
@@ -18,46 +10,13 @@ const stats = [
 ];
 
 export default function AboutDeveloper() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current || !statsRef.current) return;
-    
-    const ctx = gsap.context(() => {
-      const statItems = statsRef.current?.querySelectorAll('.stat-item');
-      if (statItems) {
-        gsap.fromTo(statItems, 
-          { y: 50, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            stagger: 0.15,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: statsRef.current,
-              start: "top 80%",
-            }
-          }
-        );
-      }
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section id="developer" ref={containerRef} className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden">
+    <section id="developer" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden section-deferred">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
         <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
           
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <div 
             className="w-full lg:w-1/2"
           >
             <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-6 block">
@@ -87,26 +46,27 @@ export default function AboutDeveloper() {
                 View All 11 Pune Projects
               </a>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          <div 
             className="w-full lg:w-1/2 relative h-[500px] rounded-sm overflow-hidden group shadow-sm border border-[#0A192F]/10"
           >
-            <div 
-              className="absolute inset-0 bg-cover bg-center brightness-[1.15] contrast-[1.05] transition-transform duration-1000 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/story_bg.webp')" }}
-            />
+            <div className="absolute inset-0 overflow-hidden">
+              <img 
+                src="/images/story_bg.webp" 
+                alt="Shapoorji Pallonji Real Estate Heritage" 
+                loading="lazy" 
+                decoding="async" 
+                className="w-full h-full object-cover object-center brightness-[1.15] contrast-[1.05] transition-transform duration-1000 group-hover:scale-105" 
+              />
+            </div>
             <div className="absolute inset-0 bg-black/20" />
             
             {/* Overlay logo or graphic */}
             <div className="absolute inset-0 flex items-center justify-center p-12">
                <div className="w-full h-full border border-white/30 flex items-center justify-center backdrop-blur-sm bg-black/20">
                  <Image 
-                    src="https://shapoorjirealestate.com/files/assets/jpegs/all_projects/vymora-by-joyville/logo/white-logo.svg" 
+                    src="/images/white-logo.svg" 
                     alt="Shapoorji Pallonji Real Estate Logo" 
                     width={200}
                     height={80}
@@ -119,21 +79,23 @@ export default function AboutDeveloper() {
             <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-30 pointer-events-none scale-75 md:scale-100">
               <TrustBadge />
             </div>
-          </motion.div>
+          </div>
 
         </div>
 
         {/* Stats Section */}
-        <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-[#0A192F]/10 pt-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-[#0A192F]/10 pt-16">
           {stats.map((stat, idx) => (
-            <div key={idx} className="stat-item flex flex-col items-center text-center">
-              <motion.div 
-                className="text-[#8A6B2D] mb-6"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: idx * 0.2 }}
+            <div 
+              key={idx} 
+              className="stat-item flex flex-col items-center text-center"
+            >
+              <div 
+                className="text-[#8A6B2D] mb-6 animate-float"
+                style={{ animationDelay: `${idx * 0.5}s` }}
               >
                 {stat.icon}
-              </motion.div>
+              </div>
               <h3 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-2">{stat.value}</h3>
               <p className="text-sm uppercase tracking-widest text-[#0A192F]/80 font-medium">{stat.label}</p>
             </div>

@@ -1,8 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Building2, MapPin, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import EcosystemCTA from "./EcosystemCTA";
 
 const puneDevelopments = [
   {
@@ -118,7 +116,7 @@ const puneDevelopments = [
 
 export default function ShapoorjiPuneEcosystem() {
   return (
-    <section id="pune-projects" className="py-24 md:py-32 bg-[#050C17] text-white relative overflow-hidden">
+    <section id="pune-projects" className="py-24 md:py-32 bg-[#050C17] text-white relative overflow-hidden section-deferred">
       {/* Background Ambience */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#C5A059]/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
@@ -144,12 +142,8 @@ export default function ShapoorjiPuneEcosystem() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {puneDevelopments.map((dev) => (
-            <motion.div
+            <div
               key={dev.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
               className={`rounded-sm p-6 flex flex-col justify-between transition-all duration-300 border ${
                 dev.featured 
                   ? "bg-gradient-to-b from-[#0A192F] to-[#0d2242] border-[#C5A059] shadow-xl shadow-[#C5A059]/10 ring-1 ring-[#C5A059]/50" 
@@ -204,6 +198,7 @@ export default function ShapoorjiPuneEcosystem() {
 
               <Link
                 href={dev.href}
+                prefetch={false}
                 className={`w-full py-3 px-4 rounded-sm text-xs font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2 group ${
                   dev.featured
                     ? "bg-[#C5A059] text-[#050C17] hover:bg-white hover:text-[#050C17]"
@@ -213,7 +208,7 @@ export default function ShapoorjiPuneEcosystem() {
                 <span>{dev.ctaText}</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -235,6 +230,7 @@ export default function ShapoorjiPuneEcosystem() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/shapoorji-pallonji-pune-projects"
+                prefetch={false}
                 className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
               >
                 View Complete Pune Projects Portfolio →
@@ -242,6 +238,7 @@ export default function ShapoorjiPuneEcosystem() {
               <span className="text-white/30">•</span>
               <Link
                 href="/west-pune-real-estate"
+                prefetch={false}
                 className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
               >
                 West Pune Real Estate 2026 Guide →
@@ -249,21 +246,13 @@ export default function ShapoorjiPuneEcosystem() {
               <span className="text-white/30">•</span>
               <Link
                 href="/articles"
+                prefetch={false}
                 className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
               >
                 Market Research &amp; Articles Hub →
               </Link>
             </div>
-            <button
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  window.dispatchEvent(new Event("open-enquiry-modal"));
-                }
-              }}
-              className="text-xs font-bold uppercase tracking-widest text-[#050C17] bg-[#C5A059] hover:bg-white px-5 py-2.5 rounded-sm transition-colors"
-            >
-              Get Multi-Project Price Comparison
-            </button>
+            <EcosystemCTA />
           </div>
         </div>
 

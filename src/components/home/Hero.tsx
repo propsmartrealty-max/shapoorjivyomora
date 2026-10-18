@@ -1,64 +1,28 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Button } from "@/components/ui/Button";
-import { TrustBadge } from "@/components/ui/TrustBadge";
-
-gsap.registerPlugin(ScrollTrigger);
+import HeroCTA from "./HeroCTA";
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current || !textRef.current) return;
-
-    const ctx = gsap.context(() => {
-      // Parallax effect on scroll
-      gsap.to(containerRef.current, {
-        yPercent: 30,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section id="home" 
-      ref={containerRef}
       className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-[#FDFBF7]"
     >
-      {/* Optimized Hero LCP Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[#FDFBF7]/20 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/90 via-transparent to-[#FDFBF7] z-10" />
-        <Image 
-          src="/images/hero_bg.webp"
+      {/* 100% Direct Composited LCP Hero Picture */}
+      <picture className="absolute inset-0 w-full h-full z-0 block">
+        <source media="(min-width: 769px)" srcSet="/images/hero_bg.webp" type="image/webp" />
+        <img 
+          src="/images/hero_bg_mobile.webp"
           alt="Shapoorji Pallonji Joyville Vyomora Luxury Project in Hinjewadi Pune"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center brightness-[1.12] contrast-[1.05] transform scale-105 transition-transform duration-10000 hover:scale-110 opacity-90"
+          width={640}
+          height={640}
+          fetchPriority="high"
+          decoding="sync"
+          loading="eager"
+          className="w-full h-full object-cover object-center"
         />
-      </div>
+      </picture>
 
-      <div className="container relative z-20 mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center mt-20">
-        <div
-          ref={textRef}
-          className="max-w-5xl"
-        >
-          <div className="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full border border-[#C5A059]/40 bg-[#C5A059]/10 backdrop-blur-sm">
+      <div className="container relative z-10 mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center mt-20">
+        <div className="max-w-5xl">
+          <div className="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full border border-[#C5A059]/40 bg-white/70">
             <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
             <span className="text-xs md:text-sm font-semibold tracking-[0.2em] text-[#0A192F] uppercase">
               Joy 3.0 New Launch • Phase 1 Residences from ₹84.99 L*
@@ -71,74 +35,24 @@ export default function Hero() {
             </span>
           </h1>
           
-          <h2 className="text-lg md:text-xl text-[#0A192F]/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+          <h2 
+            className="text-base md:text-lg text-[#0A192F]/85 max-w-3xl mx-auto font-normal leading-relaxed mb-10"
+            style={{ fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
+          >
             Official portal for <strong>Shapoorji Pallonji Real Estate Pune</strong> &amp; <strong>Joyville Homes Pune</strong>. Discover <strong>Joyville Vyomora (Joy 3.0)</strong> — flagship river-facing 2, 3 & 4 BHK residences with a monumental 32,000+ sq. ft. clubhouse in Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, Pune. Possession: Dec 2029 | MahaRERA: PR1260002600999.
           </h2>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Button 
-              variant="primaryDark" 
-              size="lg" 
-              aria-label="Book VIP Site Visit to Shapoorji Joyville Vyomora"
-              onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
-              className="w-full sm:w-auto"
-            >
-              Book Site Visit
-            </Button>
-            <Button 
-              variant="outlineDark" 
-              size="lg" 
-              aria-label="Download Official Brochure and Price Sheet"
-              onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
-              className="w-full sm:w-auto"
-            >
-              Download Brochure
-            </Button>
-          </div>
+          <HeroCTA />
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-[0.65rem] uppercase tracking-[0.3em] text-[#0A192F] font-bold mb-4">Discover</span>
-          <div className="w-[1px] h-16 bg-[#0A192F]/30 relative overflow-hidden">
-            <motion.div 
-              className="absolute top-0 left-0 w-full h-1/2 bg-[#0A192F]"
-              animate={{ top: ["-50%", "100%"] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
-            />
-          </div>
-        </motion.div>
       </div>
 
-      {/* Luxury Stats Floating Elements */}
-      <motion.div 
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute left-6 md:left-12 bottom-20 z-20 hidden lg:block"
-      >
-        <div className="bg-white/95 backdrop-blur-md p-6 rounded-sm border-l-4 border-l-[#C5A059] shadow-sm">
-          <p className="text-3xl font-serif text-[#0A192F] mb-1">25<span className="text-[#C5A059] text-lg ml-1">Acres</span></p>
-          <p className="text-xs uppercase tracking-[0.1em] text-[#0A192F] font-semibold">Integrated Development</p>
+      {/* Pure CSS GPU Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 pointer-events-none">
+        <span className="text-[10px] tracking-[0.3em] uppercase text-[#0A192F]/60">Scroll</span>
+        <div className="w-[1px] h-8 bg-[#0A192F]/20 relative overflow-hidden">
+          <div className="w-full h-full bg-[#C5A059] animate-scroll-line" />
         </div>
-      </motion.div>
-
-      <motion.div 
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1.7, duration: 1 }}
-        className="absolute right-6 md:right-12 bottom-32 z-20 hidden lg:block"
-      >
-        <div className="bg-white/80 backdrop-blur-md p-6 rounded-sm border-r-4 border-r-[#C5A059] text-right shadow-sm">
-          <p className="text-3xl font-serif text-[#0A192F] mb-1">685<span className="text-[#C5A059] text-lg ml-1">-1434</span></p>
-          <p className="text-xs uppercase tracking-[0.1em] text-[#1e2338]/60">Sq. Ft. Residences</p>
-        </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

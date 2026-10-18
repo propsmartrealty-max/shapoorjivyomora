@@ -1,9 +1,3 @@
-"use client";
-
-import { useRef, useEffect } from "react";
-import { motion } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Waves, Dumbbell, Trophy, Film } from "lucide-react";
 import { detailedAmenities } from "./amenitiesData";
 
@@ -30,40 +24,13 @@ const amenitiesList = [
     title: "Entertainment Hub",
     description: "Mini theatre, digital dome, and a premium co-working lounge.",
     icon: <Film size={32} strokeWidth={1} />,
-    image: "/images/hero_bg.webp"
+    image: "/images/hero_bg_mobile.webp"
   }
 ];
 
 export default function Amenities() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const detailsRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const cards = containerRef.current.querySelectorAll('.amenity-card');
-    
-    const ctx = gsap.context(() => {
-      gsap.fromTo(cards, 
-        { y: 100, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 75%",
-          }
-        }
-      );
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section id="amenities" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden" ref={containerRef}>
+    <section id="amenities" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden section-deferred">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-4 block">
@@ -80,15 +47,16 @@ export default function Amenities() {
         {/* Top 4 Visual Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
           {amenitiesList.map((amenity, index) => (
-            <motion.div 
+            <div 
               key={index}
-              className="amenity-card group relative h-[400px] rounded-sm overflow-hidden cursor-pointer"
-              whileHover={{ y: -10 }}
-              transition={{ duration: 0.3 }}
+              className="amenity-card group relative h-[400px] rounded-sm overflow-hidden cursor-pointer transform hover:-translate-y-2 transition-transform duration-500"
             >
-              <div 
-                className="absolute inset-0 bg-cover bg-center brightness-[1.15] contrast-[1.05] transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url('${amenity.image}')` }}
+              <img 
+                src={amenity.image}
+                alt={amenity.title}
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover object-center brightness-[1.15] contrast-[1.05] transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
               
@@ -101,12 +69,12 @@ export default function Amenities() {
                   {amenity.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Detailed Comprehensive List */}
-        <div ref={detailsRef} className="pt-20 border-t border-[#0A192F]/10">
+        <div className="pt-20 border-t border-[#0A192F]/10">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16">
             <div className="lg:w-1/3">
               <h3 className="text-3xl md:text-4xl font-serif text-[#0A192F] leading-tight mb-4 uppercase tracking-wide">
@@ -122,13 +90,9 @@ export default function Amenities() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
             {detailedAmenities.map((section, idx) => (
-              <motion.div 
+              <div 
                 key={idx} 
                 className="flex flex-col"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
               >
                 <h4 className="text-sm font-bold tracking-[0.2em] text-[#0A192F] uppercase mb-8 pb-4 border-b border-[#0A192F]/10">
                   {section.category}
@@ -137,13 +101,9 @@ export default function Amenities() {
                   {section.items.map((item, itemIdx) => {
                     const Icon = item.icon;
                     return (
-                      <motion.li 
+                      <li 
                         key={itemIdx} 
                         className="flex items-center group"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: (idx * 0.15) + (itemIdx * 0.05) }}
                       >
                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-[#0A192F]/5 mr-4 group-hover:bg-[#0A192F] group-hover:text-white transition-colors duration-300">
                           <Icon size={18} strokeWidth={1.5} className="text-[#0A192F] group-hover:text-white transition-colors" />
@@ -151,11 +111,11 @@ export default function Amenities() {
                         <span className="text-[#1e2338]/80 font-light text-sm group-hover:text-[#0A192F] group-hover:font-medium transition-all">
                           {item.name}
                         </span>
-                      </motion.li>
+                      </li>
                     );
                   })}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

@@ -1,14 +1,17 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect, useState } from "react";
 import { Train, Bus, ArrowRight, GraduationCap, Building2, ShoppingBag, TreePine, Map, PlusSquare } from "lucide-react";
 import dynamic from "next/dynamic";
 
 const DynamicMap = dynamic(() => import("./InteractiveMap"), {
   ssr: false,
-  loading: () => <div className="w-full h-full bg-[#1a1a1a] flex items-center justify-center animate-pulse"><div className="w-8 h-8 border-4 border-[#C5A059] border-t-transparent rounded-full animate-spin"></div></div>
+  loading: () => (
+    <div className="w-full h-full bg-[#1a1a1a] flex flex-col items-center justify-center text-center p-6 animate-pulse">
+      <div className="w-8 h-8 border-4 border-[#C5A059] border-t-transparent rounded-full animate-spin mb-3"></div>
+      <span className="text-xs text-white/60 uppercase tracking-widest">Loading Interactive Map...</span>
+    </div>
+  )
 });
 
 const legendItems = [
@@ -27,50 +30,44 @@ const legendItems = [
 export default function Location() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadMap, setShouldLoadMap] = useState(false);
+  const [inView, setInView] = useState(false);
+
+  // Lazy-load map on viewport intersection to remove Leaflet from initial bundle execution
+  useEffect(() => {
+    if (!mapRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoadMap(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "350px" }
+    );
+    observer.observe(mapRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    if (!containerRef.current || !mapRef.current) return;
-    
-    const ctx = gsap.context(() => {
-      // Fade in legend
-      gsap.fromTo('.legend-item',
-        { opacity: 0, x: -20 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.5,
-          stagger: 0.05,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 60%",
-          }
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setInView(true);
+          observer.disconnect();
         }
-      );
-
-      // Fade up map
-      gsap.fromTo(mapRef.current,
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 50%",
-          }
-        }
-      );
-    }, containerRef);
-
-    return () => ctx.revert();
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section 
       id="location" 
-      className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-white via-[#FDFBF7]/30 to-[#fdfbf7]" 
+      className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-white via-[#FDFBF7]/30 to-[#fdfbf7] section-deferred" 
       ref={containerRef}
     >
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -96,7 +93,13 @@ export default function Location() {
               </h3>
               <ul className="space-y-4">
                 {legendItems.map((item, index) => (
-                  <li key={index} className="legend-item flex items-center group">
+                  <li 
+                    key={index} 
+                    className={`legend-item flex items-center group transition-all duration-500 ${
+                      inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                    }`}
+                    style={{ transitionDelay: `${Math.min(index * 30, 300)}ms` }}
+                  >
                     <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm border border-[#0A192F]/10 mr-4 transition-transform group-hover:scale-110">
                       {item.icon}
                     </div>
@@ -110,7 +113,12 @@ export default function Location() {
           </div>
 
           {/* Map Display (Distortion-free) */}
-          <div className="w-full lg:w-3/4" ref={mapRef}>
+          <div 
+            className={`w-full lg:w-3/4 transition-all duration-700 ease-out ${
+              inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`} 
+            ref={mapRef}
+          >
             <div className="relative w-full rounded-sm overflow-hidden bg-white/50 border border-[#0A192F]/10 shadow-sm p-2 md:p-4 group">
               {/* Note: The image uses object-contain to prevent any distortion of the complex map */}
               <div className="relative w-full aspect-[4/3] md:aspect-[16/9] lg:aspect-[2/1] bg-[#FDFBF7] rounded-sm overflow-hidden flex items-center justify-center cursor-zoom-in">
@@ -119,7 +127,14 @@ export default function Location() {
                   Using a placeholder that can be replaced by the actual Map SVG or Image. 
                   We use object-contain so it never stretches or distorts.
                 */}
-                <DynamicMap />
+                {shouldLoadMap ? (
+                  <DynamicMap />
+                ) : (
+                  <div className="w-full h-full bg-[#1a1a1a] flex flex-col items-center justify-center text-center p-6">
+                    <div className="w-8 h-8 border-4 border-[#C5A059] border-t-transparent rounded-full animate-spin mb-3"></div>
+                    <span className="text-xs text-white/60 uppercase tracking-widest">Loading Interactive Map...</span>
+                  </div>
+                )}
 
               </div>
               <p className="text-right text-[10px] text-[#0A192F]/75 mt-2 font-normal uppercase tracking-widest">
