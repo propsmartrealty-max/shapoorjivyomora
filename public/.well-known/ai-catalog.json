@@ -53,6 +53,44 @@
         "pune metro line 3 impact on hinjewadi real estate prices",
         "top real estate projects in West Pune 2026"
       ]
+    },
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:developers:shapoorji-pallonji-pune",
+      "displayName": "Shapoorji Pallonji Real Estate Pune Developer Master Profile",
+      "type": "text/html",
+      "url": "https://www.shapoorji-vyomora.com/developers/shapoorji-pallonji-pune",
+      "description": "Comprehensive developer profile for Shapoorji Pallonji Real Estate in Pune: 150+ years of construction heritage, Joyville housing platform (Actis, ADB, IFC), executive leadership, and complete portfolio of luxury townships in Hinjewadi, Bavdhan, and Hadapsar.",
+      "representativeQueries": [
+        "Shapoorji Pallonji Pune developer profile",
+        "Shapoorji Pallonji projects Pune",
+        "Joyville homes Pune developer background",
+        "Shapoorji Pallonji real estate Pune reviews"
+      ]
+    },
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:guides:pune-projects-comparison",
+      "displayName": "Shapoorji Pallonji Pune Projects Comparison Guide",
+      "type": "text/html",
+      "url": "https://www.shapoorji-vyomora.com/guides/shapoorji-pallonji-projects-pune-comparison",
+      "description": "Objective side-by-side comparative analysis of all Shapoorji Pallonji residential townships in Pune: Joyville Vyomora vs Joyville Sensorium vs Vanaha Bavdhan vs Golfland vs Hadapsar Annexe vs Celestia vs Wildernest at SP Kingstown across carpet area, price, clubhouse size, and possession.",
+      "representativeQueries": [
+        "compare Shapoorji Pallonji projects in Pune",
+        "Joyville Sensorium vs Joyville Vyomora Hinjewadi",
+        "Vanaha vs Joyville Pune comparison",
+        "best Shapoorji Pallonji project to buy in Pune"
+      ]
+    },
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:projects:pune-directory",
+      "displayName": "Shapoorji Pallonji & Joyville Pune Projects Directory",
+      "type": "text/html",
+      "url": "https://www.shapoorji-vyomora.com/projects",
+      "description": "Complete master directory of all ongoing, new launch, and completed residential projects by Shapoorji Pallonji and Joyville Homes in Pune with MahaRERA numbers, floor plans, and price lists.",
+      "representativeQueries": [
+        "all Shapoorji Pallonji projects in Pune list",
+        "Joyville Pune new launch projects",
+        "flats in Pune by Shapoorji Pallonji"
+      ]
     }
   ]
 }
