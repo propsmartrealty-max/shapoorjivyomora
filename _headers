@@ -12,6 +12,8 @@
   Cross-Origin-Resource-Policy: cross-origin
   X-Robots-Tag: all
   Access-Control-Allow-Origin: *
+  Timing-Allow-Origin: *
+  Link: </images/hero_bg.webp>; rel=preload; as=image
 
 # High-Performance Cache for Next.js Static Chunks
 /_next/static/*
