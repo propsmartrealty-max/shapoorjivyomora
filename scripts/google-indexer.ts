@@ -30,7 +30,10 @@ async function getAuthClient() {
     const credentials = JSON.parse(credentialsJson);
     const auth = new google.auth.GoogleAuth({
       credentials,
-      scopes: ['https://www.googleapis.com/auth/indexing'],
+      scopes: [
+        'https://www.googleapis.com/auth/indexing',
+        'https://www.googleapis.com/auth/webmasters'
+      ],
     });
     return auth.getClient();
   } catch (error) {
@@ -82,6 +85,15 @@ async function main() {
     return;
   }
 
+  // 2. Submit Sitemap via Google Search Console API
+  try {
+    const sc = google.searchconsole({ version: 'v1', auth: authClient as any });
+    await sc.sitemaps.submit({ siteUrl: 'https://www.shapoorji-vyomora.com/', feedpath: `${BASE_URL}/sitemap.xml` });
+    console.log("✅ Successfully submitted sitemap to Google Search Console API.");
+  } catch (err: any) {
+    console.warn("⚠️ GSC sitemap submit notice:", err?.message || err);
+  }
+
   const indexing = google.indexing({ version: 'v3', auth: authClient as any });
   const state = loadState();
 
@@ -107,15 +119,29 @@ async function main() {
     }
   }
 
-  // Sort priority: Hubs & Articles first, then programmatic
+  // Sort priority: Core Hubs, Projects, Comparison, then programmatic
   const priorityOrder = [
     `${BASE_URL}/`,
+    `${BASE_URL}/projects`,
+    `${BASE_URL}/developers/shapoorji-pallonji-pune`,
+    `${BASE_URL}/guides/shapoorji-pallonji-projects-pune-comparison`,
+    `${BASE_URL}/projects/joyville-vyomora-hinjewadi`,
+    `${BASE_URL}/projects/joyville-sensorium`,
+    `${BASE_URL}/projects/shapoorji-pallonji-vanaha`,
+    `${BASE_URL}/projects/vanaha-golfland`,
+    `${BASE_URL}/projects/joyville-hadapsar-annexe`,
+    `${BASE_URL}/projects/joyville-celestia`,
+    `${BASE_URL}/projects/wildernest-sp-kingstown`,
+    `${BASE_URL}/projects/joyville-sky-luxe-edition`,
+    `${BASE_URL}/projects/joyville-hinjewadi`,
+    `${BASE_URL}/projects/vanaha-verdant`,
+    `${BASE_URL}/projects/vanaha-springs`,
+    `${BASE_URL}/shapoorji-pallonji-pune-projects`,
+    `${BASE_URL}/west-pune-real-estate`,
     `${BASE_URL}/residences`,
     `${BASE_URL}/amenities`,
     `${BASE_URL}/location`,
     `${BASE_URL}/masterplan`,
-    `${BASE_URL}/west-pune-real-estate`,
-    `${BASE_URL}/shapoorji-pallonji-pune-projects`,
     `${BASE_URL}/investment-calculator`,
     `${BASE_URL}/contact`,
     `${BASE_URL}/articles`,
