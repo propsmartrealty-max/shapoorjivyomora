@@ -47,7 +47,7 @@ export default function Specifications() {
             
             <button
               onClick={() => setActiveTab("2_3_BHK")}
-              aria-label="View 2 and 3 BHK Specifications"
+              aria-label="2 & 3 BHKs Specifications"
               className={`relative z-10 px-8 py-3 rounded-full text-sm font-semibold tracking-wide uppercase transition-colors duration-300 w-48 ${
                 activeTab === "2_3_BHK" ? "text-white" : "text-[#0A192F]/60 hover:text-[#0A192F]"
               }`}
@@ -56,7 +56,7 @@ export default function Specifications() {
             </button>
             <button
               onClick={() => setActiveTab("Duplexes")}
-              aria-label="View Duplex Specifications"
+              aria-label="Duplexes Specifications"
               className={`relative z-10 px-8 py-3 rounded-full text-sm font-semibold tracking-wide uppercase transition-colors duration-300 w-48 ${
                 activeTab === "Duplexes" ? "text-white" : "text-[#0A192F]/60 hover:text-[#0A192F]"
               }`}

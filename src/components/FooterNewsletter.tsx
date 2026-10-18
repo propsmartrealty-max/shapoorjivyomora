@@ -82,7 +82,7 @@ export default function FooterNewsletter() {
         <button 
           type="submit" 
           disabled={status === "loading"}
-          aria-label="Download Brochure and Price Sheet"
+          aria-label="Download Brochure & Price Sheet"
           className="text-left text-xs tracking-[0.15em] text-white hover:text-[#C5A059] uppercase flex items-center transition-colors group disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Registering..." : "Download Brochure & Price Sheet"}

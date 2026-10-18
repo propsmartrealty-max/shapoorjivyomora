@@ -125,9 +125,9 @@ export default function ShapoorjiPuneEcosystem() {
         
         {/* Section Heading */}
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-[#C5A059]/30 mb-4">
-            <Building2 size={14} className="text-[#C5A059]" />
-            <span className="text-xs font-bold tracking-[0.2em] text-[#C5A059] uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0A192F] border border-[#C5A059]/50 shadow-sm mb-4">
+            <Building2 size={14} className="text-[#E6C687]" />
+            <span className="text-xs font-bold tracking-[0.2em] text-[#E6C687] uppercase">
               Pune Real Estate Ecosystem
             </span>
           </div>

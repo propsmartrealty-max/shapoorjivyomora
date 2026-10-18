@@ -51,7 +51,7 @@ export default function Header() {
           }`}
         >
           {/* Brand / Logo */}
-          <Link href="/" prefetch={false} aria-label="Shapoorji Pallonji Joyville Vyomora Homepage" className="flex flex-col group py-0.5 shrink-0">
+          <Link href="/" prefetch={false} aria-label="VYOMORA By Shapoorji Pallonji - Official Homepage" className="flex flex-col group py-0.5 shrink-0">
             <span className="text-lg md:text-xl font-serif font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#0A192F] via-[#0A192F] to-[#C5A059] group-hover:to-[#C5A059] transition-all duration-300">
               VYOMORA
             </span>

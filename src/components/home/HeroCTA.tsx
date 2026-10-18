@@ -8,7 +8,7 @@ export default function HeroCTA() {
       <Button 
         variant="primaryDark" 
         size="lg" 
-        aria-label="Book VIP Site Visit to Shapoorji Joyville Vyomora"
+        aria-label="Book Site Visit"
         onClick={() => {
           if (typeof window !== "undefined") {
             window.dispatchEvent(new Event("open-enquiry-modal"));
@@ -21,7 +21,7 @@ export default function HeroCTA() {
       <Button 
         variant="outlineDark" 
         size="lg" 
-        aria-label="Download Official Brochure and Price Sheet"
+        aria-label="Download Brochure"
         onClick={() => {
           if (typeof window !== "undefined") {
             window.dispatchEvent(new Event("open-enquiry-modal"));

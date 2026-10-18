@@ -43,6 +43,17 @@ function processNextServerDir(currentDir, targetBase) {
       // Optimize Next.js hydration scripts: replace async="" with defer="" so first paint paints instantaneously without main thread blocking
       content = content.replace(/(<script\s+[^>]*?src=[\"'][^\"']+[\"'][^>]*?)\s+async=[\"'][\"']/gi, '$1 defer=""');
 
+      // Inline critical CSS stylesheets into <head> to completely eliminate render-blocking CSS network round trips
+      content = content.replace(/<link\s+rel="stylesheet"\s+href="(\/_next\/static\/css\/[^"]+\.css)"([^>]*?)\/?>/gi, (match, href) => {
+        const cssFilename = path.basename(href);
+        const cssDiskPath = path.join(nextStaticDir, 'css', cssFilename);
+        if (fs.existsSync(cssDiskPath)) {
+          const cssContent = fs.readFileSync(cssDiskPath, 'utf8');
+          return `<style data-href="${href}">${cssContent}</style><link rel="preload" href="${href}" as="style" />`;
+        }
+        return match;
+      });
+
       // Guarantee global hreflang tags in <head> for Google global ranking
       const cleanPath = (relPath === 'index.html' || entry.name === 'index.html' && relPath === 'index.html')
         ? '/'
