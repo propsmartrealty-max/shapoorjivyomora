@@ -91,11 +91,11 @@ export default function Story() {
           <div className="grid grid-cols-2 gap-8">
             <div className="border-l border-[#0A192F]/20 pl-4">
               <h3 className="text-3xl font-serif text-[#0A192F] mb-2">685-1434</h3>
-              <p className="text-xs uppercase tracking-widest text-[#1e2338]/70">Sq. Ft. Spaces</p>
+              <p className="text-xs uppercase tracking-widest text-[#0A192F]/80 font-medium">Sq. Ft. Spaces</p>
             </div>
             <div className="border-l border-[#0A192F]/20 pl-4">
               <h3 className="text-3xl font-serif text-[#0A192F] mb-2">₹84.99L</h3>
-              <p className="text-xs uppercase tracking-widest text-[#1e2338]/70">Starting Price</p>
+              <p className="text-xs uppercase tracking-widest text-[#0A192F]/80 font-medium">Starting Price</p>
             </div>
           </div>
         </div>

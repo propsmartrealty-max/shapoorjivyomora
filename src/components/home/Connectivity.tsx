@@ -80,7 +80,7 @@ export default function Connectivity() {
                 {/* Card Body */}
                 <div className="p-6">
                   {/* Table Header */}
-                  <div className="flex justify-between text-[10px] uppercase tracking-widest text-[#1e2338]/50 mb-4 pb-2 border-b border-[#0A192F]/10">
+                  <div className="flex justify-between text-[10px] uppercase tracking-widest text-[#0A192F]/80 mb-4 pb-2 border-b border-[#0A192F]/10">
                     <span className="w-1/2">Destination</span>
                     <div className="w-1/2 flex justify-end gap-4 text-right">
                       <span className="w-16">Distance<br/>(approx)</span>
@@ -99,12 +99,12 @@ export default function Connectivity() {
                         <ul className="space-y-3">
                           {section.items.map((item, iIdx) => (
                             <li key={iIdx} className="flex justify-between items-center text-xs group">
-                              <span className="w-1/2 font-medium text-[#1e2338]/80 group-hover:text-[#C5A059] transition-colors leading-tight">
+                              <span className="w-1/2 font-medium text-[#0A192F]/80 group-hover:text-[#8A6B2D] transition-colors leading-tight">
                                 {item.name}
                               </span>
                               <div className="w-1/2 flex justify-end gap-4 text-right">
-                                <span className="w-16 text-[#1e2338]/60">{item.distance}</span>
-                                <span className="w-12 text-[#1e2338]/60 font-medium">{item.time}</span>
+                                <span className="w-16 text-[#0A192F]/75 font-normal">{item.distance}</span>
+                                <span className="w-12 text-[#0A192F]/80 font-medium">{item.time}</span>
                               </div>
                             </li>
                           ))}

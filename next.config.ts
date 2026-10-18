@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   compress: true,
   images: {
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -16,9 +17,9 @@ const nextConfig: NextConfig = {
       default-src 'self';
       script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com;
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      img-src 'self' blob: data: https://images.unsplash.com https://i.ytimg.com https://shapoorjirealestate.com https://www.google-analytics.com;
+      img-src 'self' blob: data: https://images.unsplash.com https://i.ytimg.com https://shapoorjirealestate.com https://www.google-analytics.com https://*.basemaps.cartocdn.com https://cdnjs.cloudflare.com https://*.tile.openstreetmap.org;
       font-src 'self' https://fonts.gstatic.com;
-      connect-src 'self' https://formsubmit.co https://script.google.com https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://cloudflareinsights.com;
+      connect-src 'self' https://formsubmit.co https://script.google.com https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://cloudflareinsights.com https://*.basemaps.cartocdn.com;
       object-src 'none';
       base-uri 'self';
       form-action 'self' https://formsubmit.co;

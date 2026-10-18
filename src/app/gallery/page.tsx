@@ -128,8 +128,9 @@ export default function GalleryPage() {
             onClick={() => setSelectedImage(null)}
           >
             <button 
-              className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+              className="absolute top-6 right-6 text-white/80 hover:text-white transition-colors"
               onClick={() => setSelectedImage(null)}
+              aria-label="Close fullscreen gallery image"
             >
               <X size={32} />
             </button>

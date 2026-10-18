@@ -73,7 +73,7 @@ export default function MasterLayout() {
                   className={`text-left px-6 py-4 rounded-sm transition-all duration-300 border-l-2 whitespace-nowrap lg:whitespace-normal flex-shrink-0 ${
                     activeTab === tab.id 
                     ? "border-l-[#8A6B2D] bg-white/60 shadow-sm backdrop-blur-md" 
-                    : "border-l-transparent text-[#1e2338]/50 hover:text-[#0A192F] hover:bg-white/40"
+                    : "border-l-transparent text-[#0A192F]/80 hover:text-[#0A192F] hover:bg-white/40"
                   }`}
                 >
                   <h3 className={`text-lg font-serif mb-1 ${activeTab === tab.id ? "text-[#8A6B2D]" : ""}`}>

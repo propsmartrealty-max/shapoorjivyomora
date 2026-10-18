@@ -146,7 +146,6 @@ export const metadata: Metadata = {
   verification: {
     google: '_plOwnQGpvv_iPs3H6LA4ghAOe9XbJprhoQyky_lWko',
   },
-  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -158,8 +157,6 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" fetchPriority="high" />
-        <link rel="preconnect" href="https://shapoorjirealestate.com" />
-        <link rel="preconnect" href="https://static.cloudflareinsights.com" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
         <StructuredData />

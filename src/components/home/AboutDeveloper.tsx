@@ -121,7 +121,7 @@ export default function AboutDeveloper() {
                 {stat.icon}
               </motion.div>
               <h3 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-2">{stat.value}</h3>
-              <p className="text-sm uppercase tracking-widest text-[#1e2338]/70">{stat.label}</p>
+              <p className="text-sm uppercase tracking-widest text-[#0A192F]/80 font-medium">{stat.label}</p>
             </div>
           ))}
         </div>

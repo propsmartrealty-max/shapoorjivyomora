@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -55,15 +55,55 @@ const pois = [
 
 export default function InteractiveMap() {
   const [isMounted, setIsMounted] = useState(false);
+  const mapContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (!isMounted || !mapContainerRef.current) return;
+
+    const enforceAccessibility = () => {
+      const container = mapContainerRef.current;
+      if (!container) return;
+
+      const zoomIn = container.querySelector<HTMLAnchorElement>('.leaflet-control-zoom-in');
+      if (zoomIn && !zoomIn.getAttribute('aria-label')) {
+        zoomIn.setAttribute('aria-label', 'Zoom in');
+      }
+
+      const zoomOut = container.querySelector<HTMLAnchorElement>('.leaflet-control-zoom-out');
+      if (zoomOut && !zoomOut.getAttribute('aria-label')) {
+        zoomOut.setAttribute('aria-label', 'Zoom out');
+      }
+
+      const closeButtons = container.querySelectorAll<HTMLAnchorElement>('.leaflet-popup-close-button');
+      closeButtons.forEach((btn) => {
+        if (!btn.getAttribute('aria-label')) {
+          btn.setAttribute('aria-label', 'Close location details popup');
+        }
+      });
+
+      const attributionLinks = container.querySelectorAll<HTMLAnchorElement>('.leaflet-control-attribution a');
+      attributionLinks.forEach((link) => {
+        if (!link.getAttribute('aria-label')) {
+          link.setAttribute('aria-label', link.textContent?.trim() || 'Map provider link');
+        }
+      });
+    };
+
+    enforceAccessibility();
+    const observer = new MutationObserver(enforceAccessibility);
+    observer.observe(mapContainerRef.current, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, [isMounted]);
+
   if (!isMounted) return null; // Prevents SSR hydration mismatch for leaflet
 
   return (
-    <div className="w-full h-full relative z-0">
+    <div ref={mapContainerRef} className="w-full h-full relative z-0">
       <MapContainer
         center={[18.5913, 73.7389]}
         zoom={13}
@@ -73,7 +113,7 @@ export default function InteractiveMap() {
       >
         {/* CartoDB Dark Matter Tiles */}
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright" aria-label="OpenStreetMap contributors">OpenStreetMap</a> contributors'
           url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
           maxZoom={20}
         />
@@ -82,9 +122,9 @@ export default function InteractiveMap() {
           <Marker key={poi.id} position={poi.pos as [number, number]} icon={poi.icon}>
             <Popup className="custom-popup">
               <div className="p-1">
-                <span className="block text-[10px] font-bold uppercase tracking-widest text-[#C5A059] mb-1">{poi.type}</span>
+                <span className="block text-[10px] font-bold uppercase tracking-widest text-[#8A6B2D] mb-1">{poi.type}</span>
                 <strong className="block text-sm font-serif text-[#0A192F] mb-1">{poi.title}</strong>
-                <span className="block text-xs text-gray-600">{poi.desc}</span>
+                <span className="block text-xs text-gray-700 font-medium">{poi.desc}</span>
               </div>
             </Popup>
           </Marker>

@@ -147,11 +147,11 @@ export default function Footer() {
               <div className="bg-white/5 border border-[#C5A059]/30 rounded-sm p-6 text-center">
                 <CheckCircle2 className="w-8 h-8 text-[#C5A059] mx-auto mb-3" />
                 <h5 className="text-sm font-bold text-white mb-1">Subscribed!</h5>
-                <p className="text-xs text-white/60">Thank you for registering your interest.</p>
+                <p className="text-xs text-white/80">Thank you for registering your interest.</p>
               </div>
             ) : (
               <>
-                <p className="text-xs text-white/60 mb-5 font-light">
+                <p className="text-xs text-white/80 mb-5 font-light">
                   Register for exclusive pre-launch pricing, unit floor plans, and priority inventory access.
                 </p>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
@@ -163,7 +163,7 @@ export default function Footer() {
                       type="email" 
                       placeholder="Enter Your Email Address" 
                       aria-label="Enter your email address for VIP brochure and pricing"
-                      className={`bg-transparent border-b pb-2 text-sm text-white focus:outline-none transition-colors placeholder:text-white/30 rounded-none ${errors.email ? 'border-red-400 focus:border-red-400' : 'border-white/20 focus:border-[#C5A059]'}`}
+                      className={`bg-transparent border-b pb-2 text-sm text-white focus:outline-none transition-colors placeholder:text-white/60 rounded-none ${errors.email ? 'border-red-400 focus:border-red-400' : 'border-white/20 focus:border-[#C5A059]'}`}
                     />
                     {errors.email && <p className="text-red-400 text-[10px] mt-1">{errors.email.message}</p>}
                   </div>
@@ -191,7 +191,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-10 mt-10 mb-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Pune Micro-Markets Focus</h4>
-            <ul className="space-y-2 text-[11px] text-white/50">
+            <ul className="space-y-2 text-[11px] text-white/80">
               <li><Link href="/market/mahalunge/luxury-apartments/property-investment" className="hover:text-white transition-colors">Mahalunge Real Estate & Township Projects</Link></li>
               <li><Link href="/market/hinjewadi-phase-1/2bhk-in-hinjewadi/location-benefits" className="hover:text-white transition-colors">2 BHK Flats in Hinjewadi Phase 1</Link></li>
               <li><Link href="/market/baner/4bhk-in-baner/price-trends" className="hover:text-white transition-colors">Luxury 4 BHK Apartments in Baner</Link></li>
@@ -203,7 +203,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Typologies & Luxury Residences</h4>
-            <ul className="space-y-2 text-[11px] text-white/50">
+            <ul className="space-y-2 text-[11px] text-white/80">
               <li><Link href="/market/hinjewadi/2bhk-in-hinjewadi/price-trends" className="hover:text-white transition-colors">2 BHK Smart Apartments in Hinjewadi</Link></li>
               <li><Link href="/market/mahalunge/3bhk-in-mahalunge/floor-plans" className="hover:text-white transition-colors">3 BHK Premium Township Flats in Mahalunge</Link></li>
               <li><Link href="/market/baner/4bhk-in-baner/brochure-download" className="hover:text-white transition-colors">4 BHK Luxury Sky Suites in Baner-Mahalunge</Link></li>
@@ -215,7 +215,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Market Research & Guides</h4>
-            <ul className="space-y-2 text-[11px] text-white/50">
+            <ul className="space-y-2 text-[11px] text-white/80">
               <li><Link href="/west-pune-real-estate" className="text-[#C5A059] font-semibold hover:text-white transition-colors">West Pune Real Estate Market Guide 2026</Link></li>
               <li><Link href="/articles/shapoorji-vyomora-vs-godrej-24-and-godrej-hillside-hinjewadi" className="hover:text-white transition-colors">Vyomora vs Godrej 24 & Godrej Hillside</Link></li>
               <li><Link href="/articles/joyville-vyomora-vs-kolte-patil-life-republic-hinjewadi" className="hover:text-white transition-colors">Joyville Vyomora vs Kolte Patil Life Republic</Link></li>
@@ -227,10 +227,10 @@ export default function Footer() {
         </div>
 
         {/* RERA & Channel Partner Compliance Disclosures */}
-        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col justify-between items-center text-[10px] md:text-xs text-white/40 font-light gap-6">
+        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col justify-between items-center text-[10px] md:text-xs text-white/75 font-light gap-6">
           <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
-              <p className="mb-1">MahaRERA Registration No: <span className="text-white/70 font-semibold">PR1260002600999</span></p>
+              <p className="mb-1">MahaRERA Registration No: <span className="text-white/90 font-semibold">PR1260002600999</span></p>
               <p>Project details verified at official portal: <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noreferrer" className="hover:text-white transition-colors underline">maharera.mahaonline.gov.in</a></p>
             </div>
             <div className="text-center md:text-right">
@@ -244,7 +244,7 @@ export default function Footer() {
             </div>
           </div>
           
-          <div id="disclaimer" className="text-[9px] md:text-[10px] text-justify text-white/30 max-w-7xl mx-auto leading-relaxed border-t border-white/5 pt-6">
+          <div id="disclaimer" className="text-[9px] md:text-[10px] text-justify text-white/70 max-w-7xl mx-auto leading-relaxed border-t border-white/5 pt-6">
             Disclaimer: The content provided on this website is for informational purposes only and does not constitute an offer of contract. Prices, configurations, specifications, floor plans, and amenities mentioned are subject to change without prior notice. Rendered images and artist impressions are for representative purposes only. This website is managed by an authorized channel partner for Shapoorji Pallonji Real Estate. We may share inquiries with MahaRERA registered real estate advisors for processing.
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function Footer() {
       {/* Comprehensive Pune Real Estate Authority Footprint */}
       <div className="border-t border-white/5 bg-[#050c17] py-6 mt-10">
         <div className="container mx-auto px-6 md:px-12">
-          <p className="text-[0.65rem] leading-relaxed text-white/30 text-justify font-light">
+          <p className="text-[0.65rem] leading-relaxed text-white/70 text-justify font-light">
             <strong>Pune Real Estate Market, Mahalunge & Hinjewadi Township Authority:</strong> Shapoorji Pallonji Real Estate continues to set the gold standard in premium real estate across West Pune. While landmark projects like Joyville Sensorium Hinjewadi, Joyville Hadapsar Annexe, Shapoorji Pallonji Wildstone, and Celestian have established incredible benchmarks for gated communities, <strong>Joyville Homes Vyomora (Mahalunge-Hinjewadi)</strong> stands as the ultimate crown jewel and flagship luxury township. Offering 2 BHK in Hinjewadi, 3 BHK in Mahalunge, 4 BHK in Baner, Sky Duplexes, Simplexes, 5 BHK Sky Villas, and Presidential Penthouses near Rajiv Gandhi Infotech Park, Vyomora delivers unprecedented capital appreciation and high rental yields. With seamless connectivity to the Pune Metro Line 3, Mumbai-Pune Expressway, and Balewadi High Street, alongside a magnificent 32,000+ sq. ft. clubhouse, Shapoorji Pallonji Vyomora represents the absolute highest ROI real estate investment in Pune.
           </p>
         </div>

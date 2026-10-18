@@ -63,10 +63,10 @@ export default function Pricing() {
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       className="border-b border-[#0A192F]/5 hover:bg-white/80 transition-colors group"
                     >
-                      <td className="py-5 px-6 text-[#0A192F] font-medium whitespace-nowrap group-hover:text-[#C5A059] transition-colors">
+                      <td className="py-5 px-6 text-[#0A192F] font-medium whitespace-nowrap group-hover:text-[#8A6B2D] transition-colors">
                         {row.typology}
                       </td>
-                      <td className="py-5 px-6 text-[#1e2338]/80 font-light">
+                      <td className="py-5 px-6 text-[#0A192F]/80 font-light">
                         {row.area}
                       </td>
                       <td className="py-5 px-6 text-[#0A192F] font-medium">
@@ -79,7 +79,7 @@ export default function Pricing() {
             </div>
           </div>
           
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#1e2338]/50 font-light gap-4 px-2">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#0A192F]/80 font-normal gap-4 px-2">
             <p className="text-center sm:text-left">
               * Prices are indicative and subject to revision by the Developer without prior notice.<br />
               * Above Price excludes advance maintenance and corpus fund charges, to be paid on possession.<br />

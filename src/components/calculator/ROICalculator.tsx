@@ -99,19 +99,20 @@ export default function ROICalculator() {
               </div>
               <div>
                 <h2 className="text-2xl md:text-3xl font-serif text-[#0A192F]">Investment Simulator</h2>
-                <p className="text-xs text-gray-500 font-light mt-0.5">ROI & EMI Projections for Shapoorji Pallonji Vyomora</p>
+                <p className="text-xs text-gray-700 font-normal mt-0.5">ROI & EMI Projections for Shapoorji Pallonji Vyomora</p>
               </div>
             </div>
 
             {/* Currency Selector */}
             <div className="flex items-center gap-1.5 bg-gray-100 p-1 rounded-lg border border-gray-200 self-start sm:self-auto">
-              <Globe size={14} className="text-gray-400 ml-1.5" />
+              <Globe size={14} className="text-gray-600 ml-1.5" />
               {(["INR", "USD", "AED", "SGD", "GBP", "QAR"] as CurrencyKey[]).map((c) => (
                 <button
                   key={c}
                   onClick={() => setCurrency(c)}
+                  aria-label={`Select currency ${c}`}
                   className={`text-xs px-2.5 py-1 rounded-md font-medium transition-all ${
-                    currency === c ? "bg-[#0A192F] text-[#C5A059] shadow-sm" : "text-gray-600 hover:text-[#0A192F]"
+                    currency === c ? "bg-[#0A192F] text-[#C5A059] shadow-sm" : "text-gray-700 hover:text-[#0A192F]"
                   }`}
                 >
                   {c}
@@ -135,7 +136,7 @@ export default function ROICalculator() {
                 onChange={(e) => setPropertyValue(Number(e.target.value))}
                 className="w-full accent-[#8A6B2D] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
               />
-              <div className="flex justify-between text-xs text-gray-400 mt-2">
+              <div className="flex justify-between text-xs text-gray-600 mt-2">
                 <span>₹85 L (2 BHK)</span>
                 <span>₹3 Cr (Duplex)</span>
               </div>
@@ -234,7 +235,7 @@ export default function ROICalculator() {
             
             <div className="space-y-6">
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
-                <p className="text-sm text-gray-400 mb-1">Total Asset Value</p>
+                <p className="text-sm text-gray-300 font-medium mb-1">Total Asset Value</p>
                 <p className="text-3xl font-serif text-white">{formatCurrency(metrics.futurePropertyValue)}</p>
                 <div className="flex items-center gap-2 mt-2 text-green-400 text-sm">
                   <TrendingUp size={16} />
@@ -243,17 +244,17 @@ export default function ROICalculator() {
               </div>
 
               <div className="bg-white/5 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
-                <p className="text-sm text-gray-400 mb-1">Cumulative Rental Income</p>
+                <p className="text-sm text-gray-300 font-medium mb-1">Cumulative Rental Income</p>
                 <p className="text-3xl font-serif text-white">{formatCurrency(metrics.totalRentalIncome)}</p>
               </div>
               
               <div className="pt-6 border-t border-white/10">
                 <div className="flex justify-between items-end mb-2">
-                  <p className="text-gray-400">Net Profit</p>
+                  <p className="text-gray-300 font-medium">Net Profit</p>
                   <p className="text-[#C5A059] text-xl font-semibold">{formatCurrency(metrics.netProfit)}</p>
                 </div>
                 <div className="flex justify-between items-end">
-                  <p className="text-gray-400">Absolute ROI</p>
+                  <p className="text-gray-300 font-medium">Absolute ROI</p>
                   <p className="text-white text-4xl font-serif">{metrics.netROI.toFixed(1)}%</p>
                 </div>
               </div>
@@ -266,6 +267,7 @@ export default function ROICalculator() {
                 window.dispatchEvent(new CustomEvent("open-enquiry-modal"));
               }
             }}
+            aria-label="Download Detailed ROI Projections Report"
             className="relative z-10 w-full mt-10 bg-[#C5A059] text-[#0A192F] py-4 rounded-sm font-medium hover:bg-white transition-colors flex items-center justify-center gap-2 group"
           >
             Download Detailed Report

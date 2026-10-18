@@ -11,6 +11,7 @@ export function EnquiryTriggerButton({ children = "Enquire Now", className }: En
   return (
     <button
       type="button"
+      aria-label={typeof children === "string" ? children : "Enquire Now"}
       onClick={() => {
         if (typeof window !== "undefined") {
           window.dispatchEvent(new Event("open-enquiry-modal"));

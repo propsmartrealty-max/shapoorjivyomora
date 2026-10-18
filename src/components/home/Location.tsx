@@ -82,7 +82,7 @@ export default function Location() {
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0A192F] leading-tight tracking-wide">
             A LOCATION <br/>
-            <span className="text-[#1e2338]/60">THAT MOVES WITH YOU.</span>
+            <span className="text-[#0A192F]/80">THAT MOVES WITH YOU.</span>
           </h2>
         </div>
 
@@ -122,7 +122,7 @@ export default function Location() {
                 <DynamicMap />
 
               </div>
-              <p className="text-right text-[10px] text-[#1e2338]/40 mt-2 font-light uppercase tracking-widest">
+              <p className="text-right text-[10px] text-[#0A192F]/75 mt-2 font-normal uppercase tracking-widest">
                 Map not to scale
               </p>
             </div>
