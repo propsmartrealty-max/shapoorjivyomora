@@ -50,10 +50,11 @@ export default function Footer() {
                 { label: "32k Sq. Ft. Clubhouse", href: "/amenities" },
                 { label: "Specifications & Finishes", href: "/specifications" },
                 { label: "Location & Metro Connectivity", href: "/location" },
+                { label: "All Pune Projects", href: "/projects" },
+                { label: "Developer Profile", href: "/developers/shapoorji-pallonji-pune" },
+                { label: "Projects Comparison", href: "/guides/shapoorji-pallonji-projects-pune-comparison" },
                 { label: "West Pune Real Estate Hub", href: "/west-pune-real-estate" },
-                { label: "Shapoorji Pune Projects", href: "/shapoorji-pallonji-pune-projects" },
                 { label: "ROI & EMI Calculator", href: "/investment-calculator" },
-                { label: "All Pune Micro-Markets", href: "/locations" },
                 { label: "Real Estate Articles", href: "/articles" }
               ].map((item) => (
                 <li key={item.label}>
@@ -107,12 +108,14 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Shapoorji Pune Ecosystem</h4>
             <ul className="space-y-2 text-[11px] text-white/80">
-              <li><Link href="/shapoorji-pallonji-pune-projects" prefetch={false} className="text-[#C5A059] font-semibold hover:text-white transition-colors">All Shapoorji Projects in Pune</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-pune-projects-master-portfolio-guide" prefetch={false} className="hover:text-white transition-colors">Joyville Homes Pune Portfolio Guide</Link></li>
-              <li><Link href="/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi" prefetch={false} className="hover:text-white transition-colors">Joyville Sensorium vs Vyomora</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review" prefetch={false} className="hover:text-white transition-colors">Joy 3.0 Hinjewadi Review &amp; Prices</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-pune-projects-price-list-and-new-launches-2026" prefetch={false} className="hover:text-white transition-colors">Pune Price List &amp; New Launches 2026</Link></li>
-              <li><Link href="/articles/shapoorji-pallonji-joyville-vyomora-township-project-details" prefetch={false} className="hover:text-white transition-colors">Vyomora Township Master Details</Link></li>
+              <li><Link href="/developers/shapoorji-pallonji-pune" prefetch={false} className="text-[#C5A059] font-semibold hover:text-white transition-colors">Developer Profile: Shapoorji Pallonji</Link></li>
+              <li><Link href="/guides/shapoorji-pallonji-projects-pune-comparison" prefetch={false} className="text-[#C5A059] font-semibold hover:text-white transition-colors">Pune Projects Comparison Guide</Link></li>
+              <li><Link href="/projects" prefetch={false} className="hover:text-white transition-colors">All Pune Projects Master Directory</Link></li>
+              <li><Link href="/projects/joyville-sensorium" prefetch={false} className="hover:text-white transition-colors">Joyville Sensorium Hinjewadi Phase 1</Link></li>
+              <li><Link href="/projects/shapoorji-pallonji-vanaha" prefetch={false} className="hover:text-white transition-colors">Shapoorji Pallonji Vanaha Bavdhan</Link></li>
+              <li><Link href="/projects/vanaha-golfland" prefetch={false} className="hover:text-white transition-colors">Vanaha Golfland Bavdhan Valley</Link></li>
+              <li><Link href="/projects/joyville-hadapsar-annexe" prefetch={false} className="hover:text-white transition-colors">Joyville Hadapsar Annexe & Celestia</Link></li>
+              <li><Link href="/projects/wildernest-sp-kingstown" prefetch={false} className="hover:text-white transition-colors">Wildernest at SP Kingstown Pune</Link></li>
             </ul>
           </div>
 
