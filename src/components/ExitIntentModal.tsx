@@ -86,7 +86,7 @@ export default function ExitIntentModal() {
           >
             {/* Left Image Side */}
             <div className="md:w-1/2 relative min-h-[250px] md:min-h-[500px]">
-              <div className="absolute inset-0 bg-cover bg-center brightness-[1.15] contrast-[1.05]" style={{ backgroundImage: "url('/images/hero_bg.jpg')" }} />
+              <div className="absolute inset-0 bg-cover bg-center brightness-[1.15] contrast-[1.05]" style={{ backgroundImage: "url('/images/hero_bg.webp')" }} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/90 to-transparent" />
               <div className="absolute bottom-0 left-0 w-full p-8 text-white">
                 <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-2 block">Before You Go</span>
@@ -136,6 +136,7 @@ export default function ExitIntentModal() {
                       <input
                         type="text"
                         placeholder="Your Name"
+                        aria-label="Your Full Name"
                         {...register("name")}
                         className={`w-full bg-[#FDFBF7] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#C5A059] outline-none transition-all placeholder:text-[#0A192F]/40 text-base ${errors.name ? 'border-red-400' : 'border-transparent'}`}
                       />
@@ -146,6 +147,7 @@ export default function ExitIntentModal() {
                       <input
                         type="email"
                         placeholder="Email Address"
+                        aria-label="Your Email Address"
                         {...register("email")}
                         className={`w-full bg-[#FDFBF7] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#C5A059] outline-none transition-all placeholder:text-[#0A192F]/40 text-base ${errors.email ? 'border-red-400' : 'border-transparent'}`}
                       />
@@ -156,6 +158,7 @@ export default function ExitIntentModal() {
                       <input
                         type="tel"
                         placeholder="Phone Number (10 digits)"
+                        aria-label="Your Phone Number"
                         {...register("phone")}
                         className={`w-full bg-[#FDFBF7] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#C5A059] outline-none transition-all placeholder:text-[#0A192F]/40 text-base ${errors.phone ? 'border-red-400' : 'border-transparent'}`}
                       />

@@ -77,7 +77,7 @@ export default function Location() {
         
         {/* Title Section */}
         <div className="mb-12 md:mb-20 max-w-2xl">
-          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-6 block">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-6 block">
             Strategic Connectivity
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0A192F] leading-tight tracking-wide">

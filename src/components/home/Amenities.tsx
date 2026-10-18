@@ -12,25 +12,25 @@ const amenitiesList = [
     title: "Lap Pool",
     description: "Swim into the horizon with temperature-controlled waters.",
     icon: <Waves size={32} strokeWidth={1} />,
-    image: "/images/pool_bg.jpg"
+    image: "/images/pool_bg.webp"
   },
   {
     title: "Wellness Studio & Gym",
     description: "State-of-the-art gymnasium, yoga studio, and luxury spa.",
     icon: <Dumbbell size={32} strokeWidth={1} />,
-    image: "/images/story_bg.jpg"
+    image: "/images/story_bg.webp"
   },
   {
     title: "Active Sports",
     description: "Professional pickleball courts and a mini football turf.",
     icon: <Trophy size={32} strokeWidth={1} />,
-    image: "/images/masterplan_bg.jpg"
+    image: "/images/masterplan_bg.webp"
   },
   {
     title: "Entertainment Hub",
     description: "Mini theatre, digital dome, and a premium co-working lounge.",
     icon: <Film size={32} strokeWidth={1} />,
-    image: "/images/hero_bg.jpg"
+    image: "/images/hero_bg.webp"
   }
 ];
 
@@ -66,7 +66,7 @@ export default function Amenities() {
     <section id="amenities" className="py-24 md:py-32 bg-[#FDFBF7] relative overflow-hidden" ref={containerRef}>
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-4 block">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-4 block">
             Signature Lifestyle
           </span>
           <h2 className="text-4xl md:text-6xl font-serif text-[#0A192F] leading-tight mb-6">

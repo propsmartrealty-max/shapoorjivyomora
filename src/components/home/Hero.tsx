@@ -44,11 +44,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[#FDFBF7]/20 z-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/90 via-transparent to-[#FDFBF7] z-10" />
         <Image 
-          src="/images/hero_bg.jpg"
+          src="/images/hero_bg.webp"
           alt="Shapoorji Pallonji Joyville Vyomora Luxury Project in Hinjewadi Pune"
           fill
           priority
-          quality={85}
           sizes="100vw"
           className="object-cover object-center brightness-[1.12] contrast-[1.05] transform scale-105 transition-transform duration-10000 hover:scale-110 opacity-90"
         />
@@ -90,10 +89,22 @@ export default function Hero() {
             transition={{ duration: 1, delay: 1.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            <Button variant="gold" size="lg" className="w-full sm:w-auto bg-[#0A192F] text-white">
+            <Button 
+              variant="gold" 
+              size="lg" 
+              aria-label="Book VIP Site Visit to Shapoorji Joyville Vyomora"
+              onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
+              className="w-full sm:w-auto bg-[#0A192F] text-white"
+            >
               Book Site Visit
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-[#0A192F]/20 text-[#0A192F] hover:bg-[#0A192F]/5">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              aria-label="Download Official Brochure and Price Sheet"
+              onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
+              className="w-full sm:w-auto border-[#0A192F]/20 text-[#0A192F] hover:bg-[#0A192F]/5"
+            >
               Download Brochure
             </Button>
           </motion.div>

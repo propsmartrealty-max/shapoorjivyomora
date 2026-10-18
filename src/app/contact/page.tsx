@@ -96,9 +96,11 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-[#0F172A]/60 mb-2">Full Name</label>
+                  <label htmlFor="contact-name" className="block text-xs uppercase tracking-widest text-[#0F172A]/70 mb-2">Full Name</label>
                   <input 
                     {...register("name")}
+                    id="contact-name"
+                    aria-label="Your Full Name"
                     type="text" 
                     className={`w-full bg-transparent border-b pb-3 focus:outline-none transition-colors text-base ${errors.name ? 'border-red-400 focus:border-red-400' : 'border-[#0F172A]/20 focus:border-[#E5D3B3]'}`}
                   />
@@ -106,9 +108,11 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-[#0F172A]/60 mb-2">Email Address</label>
+                  <label htmlFor="contact-email" className="block text-xs uppercase tracking-widest text-[#0F172A]/70 mb-2">Email Address</label>
                   <input 
                     {...register("email")}
+                    id="contact-email"
+                    aria-label="Your Email Address"
                     type="email" 
                     className={`w-full bg-transparent border-b pb-3 focus:outline-none transition-colors text-base ${errors.email ? 'border-red-400 focus:border-red-400' : 'border-[#0F172A]/20 focus:border-[#E5D3B3]'}`}
                   />
@@ -116,9 +120,11 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-[#0F172A]/60 mb-2">Phone Number</label>
+                  <label htmlFor="contact-phone" className="block text-xs uppercase tracking-widest text-[#0F172A]/70 mb-2">Phone Number</label>
                   <input 
                     {...register("phone")}
+                    id="contact-phone"
+                    aria-label="Your Phone Number"
                     type="tel" 
                     className={`w-full bg-transparent border-b pb-3 focus:outline-none transition-colors text-base ${errors.phone ? 'border-red-400 focus:border-red-400' : 'border-[#0F172A]/20 focus:border-[#E5D3B3]'}`}
                   />
@@ -126,9 +132,11 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-widest text-[#0F172A]/60 mb-2">Interested In</label>
+                  <label htmlFor="contact-interest" className="block text-xs uppercase tracking-widest text-[#0F172A]/70 mb-2">Interested In</label>
                   <select 
                     {...register("interest")}
+                    id="contact-interest"
+                    aria-label="Interested In Configuration"
                     className={`w-full bg-transparent border-b pb-3 focus:outline-none transition-colors text-base text-[#0F172A] appearance-none ${errors.interest ? 'border-red-400 focus:border-red-400' : 'border-[#0F172A]/20 focus:border-[#E5D3B3]'}`}
                   >
                     <option value="">Select Configuration</option>

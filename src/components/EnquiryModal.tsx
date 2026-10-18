@@ -144,6 +144,7 @@ export default function EnquiryModal() {
                       {...register("name")}
                       type="text" 
                       placeholder="Full Name"
+                      aria-label="Your Full Name"
                       className={`w-full bg-[#F5F5F3] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#E5D3B3] outline-none transition-all placeholder:text-[#0F172A]/40 text-base ${errors.name ? 'border-red-400' : 'border-transparent'}`}
                     />
                     {errors.name && <p className="text-red-500 text-[10px] mt-1 ml-1">{errors.name.message}</p>}
@@ -153,6 +154,7 @@ export default function EnquiryModal() {
                       {...register("email")}
                       type="email" 
                       placeholder="Email Address"
+                      aria-label="Your Email Address"
                       className={`w-full bg-[#F5F5F3] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#E5D3B3] outline-none transition-all placeholder:text-[#0F172A]/40 text-base ${errors.email ? 'border-red-400' : 'border-transparent'}`}
                     />
                     {errors.email && <p className="text-red-500 text-[10px] mt-1 ml-1">{errors.email.message}</p>}
@@ -162,6 +164,7 @@ export default function EnquiryModal() {
                       {...register("phone")}
                       type="tel" 
                       placeholder="Phone Number"
+                      aria-label="Your Phone Number"
                       className={`w-full bg-[#F5F5F3] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#E5D3B3] outline-none transition-all placeholder:text-[#0F172A]/40 text-base ${errors.phone ? 'border-red-400' : 'border-transparent'}`}
                     />
                     {errors.phone && <p className="text-red-500 text-[10px] mt-1 ml-1">{errors.phone.message}</p>}
@@ -169,6 +172,8 @@ export default function EnquiryModal() {
                   <div>
                     <select 
                       {...register("configuration")}
+                      id="modal-configuration"
+                      aria-label="Select Preferred Apartment Configuration"
                       className={`w-full bg-[#F5F5F3] px-4 py-3 rounded-sm border focus:ring-1 focus:ring-[#E5D3B3] outline-none transition-all text-base appearance-none text-[#0F172A] ${errors.configuration ? 'border-red-400' : 'border-transparent'}`}
                     >
                       <option value="">Select Configuration</option>
@@ -183,6 +188,7 @@ export default function EnquiryModal() {
                       {...register("visit_date")}
                       type="date" 
                       placeholder="Schedule a Visit (Optional)"
+                      aria-label="Schedule a Site Visit Date"
                       className="w-full bg-[#F5F5F3] px-4 py-3 rounded-sm border border-transparent focus:ring-1 focus:ring-[#E5D3B3] outline-none transition-all placeholder:text-[#0F172A]/40 text-base"
                     />
                   </div>

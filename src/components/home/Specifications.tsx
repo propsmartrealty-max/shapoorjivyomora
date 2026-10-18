@@ -67,7 +67,7 @@ export default function Specifications() {
         
         {/* Header */}
         <div className="spec-header text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-4 block">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-4 block">
             Home Specifications
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-[#0A192F] leading-tight tracking-wide mb-6">
@@ -93,6 +93,7 @@ export default function Specifications() {
             
             <button
               onClick={() => setActiveTab("2_3_BHK")}
+              aria-label="View 2 and 3 BHK Specifications"
               className={`relative z-10 px-8 py-3 rounded-full text-sm font-semibold tracking-wide uppercase transition-colors duration-300 w-48 ${
                 activeTab === "2_3_BHK" ? "text-white" : "text-[#0A192F]/60 hover:text-[#0A192F]"
               }`}
@@ -101,6 +102,7 @@ export default function Specifications() {
             </button>
             <button
               onClick={() => setActiveTab("Duplexes")}
+              aria-label="View Duplex Specifications"
               className={`relative z-10 px-8 py-3 rounded-full text-sm font-semibold tracking-wide uppercase transition-colors duration-300 w-48 ${
                 activeTab === "Duplexes" ? "text-white" : "text-[#0A192F]/60 hover:text-[#0A192F]"
               }`}

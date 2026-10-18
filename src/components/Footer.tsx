@@ -74,6 +74,7 @@ export default function Footer() {
                 href="https://maps.google.com/?q=18.5913,73.7389" 
                 target="_blank" 
                 rel="noreferrer"
+                aria-label="Get Google Maps Directions to Shapoorji Vyomora Experience Centre"
                 className="inline-flex items-center text-xs font-medium text-[#C5A059] hover:text-white transition-colors gap-2"
               >
                 <Navigation size={14} />
@@ -155,10 +156,13 @@ export default function Footer() {
                 </p>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
                   <div className="flex flex-col">
+                    <label htmlFor="footer-email" className="sr-only">Enter Your Email Address</label>
                     <input 
                       {...register("email")}
+                      id="footer-email"
                       type="email" 
                       placeholder="Enter Your Email Address" 
+                      aria-label="Enter your email address for VIP brochure and pricing"
                       className={`bg-transparent border-b pb-2 text-sm text-white focus:outline-none transition-colors placeholder:text-white/30 rounded-none ${errors.email ? 'border-red-400 focus:border-red-400' : 'border-white/20 focus:border-[#C5A059]'}`}
                     />
                     {errors.email && <p className="text-red-400 text-[10px] mt-1">{errors.email.message}</p>}
@@ -171,6 +175,7 @@ export default function Footer() {
                   <button 
                     type="submit" 
                     disabled={status === "loading"}
+                    aria-label="Download Brochure and Price Sheet"
                     className="text-left text-xs tracking-[0.15em] text-white hover:text-[#C5A059] uppercase flex items-center transition-colors group disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? "Registering..." : "Download Brochure & Price Sheet"}
@@ -231,15 +236,15 @@ export default function Footer() {
             <div className="text-center md:text-right">
               <p className="mb-2">&copy; {new Date().getFullYear()} Shapoorji Pallonji Real Estate. All rights reserved.</p>
               <div className="flex space-x-4 justify-center md:justify-end">
-                <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                 <Link href="/sitemap" className="hover:text-white transition-colors text-[#C5A059]">HTML Sitemap</Link>
-                <Link href="#" className="hover:text-white transition-colors">RERA Disclaimers</Link>
+                <a href="#disclaimer" className="hover:text-white transition-colors">RERA Disclaimers</a>
               </div>
             </div>
           </div>
           
-          <div className="text-[9px] md:text-[10px] text-justify text-white/30 max-w-7xl mx-auto leading-relaxed border-t border-white/5 pt-6">
+          <div id="disclaimer" className="text-[9px] md:text-[10px] text-justify text-white/30 max-w-7xl mx-auto leading-relaxed border-t border-white/5 pt-6">
             Disclaimer: The content provided on this website is for informational purposes only and does not constitute an offer of contract. Prices, configurations, specifications, floor plans, and amenities mentioned are subject to change without prior notice. Rendered images and artist impressions are for representative purposes only. This website is managed by an authorized channel partner for Shapoorji Pallonji Real Estate. We may share inquiries with MahaRERA registered real estate advisors for processing.
           </div>
         </div>

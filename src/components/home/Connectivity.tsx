@@ -43,16 +43,15 @@ export default function Connectivity() {
         <div className="flex flex-col items-center justify-center text-center mb-16 md:mb-24">
           <div className="bg-[#0A192F] text-white py-6 px-12 rounded-sm shadow-xl mb-8 transform hover:scale-105 transition-transform duration-500 cursor-default border border-[#C5A059]/20 relative overflow-hidden">
             {/* Subtle glow effect behind logo */}
-            <div className="absolute inset-0 bg-[#C5A059]/10 blur-xl rounded-full scale-150" />
-            <h2 className="text-xl md:text-2xl font-serif tracking-widest uppercase mb-1 relative z-10">
+            <span className="block text-xl md:text-2xl font-serif tracking-widest uppercase mb-1 relative z-10 text-white">
               Shapoorji Pallonji
+            </span>
+            <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#C5A059] tracking-wide relative z-10">
+              Vyomora Connectivity
             </h2>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#C5A059] tracking-wide relative z-10">
-              Vyomora
-            </h1>
-            <h3 className="text-sm md:text-md tracking-[0.3em] font-light mt-2 relative z-10 text-white/80">
-              HINJAWADI
-            </h3>
+            <p className="text-sm md:text-md tracking-[0.3em] font-light mt-2 relative z-10 text-white/80 uppercase">
+              Hinjawadi IT Corridor
+            </p>
           </div>
           <p className="text-[#1e2338]/80 font-light max-w-xl">
             Seamlessly connected to everything that matters. Explore the strategic distances and estimated travel times to major hubs around Pune.

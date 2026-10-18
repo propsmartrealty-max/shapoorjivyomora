@@ -1,0 +1,58 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Shapoorji Pallonji Joyville Vyomora",
+    "documentationUrl": "https://www.shapoorji-vyomora.com/llms.txt",
+    "logoUrl": "https://www.shapoorji-vyomora.com/icon-512.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:residences:catalog",
+      "displayName": "Joyville Vyomora Residences & Pricing Catalog",
+      "type": "text/html",
+      "url": "https://www.shapoorji-vyomora.com/residences",
+      "description": "Floor plans, usable carpet areas (685 to 2,200+ sq. ft.), launch pricing starting from ₹84.99 Lakhs, and inventory specifications for 2 BHK Luxe, 3 BHK Elite, 4 BHK Sky Suites, and Duplexes in Hinjewadi Phase 1.",
+      "representativeQueries": [
+        "what is the price of 2 BHK flat in Shapoorji Joyville Vyomora Hinjewadi",
+        "show carpet area and floor plans for Joyville Vyomora 3 BHK",
+        "what are the apartment configurations at Shapoorji Joyville 3.0 Pune"
+      ]
+    },
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:calculator:roi-emi",
+      "displayName": "West Pune Real Estate ROI & EMI Calculator",
+      "type": "text/html",
+      "url": "https://www.shapoorji-vyomora.com/investment-calculator",
+      "description": "Dynamic financial calculation tool modeling monthly EMI installments, projected rental yield, tax benefits, and 5-to-10 year capital appreciation forecasts for Pune real estate.",
+      "representativeQueries": [
+        "calculate ROI for buying property in Hinjewadi Phase 1",
+        "what is the expected rental yield for Joyville Vyomora Pune",
+        "calculate EMI for 85 lakh apartment in Hinjewadi"
+      ]
+    },
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:docs:architectural-specification",
+      "displayName": "Joyville Vyomora Architectural Specification & Amenities",
+      "type": "text/markdown",
+      "url": "https://www.shapoorji-vyomora.com/llms.txt",
+      "description": "Comprehensive technical factsheet covering Mivan construction technology, 32,000 sq. ft. multi-level clubhouse, 75% open landscaped greenery, and MahaRERA compliance.",
+      "representativeQueries": [
+        "what amenities are available at Shapoorji Joyville Vyomora",
+        "clubhouse size at Joyville Vyomora Hinjewadi",
+        "construction technology used in Shapoorji Vyomora Pune"
+      ]
+    },
+    {
+      "identifier": "urn:air:shapoorji-vyomora.com:market:west-pune-hub",
+      "displayName": "West Pune Real Estate Authority Hub",
+      "type": "text/html",
+      "url": "https://www.shapoorji-vyomora.com/west-pune-real-estate",
+      "description": "Exhaustive market intelligence report for West Pune real estate corridors including Mahalunge, Hinjewadi, Baner, Wakad, and Balewadi, with infrastructure impact analysis for Pune Metro Line 3.",
+      "representativeQueries": [
+        "is it good to invest in Hinjewadi Mahalunge corridor",
+        "pune metro line 3 impact on hinjewadi real estate prices",
+        "top real estate projects in West Pune 2026"
+      ]
+    }
+  ]
+}

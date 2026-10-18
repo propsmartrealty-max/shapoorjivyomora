@@ -43,11 +43,11 @@ export default function MasterLayout() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-6 block">
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-6 block">
               Architectural Vision
             </span>
             <h2 className="text-4xl md:text-6xl font-serif text-[#0A192F] max-w-2xl">
-              Master Plan & <span className="text-[#C5A059] italic">Layouts</span>
+              Master Plan & <span className="text-[#8A6B2D] italic">Layouts</span>
             </h2>
           </div>
           <Link href="/residences">
@@ -62,18 +62,21 @@ export default function MasterLayout() {
           
           {/* Tabs & Details (Left side) */}
           <div className="lg:col-span-4 flex flex-col justify-center">
-            <div className="flex flex-row lg:flex-col gap-4 overflow-x-auto pb-4 lg:pb-0 mb-8 hide-scrollbar">
+            <div role="tablist" aria-label="Residence layout options" className="flex flex-row lg:flex-col gap-4 overflow-x-auto pb-4 lg:pb-0 mb-8 hide-scrollbar">
               {layoutData.map((tab) => (
                 <button
                   key={tab.id}
+                  role="tab"
+                  aria-selected={activeTab === tab.id}
+                  aria-label={`View ${tab.title}`}
                   onClick={() => setActiveTab(tab.id)}
                   className={`text-left px-6 py-4 rounded-sm transition-all duration-300 border-l-2 whitespace-nowrap lg:whitespace-normal flex-shrink-0 ${
                     activeTab === tab.id 
-                    ? "border-l-[#C5A059] bg-white/60 shadow-sm backdrop-blur-md" 
+                    ? "border-l-[#8A6B2D] bg-white/60 shadow-sm backdrop-blur-md" 
                     : "border-l-transparent text-[#1e2338]/50 hover:text-[#0A192F] hover:bg-white/40"
                   }`}
                 >
-                  <h3 className={`text-lg font-serif mb-1 ${activeTab === tab.id ? "text-[#C5A059]" : ""}`}>
+                  <h3 className={`text-lg font-serif mb-1 ${activeTab === tab.id ? "text-[#8A6B2D]" : ""}`}>
                     {tab.title}
                   </h3>
                   <p className="text-xs uppercase tracking-widest opacity-70">
@@ -128,7 +131,11 @@ export default function MasterLayout() {
                     className="object-contain mix-blend-multiply opacity-90 transition-all duration-700 group-hover:scale-105"
                   />
                   
-                  <Link href="/residences" className="absolute bottom-4 right-4 bg-[#0A192F] text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md">
+                  <Link 
+                    href="/residences" 
+                    aria-label="View enlarged residence floor plans"
+                    className="absolute bottom-4 right-4 bg-[#0A192F] text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md"
+                  >
                     <Maximize2 className="w-4 h-4" />
                   </Link>
                 </motion.div>

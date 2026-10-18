@@ -60,7 +60,7 @@ export default function AboutDeveloper() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2"
           >
-            <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-6 block">
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-6 block">
               The Legacy
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#0A192F] leading-tight mb-8">
@@ -84,7 +84,7 @@ export default function AboutDeveloper() {
           >
             <div 
               className="absolute inset-0 bg-cover bg-center brightness-[1.15] contrast-[1.05] transition-transform duration-1000 group-hover:scale-105"
-              style={{ backgroundImage: "url('/images/story_bg.jpg')" }}
+              style={{ backgroundImage: "url('/images/story_bg.webp')" }}
             />
             <div className="absolute inset-0 bg-black/20" />
             
@@ -114,13 +114,13 @@ export default function AboutDeveloper() {
           {stats.map((stat, idx) => (
             <div key={idx} className="stat-item flex flex-col items-center text-center">
               <motion.div 
-                className="text-[#C5A059] mb-6"
+                className="text-[#8A6B2D] mb-6"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: idx * 0.2 }}
               >
                 {stat.icon}
               </motion.div>
-              <h4 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-2">{stat.value}</h4>
+              <h3 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-2">{stat.value}</h3>
               <p className="text-sm uppercase tracking-widest text-[#1e2338]/70">{stat.label}</p>
             </div>
           ))}

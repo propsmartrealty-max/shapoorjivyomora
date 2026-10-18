@@ -163,6 +163,7 @@ export default function GoogleReviews() {
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id as any)}
+              aria-label={`Filter by ${tab.label}`}
               className={`px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all ${
                 filter === tab.id
                   ? "bg-[#C5A059] text-[#050C17] shadow-lg font-semibold"
@@ -209,12 +210,12 @@ export default function GoogleReviews() {
                     {review.author.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-white group-hover:text-[#C5A059] transition-colors flex items-center gap-1.5">
+                    <h3 className="text-sm font-semibold text-white group-hover:text-[#C5A059] transition-colors flex items-center gap-1.5">
                       {review.author}
                       {review.verified && (
                         <CheckCircle size={13} className="text-blue-400 fill-blue-400/20" />
                       )}
-                    </h4>
+                    </h3>
                     <p className="text-[11px] text-white/50">{review.role}</p>
                     <p className="text-[10px] text-white/40 flex items-center gap-1 mt-0.5">
                       <MapPin size={10} className="text-[#C5A059]" /> {review.location}

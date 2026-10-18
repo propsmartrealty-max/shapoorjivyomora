@@ -53,7 +53,7 @@ export default function Intro() {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div style={{ y, opacity }} className="max-w-4xl mx-auto text-center">
-          <p className="text-sm font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-8">
+          <p className="text-sm font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-8">
             The Philosophy
           </p>
           

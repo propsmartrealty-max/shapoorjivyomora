@@ -31,11 +31,11 @@ export default function Pricing() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#C5A059] mb-4 block">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-[#8A6B2D] mb-4 block">
             Joy 3.0 Pricing & Configurations
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-6">
-            Intelligent Spaces. <span className="text-[#C5A059] italic">Impeccable Value.</span>
+            Intelligent Spaces. <span className="text-[#8A6B2D] italic">Impeccable Value.</span>
           </h2>
           <p className="text-[#1e2338]/80 font-light max-w-2xl mx-auto">
             Discover thoughtfully crafted residences with layouts optimized for modern living. Choose from our diverse range of 2 & 3 BHK configurations starting from <strong>₹84.99 Lakhs* onwards</strong>.
@@ -87,6 +87,7 @@ export default function Pricing() {
             </p>
             <Button 
               variant="gold" 
+              aria-label="Enquire Now for Pricing and Floor Plans"
               className="text-sm bg-[#0A192F] text-white shrink-0"
               onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
             >

@@ -55,7 +55,7 @@ export default function Header() {
           }`}
         >
           {/* Brand / Logo */}
-          <Link href="/" className="flex flex-col group py-0.5 shrink-0">
+          <Link href="/" aria-label="Shapoorji Pallonji Joyville Vyomora Homepage" className="flex flex-col group py-0.5 shrink-0">
             <span className="text-lg md:text-xl font-serif font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#0A192F] via-[#0A192F] to-[#C5A059] group-hover:to-[#C5A059] transition-all duration-300">
               VYOMORA
             </span>
@@ -81,6 +81,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3 shrink-0">
             <button 
               onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
+              aria-label="Enquire Now for Shapoorji Joyville Vyomora"
               className="px-5 py-2 rounded-full bg-[#0A192F] text-white hover:bg-[#C5A059] hover:text-[#0A192F] text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-md shadow-[#0A192F]/10 hover:shadow-lg hover:shadow-[#C5A059]/20"
             >
               Enquire Now
@@ -91,6 +92,7 @@ export default function Header() {
           <div className="lg:hidden flex items-center space-x-2">
             <button 
               onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
+              aria-label="Enquire Now"
               className="px-3.5 py-1.5 rounded-full bg-[#0A192F] text-white text-[10px] font-bold uppercase tracking-wider"
             >
               Enquire

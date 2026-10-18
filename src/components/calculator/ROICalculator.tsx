@@ -124,14 +124,16 @@ export default function ROICalculator() {
             {/* Property Value */}
             <div>
               <div className="flex justify-between mb-2">
-                <label className="text-sm font-medium text-[#0A192F]">Property Value</label>
-                <span className="text-[#C5A059] font-semibold text-base">{formatCurrency(propertyValue)}</span>
+                <label htmlFor="roi-property-value" className="text-sm font-medium text-[#0A192F]">Property Value</label>
+                <span className="text-[#8A6B2D] font-semibold text-base">{formatCurrency(propertyValue)}</span>
               </div>
               <input 
+                id="roi-property-value"
+                aria-label="Property Value"
                 type="range" min="8500000" max="30000000" step="100000"
                 value={propertyValue}
                 onChange={(e) => setPropertyValue(Number(e.target.value))}
-                className="w-full accent-[#C5A059] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                className="w-full accent-[#8A6B2D] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
               />
               <div className="flex justify-between text-xs text-gray-400 mt-2">
                 <span>₹85 L (2 BHK)</span>
@@ -143,26 +145,30 @@ export default function ROICalculator() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-sm font-medium text-[#0A192F]">Down Payment</label>
-                  <span className="text-[#C5A059] font-semibold">{downPaymentPct}%</span>
+                  <label htmlFor="roi-down-payment" className="text-sm font-medium text-[#0A192F]">Down Payment</label>
+                  <span className="text-[#8A6B2D] font-semibold">{downPaymentPct}%</span>
                 </div>
                 <input 
+                  id="roi-down-payment"
+                  aria-label="Down Payment Percentage"
                   type="range" min="10" max="100" step="5"
                   value={downPaymentPct}
                   onChange={(e) => setDownPaymentPct(Number(e.target.value))}
-                  className="w-full accent-[#C5A059] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full accent-[#8A6B2D] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                 />
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-sm font-medium text-[#0A192F]">Home Loan Rate</label>
-                  <span className="text-[#C5A059] font-semibold">{loanRate}%</span>
+                  <label htmlFor="roi-loan-rate" className="text-sm font-medium text-[#0A192F]">Home Loan Rate</label>
+                  <span className="text-[#8A6B2D] font-semibold">{loanRate}%</span>
                 </div>
                 <input 
+                  id="roi-loan-rate"
+                  aria-label="Home Loan Interest Rate"
                   type="range" min="7" max="12" step="0.1"
                   value={loanRate}
                   onChange={(e) => setLoanRate(Number(e.target.value))}
-                  className="w-full accent-[#C5A059] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full accent-[#8A6B2D] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                   disabled={downPaymentPct === 100}
                 />
               </div>
@@ -172,10 +178,12 @@ export default function ROICalculator() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-sm font-medium text-[#0A192F]">Expected Appreciation</label>
+                  <label htmlFor="roi-appreciation-rate" className="text-sm font-medium text-[#0A192F]">Expected Appreciation</label>
                   <span className="text-green-600 font-semibold">{appreciationRate}% /yr</span>
                 </div>
                 <input 
+                  id="roi-appreciation-rate"
+                  aria-label="Expected Capital Appreciation Rate"
                   type="range" min="4" max="15" step="1"
                   value={appreciationRate}
                   onChange={(e) => setAppreciationRate(Number(e.target.value))}
@@ -184,10 +192,12 @@ export default function ROICalculator() {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <label className="text-sm font-medium text-[#0A192F]">Expected Rental Yield</label>
+                  <label htmlFor="roi-rental-yield" className="text-sm font-medium text-[#0A192F]">Expected Rental Yield</label>
                   <span className="text-blue-600 font-semibold">{rentalYield}% /yr</span>
                 </div>
                 <input 
+                  id="roi-rental-yield"
+                  aria-label="Expected Annual Rental Yield"
                   type="range" min="2" max="8" step="0.5"
                   value={rentalYield}
                   onChange={(e) => setRentalYield(Number(e.target.value))}
@@ -199,14 +209,16 @@ export default function ROICalculator() {
             {/* Time Horizon */}
             <div>
               <div className="flex justify-between mb-2">
-                <label className="text-sm font-medium text-[#0A192F]">Investment Horizon</label>
-                <span className="text-[#C5A059] font-semibold">{horizonYears} Years</span>
+                <label htmlFor="roi-investment-horizon" className="text-sm font-medium text-[#0A192F]">Investment Horizon</label>
+                <span className="text-[#8A6B2D] font-semibold">{horizonYears} Years</span>
               </div>
               <input 
+                id="roi-investment-horizon"
+                aria-label="Investment Horizon in Years"
                 type="range" min="3" max="20" step="1"
                 value={horizonYears}
                 onChange={(e) => setHorizonYears(Number(e.target.value))}
-                className="w-full accent-[#C5A059] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                className="w-full accent-[#8A6B2D] h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
               />
             </div>
           </div>
