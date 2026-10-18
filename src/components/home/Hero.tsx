@@ -54,11 +54,8 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-20 mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center mt-20">
-        <motion.div
+        <div
           ref={textRef}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="max-w-5xl"
         >
           <div className="inline-flex items-center gap-2 mb-3 px-4 py-1.5 rounded-full border border-[#C5A059]/40 bg-[#C5A059]/10 backdrop-blur-sm">
@@ -74,21 +71,11 @@ export default function Hero() {
             </span>
           </h1>
           
-          <motion.h2 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="text-lg md:text-xl text-[#1e2338]/80 max-w-3xl mx-auto font-light leading-relaxed mb-10"
-          >
+          <h2 className="text-lg md:text-xl text-[#1e2338]/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
             Welcome to <strong>Joyville Vyomora (Joy 3.0) by Shapoorji Pallonji Real Estate</strong> — luxury river-facing 2 BHK, 3 BHK, 4 BHK & Sky Duplexes with a monumental 32,000+ sq. ft. clubhouse in Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, Pune. Possession: Dec 2029 | MahaRERA: PR1260002600999.
-          </motion.h2>
+          </h2>
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button 
               variant="gold" 
               size="lg" 
@@ -107,8 +94,8 @@ export default function Hero() {
             >
               Download Brochure
             </Button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Scroll Indicator */}
         <motion.div

@@ -15,14 +15,16 @@ export default function Story() {
     if (!containerRef.current || !imageRef.current || !contentRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Pinning and parallax effect
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top",
-        end: "+=100%",
-        pin: true,
-        pinSpacing: true,
-      });
+      // Pinning and parallax effect (Desktop only to prevent mobile scroll hijacking)
+      if (window.innerWidth >= 1024) {
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top top",
+          end: "+=100%",
+          pin: true,
+          pinSpacing: true,
+        });
+      }
 
       gsap.to(imageRef.current, {
         scale: 1.1,

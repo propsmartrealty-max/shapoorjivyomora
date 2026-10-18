@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Preloader from "@/components/Preloader";
 import SmoothScroll from "@/components/SmoothScroll";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,12 +16,16 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["Georgia", "Cambria", "Times New Roman", "Times", "serif"],
 });
 
 export const viewport = {
@@ -155,12 +158,13 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" fetchPriority="high" />
+        <link rel="preconnect" href="https://shapoorjirealestate.com" />
+        <link rel="preconnect" href="https://static.cloudflareinsights.com" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
         <StructuredData />
       </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased overflow-x-hidden max-w-full`}>
-        <Preloader />
         <CustomCursor />
         <SmoothScroll>
           <Header />
