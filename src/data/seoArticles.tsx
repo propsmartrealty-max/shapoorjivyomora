@@ -777,5 +777,113 @@ export const seoArticles: SEOArticle[] = [
         </p>
       </div>
     ),
+  },
+  {
+    id: "17",
+    slug: "shapoorji-pallonji-vanaha-bavdhan-and-golfland-review-and-price-guide",
+    title: "Shapoorji Pallonji Vanaha Bavdhan & Golfland: Complete Review, Floor Plans & Price Guide",
+    metaDescription: "Detailed review of Shapoorji Pallonji Vanaha and Golfland in Bavdhan Pune. Compare 1, 2, 3, 4 BHK floor plans, golf course view apartments, prices, and MahaRERA details.",
+    keywords: [
+      "Shapoorji Pallonji Vanaha Pune", "Shapoorji Pallonji Vanaha Bavdhan", "Vanaha Golfland price",
+      "Vanaha Pune residential township", "Vanaha Bavdhan apartments", "Vanaha Golfland brochure",
+      "Vanaha Golfland floor plan", "Vanaha Golfland golf course facing homes", "Vanaha Verdant Bavdhan",
+      "Vanaha Springs Bavdhan", "Vanaha Pune MahaRERA details", "flats in Bavdhan Pune"
+    ],
+    excerpt: "Nestled within a 1,000-acre green valley near Oxford Golf Resort, Shapoorji Pallonji Vanaha and Golfland deliver nature-centric luxury living just minutes from Kothrud and the Mumbai-Bangalore Highway.",
+    date: "2026-09-20",
+    content: (
+      <div className="space-y-6">
+        <p>
+          <strong>Shapoorji Pallonji Vanaha</strong> in Bavdhan stands as one of the most ambitious master-planned residential green townships in Western India. Sprawling across an idyllic 1,000-acre green valley framed by the Sahyadri mountain ranges, Vanaha offers an extraordinary respite from central Pune&apos;s urban density while maintaining seamless connectivity to Kothrud, Hinjewadi, and the Mumbai-Bangalore Highway.
+        </p>
+        <h2 className="text-2xl font-serif text-[#0A192F] mt-8 mb-4">Vanaha Golfland: Golf-Course-Facing Luxury Residences</h2>
+        <p>
+          The crown jewel of the township is <strong>Vanaha Golfland</strong>, an exclusive residential enclave providing uninterrupted vistas over the 18-hole championship Oxford Golf Resort. Designed for discerning buyers, Golfland features expansive 2 BHK, 3 BHK, 4 BHK duplex apartments, and townhouses with double-height ceiling living rooms, private sun decks, and premium marble finishes.
+        </p>
+        <h3 className="text-xl font-serif text-[#0A192F] mt-6 mb-3">Vanaha Verdant & Vanaha Springs Enclaves</h3>
+        <p>
+          The township comprises distinct thematic phases tailored to diverse buyer budgets:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Vanaha Springs:</strong> Accessible 2 & 3 BHK nature residences starting from ₹62 Lakhs*, bordered by perennial fresh streams and reflexology pathways.</li>
+          <li><strong>Vanaha Verdant (Mahogany):</strong> Premium 2 & 3 BHK botanical apartments surrounded by curated green courtyards, priced from ₹72 Lakhs*.</li>
+          <li><strong>Vanaha Golfland:</strong> Signature golf-view residences and duplex penthouses starting from ₹1.35 Cr* up to ₹2.16 Cr*.</li>
+        </ul>
+        <h3 className="text-xl font-serif text-[#0A192F] mt-6 mb-3">MahaRERA Disclosures & Infrastructure Timeline</h3>
+        <p>
+          Every phase within Vanaha is registered under MahaRERA (Registration Numbers: P52100024372 and P52100030012). With the completion of the multi-level Chandani Chowk flyover network and the planned Pune Ring Road, commuting from Vanaha to Hinjewadi IT Park takes less than 20 minutes, making it a favorite for senior tech executives and NRI investors.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "18",
+    slug: "joyville-hadapsar-annexe-celestia-and-wildernest-sp-kingstown-pune-guide",
+    title: "Joyville Hadapsar Annexe, Celestia & Wildernest at SP Kingstown: East Pune Investment Guide",
+    metaDescription: "Comprehensive guide to Shapoorji Pallonji's East Pune developments: Joyville Hadapsar Annexe, Joyville Celestia (Titan Tower), and Wildernest at SP Kingstown. Prices, amenities, and rental returns.",
+    keywords: [
+      "Joyville Hadapsar Annexe Pune", "Joyville Hadapsar Manjri", "Joyville Hadapsar price",
+      "Joyville Celestia Pune", "Joyville Celestia Titan Tower", "Wildernest at SP Kingstown Pune",
+      "SP Kingstown township Pune", "flats near SP Infocity Phursungi", "Joyville Hadapsar rental returns",
+      "MahaRERA Joyville Hadapsar", "Joyville Sky-Luxe Hadapsar"
+    ],
+    excerpt: "East Pune's fastest-appreciating residential corridor is anchored by Shapoorji Pallonji's 21-acre Joyville Hadapsar Annexe and the SP Kingstown township, offering 60+ lifestyle amenities near SP Infocity.",
+    date: "2026-09-25",
+    content: (
+      <div className="space-y-6">
+        <p>
+          East Pune has emerged as a premier employment and residential hub, driven by the colossal presence of <strong>SP Infocity in Phursungi</strong>, Magarpatta Cybercity, and EON Free Zone in Kharadi. Anchoring this flourishing micro-market is <strong>Joyville Hadapsar Annexe</strong>, a 21-acre master-planned township by Shapoorji Pallonji Real Estate featuring over 8.8 acres of dedicated central greenery.
+        </p>
+        <h2 className="text-2xl font-serif text-[#0A192F] mt-8 mb-4">Joyville Celestia & The Iconic Titan Tower</h2>
+        <p>
+          Within the Hadapsar Annexe masterplan, <strong>Joyville Celestia</strong> introduces an elevated standard of architectural grandeur. The crowning highlight is the <em>Titan Tower</em>, offering spacious 2 & 3 BHK residences, high-speed elevators, and an exclusive sky clubhouse with panoramic views over the East Pune horizon.
+        </p>
+        <h3 className="text-xl font-serif text-[#0A192F] mt-6 mb-3">Wildernest at SP Kingstown: Forest-Themed Luxury Living</h3>
+        <p>
+          For buyers seeking a resort-style retreat, <strong>Wildernest at SP Kingstown</strong> provides nature-immersion residences surrounded by dense forested groves, elevated treehouse decks, and open-air amphitheaters. Typologies span 3 & 4 BHK luxury residences tailored for corporate leaders and business families.
+        </p>
+        <h3 className="text-xl font-serif text-[#0A192F] mt-6 mb-3">Rental Yields & Capital Appreciation</h3>
+        <p>
+          Due to proximity to over 100,000 IT and manufacturing professionals at SP Infocity and Magarpatta, units at Joyville Hadapsar Annexe yield between <strong>4.5% and 5.2% in annual rental returns</strong>. Entry prices starting from ₹43 Lakhs* for 1 BHK and ₹68 Lakhs* for 2 BHK make it one of Pune&apos;s most accessible institutional-grade investments.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "19",
+    slug: "joyville-sensorium-hinjewadi-towers-amenities-and-price-guide",
+    title: "Joyville Sensorium Hinjewadi: Towers, 2.8-Acre Sensory Park & Price Guide",
+    metaDescription: "In-depth overview of Joyville Sensorium in Hinjewadi Phase 1 Pune. Explore Elation, Vista, Ambrosia, Iris, and Aurum towers, 5D sensory amenities, floor plans, and prices.",
+    keywords: [
+      "Shapoorji Pallonji Joyville Sensorium", "Joyville Sensorium Hinjewadi Pune", "Joyville Sensorium price",
+      "Joyville Sensorium floor plan", "Joyville Sensorium sensory park", "Joyville Sensorium clubhouse",
+      "Joyville Sensorium Elation Vista Ambrosia", "Joyville Sensorium MahaRERA", "Joyville Sensorium vs Joyville Vyomora"
+    ],
+    excerpt: "Joyville Sensorium pioneers 5D sensory wellness living across 10.5 acres in Hinjewadi Phase 1, featuring a 2.8-acre continuous central park and walking proximity to major IT tech parks.",
+    date: "2026-10-01",
+    content: (
+      <div className="space-y-6">
+        <p>
+          <strong>Joyville Sensorium</strong> represents a groundbreaking milestone in biophilic residential master planning in Hinjewadi Phase 1, Pune. Developed by Shapoorji Pallonji Real Estate under the global Joyville platform (backed by Actis, ADB, and IFC), Sensorium is designed around a multi-sensory lifestyle that engages touch, sight, sound, smell, and taste across 10.5 acres of prime IT-corridor land.
+        </p>
+        <h2 className="text-2xl font-serif text-[#0A192F] mt-8 mb-4">The 2.8-Acre Continuous Sensory Park</h2>
+        <p>
+          Unlike conventional high-rises where landscaping is fragmented, Sensorium dedicates <strong>2.8 contiguous acres</strong> to an interactive sensory central park. Features include reflexology pebble walkways, aroma floral courtyards, whispering bamboo groves, and cascading infinity water bodies that lower ambient temperatures and promote active mindfulness.
+        </p>
+        <h3 className="text-xl font-serif text-[#0A192F] mt-6 mb-3">Tower Overview: Elation, Vista, Ambrosia, Iris & Aurum</h3>
+        <p>
+          The development houses premium residential towers engineered with Mivan aluminium shuttering for supreme earthquake resilience:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 my-4">
+          <li><strong>Elation & Vista:</strong> 2 & 3 BHK smart homes with panoramic views of the central park and Mula riverbed.</li>
+          <li><strong>Ambrosia & Iris:</strong> Executive 2 BHK suites engineered for IT leaders prioritizing work-from-home acoustic separation and high-speed fiber connectivity.</li>
+          <li><strong>Aurum:</strong> The premium luxury tower featuring enhanced ceiling clearances, modular kitchens, and private lobby access.</li>
+        </ul>
+        <h3 className="text-xl font-serif text-[#0A192F] mt-6 mb-3">Joyville Sensorium vs Joyville Vyomora (Joy 3.0)</h3>
+        <p>
+          While Joyville Sensorium focuses on 5D sensory wellness and immediate walk-to-work proximity for Phase 1 tech campuses, <strong>Joyville Vyomora (Joy 3.0)</strong> is the newest flagship launch offering larger 4 BHK and Sky Duplex configurations and a monumental 32,000+ sq. ft. clubhouse. Together, they establish Shapoorji Pallonji&apos;s unchallenged supremacy in the Hinjewadi-Mahalunge growth corridor.
+        </p>
+      </div>
+    ),
   }
 ];

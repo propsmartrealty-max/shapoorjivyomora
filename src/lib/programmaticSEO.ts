@@ -1,10 +1,10 @@
 export const SEOLocations = [
   // Core Pune Hubs & Micro-Markets
   "hinjewadi", "mahalunge", "baner", "wakad", "balewadi",
-  "pimpri-chinchwad", "aundh", "pashan", "bavdhan", "sus",
+  "pimpri-chinchwad", "aundh", "pashan", "bavdhan", "bavdhan-valley", "oxford-golf-resort", "sus",
   "punawale", "tathawade", "ravet", "kothrud", "shivaji-nagar",
   "viman-nagar", "kalyani-nagar", "koregaon-park", "kharadi", "magarpatta",
-  "hadapsar", "wagholi", "pune-west", "pune-mumbai-highway", 
+  "hadapsar", "hadapsar-annexe", "manjri", "phursungi", "wagholi", "pune-west", "pune-east", "pune-mumbai-highway", 
   
   // IT Corridor Granular Hubs & Roads
   "hinjewadi-phase-1", "hinjewadi-phase-2", "hinjewadi-phase-3", 
@@ -28,7 +28,16 @@ export const SEONRILocations = [
 ];
 
 export const SEOConfigurations = [
-  // Primary High-Intent Keywords
+  // Developer & Platform Brand Permutations
+  "shapoorji-pallonji-pune", "shapoorji-pallonji-projects", "shapoorji-pallonji-real-estate",
+  "joyville-homes", "joyville-homes-pune",
+  
+  // Project-Specific Permutations
+  "joyville-vyomora", "joy-3.0-hinjewadi", "joyville-sensorium", "shapoorji-vanaha",
+  "vanaha-golfland", "joyville-hadapsar-annexe", "joyville-celestia", "wildernest-sp-kingstown",
+  "vanaha-verdant", "vanaha-springs", "golf-course-facing-homes", "river-facing-apartments",
+
+  // Typology & Configuration Permutations
   "2bhk-in-hinjewadi", "3bhk-in-mahalunge", "4bhk-in-baner", "4bhk-in-mahalunge",
   "sky-duplex", "simplex-luxury-homes", "5bhk-sky-villas", "penthouses",
   "2bhk-flats", "3bhk-apartments", "4bhk-luxury-homes", "duplex-penthouses",
@@ -40,11 +49,11 @@ export const SEOConfigurations = [
   "family-apartments", "luxury-lifestyle-apartments", "investment-property", 
   "residential-property", "best-residential-projects", "top-luxury-apartments", 
   "buy-flat", "buy-apartment", "buy-2-bhk", "buy-3-bhk", "best-flats-for-it-professionals",
-  "high-roi-investment", "shapoorji-pallonji-projects", "joyville-homes"
+  "high-roi-investment"
 ];
 
 export const SEOTopics = [
-  "price-trends", "floor-plans", "masterplan", "amenities", "connectivity",
+  "price-trends", "price-list", "floor-plans", "masterplan", "amenities", "connectivity",
   "investment-roi", "real-estate-reviews", "location-benefits", "brochure-download",
   "site-visit", "nri-investment", "stamp-duty-registration", "home-loan-offers",
   "possession-date", "construction-update", "project-specifications",
@@ -54,7 +63,8 @@ export const SEOTopics = [
   "real-estate-investment", "future-growth", "high-appreciation", "contact-number", 
   "payment-plan", "sample-flat-video", "best-area-to-buy-flat", "urban-lifestyle", 
   "sustainable-living", "clubhouse", "vs-joyville-sensorium", "vs-joyville-hadapsar",
-  "vs-shapoorji-wildstone", "shapoorji-pallonji-pune-projects", "joyville-homes-pune"
+  "vs-shapoorji-wildstone", "shapoorji-pallonji-pune-projects", "joyville-homes-pune",
+  "cost-sheet", "all-projects-in-pune", "official-website", "sales-office", "property-enquiry"
 ];
 
 // Curated High-Intent Combinations for Static Pre-Rendering & Verified Sitemap Indexation
@@ -120,41 +130,48 @@ export const TOP_CURATED_MARKET_COMBOS = [
   { location: "singapore", configuration: "luxury-sky-villas", topic: "nri-investment" },
   { location: "london", configuration: "sky-duplex", topic: "nri-investment" },
 
-  // Footer & Directory Semantic Crawl Links
-  { location: "mahalunge", configuration: "luxury-apartments", topic: "property-investment" },
-  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "location-benefits" },
-  { location: "wakad", configuration: "3bhk-in-mahalunge", topic: "floor-plans" },
-  { location: "balewadi-high-street", configuration: "sky-duplex", topic: "future-growth" },
-  { location: "rajiv-gandhi-infotech-park", configuration: "luxury-apartments", topic: "connectivity" },
-  { location: "baner", configuration: "4bhk-in-baner", topic: "brochure-download" },
-  { location: "pune-west", configuration: "sky-duplex", topic: "amenities" },
-  { location: "pune", configuration: "5bhk-sky-villas", topic: "masterplan" },
-  { location: "pune", configuration: "5bhk-sky-villas", topic: "future-growth" },
-  { location: "hinjewadi", configuration: "best-flats-for-it-professionals", topic: "investment-roi" },
-  { location: "mahalunge", configuration: "4bhk-in-mahalunge", topic: "investment-roi" },
-  { location: "hinjewadi", configuration: "simplex-luxury-homes", topic: "masterplan" },
-  { location: "mahalunge", configuration: "penthouses", topic: "price-trends" },
-  { location: "infosys-circle-hinjewadi", configuration: "2bhk-flats", topic: "location-benefits" },
-  { location: "hinjewadi-metro", configuration: "luxury-apartments", topic: "connectivity" },
-  { location: "balewadi-high-street", configuration: "3bhk-apartments", topic: "urban-lifestyle" },
-
-  // Shapoorji Pallonji Entire Pune Developer Synthesis
+  // Dedicated Shapoorji Pallonji Pune & Joyville Permutations
+  { location: "pune", configuration: "shapoorji-pallonji-pune", topic: "price-trends" },
+  { location: "pune", configuration: "shapoorji-pallonji-pune", topic: "all-projects-in-pune" },
+  { location: "pune", configuration: "shapoorji-pallonji-pune", topic: "brochure-download" },
+  { location: "pune", configuration: "joyville-homes-pune", topic: "price-trends" },
+  { location: "pune", configuration: "joyville-homes-pune", topic: "all-projects-in-pune" },
+  { location: "pune-west", configuration: "shapoorji-pallonji-projects", topic: "amenities" },
+  { location: "pune-east", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
   { location: "hinjewadi", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
   { location: "hinjewadi-phase-1", configuration: "shapoorji-pallonji-projects", topic: "floor-plans" },
-  { location: "pune", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
-  { location: "pune-west", configuration: "shapoorji-pallonji-projects", topic: "amenities" },
-  { location: "hinjewadi", configuration: "joyville-homes", topic: "price-trends" },
-  { location: "mahalunge", configuration: "joyville-homes", topic: "floor-plans" },
-  { location: "pune", configuration: "joyville-homes", topic: "possession-date" },
-  { location: "bavdhan", configuration: "shapoorji-pallonji-projects", topic: "connectivity" },
-  { location: "bavdhan", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
-  { location: "hadapsar", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
+
+  // Dedicated Vanaha & Golfland Bavdhan Permutations
+  { location: "bavdhan", configuration: "shapoorji-vanaha", topic: "price-trends" },
+  { location: "bavdhan", configuration: "shapoorji-vanaha", topic: "floor-plans" },
+  { location: "bavdhan", configuration: "shapoorji-vanaha", topic: "brochure-download" },
+  { location: "bavdhan", configuration: "vanaha-golfland", topic: "price-trends" },
+  { location: "bavdhan", configuration: "vanaha-golfland", topic: "floor-plans" },
+  { location: "bavdhan", configuration: "vanaha-golfland", topic: "brochure-download" },
+  { location: "bavdhan", configuration: "vanaha-verdant", topic: "price-trends" },
+  { location: "bavdhan", configuration: "vanaha-springs", topic: "floor-plans" },
+  { location: "bavdhan", configuration: "golf-course-facing-homes", topic: "price-trends" },
+
+  // Dedicated Joyville Hinjewadi, Vyomora & Sensorium Permutations
+  { location: "hinjewadi-phase-1", configuration: "joyville-vyomora", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "joyville-vyomora", topic: "floor-plans" },
+  { location: "hinjewadi-phase-1", configuration: "joyville-vyomora", topic: "brochure-download" },
+  { location: "hinjewadi-phase-1", configuration: "joy-3.0-hinjewadi", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "joyville-sensorium", topic: "price-trends" },
+  { location: "hinjewadi-phase-1", configuration: "joyville-sensorium", topic: "floor-plans" },
+  { location: "hinjewadi-phase-1", configuration: "joyville-sensorium", topic: "amenities" },
+  { location: "maan-road", configuration: "joyville-vyomora", topic: "connectivity" },
+  { location: "maan-road", configuration: "joyville-sensorium", topic: "price-trends" },
+
+  // Dedicated Joyville Hadapsar Annexe & East Pune Permutations
+  { location: "hadapsar", configuration: "joyville-hadapsar-annexe", topic: "price-trends" },
+  { location: "hadapsar", configuration: "joyville-hadapsar-annexe", topic: "floor-plans" },
+  { location: "hadapsar", configuration: "joyville-hadapsar-annexe", topic: "brochure-download" },
+  { location: "hadapsar", configuration: "joyville-celestia", topic: "price-trends" },
+  { location: "hadapsar", configuration: "wildernest-sp-kingstown", topic: "price-trends" },
+  { location: "hadapsar", configuration: "wildernest-sp-kingstown", topic: "floor-plans" },
+  { location: "manjri", configuration: "joyville-hadapsar-annexe", topic: "price-trends" },
   { location: "hadapsar", configuration: "joyville-homes", topic: "investment-roi" },
-  { location: "pune", configuration: "shapoorji-pallonji-projects", topic: "rera-details" },
-  { location: "pune", configuration: "shapoorji-pallonji-projects", topic: "investment-roi" },
-  { location: "mahalunge", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
-  { location: "baner", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
-  { location: "wakad", configuration: "shapoorji-pallonji-projects", topic: "connectivity" },
 
   // HTML Sitemap Hub Links (100% Pre-rendered Coverage)
   { location: "hinjewadi", configuration: "luxury-apartments", topic: "investment-roi" },
@@ -179,13 +196,12 @@ export const TOP_CURATED_MARKET_COMBOS = [
   { location: "kuwait", configuration: "luxury-apartments", topic: "nri-investment" },
 ];
 
-// Deterministic Pseudo-Random Number Generator based on string seed
 function pseudoRandom(seed: string): number {
   let hash = 0;
   for (let i = 0; i < seed.length; i++) {
     const char = seed.charCodeAt(i);
     hash = ((hash << 5) - hash) + char;
-    hash = hash & hash; // Convert to 32bit integer
+    hash = hash & hash;
   }
   return Math.abs(hash);
 }
@@ -198,65 +214,104 @@ export function generateSEOContent(location: string, configuration: string, topi
   const seed = `${location}-${configuration}-${topic}`;
   const hash = pseudoRandom(seed);
 
-  // Spintax Arrays for Extreme SEO Variance & Ultra Advanced Keyword Injection
-  const intros = [
-    `The Pune Property Market in ${cleanLocation} and the Mahalunge-Hinjewadi growth corridor is witnessing unprecedented growth, making it the absolute perfect time to explore ${cleanConfig}.`,
-    `If you are searching for premium real estate in West Pune across Baner, Mahalunge, and Hinjewadi, the demand for ${cleanConfig} in ${cleanLocation} is currently at an all-time high.`,
-    `Shapoorji Pallonji Joyville Homes Vyomora represents the pinnacle of luxury living in Pune, especially when evaluating ${cleanConfig} within the highly sought-after ${cleanLocation} micro-market.`,
-    `Investors and homebuyers alike are turning their attention to the Hinjewadi-Mahalunge Real Estate Market and ${cleanLocation} for securing high-yield ${cleanConfig}, driven by robust Smart City Pune infrastructure growth.`,
-    `Discover the ultimate luxury lifestyle in ${cleanLocation}. The latest Pune Real Estate trends indicate a massive surge in interest for meticulously designed ${cleanConfig} near the IT Corridor Pune.`
+  // Intelligent Entity Detection
+  const isVanaha = configuration.includes("vanaha") || configuration.includes("golfland") || location.includes("bavdhan");
+  const isSensorium = configuration.includes("sensorium");
+  const isHadapsar = configuration.includes("hadapsar") || configuration.includes("celestia") || configuration.includes("wildernest") || location.includes("hadapsar") || location.includes("manjri");
+  const isDeveloperBrand = configuration.includes("shapoorji") || configuration.includes("joyville");
+
+  let p1 = "";
+  let p2 = "";
+  let title = "";
+  let description = "";
+  let h1 = "";
+  let faqs = [
+    { question: "", answer: "" },
+    { question: "", answer: "" }
   ];
 
-  const midsections = [
-    `At Shapoorji Pallonji Vyomora Hinjewadi & Mahalunge, we redefine contemporary architecture with 2 BHK, 3 BHK, 4 BHK, Sky Duplexes, and Simplexes. While projects like Joyville Sensorium Hinjewadi and Joyville Hadapsar Annexe have set high benchmarks across Pune, Vyomora stands as the ultimate flagship luxury township. When considering the ${cleanTopic} associated with your investment, our transparent approach provides unmatched peace of mind.`,
-    `Understanding the precise ${cleanTopic} is crucial for securing a high-ROI asset in the competitive Pune Real Estate Market. Joyville Homes Vyomora is strategically positioned to exceed all expectations, offering unmatched luxury compared to other Shapoorji Pallonji Pune projects and developments in Mahalunge and Baner.`,
-    `The Pune Real Estate Market is evolving rapidly. By deeply analyzing the ${cleanTopic} for ${cleanConfig}, buyers can unlock immense capital appreciation at Shapoorji Pallonji Vyomora. It represents the finest real estate investment opportunity currently available across the entire Joyville Homes portfolio.`,
-    `Vyomora Hinjewadi offers an exclusive 32,000 sq. ft. Clubhouse and sprawling green spaces. While buyers often compare it against Shapoorji Wildstone, Godrej Hillside, or Kolte Patil Life Republic, Vyomora's prime location in the Hinjewadi-Mahalunge IT hub secures its spot as the best asset for IT professionals focused on ${cleanTopic}.`,
-    `Whether you are a first-time homebuyer exploring the broader Pune property market or a seasoned NRI investor, navigating the ${cleanTopic} of ${cleanLocation} real estate is streamlined flawlessly by the 150-year-old Shapoorji Pallonji legacy, delivering the ultimate urban lifestyle at Vyomora.`
-  ];
+  if (isVanaha) {
+    title = `${cleanConfig} in ${cleanLocation} | ${cleanTopic} | Shapoorji Pallonji Vanaha Bavdhan`;
+    description = `Official guide to ${cleanConfig} at Shapoorji Pallonji Vanaha and Golfland in ${cleanLocation}. Explore ${cleanTopic}, 1000-acre green valley living, golf course views, and MahaRERA details.`;
+    h1 = `Shapoorji Pallonji Vanaha & Golfland ${cleanLocation}: ${cleanConfig} & ${cleanTopic}`;
+    p1 = `Shapoorji Pallonji Vanaha in ${cleanLocation} represents one of Pune's grandest master-planned township developments, nestled within a 1,000-acre green valley near the prestigious Oxford Golf Resort. Buyers evaluating ${cleanConfig} can discover a lifestyle defined by clean mountain air, sweeping views of the Sahyadri hills, and seamless access to the Mumbai-Bangalore Highway and Chandani Chowk. Vanaha's premium enclave, Vanaha Golfland, offers signature golf-course-facing residences, townhouses, and duplexes designed with high ceiling heights and expansive sundecks.`;
+    p2 = `When evaluating ${cleanTopic} for ${cleanConfig} in ${cleanLocation}, Shapoorji Pallonji provides unmatched transparency with dedicated MahaRERA registrations (P52100024372 and P52100030012). From the nature-centric Vanaha Verdant and Vanaha Springs to the elite Golfland luxury towers, every phase integrates biophilic architecture, international-standard clubhouses, sports arenas, and 24x7 gated security. Schedule your private site visit or request the complete cost sheet and floor plans today.`;
+    faqs = [
+      {
+        question: `What is the starting price and RERA number for Shapoorji Vanaha in Bavdhan?`,
+        answer: `Shapoorji Pallonji Vanaha Bavdhan residences start from ₹55 Lakhs* for 1 and 2 BHKs, with luxury golf-facing residences at Golfland starting from ₹1.35 Cr*. The project is registered under MahaRERA registration numbers P52100024372 and P52100030012.`
+      },
+      {
+        question: `How does Vanaha Bavdhan compare to Joyville Hinjewadi?`,
+        answer: `Vanaha Bavdhan emphasizes serene 1000-acre green valley living, nature trails, and golf views near Kothrud, ideal for families seeking peace and clean air. Joyville Hinjewadi (Vyomora and Sensorium) prioritizes walk-to-work proximity to Rajiv Gandhi IT Park and Pune Metro Line 3.`
+      }
+    ];
+  } else if (isSensorium) {
+    title = `${cleanConfig} at Joyville Sensorium Hinjewadi | ${cleanTopic} | Shapoorji Pallonji Pune`;
+    description = `Explore ${cleanConfig} at Joyville Sensorium in Hinjewadi Phase 1. Discover 2.8 acres of sensory park living, 5D theme amenities, ${cleanTopic}, and verified MahaRERA P52100024965 details.`;
+    h1 = `Joyville Sensorium Hinjewadi: ${cleanConfig} Analysis & ${cleanTopic}`;
+    p1 = `Joyville Sensorium by Shapoorji Pallonji Real Estate is Hinjewadi Phase 1's landmark tech-forward development. Spanning across 10.5 acres with 2.8 acres dedicated exclusively to a multi-sensory park, Sensorium engages all five human senses through rhythm walkways, floral scents, therapy gardens, and acoustic water cascades. For IT executives seeking ${cleanConfig} in ${cleanLocation}, Sensorium delivers unprecedented walk-to-work convenience to major IT campuses including Infosys, Wipro, and Cognizant.`;
+    p2 = `Analyzing ${cleanTopic} at Joyville Sensorium reveals exceptional capital appreciation and rental yield prospects (projected at 4.8% to 5.4% per annum). Featuring iconic residential towers such as Elation, Vista, Ambrosia, Iris, and Aurum, the project offers smart home automation, high-speed elevators, and a 25,000 sq. ft. sensory clubhouse under MahaRERA registration number P52100024965. Connect with our dedicated Hinjewadi sales desk to review live resale inventory and new launch releases.`;
+    faqs = [
+      {
+        question: `What makes Joyville Sensorium Hinjewadi unique?`,
+        answer: `Joyville Sensorium features 2.8 acres of continuous multi-sensory central park with over 75% open landscaped greenery, interactive 5D wellness features, and immediate walking proximity to Rajiv Gandhi Infotech Park Phase 1.`
+      },
+      {
+        question: `What are the typical configurations and prices at Sensorium?`,
+        answer: `Joyville Sensorium offers luxury 2 BHK and 3 BHK apartments ranging from 700 to 1,050 sq. ft. carpet area, with pricing spanning from ₹75 Lakhs to ₹1.25 Cr*. MahaRERA registration: P52100024965.`
+      }
+    ];
+  } else if (isHadapsar) {
+    title = `${cleanConfig} at Joyville Hadapsar Annexe & Celestia | ${cleanTopic} | East Pune`;
+    description = `Comprehensive guide to ${cleanConfig} at Joyville Hadapsar Annexe, Celestia, and Wildernest at SP Kingstown. Verified ${cleanTopic}, MahaRERA P52100026451, and SP Infocity proximity.`;
+    h1 = `Joyville Hadapsar Annexe & East Pune: ${cleanConfig} Guide & ${cleanTopic}`;
+    p1 = `Joyville Hadapsar Annexe by Shapoorji Pallonji Real Estate is East Pune's premier mega-township, sprawling across 21+ acres with 8.8 acres dedicated to continuous central greens. Located in the high-growth Manjri-Hadapsar corridor, this development serves professionals working at SP Infocity, Magarpatta Cybercity, and EON IT Park Kharadi. Discerning buyers evaluating ${cleanConfig} in ${cleanLocation} will benefit from over 60+ world-class lifestyle amenities and vehicular-free pedestrian boulevards.`;
+    p2 = `Within this thriving East Pune ecosystem, Shapoorji Pallonji has also introduced Joyville Celestia (featuring the landmark Titan Tower) and Wildernest at SP Kingstown (forest-themed luxury residences). Examining ${cleanTopic} demonstrates robust rental returns averaging 4.5%–5.2% annually and low ticket-size entry from ₹43 Lakhs*. All phases operate under strict MahaRERA governance (P52100026451 and P52100031522). Request the consolidated East Pune price list and schedule your private site visit today.`;
+    faqs = [
+      {
+        question: `Where is Joyville Hadapsar Annexe located and what is its starting price?`,
+        answer: `Joyville Hadapsar Annexe is strategically located in Manjri, off the Pune-Solapur Highway, just 10 minutes from SP Infocity and Magarpatta City. Homes start from ₹43 Lakhs* for 1 BHK and ₹68 Lakhs* for 2 BHKs. MahaRERA: P52100026451.`
+      },
+      {
+        question: `What are Joyville Celestia and Wildernest at SP Kingstown?`,
+        answer: `Joyville Celestia and Wildernest represent luxury high-rise extensions within the SP Kingstown township in Hadapsar Annexe, offering upgraded 2, 3 & 4 BHK forest-themed homes and exclusive clubhouse privileges.`
+      }
+    ];
+  } else if (isDeveloperBrand) {
+    title = `${cleanConfig} | ${cleanLocation} Real Estate | ${cleanTopic} | Shapoorji Pallonji Pune`;
+    description = `Discover ${cleanConfig} in ${cleanLocation}. Explore the complete 150-year legacy of Shapoorji Pallonji Real Estate and Joyville Homes in Pune with detailed ${cleanTopic} and pricing.`;
+    h1 = `Shapoorji Pallonji Real Estate & Joyville Homes: ${cleanConfig} in ${cleanLocation}`;
+    p1 = `Shapoorji Pallonji Real Estate represents over 150 years of world-class construction heritage, delivering iconic architectural landmarks globally and shaping Pune's real estate transformation. Across West and East Pune, the developer's residential portfolio encompasses Joyville Vyomora (Joy 3.0 Hinjewadi Phase 1), Joyville Sensorium, Vanaha Bavdhan, Vanaha Golfland, Joyville Hadapsar Annexe, and Wildernest at SP Kingstown. For buyers researching ${cleanConfig} in ${cleanLocation}, Shapoorji Pallonji delivers unmatched structural engineering with aluminium Mivan formwork and IGBC green building certifications.`;
+    p2 = `Analyzing ${cleanTopic} across the Shapoorji Pallonji and Joyville Homes portfolio illustrates a track record of transparent customer service, statutory escrow account security, and superior capital appreciation. Supported by institutional partners including Actis (UK), the Asian Development Bank (ADB), and the International Finance Corporation (IFC), Joyville homes ensure timely delivery and world-class clubhouse amenities. Explore verified floor plans, live pricing schedules, and VIP site visit bookings across Pune.`;
+    faqs = [
+      {
+        question: `What projects does Shapoorji Pallonji have in Pune?`,
+        answer: `Shapoorji Pallonji's Pune portfolio includes Joyville Vyomora (Joy 3.0 Hinjewadi), Joyville Sensorium (Hinjewadi Phase 1), Vanaha & Golfland (Bavdhan), Joyville Hadapsar Annexe, Joyville Celestia, Wildernest at SP Kingstown, and the SP Infocity commercial campus in Phursungi.`
+      },
+      {
+        question: `What is the price range of Shapoorji Pallonji homes in Pune?`,
+        answer: `Prices range from ₹43 Lakhs* for 1 BHK residences at Hadapsar Annexe, ₹84.99 Lakhs* for 2 BHK luxury residences at Joyville Vyomora Hinjewadi, up to ₹2.16 Cr* for signature Sky Duplexes and Golfland townhouses in Bavdhan.`
+      }
+    ];
+  } else {
+    // Default Hinjewadi / Vyomora Core Context
+    title = `${cleanConfig} in ${cleanLocation} | ${cleanTopic} | Shapoorji Pallonji Vyomora Pune`;
+    description = `Explore premium ${cleanConfig} in ${cleanLocation}. In-depth insights on ${cleanTopic} at Shapoorji Pallonji Joyville Vyomora Hinjewadi Phase 1, West Pune's flagship luxury riverfront township.`;
+    h1 = `Discover ${cleanConfig} in ${cleanLocation}: Complete Guide & ${cleanTopic}`;
+    p1 = `The Pune Real Estate Market in ${cleanLocation} and the Mahalunge-Hinjewadi growth corridor is witnessing record demand for ${cleanConfig}. Shapoorji Pallonji Joyville Vyomora (Joy 3.0) represents the flagship luxury benchmark in West Pune, spanning 25 acres along the serene Mula riverfront just 5 minutes from Rajiv Gandhi Infotech Park Phase 1 and the upcoming Pune Metro Line 3 station.`;
+    p2 = `When examining ${cleanTopic} for ${cleanConfig} in ${cleanLocation}, Vyomora stands apart with its monumental 32,000+ sq. ft. multi-level clubhouse, temperature-controlled indoor pool, and premium 2 BHK, 3 BHK, 4 BHK, and double-height Sky Duplexes. All residences are registered under MahaRERA registration number PR1260002600999 with scheduled possession for December 2029. Schedule an exclusive VIP site visit or download the official brochure today.`;
+    faqs = [
+      {
+        question: `Why is ${cleanLocation} the top destination for ${cleanConfig}?`,
+        answer: `${cleanLocation} offers prime transit connectivity to the Mumbai-Pune Expressway, Baner, and the Rajiv Gandhi IT corridor, coupled with high rental yields (4.5%–5.5%) driven by 300+ multinational technology employers.`
+      },
+      {
+        question: `How does Shapoorji Vyomora compare to other developments in West Pune?`,
+        answer: `Joyville Vyomora offers larger 2, 3, 4 BHK and Sky Duplex carpet areas, a massive 32,000+ sq. ft. clubhouse, direct riverfront promenade frontage, and the backing of Shapoorji Pallonji's 150-year engineering heritage.`
+      }
+    ];
+  }
 
-  const ctas = [
-    `Schedule an exclusive VIP site visit today to experience Joyville Homes Vyomora Hinjewadi firsthand and see why it leads the Pune luxury real estate market.`,
-    `Download the official Shapoorji Pallonji Vyomora brochure to explore the detailed ${cleanTopic}, floor plans, and modern residences in Mahalunge-Hinjewadi.`,
-    `Contact our West Pune Real Estate experts immediately at +91-7744009295 to secure the best pre-launch pricing and inventory before it sells out.`,
-    `Don't miss out on the fastest appreciating asset in the Hinjewadi Real Estate Market. Request a personalized consultation regarding ${cleanTopic} now.`,
-    `Unlock exclusive home loan offers and NRI investment guidance for your new luxury home in ${cleanLocation}.`
-  ];
-
-  const p1 = intros[hash % intros.length] + ' ' + midsections[(hash + 1) % midsections.length];
-  const p2 = midsections[(hash + 2) % midsections.length] + ' ' + ctas[(hash + 3) % ctas.length];
-
-  const title = `${cleanConfig} in ${cleanLocation} | ${cleanTopic} | Shapoorji Pallonji Vyomora Pune`;
-  const description = `Explore the best ${cleanConfig} in ${cleanLocation}. Discover in-depth insights on ${cleanTopic} at Shapoorji Pallonji Vyomora, West Pune's ultimate luxury township by Joyville Homes Hinjewadi Vyomora.`;
-  
-  const h1 = `Discover ${cleanConfig} in ${cleanLocation}: Complete Guide & ${cleanTopic}`;
-
-  // Advanced FAQ Injection based on Primary Keywords & Competitor Comparisons
-  const faqQuestions = [
-    `How does Shapoorji Pallonji Vyomora compare to Joyville Sensorium and Joyville Hadapsar?`,
-    `Why invest in the ${cleanLocation} Real Estate Market?`,
-    `Which is the best residential project by Shapoorji Pallonji in Pune?`,
-    `What is the future of Hinjewadi and Mahalunge real estate for ${cleanTopic}?`,
-    `Is Shapoorji Pallonji a trusted builder in Pune?`
-  ];
-
-  const faqAnswers = [
-    `While Joyville Sensorium in Hinjewadi and Joyville Hadapsar Annexe in East Pune are fantastic projects that sold out rapidly, Vyomora is Shapoorji Pallonji's absolute flagship luxury township in West Pune (Mahalunge-Hinjewadi), offering upgraded premium amenities, massive 2BHK, 3BHK, 4BHK, and Sky Duplex layouts, and superior ROI potential for ${cleanConfig}.`,
-    `The ${cleanLocation} micro-market is one of the fastest-growing residential hubs in Pune. With the upcoming Metro Line 3, massive IT parks, and seamless connectivity to the Mumbai-Pune Expressway and Baner, property values here are witnessing double-digit capital appreciation year-over-year.`,
-    `While Shapoorji Pallonji has delivered multiple iconic projects across Pune including Wildstone and Celestian, Joyville Vyomora in Hinjewadi-Mahalunge is currently regarded as their finest luxury offering, perfectly blending resort-style amenities with prime IT corridor connectivity.`,
-    `Hinjewadi and Mahalunge represent the epicenter of Pune's IT revolution. Real estate experts project massive growth for ${cleanTopic}, making early investments in premium townships like Vyomora highly lucrative for both rental yields and long-term resale value.`,
-    `Absolutely. Shapoorji Pallonji boasts an unparalleled 150+ year legacy in global construction. Their residential wing, Joyville Homes, is synonymous with trust, transparency, superior build quality, and timely delivery across the entire Indian real estate market.`
-  ];
-
-  const faq1 = {
-    question: faqQuestions[hash % faqQuestions.length],
-    answer: faqAnswers[hash % faqAnswers.length]
-  };
-
-  const faq2 = {
-    question: faqQuestions[(hash + 1) % faqQuestions.length],
-    answer: faqAnswers[(hash + 1) % faqAnswers.length]
-  };
-
-  return { title, description, h1, p1, p2, faqs: [faq1, faq2] };
+  return { title, description, h1, p1, p2, faqs };
 }

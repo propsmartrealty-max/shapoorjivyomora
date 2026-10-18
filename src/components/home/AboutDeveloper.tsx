@@ -68,11 +68,25 @@ export default function AboutDeveloper() {
             </h2>
             <div className="w-12 h-1 bg-[#C5A059] mb-8" />
             <p className="text-lg text-[#1e2338]/80 font-light leading-relaxed mb-6">
-              With a legacy spanning over 150 years, <strong>Shapoorji Pallonji Real Estate</strong> has been the gold standard in Indian infrastructure and luxury township development. From iconic mega-structures to flagship residential communities, our engineering excellence shapes West Pune's skyline with <strong>Vyomora Hinjewadi</strong>.
+              With an engineering legacy spanning over 150 years, <strong>Shapoorji Pallonji Real Estate</strong> has been the gold standard in Indian infrastructure and luxury township development. Explore our complete <a href="/developers/shapoorji-pallonji-pune" className="text-[#8A6B2D] font-medium hover:underline">Shapoorji Pallonji Pune Developer Profile</a>, from global monuments to landmark residential communities across Hinjewadi, Bavdhan, and Hadapsar.
             </p>
-            <p className="text-lg text-[#1e2338]/80 font-light leading-relaxed mb-10">
-              Through <strong>Joyville Homes</strong>, Shapoorji Pallonji Real Estate brings masterplanned 2 BHK, 3 BHK, 4 BHK, and Sky Duplex residences to Hinjewadi Phase 1 and Mahalunge, delivering superior capital appreciation, sustainable green design, and world-class 32,000+ sq. ft. clubhouses.
+            <p className="text-lg text-[#1e2338]/80 font-light leading-relaxed mb-8">
+              Through the institutional <strong>Joyville Homes</strong> platform, Shapoorji Pallonji Real Estate delivers masterplanned residences across Pune. Compare all 11 developments in our <a href="/guides/shapoorji-pallonji-projects-pune-comparison" className="text-[#8A6B2D] font-medium hover:underline">Pune Projects Comparison Guide</a> or browse the official <a href="/projects" className="text-[#8A6B2D] font-medium hover:underline">Pune Projects Directory</a> for verified MahaRERA disclosures and floor plans.
             </p>
+            <div className="flex flex-wrap gap-4 mb-10">
+              <a 
+                href="/developers/shapoorji-pallonji-pune"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#0A192F] text-white hover:bg-[#152a4a] text-xs font-semibold transition-all shadow-sm"
+              >
+                Developer Track Record & Legacy
+              </a>
+              <a 
+                href="/projects"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#0A192F]/20 text-[#0A192F] hover:bg-white text-xs font-semibold transition-all"
+              >
+                View All 11 Pune Projects
+              </a>
+            </div>
           </motion.div>
 
           <motion.div 
