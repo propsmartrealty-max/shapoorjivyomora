@@ -52,12 +52,21 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     title: "Vyomora",
   },
-  title: "Shapoorji Pallonji Joyville Vyomora Hinjewadi (Joy 3.0) | Official Website Pune",
-  description: "Official portal for Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. Luxury 2, 3 & 4 BHK apartments from ₹84.99 L* near Rajiv Gandhi Infotech Park. 32,000+ sq. ft. clubhouse, river-facing towers. Possession Dec 2029. MahaRERA: PR1260002600999.",
+  title: "Shapoorji Pallonji Pune | Joyville Homes Pune | Joyville Vyomora Hinjewadi",
+  description: "Official portal for Shapoorji Pallonji Real Estate Pune and Joyville Homes. Explore Joyville Vyomora Hinjewadi (Joy 3.0), Sensorium, Hadapsar Annexe, Wildstone & Celestian. Luxury 2, 3 & 4 BHK apartments from ₹84.99 L* near Rajiv Gandhi Infotech Park. MahaRERA: PR1260002600999.",
   keywords: [
-    "Joy 3.0",
-    "Joyville 3.0",
-    "Joy 3.0 Hinjewadi",
+    "shapoorji pallonji pune",
+    "joyville homes pune",
+    "shapoorji pallonji real estate pune",
+    "joyville homes",
+    "shapoorji pune",
+    "shapoorji vyomora",
+    "joyville vyomora",
+    "joyville vyomora hinjewadi",
+    "shapoorji pallonji vyomora",
+    "joy 3.0",
+    "joyville 3.0",
+    "joy 3.0 hinjewadi",
     "Joyville Vyomora Joy 3.0",
     "Shapoorji Joy 3.0",
     "Shapoorji Vyomora",
@@ -111,10 +120,10 @@ export const metadata: Metadata = {
     "Top Properties in West Pune"
   ],
   openGraph: {
-    title: "Shapoorji Pallonji Joyville Vyomora Hinjewadi | Joy 3.0 Luxury Residences",
-    description: "Official portal of Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. 2, 3 & 4 BHK river-facing residences from ₹84.99 L* with 32,000 sq.ft. clubhouse. MahaRERA: PR1260002600999.",
+    title: "Shapoorji Pallonji Pune | Joyville Homes Pune | Joyville Vyomora Hinjewadi",
+    description: "Official portal of Shapoorji Pallonji Real Estate Pune & Joyville Homes. 2, 3 & 4 BHK river-facing residences from ₹84.99 L* with 32,000 sq.ft. clubhouse. MahaRERA: PR1260002600999.",
     url: "https://www.shapoorji-vyomora.com/",
-    siteName: "Shapoorji Pallonji Vyomora",
+    siteName: "Shapoorji Pallonji Pune - Joyville Homes",
     images: [
       {
         url: "https://www.shapoorji-vyomora.com/og-image.jpg",
@@ -128,8 +137,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shapoorji Pallonji Joyville Vyomora Hinjewadi (Joy 3.0) | Pune",
-    description: "Luxury 2, 3 & 4 BHK homes in Hinjewadi Phase 1 from ₹84.99 L*. 32,000+ sq. ft clubhouse.",
+    title: "Shapoorji Pallonji Pune | Joyville Homes Pune | Joyville Vyomora",
+    description: "Official portal for Shapoorji Pallonji Pune and Joyville Homes. Luxury 2, 3 & 4 BHK homes in Hinjewadi Phase 1 from ₹84.99 L*. 32,000+ sq. ft clubhouse.",
     images: ["https://www.shapoorji-vyomora.com/og-image.jpg"],
   },
   robots: {

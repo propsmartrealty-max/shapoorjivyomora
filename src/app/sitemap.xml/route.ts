@@ -1,5 +1,6 @@
 import { seoArticles } from '@/data/seoArticles';
 import { TOP_CURATED_MARKET_COMBOS } from '@/lib/programmaticSEO';
+import { puneProjectsMasterList } from '@/data/puneProjectsData';
 
 export async function GET() {
   const baseUrl = 'https://www.shapoorji-vyomora.com';
@@ -7,14 +8,17 @@ export async function GET() {
 
   const coreRoutes = [
     { path: '/', priority: '1.0', changefreq: 'daily' },
+    { path: '/projects', priority: '0.95', changefreq: 'daily' },
+    { path: '/developers/shapoorji-pallonji-pune', priority: '0.95', changefreq: 'weekly' },
+    { path: '/guides/shapoorji-pallonji-projects-pune-comparison', priority: '0.95', changefreq: 'weekly' },
+    { path: '/shapoorji-pallonji-pune-projects', priority: '0.95', changefreq: 'daily' },
+    { path: '/west-pune-real-estate', priority: '0.95', changefreq: 'daily' },
     { path: '/residences', priority: '0.9', changefreq: 'weekly' },
     { path: '/amenities', priority: '0.9', changefreq: 'weekly' },
     { path: '/masterplan', priority: '0.9', changefreq: 'weekly' },
     { path: '/specifications', priority: '0.8', changefreq: 'monthly' },
     { path: '/location', priority: '0.9', changefreq: 'weekly' },
-    { path: '/west-pune-real-estate', priority: '0.95', changefreq: 'daily' },
     { path: '/locations', priority: '0.8', changefreq: 'weekly' },
-    { path: '/shapoorji-pallonji-pune-projects', priority: '0.9', changefreq: 'weekly' },
     { path: '/investment-calculator', priority: '0.8', changefreq: 'monthly' },
     { path: '/vision', priority: '0.8', changefreq: 'monthly' },
     { path: '/lifestyle', priority: '0.8', changefreq: 'monthly' },
@@ -43,7 +47,18 @@ export async function GET() {
   </url>`;
   }
 
-  // 2. High-Authority Real Estate Deep-Dive Articles
+  // 2. Individual Shapoorji Pallonji & Joyville Pune Project Hubs
+  for (const project of puneProjectsMasterList) {
+    xml += `
+  <url>
+    <loc>${baseUrl}/projects/${project.slug}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>`;
+  }
+
+  // 3. High-Authority Real Estate Deep-Dive Articles
   for (const article of seoArticles) {
     xml += `
   <url>

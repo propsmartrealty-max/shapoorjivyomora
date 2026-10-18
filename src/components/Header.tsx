@@ -7,13 +7,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
 
 const navLinks = [
-  { label: "The Vision", href: "/vision" },
   { label: "Residences", href: "/residences" },
   { label: "Amenities", href: "/amenities" },
   { label: "Masterplan", href: "/masterplan" },
   { label: "Location", href: "/location" },
+  { label: "Pune Projects", href: "/shapoorji-pallonji-pune-projects" },
   { label: "West Pune Hub", href: "/west-pune-real-estate" },
-  { label: "Pune Projects", href: "/shapoorji-pallonji-pune-projects" }
+  { label: "Research", href: "/articles" }
 ];
 
 export default function Header() {

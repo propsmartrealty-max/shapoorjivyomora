@@ -40,7 +40,10 @@ export default function StructuredData() {
           { "@type": "SiteNavigationElement", "position": 5, "name": "West Pune Real Estate Guide", "url": "https://www.shapoorji-vyomora.com/west-pune-real-estate" },
           { "@type": "SiteNavigationElement", "position": 6, "name": "All Shapoorji Pune Projects", "url": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects" },
           { "@type": "SiteNavigationElement", "position": 7, "name": "Investment ROI & EMI Calculator", "url": "https://www.shapoorji-vyomora.com/investment-calculator" },
-          { "@type": "SiteNavigationElement", "position": 8, "name": "Real Estate Articles & Research", "url": "https://www.shapoorji-vyomora.com/articles" }
+          { "@type": "SiteNavigationElement", "position": 8, "name": "Real Estate Articles & Research", "url": "https://www.shapoorji-vyomora.com/articles" },
+          { "@type": "SiteNavigationElement", "position": 9, "name": "Shapoorji Pallonji Pune Developer Profile", "url": "https://www.shapoorji-vyomora.com/developers/shapoorji-pallonji-pune" },
+          { "@type": "SiteNavigationElement", "position": 10, "name": "Pune Projects Comparison Guide", "url": "https://www.shapoorji-vyomora.com/guides/shapoorji-pallonji-projects-pune-comparison" },
+          { "@type": "SiteNavigationElement", "position": 11, "name": "Complete Pune Projects Directory", "url": "https://www.shapoorji-vyomora.com/projects" }
         ]
       },
       {
@@ -59,12 +62,22 @@ export default function StructuredData() {
         "priceRange": "INR 84.99 Lakhs - 2.50 Cr+",
         "description": "Ultra luxury 2BHK, 3BHK, 4BHK, Sky Duplex, Simplex, and 5BHK Sky Villa apartments in Hinjewadi and Mahalunge, Pune by Shapoorji Pallonji Real Estate.",
         "knowsAbout": [
+          "Shapoorji Pallonji Pune",
+          "Shapoorji Pallonji projects Pune",
+          "Shapoorji Pallonji real estate Pune",
+          "Joyville Homes Pune",
+          "Shapoorji Pallonji Joyville Pune",
           "Joy 3.0 Hinjewadi",
           "Joyville 3.0 New Launch",
-          "Shapoorji Pallonji Real Estate",
+          "Joyville Vyomora Hinjewadi Phase 1",
           "Shapoorji Pallonji Real Estate Vyomora Hinjewadi",
           "Shapoorji Vyomora Pune",
-          "Joyville Homes Pune",
+          "Shapoorji Pallonji Vanaha Pune",
+          "Vanaha Golfland Bavdhan",
+          "Joyville Sensorium Hinjewadi",
+          "Joyville Hadapsar Annexe",
+          "Joyville Celestia Pune",
+          "Wildernest at SP Kingstown",
           "Hinjewadi Real Estate Market",
           "Mahalunge Township Projects",
           "2 BHK 3 BHK 4 BHK Flats in Hinjewadi",
@@ -293,38 +306,68 @@ export default function StructuredData() {
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "Shapoorji Pallonji Joyville Vyomora (Hinjewadi Phase 1 - Mahalunge)",
-            "url": "https://www.shapoorji-vyomora.com"
+            "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0 Hinjewadi Phase 1)",
+            "url": "https://www.shapoorji-vyomora.com/projects/joyville-vyomora-hinjewadi"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Joyville Sensorium Hinjewadi Phase 1",
-            "url": "https://www.shapoorji-vyomora.com/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi"
+            "url": "https://www.shapoorji-vyomora.com/projects/joyville-sensorium"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Joyville Hadapsar Annexe East Pune",
-            "url": "https://www.shapoorji-vyomora.com/articles/shapoorji-pallonji-pune-projects-2026-guide"
+            "name": "Shapoorji Pallonji Vanaha Bavdhan Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/shapoorji-pallonji-vanaha"
           },
           {
             "@type": "ListItem",
             "position": 4,
-            "name": "Shapoorji Pallonji Wildstone Bavdhan",
-            "url": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects"
+            "name": "Vanaha Golfland Bavdhan Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/vanaha-golfland"
           },
           {
             "@type": "ListItem",
             "position": 5,
-            "name": "Shapoorji Pallonji Vanaha & Golfland Bavdhan",
-            "url": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects"
+            "name": "Joyville Hadapsar Annexe East Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/joyville-hadapsar-annexe"
           },
           {
             "@type": "ListItem",
             "position": 6,
-            "name": "Shapoorji Pallonji Celestian Pune",
-            "url": "https://www.shapoorji-vyomora.com/shapoorji-pallonji-pune-projects"
+            "name": "Joyville Celestia Hadapsar Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/joyville-celestia"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Wildernest at SP Kingstown Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/wildernest-sp-kingstown"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Joyville Sky-Luxe Edition Hadapsar",
+            "url": "https://www.shapoorji-vyomora.com/projects/joyville-sky-luxe-edition"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Joyville Hinjewadi Township Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/joyville-hinjewadi"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Vanaha Verdant Bavdhan Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/vanaha-verdant"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Vanaha Springs Bavdhan Pune",
+            "url": "https://www.shapoorji-vyomora.com/projects/vanaha-springs"
           }
         ]
       },

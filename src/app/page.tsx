@@ -8,6 +8,7 @@ import GoogleReviews from "@/components/home/GoogleReviews";
 import Specifications from "@/components/home/Specifications";
 import Location from "@/components/home/Location";
 import Connectivity from "@/components/home/Connectivity";
+import ShapoorjiPuneEcosystem from "@/components/home/ShapoorjiPuneEcosystem";
 import AboutDeveloper from "@/components/home/AboutDeveloper";
 import { Metadata } from "next";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <Specifications />
       <Location />
       <Connectivity />
+      <ShapoorjiPuneEcosystem />
       <AboutDeveloper />
     </>
   );

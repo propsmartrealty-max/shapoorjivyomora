@@ -188,7 +188,19 @@ export default function Footer() {
         </div>
 
         {/* Thematic Real Estate Keyword Hub (Crawlable Semantic Links) */}
-        <div className="border-t border-white/10 pt-10 mt-10 mb-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="border-t border-white/10 pt-10 mt-10 mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Shapoorji Pune Ecosystem</h4>
+            <ul className="space-y-2 text-[11px] text-white/80">
+              <li><Link href="/shapoorji-pallonji-pune-projects" className="text-[#C5A059] font-semibold hover:text-white transition-colors">All Shapoorji Projects in Pune</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-pune-projects-master-portfolio-guide" className="hover:text-white transition-colors">Joyville Homes Pune Portfolio Guide</Link></li>
+              <li><Link href="/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi" className="hover:text-white transition-colors">Joyville Sensorium vs Vyomora</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review" className="hover:text-white transition-colors">Joy 3.0 Hinjewadi Review &amp; Prices</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-pune-projects-price-list-and-new-launches-2026" className="hover:text-white transition-colors">Pune Price List &amp; New Launches 2026</Link></li>
+              <li><Link href="/articles/shapoorji-pallonji-joyville-vyomora-township-project-details" className="hover:text-white transition-colors">Vyomora Township Master Details</Link></li>
+            </ul>
+          </div>
+
           <div>
             <h4 className="text-xs font-bold tracking-[0.15em] text-[#C5A059] uppercase mb-4">Pune Micro-Markets Focus</h4>
             <ul className="space-y-2 text-[11px] text-white/80">

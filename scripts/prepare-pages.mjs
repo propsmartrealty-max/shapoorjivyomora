@@ -77,8 +77,16 @@ if (!fs.existsSync(distSitemapPath) || fs.statSync(distSitemapPath).size < 100) 
   const baseUrl = 'https://www.shapoorji-vyomora.com';
   const now = new Date().toISOString();
   const defaultUrls = [
-    '/', '/residences', '/amenities', '/masterplan', '/specifications',
-    '/location', '/locations', '/shapoorji-pallonji-pune-projects',
+    '/', '/projects', '/developers/shapoorji-pallonji-pune',
+    '/guides/shapoorji-pallonji-projects-pune-comparison',
+    '/shapoorji-pallonji-pune-projects', '/west-pune-real-estate',
+    '/projects/joyville-vyomora-hinjewadi', '/projects/joyville-sensorium',
+    '/projects/shapoorji-pallonji-vanaha', '/projects/vanaha-golfland',
+    '/projects/joyville-hadapsar-annexe', '/projects/joyville-celestia',
+    '/projects/wildernest-sp-kingstown', '/projects/joyville-sky-luxe-edition',
+    '/projects/joyville-hinjewadi', '/projects/vanaha-verdant', '/projects/vanaha-springs',
+    '/residences', '/amenities', '/masterplan', '/specifications',
+    '/location', '/locations',
     '/investment-calculator', '/vision', '/lifestyle', '/gallery',
     '/sustainability', '/updates', '/contact', '/articles', '/sitemap',
     '/privacy-policy', '/terms'

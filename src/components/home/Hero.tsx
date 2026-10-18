@@ -67,12 +67,12 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-[#0A192F] leading-[1.1] tracking-tight mb-6">
             Shapoorji Pallonji Joyville Vyomora <br className="hidden sm:inline" />
             <span className="text-gradient block text-2xl sm:text-4xl md:text-5xl mt-3 font-normal">
-              Joy 3.0 • Luxury 2, 3 & 4 BHK in Hinjewadi Phase 1
+              Joyville Homes Pune • Luxury 2, 3 & 4 BHK in Hinjewadi
             </span>
           </h1>
           
-          <h2 className="text-lg md:text-xl text-[#1e2338]/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-            Welcome to <strong>Joyville Vyomora (Joy 3.0) by Shapoorji Pallonji Real Estate</strong> — luxury river-facing 2 BHK, 3 BHK, 4 BHK & Sky Duplexes with a monumental 32,000+ sq. ft. clubhouse in Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, Pune. Possession: Dec 2029 | MahaRERA: PR1260002600999.
+          <h2 className="text-lg md:text-xl text-[#0A192F]/80 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+            Official portal for <strong>Shapoorji Pallonji Real Estate Pune</strong> &amp; <strong>Joyville Homes Pune</strong>. Discover <strong>Joyville Vyomora (Joy 3.0)</strong> — flagship river-facing 2, 3 & 4 BHK residences with a monumental 32,000+ sq. ft. clubhouse in Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, Pune. Possession: Dec 2029 | MahaRERA: PR1260002600999.
           </h2>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
