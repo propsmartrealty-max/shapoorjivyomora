@@ -51,7 +51,7 @@ export default function MasterLayout() {
             </h2>
           </div>
           <Link href="/residences">
-            <Button variant="outline" className="group border-[#0A192F]/20 text-[#0A192F] hover:bg-[#0A192F]/5">
+            <Button variant="outlineDark" className="group">
               View All Specifications 
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -72,14 +72,14 @@ export default function MasterLayout() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`text-left px-6 py-4 rounded-sm transition-all duration-300 border-l-2 whitespace-nowrap lg:whitespace-normal flex-shrink-0 ${
                     activeTab === tab.id 
-                    ? "border-l-[#8A6B2D] bg-white/60 shadow-sm backdrop-blur-md" 
-                    : "border-l-transparent text-[#0A192F]/80 hover:text-[#0A192F] hover:bg-white/40"
+                    ? "border-l-[#8A6B2D] bg-white/95 shadow-sm backdrop-blur-md" 
+                    : "border-l-transparent text-[#0A192F] hover:text-[#8A6B2D] hover:bg-white/60"
                   }`}
                 >
-                  <h3 className={`text-lg font-serif mb-1 ${activeTab === tab.id ? "text-[#8A6B2D]" : ""}`}>
+                  <h3 className={`text-lg font-serif mb-1 font-semibold ${activeTab === tab.id ? "text-[#8A6B2D]" : "text-[#0A192F]"}`}>
                     {tab.title}
                   </h3>
-                  <p className="text-xs uppercase tracking-widest opacity-70">
+                  <p className="text-xs uppercase tracking-widest text-[#0A192F] font-semibold">
                     {tab.subtitle}
                   </p>
                 </button>
@@ -94,13 +94,13 @@ export default function MasterLayout() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white/80 backdrop-blur-md p-6 rounded-sm border border-[#0A192F]/10 shadow-sm"
+                className="bg-white/95 backdrop-blur-md p-6 rounded-sm border border-[#0A192F]/10 shadow-sm"
               >
-                <h4 className="text-xs uppercase tracking-[0.2em] text-[#1e2338]/50 mb-4">Highlights</h4>
+                <h4 className="text-xs uppercase tracking-[0.2em] text-[#0A192F] font-bold mb-4">Highlights</h4>
                 <ul className="space-y-3">
                   {activeData.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm font-light text-[#1e2338]/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A059] mr-3" />
+                    <li key={idx} className="flex items-center text-sm font-medium text-[#0A192F]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8A6B2D] mr-3" />
                       {feature}
                     </li>
                   ))}

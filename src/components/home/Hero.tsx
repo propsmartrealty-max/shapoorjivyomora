@@ -77,20 +77,20 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button 
-              variant="gold" 
+              variant="primaryDark" 
               size="lg" 
               aria-label="Book VIP Site Visit to Shapoorji Joyville Vyomora"
               onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
-              className="w-full sm:w-auto bg-[#0A192F] text-white"
+              className="w-full sm:w-auto"
             >
               Book Site Visit
             </Button>
             <Button 
-              variant="outline" 
+              variant="outlineDark" 
               size="lg" 
               aria-label="Download Official Brochure and Price Sheet"
               onClick={() => window.dispatchEvent(new Event('open-enquiry-modal'))}
-              className="w-full sm:w-auto border-[#0A192F]/20 text-[#0A192F] hover:bg-[#0A192F]/5"
+              className="w-full sm:w-auto"
             >
               Download Brochure
             </Button>
@@ -104,8 +104,8 @@ export default function Hero() {
           transition={{ delay: 2, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
         >
-          <span className="text-[0.6rem] uppercase tracking-[0.3em] text-[#1e2338]/50 mb-4">Discover</span>
-          <div className="w-[1px] h-16 bg-[#1e2338]/20 relative overflow-hidden">
+          <span className="text-[0.65rem] uppercase tracking-[0.3em] text-[#0A192F] font-bold mb-4">Discover</span>
+          <div className="w-[1px] h-16 bg-[#0A192F]/30 relative overflow-hidden">
             <motion.div 
               className="absolute top-0 left-0 w-full h-1/2 bg-[#0A192F]"
               animate={{ top: ["-50%", "100%"] }}
@@ -122,9 +122,9 @@ export default function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute left-6 md:left-12 bottom-20 z-20 hidden lg:block"
       >
-        <div className="bg-white/80 backdrop-blur-md p-6 rounded-sm border-l-4 border-l-[#C5A059] shadow-sm">
+        <div className="bg-white/95 backdrop-blur-md p-6 rounded-sm border-l-4 border-l-[#C5A059] shadow-sm">
           <p className="text-3xl font-serif text-[#0A192F] mb-1">25<span className="text-[#C5A059] text-lg ml-1">Acres</span></p>
-          <p className="text-xs uppercase tracking-[0.1em] text-[#1e2338]/60">Integrated Development</p>
+          <p className="text-xs uppercase tracking-[0.1em] text-[#0A192F] font-semibold">Integrated Development</p>
         </div>
       </motion.div>
 

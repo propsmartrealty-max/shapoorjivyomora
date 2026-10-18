@@ -163,14 +163,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" fetchPriority="high" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
-        <StructuredData />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} antialiased overflow-x-hidden max-w-full`}>
+      <body 
+        className={`${inter.variable} ${playfair.variable} antialiased overflow-x-hidden max-w-full`}
+        suppressHydrationWarning
+      >
+        <StructuredData />
         <CustomCursor />
         <SmoothScroll>
           <Header />

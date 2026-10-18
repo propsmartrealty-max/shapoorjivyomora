@@ -91,6 +91,16 @@ export default function InteractiveMap() {
           link.setAttribute('aria-label', link.textContent?.trim() || 'Map provider link');
         }
       });
+
+      const markerIcons = container.querySelectorAll<HTMLElement>('.leaflet-marker-icon');
+      markerIcons.forEach((marker, index) => {
+        const poi = pois[index];
+        const label = marker.getAttribute('title') || poi?.title || 'Map location marker';
+        marker.setAttribute('aria-label', label);
+        if (!marker.getAttribute('title')) {
+          marker.setAttribute('title', label);
+        }
+      });
     };
 
     enforceAccessibility();
@@ -119,7 +129,13 @@ export default function InteractiveMap() {
         />
 
         {pois.map((poi) => (
-          <Marker key={poi.id} position={poi.pos as [number, number]} icon={poi.icon}>
+          <Marker 
+            key={poi.id} 
+            position={poi.pos as [number, number]} 
+            icon={poi.icon}
+            title={poi.title}
+            alt={poi.title}
+          >
             <Popup className="custom-popup">
               <div className="p-1">
                 <span className="block text-[10px] font-bold uppercase tracking-widest text-[#8A6B2D] mb-1">{poi.type}</span>

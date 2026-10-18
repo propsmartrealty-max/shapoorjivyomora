@@ -13,6 +13,10 @@ const buttonVariants = cva(
           "bg-white text-black hover:bg-white/90 shadow-lg hover:shadow-xl transition-all duration-300",
         outline:
           "border border-white/20 bg-transparent text-white hover:bg-white/10 hover:border-white/40",
+        outlineDark:
+          "border border-[#0A192F]/40 bg-transparent text-[#0A192F] hover:bg-[#0A192F]/10 hover:border-[#0A192F] font-semibold",
+        primaryDark:
+          "bg-[#0A192F] text-white hover:bg-[#152a4a] border border-[#0A192F] shadow-md hover:shadow-lg transition-all duration-300 font-semibold",
         ghost: "hover:bg-white/10 text-white",
         gold: "bg-[#E5D3B3] text-black hover:bg-[#38BDF8] shadow-lg hover:shadow-xl transition-all duration-300",
         glass: "glass text-white hover:bg-white/10",
