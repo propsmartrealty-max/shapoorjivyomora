@@ -44,15 +44,22 @@ function processNextServerDir(currentDir, targetBase) {
       content = content.replace(/(<script\s+[^>]*?src=[\"'][^\"']+[\"'][^>]*?)\s+async=[\"'][\"']/gi, '$1 defer=""');
 
       // Guarantee global hreflang tags in <head> for Google global ranking
+      const cleanPath = (relPath === 'index.html' || entry.name === 'index.html' && relPath === 'index.html')
+        ? '/'
+        : '/' + relPath.replace(/\.html$/, '').replace(/\/index$/, '');
+      const pageCanonical = cleanPath === '/'
+        ? 'https://www.shapoorji-vyomora.com/'
+        : `https://www.shapoorji-vyomora.com${cleanPath}`;
+
       const hreflangTags = `
-<link rel="alternate" hreflang="en-IN" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="en-US" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="en-AE" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="en-GB" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="en-SG" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="en-CA" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="en-AU" href="https://www.shapoorji-vyomora.com/" />
-<link rel="alternate" hreflang="x-default" href="https://www.shapoorji-vyomora.com/" />`;
+<link rel="alternate" hreflang="en-IN" href="${pageCanonical}" />
+<link rel="alternate" hreflang="en-US" href="${pageCanonical}" />
+<link rel="alternate" hreflang="en-AE" href="${pageCanonical}" />
+<link rel="alternate" hreflang="en-GB" href="${pageCanonical}" />
+<link rel="alternate" hreflang="en-SG" href="${pageCanonical}" />
+<link rel="alternate" hreflang="en-CA" href="${pageCanonical}" />
+<link rel="alternate" hreflang="en-AU" href="${pageCanonical}" />
+<link rel="alternate" hreflang="x-default" href="${pageCanonical}" />`;
       if (!content.includes('hreflang="en-IN"')) {
         content = content.replace('</head>', `${hreflangTags}\n</head>`);
       }

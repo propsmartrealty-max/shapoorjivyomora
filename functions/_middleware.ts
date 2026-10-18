@@ -101,15 +101,19 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         }
 
         // Global International Hreflang & Geolocation Directives
+        const pageCanonical = url.pathname === '/'
+          ? 'https://www.shapoorji-vyomora.com/'
+          : `https://www.shapoorji-vyomora.com${url.pathname}`;
+
         head.append(
-          `<link rel="alternate" hreflang="en-IN" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="en-US" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="en-AE" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="en-GB" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="en-SG" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="en-CA" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="en-AU" href="https://www.shapoorji-vyomora.com/" />
-           <link rel="alternate" hreflang="x-default" href="https://www.shapoorji-vyomora.com/" />
+          `<link rel="alternate" hreflang="en-IN" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="en-US" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="en-AE" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="en-GB" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="en-SG" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="en-CA" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="en-AU" href="${pageCanonical}" />
+           <link rel="alternate" hreflang="x-default" href="${pageCanonical}" />
            <meta name="geo.region" content="IN-MH" />
            <meta name="geo.placename" content="Hinjewadi, Pune" />
            <meta name="geo.position" content="18.5913;73.7389" />

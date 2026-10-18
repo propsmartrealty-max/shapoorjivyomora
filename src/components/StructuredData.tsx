@@ -383,16 +383,24 @@ export default function StructuredData() {
         "contentUrl": "https://www.shapoorji-vyomora.com/#home",
         "embedUrl": "https://www.shapoorji-vyomora.com/#home"
       },
-      // FAQPage Schema
+      // FAQPage Schema - Synchronized with visible HomeFAQ component
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is Shapoorji Pallonji Joy 3.0 Hinjewadi?",
+            "name": "What is Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Joy 3.0 is the latest ultra luxury residential new launch at Joyville Vyomora in Hinjewadi Phase 1, Pune. Featuring upgraded 2 BHK, 3 BHK, 4 BHK, and Sky Duplex residences from ₹84.99 L* onwards, with a 32,000+ sq. ft. luxury clubhouse and possession scheduled for December 2029."
+              "text": "Shapoorji Pallonji Joyville Vyomora (marketed as Joy 3.0) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the MahaRERA registration number for Joyville Vyomora Hinjewadi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shapoorji Pallonji Joyville Vyomora is officially registered under MahaRERA registration number PR1260002600999. All project disclosures, building layout approvals, tower sanctions, and completion timelines are independently verifiable on the official MahaRERA website (maharera.mahaonline.gov.in)."
             }
           },
           {
@@ -400,39 +408,63 @@ export default function StructuredData() {
             "name": "What configurations and prices are available at Shapoorji Vyomora Pune?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Joyville Vyomora offers 2 BHK Luxe/Grande from ₹84.99 L*, 3 BHK Elite/Imperial from ₹1.25 Cr*, 4 BHK Royale & Sky Duplex from ₹1.85 Cr*, and 5 BHK Sky Villas from ₹2.50 Cr*."
+              "text": "Joyville Vyomora offers flexible luxury configurations tailored for modern homebuyers and IT professionals: 2 BHK Luxe (684.91 sq. ft.) starting from ₹84.99 Lakhs*, 2 BHK Grande (780 - 785 sq. ft.) from ₹1.00 Cr*, 3 BHK Select & Elite (1,052 - 1,090 sq. ft.) from ₹1.32 Cr*, 3 BHK Imperial (1,184 - 1,186 sq. ft.) from ₹1.54 Cr*, and exclusive 3/4 BHK Sky Duplexes (1,459 - 1,467 sq. ft.) starting from ₹1.89 Cr*."
             }
           },
           {
             "@type": "Question",
-            "name": "What is the MahaRERA registration number for Shapoorji Pallonji Vyomora?",
+            "name": "Where is Joyville Vyomora located and how is the connectivity to Hinjewadi IT Park?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Joyville Vyomora is registered under MahaRERA Registration No: PR1260002600999, verified on the official MahaRERA portal (maharera.mahaonline.gov.in)."
+              "text": "Joyville Vyomora is strategically located off Maan Road, directly adjacent to Hinjewadi Phase 1 in the Mahalunge-Hinjewadi growth corridor, Pune (PIN: 411057). It is just 1.8 km (5 minutes) from Rajiv Gandhi Infotech Park Phase 1 (Infosys Circle, Wipro, Cognizant, Barclays), 1.2 km from the upcoming Hinjewadi Metro Line 3 station, and 4.5 km from the Mumbai-Pune Expressway (NH-48)."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Shapoorji Vyomora good for investment in Pune IT corridor?",
+            "name": "What clubhouse and sports amenities are provided at Joyville Vyomora Hinjewadi?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, Joyville Vyomora is situated in the high-growth Mahalunge-Hinjewadi corridor directly adjacent to Rajiv Gandhi Infotech Park Phase 1 and Pune Metro Line 3. It offers projected rental yields of 4.5-5.5% and expected capital appreciation of 12-15% per annum."
+              "text": "The project boasts one of West Pune's largest residential clubhouses spanning over 32,000 sq. ft. along with 40+ lifestyle amenities. Highlights include an infinity temperature-controlled swimming pool, full-sized cricket pitch, tennis and pickleball courts, state-of-the-art gymnasium, yoga and wellness deck, co-working executive business lounge, kids adventure play park, pet agility park, and a scenic Mula riverfront promenade."
             }
           },
           {
             "@type": "Question",
-            "name": "How does Shapoorji Vyomora compare to Godrej Hillside and Kolte Patil Life Republic?",
+            "name": "What is the possession date and construction status of Joyville Vyomora?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Pallonji Vyomora boasts a 150-year engineering heritage, superior Mivan seismic construction, an expansive 32,000 sq. ft. clubhouse, and genuine walk-to-work proximity to Hinjewadi Phase 1, making it the preferred luxury choice for tech executives."
+              "text": "Joyville Vyomora is scheduled for handover in December 2029 as per MahaRERA filings. Construction is executed using advanced Mivan aluminum shuttering technology by Shapoorji Pallonji Engineering & Construction, ensuring earthquake-resistant seismic structural integrity, monolithic concrete walls, superior finish, and timely handover."
             }
           },
           {
             "@type": "Question",
-            "name": "Can NRIs buy property in Shapoorji Pallonji Vyomora Pune?",
+            "name": "Can NRIs from USA, UAE, UK, Singapore, and Australia invest in Joyville Vyomora?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, NRIs from UAE, USA, Singapore, UK, Qatar, and Kuwait can purchase residences digitally with complete MahaRERA compliance, remote video sample tours, and dedicated NRI loan facilitation through major banks."
+              "text": "Yes. Non-Resident Indians (NRIs) and Overseas Citizens of India (OCIs) can freely purchase residential property in Shapoorji Pallonji Joyville Vyomora under RBI and FEMA regulations. The project provides 100% digital KYC verification, virtual 3D sample flat walkthroughs, remote legal document execution, approved NRI home loan assistance through major nationalized and private banks, and full repatriation support for rental income and capital gains."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the expected rental yield and capital appreciation in Hinjewadi Phase 1?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Due to Hinjewadi's status as Pune's largest employment hub housing over 400,000 IT and biotechnology professionals, luxury apartments in Phase 1 command high rental yields of 4.5% to 5.5% annually. The impending completion of Pune Metro Line 3 and the Ring Road makes Joyville Vyomora an exceptionally strong asset for long-term capital appreciation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Joyville Vyomora compare to Joyville Sensorium and Vanaha Pune?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While Joyville Sensorium (also in Hinjewadi Phase 1) emphasizes 5D sensory biophilic living, Joyville Vyomora (Joy 3.0) is the newer flagship launch offering larger typologies including 4 BHK and Sky Duplexes, a massive 32,000+ sq. ft. clubhouse, and riverfront promenade views. Shapoorji Pallonji Vanaha, located in Bavdhan near Oxford Golf Resort, is a 1,000-acre mega-township focused on nature-centric luxury living."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I schedule an official site visit or download the Joyville Vyomora brochure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can schedule a private site visit to the Shapoorji Pallonji Experience Centre on Maan Road, Hinjewadi Phase 1, by contacting our authorized sales desk at +91-7744009295 or by submitting an inquiry online. The comprehensive PDF brochure, floor plans, cost sheet, and payment schedules are available for instant digital download."
             }
           }
         ]
