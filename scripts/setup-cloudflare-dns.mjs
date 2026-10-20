@@ -49,7 +49,13 @@ async function addDnsRecord(type, name, content, ttl = 1, comment = '', extra = 
   console.log(`\n📡 Adding DNS record [${type}] ${name}...`);
   const existingRes = await api(`/zones/${ZONE_ID}/dns_records?type=${type}&name=${encodeURIComponent(name)}`);
   if (existingRes.data?.result?.length > 0) {
-    const existing = existingRes.data.result.find(r => r.content === content);
+    const existing = existingRes.data.result.find(r => {
+      if (content !== undefined) return r.content === content;
+      if (extra?.data?.tag && extra?.data?.value) {
+        return r.data?.tag === extra.data.tag && r.data?.value === extra.data.value;
+      }
+      return false;
+    });
     if (existing) {
       console.log(`ℹ️ Record already exists: ID ${existing.id}`);
       return existing;
@@ -174,9 +180,9 @@ async function run() {
   await addDnsRecord(
     'TXT',
     '_dmarc.shapoorji-vyomora.com',
-    'v=DMARC1; p=reject; rua=mailto:propsmartrealty@gmail.com',
-    1,
-    'DMARC reject policy'
+    'v=DMARC1; p=reject; sp=reject; rua=mailto:propsmartrealty@gmail.com; ruf=mailto:propsmartrealty@gmail.com; fo=1; aspf=s; adkim=s',
+    3600,
+    'Enterprise DMARC reject policy with strict SPF and DKIM alignment'
   );
 
   // 4. RFC 7505 Null MX record (informs email systems domain accepts no inbound mail)
