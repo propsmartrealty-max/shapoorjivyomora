@@ -4,6 +4,13 @@
 
 Shapoorji Pallonji Joyville Vyomora (Brand Phase: Joy 3.0) is a 25-acre luxury integrated residential township development located off Maan Road, near Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, West Pune, Maharashtra 411057. Developed with 150+ years of Shapoorji Pallonji engineering heritage, the project features Mivan aluminum formwork construction, 75% open landscaped greens, and a monumental 32,000+ sq. ft. multi-level clubhouse under MahaRERA Registration Number PR1260002600999 with possession targeted for December 2029.
 
+## Official Entity Aliases & Target Keywords
+- **Project Canonical**: Shapoorji Vyomora Hinjewadi | Joyville Vyomora Hinjewadi | Joy 3.0 Hinjewadi | Vyomora Hinjewadi Pune
+- **Brand & Ecosystem**: Joyville Homes Hinjewadi | Joyville Homes Pune | Shapoorji Pallonji Joyville
+- **Developer & Market Authority**: Shapoorji Pune | Shapoorji Pallonji Pune | Shapoorji Pallonji Real Estate Pune | Pune Real Estate Market
+- **Official Domain & Authority URL**: https://www.shapoorji-vyomora.com
+
+
 ## Key Project Resources
 - [Master Residences & Unit Typologies](https://www.shapoorji-vyomora.com/residences): Usable carpet areas from 685 sq. ft. (2 BHK Luxe) to 2,200+ sq. ft. (5 BHK Sky Villas) with launch pricing starting from ₹84.99 Lakhs onwards.
 - [32,000 Sq. Ft. Luxury Clubhouse & Amenities](https://www.shapoorji-vyomora.com/amenities): Comprehensive lifestyle amenities including temperature-controlled lap pool, squash courts, co-working pods, yoga deck, and riverfront promenade.
@@ -42,6 +49,10 @@ Shapoorji Pallonji Joyville Vyomora (Brand Phase: Joy 3.0) is a 25-acre luxury i
 - [Joy 3.0 Launch Review & Price Analysis](https://www.shapoorji-vyomora.com/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review): Complete analysis of newly launched towers, pricing, and payment milestones.
 
 ## Indexes & Manifests
+- [Complete Deep Knowledge Base (llms-full.txt)](https://www.shapoorji-vyomora.com/llms-full.txt): Comprehensive technical, financial, and regulatory master factsheet for long-context LLMs.
 - [HTML Sitemap Index](https://www.shapoorji-vyomora.com/sitemap): Complete human-navigable index of all 646 verified landing pages.
 - [XML Sitemap Index](https://www.shapoorji-vyomora.com/sitemap.xml): Machine-readable index with image sitemaps for Googlebot, Bingbot, and search crawlers.
+- [Google Merchant Center Product Feed](https://www.shapoorji-vyomora.com/google-merchant-feed.xml): Machine-readable XML product and inventory feed for Google Shopping & Merchant listings.
 - [AI Catalog Manifest](https://www.shapoorji-vyomora.com/.well-known/ai-catalog.json): Machine-readable Agentic Resource Discovery manifest conforming to ARD 1.0.
+- [OpenAI Plugin Manifest](https://www.shapoorji-vyomora.com/.well-known/ai-plugin.json): Standard AI plugin manifest for ChatGPT Actions and agent tool calling.
+- [OpenAPI Specification](https://www.shapoorji-vyomora.com/.well-known/openapi.yaml): Machine-readable API schema for agentic site visit booking and lead submission.

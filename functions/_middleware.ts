@@ -9,8 +9,8 @@ interface Env {
   NEXT_PUBLIC_GA_ID?: string;
 }
 
-// Edge Bot & Crawler Detection Pattern
-const SEARCH_BOT_REGEX = /Googlebot|Googlebot-Image|Bingbot|Applebot|GPTBot|PerplexityBot|ClaudeBot|DuckDuckBot|Slurp/i;
+// Edge Bot & Crawler Detection Pattern (Covering all Google, Bing, and AI search engines)
+const SEARCH_BOT_REGEX = /Googlebot|Google-InspectionTool|Storebot-Google|Googlebot-Image|Googlebot-News|Googlebot-Video|Google-Extended|GoogleOther|APIs-Google|FeedFetcher-Google|Bingbot|Applebot|Applebot-Extended|GPTBot|ChatGPT-User|OAI-SearchBot|PerplexityBot|ClaudeBot|Claude-Web|anthropic-ai|Meta-ExternalAgent|FacebookBot|cohere-ai|Bytespider|DuckDuckBot|YandexBot|Baiduspider|Slurp/i;
 
 // NRI Target Markets
 const NRI_COUNTRIES = new Set(['AE', 'US', 'GB', 'SG', 'QA', 'SA', 'KW', 'OM', 'BH', 'AU', 'CA']);
@@ -46,7 +46,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Add deterministic cache bucket parameters so Bots and NRIs receive tailored edge variants
   cacheKeyUrl.searchParams.set('__edge_bot', isSearchBot ? '1' : '0');
   cacheKeyUrl.searchParams.set('__edge_nri', isNri ? country : '0');
-  cacheKeyUrl.searchParams.set('__v', 'v12'); // Edge cache version invalidation bucket
+  cacheKeyUrl.searchParams.set('__v', 'v14'); // Edge cache version invalidation bucket
   const cacheKey = new Request(cacheKeyUrl.toString(), {
     method: 'GET',
     headers: request.headers,
@@ -95,6 +95,8 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         if (isSearchBot) {
           head.append(
             `<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+             <meta name="googlebot-news" content="index, follow" />
+             <meta name="googlebot-image" content="index, follow" />
              <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />`,
             { html: true }
           );
@@ -153,7 +155,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
             );
           } else {
             title.setInnerContent(
-              'Shapoorji Vyomora Hinjewadi | Joyville Homes Pune | Shapoorji Pallonji Real Estate'
+              'Shapoorji Vyomora Hinjewadi | Joyville Homes Hinjewadi | Shapoorji Pune Real Estate'
             );
           }
         }
@@ -177,6 +179,10 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), browsing-topics=()');
   headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
   headers.set('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+  headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+  headers.set('X-AI-Context', 'https://www.shapoorji-vyomora.com/llms.txt');
+  headers.set('X-AI-Knowledge-Base', 'https://www.shapoorji-vyomora.com/llms-full.txt');
+  headers.set('Link', '</llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="service-doc"; type="application/json"');
 
   // Read transformed body to cache and return cleanly
   const bodyText = await transformedResponse.text();

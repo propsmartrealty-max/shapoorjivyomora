@@ -72,10 +72,10 @@ export const metadata: Metadata = {
     title: "Vyomora",
   },
   title: {
-    default: "Shapoorji Vyomora Hinjewadi | Joyville Homes Pune | Shapoorji Pallonji Real Estate",
+    default: "Shapoorji Vyomora Hinjewadi | Joyville Homes Hinjewadi | Shapoorji Pune Real Estate",
     template: "%s | Shapoorji Vyomora Hinjewadi",
   },
-  description: "Official portal for Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. Explore luxury 2, 3 & 4 BHK apartments and sky duplexes from ₹84.99 L* with 32,000+ sq.ft. clubhouse near Rajiv Gandhi Infotech Park. MahaRERA: PR1260002600999.",
+  description: "Official portal for Shapoorji Vyomora Hinjewadi by Joyville Homes & Shapoorji Pallonji Pune. Explore luxury 2, 3 & 4 BHK apartments from ₹84.99 L* with 32,000+ sq.ft. clubhouse near Rajiv Gandhi IT Park Phase 1. MahaRERA: PR1260002600999.",
   keywords: [
     "shapoorji vyomora hinjewadi",
     "shapoorji pallonji vyomora hinjewadi",
@@ -195,8 +195,11 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/images/hero_bg_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
         <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
         <link rel="alternate" type="application/rss+xml" title="Shapoorji Pallonji Joyville Vyomora RSS Feed" href="/feed.xml" />
+        <link rel="alternate" type="application/xml" title="Google Merchant Product Feed" href="/google-merchant-feed.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Knowledge Base" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
+        <link rel="service-doc" type="application/json" href="/.well-known/ai-plugin.json" title="OpenAI Plugin Manifest" />
       </head>
       <body 
         className={`${inter.variable} ${playfair.variable} antialiased overflow-x-hidden max-w-full`}

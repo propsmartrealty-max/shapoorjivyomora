@@ -3,8 +3,16 @@ import { HelpCircle, ChevronDown, CheckCircle2, ShieldCheck, Globe, Building2, M
 
 export const homeFaqItems = [
   {
-    q: "What is Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi?",
-    a: "Shapoorji Pallonji Joyville Vyomora (marketed as Joy 3.0) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
+    q: "What is Shapoorji Vyomora Hinjewadi (Joy 3.0)?",
+    a: "Shapoorji Vyomora Hinjewadi (marketed as Joy 3.0) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
+  },
+  {
+    q: "What is Joyville Homes Hinjewadi?",
+    a: "Joyville Homes Hinjewadi refers to the master-planned residential ecosystem by Joyville (a joint venture of Shapoorji Pallonji, Actis, ADB, and IFC) located in Hinjewadi Phase 1, Pune. The ecosystem features flagship developments including Joyville Vyomora (Joy 3.0) and Joyville Sensorium, offering luxury 2, 3 & 4 BHK apartments with 32,000+ sq. ft. clubhouses, 75%+ open biophilic spaces, and walk-to-work proximity to Rajiv Gandhi Infotech Park."
+  },
+  {
+    q: "What are the top Shapoorji Pune projects in the Pune real estate market?",
+    a: "Shapoorji Pallonji Real Estate has developed 11 iconic residential projects across Pune's prime corridors: Joyville Vyomora (Hinjewadi Phase 1 - Joy 3.0), Joyville Sensorium (Hinjewadi Phase 1), Shapoorji Pallonji Vanaha (1,000-acre township in Bavdhan), Vanaha Golfland (Oxford Valley), Joyville Hadapsar Annexe (East Pune), Joyville Celestia (Hadapsar), Wildernest at SP Kingstown, Vanaha Verdant, and Vanaha Springs."
   },
   {
     q: "What is the MahaRERA registration number for Joyville Vyomora Hinjewadi?",

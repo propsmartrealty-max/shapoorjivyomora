@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  title: Shapoorji Pallonji Joyville Vyomora AI API
+  description: Official real estate intelligence service for Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. MahaRERA PR1260002600999.
+  version: 1.0.0
+servers:
+  - url: https://www.shapoorji-vyomora.com
+paths:
+  /api/contact:
+    post:
+      summary: Submit enquiry or schedule site visit
+      description: Submit an official sales enquiry, request PDF brochure download, or book a private site visit to the Experience Centre.
+      operationId: submitEnquiry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - phone
+              properties:
+                name:
+                  type: string
+                  description: Full name of the homebuyer or investor
+                email:
+                  type: string
+                  format: email
+                  description: Email address for sending the brochure and cost sheet
+                phone:
+                  type: string
+                  description: Contact telephone number with country code (e.g. +91 or +971)
+                configuration:
+                  type: string
+                  enum: [2 BHK Luxe, 2 BHK Grande, 3 BHK Select, 3 BHK Imperial, 4 BHK Sky Duplex, 5 BHK Sky Villa]
+                  description: Preferred residential unit configuration
+                visit_date:
+                  type: string
+                  format: date
+                  description: Desired date for visiting the sample flat in Hinjewadi Phase 1
+      responses:
+        '200':
+          description: Enquiry submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string

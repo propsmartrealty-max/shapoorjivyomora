@@ -19,8 +19,8 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shapoorji Pallonji Projects in Pune | Joyville Homes Pune Complete Portfolio (2026)",
-  description: "Explore all residential township projects by Shapoorji Pallonji Real Estate and Joyville Homes in Pune. Official project listings, MahaRERA registrations, floor plans, and pricing for Hinjewadi, Bavdhan, and Hadapsar.",
+  title: "Shapoorji Pune Projects | Shapoorji Pallonji Real Estate Pune | Joyville Homes",
+  description: "Explore all 11 residential township projects by Shapoorji Pallonji Real Estate and Joyville Homes in Pune. Official project listings, MahaRERA registrations, floor plans, and pricing for Hinjewadi, Bavdhan, and Hadapsar.",
   keywords: [
     "Shapoorji Pallonji Pune",
     "Shapoorji Pallonji projects Pune",
@@ -156,8 +156,8 @@ export default function ShapoorjiPuneProjectsPage() {
               150+ Years Builder Legacy • Pune Real Estate Portfolio
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
-              Shapoorji Pallonji Projects <br />
-              <span className="text-[#c5a880]">& Joyville Homes Pune.</span>
+              Shapoorji Pune Projects <br />
+              <span className="text-[#c5a880]">Shapoorji Pallonji &amp; Joyville Homes</span>
             </h1>
             <p className="text-base sm:text-lg text-white/80 font-light leading-relaxed max-w-3xl mb-8">
               Explore the complete residential township ecosystem developed by <strong>Shapoorji Pallonji Real Estate</strong> and <strong>Joyville Homes</strong> across Pune. From the flagship <strong>Joyville Vyomora (Joy 3.0 Hinjewadi)</strong> to <strong>Sensorium</strong>, <strong>Vanaha Bavdhan</strong>, <strong>Golfland</strong>, <strong>Hadapsar Annexe</strong>, and <strong>Wildernest at SP Kingstown</strong>.

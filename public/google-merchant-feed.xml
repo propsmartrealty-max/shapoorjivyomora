@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Shapoorji Pallonji Joyville Vyomora (Joy 3.0) - Official Residences &amp; Properties Catalog</title>
+    <link>https://www.shapoorji-vyomora.com</link>
+    <description>Official residential inventory, floor plans, and luxury 2, 3, 4 BHK and Sky Duplex apartments by Shapoorji Pallonji Real Estate in Hinjewadi Phase 1, Pune. MahaRERA: PR1260002600999.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Oct 2026 00:00:00 +0530</lastBuildDate>
+
+    <!-- Item 1: 2 BHK Luxe & Grande -->
+    <item>
+      <g:id>VYOMORA-2BHK</g:id>
+      <g:title>Shapoorji Pallonji Joyville Vyomora 2 BHK Luxury Apartment Hinjewadi Phase 1 Pune</g:title>
+      <g:description>Flagship 2 BHK smart luxury apartment with Italian modular kitchen, wooden master flooring, grand sun deck, and access to 32,000+ sq. ft. clubhouse in Hinjewadi Phase 1, Rajiv Gandhi Infotech Park. MahaRERA: PR1260002600999.</g:description>
+      <g:link>https://www.shapoorji-vyomora.com/residences</g:link>
+      <g:image_link>https://www.shapoorji-vyomora.com/og-image.jpg</g:image_link>
+      <g:additional_image_link>https://www.shapoorji-vyomora.com/images/floor-plan1.webp</g:additional_image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+      <g:price>8499000.00 INR</g:price>
+      <g:brand>Shapoorji Pallonji Joyville</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Residential &gt; 2 BHK Apartments</g:product_type>
+      <g:mpn>JOY-VYOMORA-2BHK</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>IN</g:country>
+        <g:service>Allotment &amp; Registry</g:service>
+        <g:price>0.00 INR</g:price>
+      </g:shipping>
+      <g:unit_pricing_measure>685 sqft</g:unit_pricing_measure>
+    </item>
+
+    <!-- Item 2: 3 BHK Luxury Suite -->
+    <item>
+      <g:id>VYOMORA-3BHK</g:id>
+      <g:title>Shapoorji Pallonji Joyville Vyomora 3 BHK Luxury Suite Hinjewadi Pune</g:title>
+      <g:description>Expansive 3 BHK luxury suite with panoramic Mula river and hill views, dual master suites, private utility balcony, and biophilic garden amenities in Mahalunge-Hinjewadi corridor. MahaRERA: PR1260002600999.</g:description>
+      <g:link>https://www.shapoorji-vyomora.com/residences</g:link>
+      <g:image_link>https://www.shapoorji-vyomora.com/og-image.jpg</g:image_link>
+      <g:additional_image_link>https://www.shapoorji-vyomora.com/images/floor-plan2.webp</g:additional_image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+      <g:price>12500000.00 INR</g:price>
+      <g:brand>Shapoorji Pallonji Joyville</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Residential &gt; 3 BHK Apartments</g:product_type>
+      <g:mpn>JOY-VYOMORA-3BHK</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>IN</g:country>
+        <g:service>Allotment &amp; Registry</g:service>
+        <g:price>0.00 INR</g:price>
+      </g:shipping>
+      <g:unit_pricing_measure>1052 sqft</g:unit_pricing_measure>
+    </item>
+
+    <!-- Item 3: 3 BHK Imperial Suite -->
+    <item>
+      <g:id>VYOMORA-3BHK-IMP</g:id>
+      <g:title>Shapoorji Pallonji Joyville Vyomora 3 BHK Imperial Suite Mahalunge Hinjewadi</g:title>
+      <g:description>Super-luxury 3 BHK Imperial residence featuring double-length deck, ultra-spacious living-dining room, imported fixtures, and dedicated covered parking. MahaRERA: PR1260002600999.</g:description>
+      <g:link>https://www.shapoorji-vyomora.com/residences</g:link>
+      <g:image_link>https://www.shapoorji-vyomora.com/og-image.jpg</g:image_link>
+      <g:additional_image_link>https://www.shapoorji-vyomora.com/images/floor-plan3.webp</g:additional_image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+      <g:price>15400000.00 INR</g:price>
+      <g:brand>Shapoorji Pallonji Joyville</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Residential &gt; 3 BHK Imperial</g:product_type>
+      <g:mpn>JOY-VYOMORA-3BHK-IMP</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>IN</g:country>
+        <g:service>Allotment &amp; Registry</g:service>
+        <g:price>0.00 INR</g:price>
+      </g:shipping>
+      <g:unit_pricing_measure>1186 sqft</g:unit_pricing_measure>
+    </item>
+
+    <!-- Item 4: 4 BHK Royale & Sky Duplex -->
+    <item>
+      <g:id>VYOMORA-4BHK</g:id>
+      <g:title>Shapoorji Pallonji Joyville Vyomora 4 BHK Royale &amp; Sky Duplex Baner-Mahalunge Pune</g:title>
+      <g:description>Exclusive 4 BHK Sky Duplex with double-height ceiling, private outdoor terrace, EV charging bay, and smart home biometric access in West Pune. MahaRERA: PR1260002600999.</g:description>
+      <g:link>https://www.shapoorji-vyomora.com/residences</g:link>
+      <g:image_link>https://www.shapoorji-vyomora.com/og-image.jpg</g:image_link>
+      <g:additional_image_link>https://www.shapoorji-vyomora.com/images/masterplan_bg.webp</g:additional_image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+      <g:price>18500000.00 INR</g:price>
+      <g:brand>Shapoorji Pallonji Joyville</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Residential &gt; 4 BHK Duplexes</g:product_type>
+      <g:mpn>JOY-VYOMORA-4BHK</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>IN</g:country>
+        <g:service>Allotment &amp; Registry</g:service>
+        <g:price>0.00 INR</g:price>
+      </g:shipping>
+      <g:unit_pricing_measure>1600 sqft</g:unit_pricing_measure>
+    </item>
+
+    <!-- Item 5: 5 BHK Sky Villa Penthouse -->
+    <item>
+      <g:id>VYOMORA-5BHK</g:id>
+      <g:title>Shapoorji Pallonji Joyville Vyomora 5 BHK Sky Villa Penthouse Hinjewadi Phase 1</g:title>
+      <g:description>Crown jewel 5 BHK penthouse villa with private plunge pool, private elevator vestibule, and 360-degree river-valley views. MahaRERA: PR1260002600999.</g:description>
+      <g:link>https://www.shapoorji-vyomora.com/residences</g:link>
+      <g:image_link>https://www.shapoorji-vyomora.com/og-image.jpg</g:image_link>
+      <g:additional_image_link>https://www.shapoorji-vyomora.com/images/pool_bg.webp</g:additional_image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in stock</g:availability>
+      <g:price>25000000.00 INR</g:price>
+      <g:brand>Shapoorji Pallonji Joyville</g:brand>
+      <g:google_product_category>Real Estate &gt; Residential Properties &gt; Apartments</g:google_product_category>
+      <g:product_type>Real Estate &gt; Residential &gt; 5 BHK Penthouses</g:product_type>
+      <g:mpn>JOY-VYOMORA-5BHK</g:mpn>
+      <g:identifier_exists>no</g:identifier_exists>
+      <g:shipping>
+        <g:country>IN</g:country>
+        <g:service>Allotment &amp; Registry</g:service>
+        <g:price>0.00 INR</g:price>
+      </g:shipping>
+      <g:unit_pricing_measure>2200 sqft</g:unit_pricing_measure>
+    </item>
+  </channel>
+</rss>

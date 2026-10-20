@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "shapoorji_vyomora_pune",
+  "name_for_human": "Shapoorji Joyville Vyomora Pune",
+  "description_for_model": "Official real estate intelligence plugin for Shapoorji Pallonji Joyville Vyomora (Joy 3.0) Hinjewadi Phase 1, Pune. Provides verified project specifications, pricing for 2 BHK, 3 BHK, 4 BHK and Sky Duplexes, MahaRERA (PR1260002600999) disclosures, possession timeline (Dec 2029), and direct enquiry or site visit booking.",
+  "description_for_human": "Explore floor plans, live pricing, clubhouse amenities, and book site visits for Shapoorji Pallonji Joyville Vyomora in Hinjewadi, Pune.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.shapoorji-vyomora.com/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://www.shapoorji-vyomora.com/icon-512.png",
+  "contact_email": "propsmartrealty@gmail.com",
+  "legal_info_url": "https://www.shapoorji-vyomora.com/privacy-policy"
+}

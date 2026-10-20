@@ -92,14 +92,15 @@ export const puneProjectsMasterList: PuneProjectItem[] = [
       { question: "How does Joyville Vyomora compare to Joyville Sensorium?", answer: "While Joyville Sensorium focuses on 5D sensory biophilic living with 2.8 acres of sensory park, Joyville Vyomora (Joy 3.0) is the newer flagship launch offering larger 4 BHK and Sky Duplex typologies, an expansive 32,000 sq. ft. clubhouse, and riverfront promenade views." }
     ],
     seoKeywords: [
-      "Shapoorji Pallonji Joyville Vyomora", "Joyville Vyomora", "Joyville Vyomora Hinjewadi", "Joyville Vyomora Pune",
+      "Shapoorji Vyomora Hinjewadi", "Joyville Homes Hinjewadi", "Shapoorji Pune", "Vyomora Hinjewadi", "Joyville Vyomora Hinjewadi",
+      "Shapoorji Pallonji Joyville Vyomora", "Joyville Vyomora", "Joyville Vyomora Pune",
       "Joy 3.0 Hinjewadi", "Joyville 3.0 Pune", "Shapoorji Vyomora price", "Joyville Vyomora floor plan",
       "Joyville Vyomora 2 BHK price", "Joyville Vyomora 3 BHK price", "Joyville Vyomora 4 BHK price",
       "Joyville Vyomora sky duplex", "Joyville Vyomora MahaRERA", "Joyville Vyomora brochure PDF",
       "Joyville Vyomora site visit", "Shapoorji Pallonji Hinjewadi Phase 1", "flats near Hinjewadi IT Park"
     ],
-    metaTitle: "Joyville Vyomora Hinjewadi (Joy 3.0) | Shapoorji Pallonji Pune",
-    metaDescription: "Official guide to Shapoorji Pallonji Joyville Vyomora (Joy 3.0) in Hinjewadi Phase 1 Pune. 2, 3 & 4 BHK residences and sky duplexes from ₹84.99 L* with 32,000 sq.ft. clubhouse. MahaRERA: PR1260002600999."
+    metaTitle: "Shapoorji Vyomora Hinjewadi | Joyville Homes Hinjewadi (Joy 3.0)",
+    metaDescription: "Official project portal for Shapoorji Vyomora Hinjewadi by Joyville Homes & Shapoorji Pallonji Pune. 2, 3 & 4 BHK residences & sky duplexes from ₹84.99 L* with 32,000+ sq.ft. clubhouse. MahaRERA: PR1260002600999."
   },
   {
     id: "sensorium",
