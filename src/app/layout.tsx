@@ -200,6 +200,38 @@ export default function RootLayout({
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Knowledge Base" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-catalog.json" title="AI Catalog" />
         <link rel="service-doc" type="application/json" href="/.well-known/ai-plugin.json" title="OpenAI Plugin Manifest" />
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  source: "list",
+                  urls: [
+                    "/residences",
+                    "/amenities",
+                    "/location",
+                    "/shapoorji-pallonji-pune-projects",
+                    "/projects/joyville-vyomora-hinjewadi"
+                  ],
+                  eagerness: "moderate"
+                }
+              ],
+              prefetch: [
+                {
+                  source: "document",
+                  where: {
+                    and: [
+                      { href_matches: "/*" },
+                      { not: { href_matches: "/api/*" } }
+                    ]
+                  },
+                  eagerness: "conservative"
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body 
         className={`${inter.variable} ${playfair.variable} antialiased overflow-x-hidden max-w-full`}

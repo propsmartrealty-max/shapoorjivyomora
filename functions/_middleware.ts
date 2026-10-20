@@ -46,7 +46,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Add deterministic cache bucket parameters so Bots and NRIs receive tailored edge variants
   cacheKeyUrl.searchParams.set('__edge_bot', isSearchBot ? '1' : '0');
   cacheKeyUrl.searchParams.set('__edge_nri', isNri ? country : '0');
-  cacheKeyUrl.searchParams.set('__v', 'v14'); // Edge cache version invalidation bucket
+  cacheKeyUrl.searchParams.set('__v', 'v15'); // Edge cache version invalidation bucket
   const cacheKey = new Request(cacheKeyUrl.toString(), {
     method: 'GET',
     headers: request.headers,
@@ -182,7 +182,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   headers.set('X-AI-Context', 'https://www.shapoorji-vyomora.com/llms.txt');
   headers.set('X-AI-Knowledge-Base', 'https://www.shapoorji-vyomora.com/llms-full.txt');
-  headers.set('Link', '</llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="service-doc"; type="application/json"');
+  headers.set('Link', '</llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="service-doc"; type="application/json", </images/hero_bg_mobile.webp>; rel=preload; as=image; type="image/webp"; media="(max-width: 768px)", </images/hero_bg.webp>; rel=preload; as=image; type="image/webp"; media="(min-width: 769px)"');
 
   // Read transformed body to cache and return cleanly
   const bodyText = await transformedResponse.text();

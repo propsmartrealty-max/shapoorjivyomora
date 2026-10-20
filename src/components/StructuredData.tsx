@@ -235,7 +235,19 @@ export default function StructuredData() {
           "addressRegion": "Maharashtra",
           "addressCountry": "IN"
         },
-        "hasMap": "https://maps.google.com/?q=18.5912,73.7389",
+        "foundingDate": "1865",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Pallonji Shapoorji Mistry"
+          }
+        ],
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Shapoorji Pallonji Group",
+          "url": "https://www.shapoorjipallonji.com"
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=18.5913,73.7389",
         "sameAs": [
           "https://www.facebook.com/shapoorjipallonji/",
           "https://twitter.com/shapoorjipallonji",
