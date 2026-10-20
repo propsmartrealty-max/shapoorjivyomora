@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -15,16 +14,12 @@ export default function WhatsAppWidget() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (!isVisible) return null;
-
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.5, type: "spring", stiffness: 260, damping: 20 }}
-      className="fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[45] flex items-end gap-3"
+    <div
+      className={`fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[45] flex items-end gap-3 transition-all duration-500 ease-out ${
+        isVisible ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" : "opacity-0 scale-75 translate-y-4 pointer-events-none"
+      }`}
     >
-
       {/* Main pulsing icon */}
       <a
         href="https://wa.me/917744009295?text=Hi,%20I%20am%20interested%20in%20Shapoorji%20Vyomora.%20Can%20you%20share%20the%20brochure%20and%20pricing?"
@@ -37,6 +32,6 @@ export default function WhatsAppWidget() {
         <span className="absolute inset-0 w-full h-full rounded-full bg-[#25D366] opacity-40 animate-ping" />
         <MessageCircle size={28} className="relative z-10" />
       </a>
-    </motion.div>
+    </div>
   );
 }
