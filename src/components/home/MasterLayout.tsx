@@ -67,7 +67,6 @@ export default function MasterLayout() {
                   key={tab.id}
                   role="tab"
                   aria-selected={activeTab === tab.id}
-                  aria-label={`${tab.title} - ${tab.subtitle}`}
                   onClick={() => setActiveTab(tab.id)}
                   className={`text-left px-6 py-4 rounded-sm transition-all duration-300 border-l-2 whitespace-nowrap lg:whitespace-normal flex-shrink-0 ${
                     activeTab === tab.id 

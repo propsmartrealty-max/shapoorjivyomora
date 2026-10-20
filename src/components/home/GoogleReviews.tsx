@@ -189,11 +189,11 @@ export default function GoogleReviews() {
                       <Star key={i} size={15} fill="#FFD700" stroke="#FFD700" />
                     ))}
                   </div>
-                  <span className="text-[11px] text-white/40">{review.date}</span>
+                  <span className="text-[11px] text-white/75">{review.date}</span>
                 </div>
 
                 {/* Review Body */}
-                <p className="text-white/80 text-sm leading-relaxed mb-6 font-light">
+                <p className="text-white/90 text-sm leading-relaxed mb-6 font-light">
                   &ldquo;{review.content}&rdquo;
                 </p>
               </div>
@@ -211,14 +211,14 @@ export default function GoogleReviews() {
                         <CheckCircle size={13} className="text-blue-400 fill-blue-400/20" />
                       )}
                     </h3>
-                    <p className="text-[11px] text-white/50">{review.role}</p>
-                    <p className="text-[10px] text-white/40 flex items-center gap-1 mt-0.5">
+                    <p className="text-[11px] text-neutral-300">{review.role}</p>
+                    <p className="text-[10px] text-neutral-300 flex items-center gap-1 mt-0.5">
                       <MapPin size={10} className="text-[#C5A059]" /> {review.location}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1 text-[11px] text-white/40">
+                <div className="flex items-center gap-1 text-[11px] text-white/75">
                   <ThumbsUp size={12} />
                   <span>{review.helpfulCount}</span>
                 </div>
