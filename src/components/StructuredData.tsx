@@ -270,6 +270,10 @@ export default function StructuredData() {
         "name": "Shapoorji Vyomora Hinjewadi (Joy 3.0)",
         "alternateName": [
           "Shapoorji Vyomora Hinjewadi",
+          "Shapoorji Vyomorar",
+          "Vyomorar Hinjewadi",
+          "Vyomorar",
+          "Joyville Vyomorar",
           "Joyville Homes Hinjewadi",
           "Joyville Vyomora Hinjewadi",
           "Shapoorji Pune",
@@ -339,6 +343,16 @@ export default function StructuredData() {
         "@type": "Product",
         "@id": "https://www.shapoorji-vyomora.com/#product-master",
         "name": "Shapoorji Pallonji Joyville Vyomora - Luxury Residences Hinjewadi Pune (Joy 3.0)",
+        "alternateName": [
+          "Shapoorji Vyomora Hinjewadi",
+          "Shapoorji Vyomorar",
+          "Vyomorar Hinjewadi",
+          "Vyomorar",
+          "Joyville Vyomorar",
+          "Joyville Vyomora Hinjewadi",
+          "Shapoorji Pune",
+          "Joy 3.0 Hinjewadi"
+        ],
         "image": [
           "https://www.shapoorji-vyomora.com/og-image.jpg",
           "https://www.shapoorji-vyomora.com/images/hero_bg.webp"
@@ -725,7 +739,7 @@ export default function StructuredData() {
             "name": "What is Shapoorji Vyomora Hinjewadi (Joy 3.0)?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Shapoorji Vyomora Hinjewadi (marketed as Joy 3.0) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
+              "text": "Shapoorji Vyomora Hinjewadi (marketed as Joy 3.0, and frequently searched as Shapoorji Vyomorar, Joyville Vyomorar, or Vyomara Hinjewadi) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
             }
           },
           {

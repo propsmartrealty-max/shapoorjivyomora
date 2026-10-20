@@ -78,6 +78,11 @@ export const metadata: Metadata = {
   description: "Official portal for Shapoorji Vyomora Hinjewadi by Joyville Homes & Shapoorji Pallonji Pune. Explore luxury 2, 3 & 4 BHK apartments from ₹84.99 L* with 32,000+ sq.ft. clubhouse near Rajiv Gandhi IT Park Phase 1. MahaRERA: PR1260002600999.",
   keywords: [
     "shapoorji vyomora hinjewadi",
+    "shapoorji vyomorar",
+    "vyomorar hinjewadi",
+    "vyomorar",
+    "joyville vyomorar",
+    "shapoorji vyomorar hinjewadi",
     "shapoorji pallonji vyomora hinjewadi",
     "joyville vyomora hinjewadi",
     "joyville vyomora hinjewadi pune",

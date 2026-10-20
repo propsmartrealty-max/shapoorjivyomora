@@ -32,6 +32,20 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return Response.redirect(url.toString(), 301);
   }
 
+  // Edge 301 redirect for common typo and phonetic queries (vyomorar, vyomara, vymora)
+  const lowerPath = url.pathname.toLowerCase();
+  if (
+    lowerPath === '/vyomorar' ||
+    lowerPath === '/shapoorji-vyomorar' ||
+    lowerPath === '/vyomara' ||
+    lowerPath === '/vymora' ||
+    lowerPath === '/joyville-vyomorar' ||
+    lowerPath === '/joyville-vyomara'
+  ) {
+    url.pathname = '/projects/joyville-vyomora-hinjewadi';
+    return Response.redirect(url.toString(), 301);
+  }
+
   // 2. Edge Context Inspection (Geo-IP & User Agent)
   const userAgent = request.headers.get('user-agent') || '';
   const isSearchBot = SEARCH_BOT_REGEX.test(userAgent);
@@ -46,7 +60,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Add deterministic cache bucket parameters so Bots and NRIs receive tailored edge variants
   cacheKeyUrl.searchParams.set('__edge_bot', isSearchBot ? '1' : '0');
   cacheKeyUrl.searchParams.set('__edge_nri', isNri ? country : '0');
-  cacheKeyUrl.searchParams.set('__v', 'v15'); // Edge cache version invalidation bucket
+  cacheKeyUrl.searchParams.set('__v', 'v16'); // Edge cache version invalidation bucket
   const cacheKey = new Request(cacheKeyUrl.toString(), {
     method: 'GET',
     headers: request.headers,

@@ -4,7 +4,7 @@ import { HelpCircle, ChevronDown, CheckCircle2, ShieldCheck, Globe, Building2, M
 export const homeFaqItems = [
   {
     q: "What is Shapoorji Vyomora Hinjewadi (Joy 3.0)?",
-    a: "Shapoorji Vyomora Hinjewadi (marketed as Joy 3.0) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
+    a: "Shapoorji Vyomora Hinjewadi (marketed as Joy 3.0, and frequently searched as Shapoorji Vyomorar, Joyville Vyomorar, or Vyomara Hinjewadi) is a flagship 25-acre residential township development located off Maan Road in Hinjewadi Phase 1, Pune. Developed jointly under the Joyville platform by Shapoorji Pallonji Real Estate, Actis, ADB, and IFC, Vyomora features high-rise residential towers, over 78% open and green biophilic spaces, a monumental 32,000+ sq. ft. clubhouse, and luxury 2, 3, 4 BHK, and Sky Duplex apartments overlooking the Mula river."
   },
   {
     q: "What is Joyville Homes Hinjewadi?",
