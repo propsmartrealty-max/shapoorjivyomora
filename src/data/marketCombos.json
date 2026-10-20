@@ -1,0 +1,2922 @@
+[
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "possession-date"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "rera-details"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "3bhk-apartments",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "3bhk-apartments",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "3bhk-apartments",
+    "topic": "possession-date"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "sky-duplex",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "sky-duplex",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "new-launch-projects",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "luxury-apartments",
+    "topic": "amenities"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "possession-date"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "3bhk-apartments",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "3bhk-apartments",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "4bhk-luxury-homes",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "sky-duplex",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "new-launch-projects",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "joyville-homes",
+    "topic": "rera-details"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "price-trends"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "possession-date"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "2bhk-flats",
+    "topic": "price-trends"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "luxury-townships",
+    "topic": "amenities"
+  },
+  {
+    "location": "baner",
+    "configuration": "4bhk-in-baner",
+    "topic": "price-trends"
+  },
+  {
+    "location": "baner",
+    "configuration": "4bhk-in-baner",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "baner",
+    "configuration": "3bhk-apartments",
+    "topic": "price-trends"
+  },
+  {
+    "location": "baner",
+    "configuration": "sky-duplex",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "wakad",
+    "configuration": "2bhk-flats",
+    "topic": "price-trends"
+  },
+  {
+    "location": "wakad",
+    "configuration": "3bhk-apartments",
+    "topic": "connectivity"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "3bhk-apartments",
+    "topic": "price-trends"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "4bhk-luxury-homes",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "rajiv-gandhi-infotech-park",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "connectivity"
+  },
+  {
+    "location": "rajiv-gandhi-infotech-park",
+    "configuration": "best-flats-for-it-professionals",
+    "topic": "rental-yield"
+  },
+  {
+    "location": "maan-road",
+    "configuration": "new-launch-projects",
+    "topic": "price-trends"
+  },
+  {
+    "location": "maan-road",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "pune-west",
+    "configuration": "luxury-apartments",
+    "topic": "price-trends"
+  },
+  {
+    "location": "pune-west",
+    "configuration": "sky-duplex",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "pune-mumbai-highway",
+    "configuration": "investment-property",
+    "topic": "capital-appreciation"
+  },
+  {
+    "location": "dubai",
+    "configuration": "high-roi-investment",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "usa",
+    "configuration": "high-roi-investment",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "singapore",
+    "configuration": "luxury-sky-villas",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "london",
+    "configuration": "sky-duplex",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "pune",
+    "configuration": "shapoorji-pallonji-pune",
+    "topic": "price-trends"
+  },
+  {
+    "location": "pune",
+    "configuration": "shapoorji-pallonji-pune",
+    "topic": "all-projects-in-pune"
+  },
+  {
+    "location": "pune",
+    "configuration": "shapoorji-pallonji-pune",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "pune",
+    "configuration": "joyville-homes-pune",
+    "topic": "price-trends"
+  },
+  {
+    "location": "pune",
+    "configuration": "joyville-homes-pune",
+    "topic": "all-projects-in-pune"
+  },
+  {
+    "location": "pune-west",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "amenities"
+  },
+  {
+    "location": "pune-east",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "shapoorji-vanaha",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "shapoorji-vanaha",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "shapoorji-vanaha",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "vanaha-golfland",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "vanaha-golfland",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "vanaha-golfland",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "vanaha-verdant",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "vanaha-springs",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "golf-course-facing-homes",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joyville-vyomora",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joyville-vyomora",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joyville-vyomora",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joy-3.0-hinjewadi",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joyville-sensorium",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joyville-sensorium",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi-phase-1",
+    "configuration": "joyville-sensorium",
+    "topic": "amenities"
+  },
+  {
+    "location": "maan-road",
+    "configuration": "joyville-vyomora",
+    "topic": "connectivity"
+  },
+  {
+    "location": "maan-road",
+    "configuration": "joyville-sensorium",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "joyville-hadapsar-annexe",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "joyville-hadapsar-annexe",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "joyville-hadapsar-annexe",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "joyville-celestia",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "wildernest-sp-kingstown",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "wildernest-sp-kingstown",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "manjri",
+    "configuration": "joyville-hadapsar-annexe",
+    "topic": "price-trends"
+  },
+  {
+    "location": "hadapsar",
+    "configuration": "joyville-homes",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "mahalunge",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "wakad",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "pimpri-chinchwad",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "aundh",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "pashan",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "sus",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "punawale",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "tathawade",
+    "configuration": "luxury-apartments",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "dubai",
+    "configuration": "luxury-apartments",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "usa",
+    "configuration": "luxury-apartments",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "singapore",
+    "configuration": "luxury-apartments",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "uk",
+    "configuration": "luxury-apartments",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "london",
+    "configuration": "luxury-apartments",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "kuwait",
+    "configuration": "luxury-apartments",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "kalyani-nagar",
+    "configuration": "premium-flats",
+    "topic": "masterplan"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "luxury-sky-villas",
+    "topic": "possession-date"
+  },
+  {
+    "location": "aundh",
+    "configuration": "best-residential-projects",
+    "topic": "capital-appreciation"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-townships",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "luxury-sky-villas",
+    "topic": "site-visit"
+  },
+  {
+    "location": "global-investors",
+    "configuration": "premium-residential-projects",
+    "topic": "contact-number"
+  },
+  {
+    "location": "hinjewadi-phase-2",
+    "configuration": "2bhk-flats",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "hinjewadi-phase-2",
+    "configuration": "4-bhk-premium-apartments",
+    "topic": "possession-date"
+  },
+  {
+    "location": "hinjewadi-phase-3",
+    "configuration": "luxury-townships",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "2-bhk-premium-flats",
+    "topic": "possession-date"
+  },
+  {
+    "location": "hinjewadi",
+    "configuration": "luxury-sky-villas",
+    "topic": "future-growth"
+  },
+  {
+    "location": "kalyani-nagar",
+    "configuration": "sky-duplex",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "kalyani-nagar",
+    "configuration": "top-luxury-apartments",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "kharadi",
+    "configuration": "premium-flats",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "kharadi",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "masterplan"
+  },
+  {
+    "location": "kothrud",
+    "configuration": "duplex-penthouses",
+    "topic": "possession-date"
+  },
+  {
+    "location": "maan-road",
+    "configuration": "under-construction-projects",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "mahalunge-township",
+    "configuration": "family-apartments",
+    "topic": "construction-update"
+  },
+  {
+    "location": "marunji-road",
+    "configuration": "new-launch-projects",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "marunji",
+    "configuration": "new-launch-projects",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "marunji",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "price-trends"
+  },
+  {
+    "location": "mukai-chowk",
+    "configuration": "sky-duplex",
+    "topic": "possession-date"
+  },
+  {
+    "location": "mumbai-pune-expressway-corridor",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "mumbai-pune-expressway",
+    "configuration": "5bhk-sky-villas",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "nri-investors",
+    "configuration": "residential-property",
+    "topic": "rera-details"
+  },
+  {
+    "location": "nri-real-estate-india",
+    "configuration": "buy-flat",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "nri-real-estate-india",
+    "configuration": "premium-residential-projects",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "pimpri-chinchwad",
+    "configuration": "buy-flat",
+    "topic": "rera-details"
+  },
+  {
+    "location": "punawale",
+    "configuration": "simplex-luxury-homes",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "pune-it-corridor",
+    "configuration": "new-launch-projects",
+    "topic": "possession-date"
+  },
+  {
+    "location": "pune-mumbai-highway",
+    "configuration": "simplex-luxury-homes",
+    "topic": "masterplan"
+  },
+  {
+    "location": "pune-ring-road",
+    "configuration": "luxury-real-estate",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "pune-west",
+    "configuration": "joyville-homes",
+    "topic": "rera-details"
+  },
+  {
+    "location": "pune",
+    "configuration": "luxury-apartments",
+    "topic": "sustainable-living"
+  },
+  {
+    "location": "pune",
+    "configuration": "new-launch-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "sus-road",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "construction-update"
+  },
+  {
+    "location": "talegaon",
+    "configuration": "luxury-real-estate",
+    "topic": "capital-appreciation"
+  },
+  {
+    "location": "tathawade-ravet-corridor",
+    "configuration": "sky-duplex",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "tathawade",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "tech-mahindra-hinjewadi",
+    "configuration": "new-launch-projects",
+    "topic": "possession-date"
+  },
+  {
+    "location": "uae",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "possession-date"
+  },
+  {
+    "location": "wagholi",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "wipro-hinjewadi",
+    "configuration": "residential-property",
+    "topic": "price-trends"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "2-bhk-premium-flats",
+    "topic": "future-growth"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "rera-details"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "connectivity"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "4bhk-luxury-homes",
+    "topic": "price-trends"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "5bhk-sky-villas",
+    "topic": "masterplan"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "5bhk-sky-villas",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "best-flats-for-it-professionals",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "best-residential-projects",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "best-residential-projects",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "buy-3-bhk",
+    "topic": "best-builder"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "buy-apartment",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "luxury-real-estate",
+    "topic": "clubhouse"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "luxury-sky-villas",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "luxury-townships",
+    "topic": "masterplan"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "penthouses",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "premium-residential-projects",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "ready-to-move-flats",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "residential-property",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "sky-duplex",
+    "topic": "possession-date"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "sky-duplex",
+    "topic": "stamp-duty-registration"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "spacious-balcony-flats",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "akurdi",
+    "configuration": "under-construction-projects",
+    "topic": "site-visit"
+  },
+  {
+    "location": "aundh",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "price-trends"
+  },
+  {
+    "location": "aundh",
+    "configuration": "4-bhk-premium-apartments",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "aundh",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "aundh",
+    "configuration": "best-residential-projects",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "aundh",
+    "configuration": "buy-flat",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "aundh",
+    "configuration": "duplex-penthouses",
+    "topic": "home-loan-offers"
+  },
+  {
+    "location": "aundh",
+    "configuration": "duplex-penthouses",
+    "topic": "possession-date"
+  },
+  {
+    "location": "aundh",
+    "configuration": "duplex-penthouses",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "aundh",
+    "configuration": "duplex-penthouses",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "aundh",
+    "configuration": "high-roi-investment",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "aundh",
+    "configuration": "investment-property",
+    "topic": "masterplan"
+  },
+  {
+    "location": "aundh",
+    "configuration": "joyville-homes",
+    "topic": "future-growth"
+  },
+  {
+    "location": "aundh",
+    "configuration": "joyville-homes",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "aundh",
+    "configuration": "luxury-real-estate",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "aundh",
+    "configuration": "luxury-real-estate",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "aundh",
+    "configuration": "premium-gated-communities",
+    "topic": "capital-appreciation"
+  },
+  {
+    "location": "aundh",
+    "configuration": "premium-gated-communities",
+    "topic": "top-builders"
+  },
+  {
+    "location": "aundh",
+    "configuration": "premium-homes",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "aundh",
+    "configuration": "premium-residential-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "aundh",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "aundh",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "stamp-duty-registration"
+  },
+  {
+    "location": "aundh",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "aundh",
+    "configuration": "simplex-luxury-homes",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "aundh",
+    "configuration": "top-luxury-apartments",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "aundh",
+    "configuration": "under-construction-projects",
+    "topic": "site-visit"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "2-bhk-premium-flats",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "2bhk-flats",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "3bhk-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "4bhk-in-baner",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "5bhk-sky-villas",
+    "topic": "contact-number"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "5bhk-sky-villas",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "best-residential-projects",
+    "topic": "best-builder"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "best-residential-projects",
+    "topic": "property-investment"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "best-residential-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "family-apartments",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "investment-property",
+    "topic": "construction-update"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "joyville-homes",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "joyville-homes",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-real-estate",
+    "topic": "amenities"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-real-estate",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-real-estate",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-sky-villas",
+    "topic": "price-trends"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-townships",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-townships",
+    "topic": "masterplan"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "luxury-townships",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "new-launch-projects",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "new-launch-projects",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "new-launch-projects",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "premium-flats",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "premium-flats",
+    "topic": "connectivity"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "premium-flats",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "premium-flats",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "premium-flats",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "premium-homes",
+    "topic": "top-builders"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "possession-date"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "simplex-luxury-homes",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "sky-duplex",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "smart-home-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "spacious-balcony-flats",
+    "topic": "possession-date"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "under-construction-projects",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "under-construction-projects",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "balewadi-high-street",
+    "configuration": "under-construction-projects",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "resale-value"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "family-apartments",
+    "topic": "amenities"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "joyville-homes",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "joyville-homes",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "new-launch-projects",
+    "topic": "best-builder"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "new-launch-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "premium-homes",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "premium-homes",
+    "topic": "location-benefits"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "residential-property",
+    "topic": "masterplan"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "possession-date"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "simplex-luxury-homes",
+    "topic": "site-visit"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "sky-duplex",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "balewadi",
+    "configuration": "sky-duplex",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "2-bhk-premium-flats",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "5bhk-sky-villas",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "best-residential-projects",
+    "topic": "rera-details"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "buy-flat",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "high-roi-investment",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "joyville-homes",
+    "topic": "contact-number"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "joyville-homes",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "joyville-homes",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "luxury-apartments",
+    "topic": "clubhouse"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "luxury-real-estate",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "luxury-sky-villas",
+    "topic": "rera-details"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "luxury-townships",
+    "topic": "rera-details"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "new-launch-projects",
+    "topic": "top-builders"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "new-launch-projects",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "premium-homes",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "residential-property",
+    "topic": "contact-number"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "top-luxury-apartments",
+    "topic": "contact-number"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "under-construction-projects",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "under-construction-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "baner-pashan-link-road",
+    "configuration": "under-construction-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "2bhk-flats",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "2bhk-flats",
+    "topic": "resale-value"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "3-bhk-luxury-flats",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "3bhk-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "construction-update"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "best-flats-for-it-professionals",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "best-residential-projects",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "best-residential-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "best-residential-projects",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "best-residential-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "buy-3-bhk",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "buy-flat",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "buy-flat",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "family-apartments",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "joyville-homes",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "joyville-homes",
+    "topic": "property-investment"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "joyville-homes",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "joyville-homes",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-apartments",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-apartments",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-real-estate",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-sky-villas",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-sky-villas",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "luxury-townships",
+    "topic": "top-schools-nearby"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "new-launch-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "new-launch-projects",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "new-launch-projects",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "new-launch-projects",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "premium-flats",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "premium-residential-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "residential-property",
+    "topic": "possession-date"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "contact-number"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "price-trends"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "property-investment"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "sky-duplex",
+    "topic": "possession-date"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "top-luxury-apartments",
+    "topic": "rera-details"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "under-construction-projects",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "baner-road",
+    "configuration": "under-construction-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "baner",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner",
+    "configuration": "4bhk-luxury-homes",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "baner",
+    "configuration": "5bhk-sky-villas",
+    "topic": "home-loan-offers"
+  },
+  {
+    "location": "baner",
+    "configuration": "5bhk-sky-villas",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "baner",
+    "configuration": "best-residential-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "baner",
+    "configuration": "best-residential-projects",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "baner",
+    "configuration": "joyville-homes",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "baner",
+    "configuration": "joyville-homes",
+    "topic": "location-benefits"
+  },
+  {
+    "location": "baner",
+    "configuration": "joyville-homes",
+    "topic": "top-builders"
+  },
+  {
+    "location": "baner",
+    "configuration": "joyville-homes",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-apartments",
+    "topic": "possession-date"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-apartments",
+    "topic": "property-investment"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "baner",
+    "configuration": "luxury-townships",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "baner",
+    "configuration": "new-launch-projects",
+    "topic": "best-builder"
+  },
+  {
+    "location": "baner",
+    "configuration": "new-launch-projects",
+    "topic": "masterplan"
+  },
+  {
+    "location": "baner",
+    "configuration": "premium-flats",
+    "topic": "rera-details"
+  },
+  {
+    "location": "baner",
+    "configuration": "premium-homes",
+    "topic": "masterplan"
+  },
+  {
+    "location": "baner",
+    "configuration": "premium-residential-projects",
+    "topic": "possession-date"
+  },
+  {
+    "location": "baner",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "baner",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "rera-details"
+  },
+  {
+    "location": "baner",
+    "configuration": "simplex-luxury-homes",
+    "topic": "stamp-duty-registration"
+  },
+  {
+    "location": "baner",
+    "configuration": "sky-duplex",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "baner",
+    "configuration": "under-construction-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "baner",
+    "configuration": "under-construction-projects",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "2-bhk-premium-flats",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "3-bhk-luxury-flats",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "4bhk-luxury-homes",
+    "topic": "best-builder"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "4bhk-luxury-homes",
+    "topic": "masterplan"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "best-residential-projects",
+    "topic": "rera-details"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "buy-apartment",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "buy-flat",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "duplex-penthouses",
+    "topic": "best-builder"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "duplex-penthouses",
+    "topic": "masterplan"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "high-roi-investment",
+    "topic": "nri-investment"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "investment-property",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "investment-property",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "joyville-homes",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "clubhouse"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "luxury-real-estate",
+    "topic": "masterplan"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "luxury-real-estate",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "luxury-townships",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "new-launch-projects",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "new-launch-projects",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "premium-gated-communities",
+    "topic": "top-builders"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "premium-homes",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "premium-residential-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "premium-residential-projects",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "ready-to-move-flats",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "residential-property",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "residential-property",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "residential-property",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "possession-date"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "property-investment"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "sky-duplex",
+    "topic": "resale-value"
+  },
+  {
+    "location": "bavdhan-khurd",
+    "configuration": "top-luxury-apartments",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "location-benefits"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "best-residential-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "best-residential-projects",
+    "topic": "site-visit"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "buy-flat",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "buy-flat",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "duplex-penthouses",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "family-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "high-roi-investment",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "investment-property",
+    "topic": "resale-value"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "investment-property",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "investment-property",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "joyville-homes",
+    "topic": "possession-date"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "joyville-homes",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-apartments",
+    "topic": "amenities"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-apartments",
+    "topic": "top-builders"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-real-estate",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-townships",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "luxury-townships",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "new-launch-projects",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "new-launch-projects",
+    "topic": "top-builders"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "premium-flats",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "premium-flats",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "premium-homes",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "premium-residential-projects",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "ready-to-move-flats",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "residential-property",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "sky-duplex",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "sky-duplex",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "bavdhan",
+    "configuration": "under-construction-projects",
+    "topic": "property-investment"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "2-bhk-premium-flats",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "2bhk-flats",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "2bhk-flats",
+    "topic": "resale-value"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "2bhk-flats",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "3bhk-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "3bhk-apartments",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "buy-2-bhk",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "buy-2-bhk",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "buy-apartment",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "buy-flat",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "duplex-penthouses",
+    "topic": "price-trends"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "investment-property",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "joyville-homes",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "joyville-homes",
+    "topic": "clubhouse"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "joyville-homes",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "joyville-homes",
+    "topic": "property-investment"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "joyville-homes",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-apartments",
+    "topic": "future-growth"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-apartments",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-real-estate",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-real-estate",
+    "topic": "resale-value"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-sky-villas",
+    "topic": "future-growth"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "luxury-sky-villas",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "new-launch-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "premium-gated-communities",
+    "topic": "capital-appreciation"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "premium-gated-communities",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "premium-homes",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "premium-homes",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "premium-residential-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "premium-residential-projects",
+    "topic": "location-benefits"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "ready-to-move-flats",
+    "topic": "possession-date"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "sky-duplex",
+    "topic": "clubhouse"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "sky-duplex",
+    "topic": "rera-details"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "sky-duplex",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "bhosari",
+    "configuration": "under-construction-projects",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "buy-flat",
+    "topic": "possession-date"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "luxury-real-estate",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "luxury-sky-villas",
+    "topic": "construction-update"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "penthouses",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "premium-flats",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "sky-duplex",
+    "topic": "rental-yield"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "sky-duplex",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "bhumkar-chowk",
+    "configuration": "top-luxury-apartments",
+    "topic": "location-benefits"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "2bhk-flats",
+    "topic": "resale-value"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "clubhouse"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "3bhk-apartments",
+    "topic": "home-loan-offers"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "best-flats-for-it-professionals",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "best-residential-projects",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "best-residential-projects",
+    "topic": "masterplan"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "best-residential-projects",
+    "topic": "rera-details"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "best-residential-projects",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "family-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "family-apartments",
+    "topic": "top-builders"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "family-apartments",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "high-roi-investment",
+    "topic": "construction-update"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "investment-property",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "investment-property",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "joyville-homes",
+    "topic": "future-growth"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "joyville-homes",
+    "topic": "investment-roi"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "joyville-homes",
+    "topic": "possession-date"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "joyville-homes",
+    "topic": "price-trends"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-apartments",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-real-estate",
+    "topic": "best-builder"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-real-estate",
+    "topic": "price-trends"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-real-estate",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-sky-villas",
+    "topic": "best-builder"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-sky-villas",
+    "topic": "price-trends"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "luxury-townships",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "new-launch-projects",
+    "topic": "best-builder"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "new-launch-projects",
+    "topic": "high-appreciation"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "premium-gated-communities",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "premium-homes",
+    "topic": "contact-number"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "premium-homes",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "premium-residential-projects",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "premium-residential-projects",
+    "topic": "resale-value"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "ready-to-move-flats",
+    "topic": "property-investment"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "residential-property",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "residential-property",
+    "topic": "property-investment"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "builder-reputation"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "top-luxury-apartments",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "top-luxury-apartments",
+    "topic": "future-growth"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "under-construction-projects",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "california-nri",
+    "configuration": "under-construction-projects",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "chakan",
+    "configuration": "2bhk-flats",
+    "topic": "price-trends"
+  },
+  {
+    "location": "chakan",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "best-builder"
+  },
+  {
+    "location": "chakan",
+    "configuration": "2bhk-in-hinjewadi",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "chakan",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "chakan",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "sustainable-living"
+  },
+  {
+    "location": "chakan",
+    "configuration": "4-bhk-premium-apartments",
+    "topic": "stamp-duty-registration"
+  },
+  {
+    "location": "chakan",
+    "configuration": "4bhk-in-baner",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "chakan",
+    "configuration": "4bhk-in-baner",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "chakan",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "chakan",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "chakan",
+    "configuration": "best-residential-projects",
+    "topic": "best-builder"
+  },
+  {
+    "location": "chakan",
+    "configuration": "best-residential-projects",
+    "topic": "sample-flat-video"
+  },
+  {
+    "location": "chakan",
+    "configuration": "best-residential-projects",
+    "topic": "stamp-duty-registration"
+  },
+  {
+    "location": "chakan",
+    "configuration": "buy-2-bhk",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "chakan",
+    "configuration": "buy-apartment",
+    "topic": "price-trends"
+  },
+  {
+    "location": "chakan",
+    "configuration": "buy-apartment",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "chakan",
+    "configuration": "buy-apartment",
+    "topic": "top-builders"
+  },
+  {
+    "location": "chakan",
+    "configuration": "buy-flat",
+    "topic": "rera-details"
+  },
+  {
+    "location": "chakan",
+    "configuration": "family-apartments",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "chakan",
+    "configuration": "family-apartments",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "chakan",
+    "configuration": "high-roi-investment",
+    "topic": "top-builders"
+  },
+  {
+    "location": "chakan",
+    "configuration": "investment-property",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "chakan",
+    "configuration": "investment-property",
+    "topic": "rera-details"
+  },
+  {
+    "location": "chakan",
+    "configuration": "investment-property",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "chakan",
+    "configuration": "joyville-homes",
+    "topic": "possession-date"
+  },
+  {
+    "location": "chakan",
+    "configuration": "joyville-homes",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "chakan",
+    "configuration": "luxury-apartments",
+    "topic": "real-estate-reviews"
+  },
+  {
+    "location": "chakan",
+    "configuration": "luxury-real-estate",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "chakan",
+    "configuration": "luxury-townships",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "chakan",
+    "configuration": "luxury-townships",
+    "topic": "connectivity"
+  },
+  {
+    "location": "chakan",
+    "configuration": "luxury-townships",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "chakan",
+    "configuration": "luxury-townships",
+    "topic": "rera-details"
+  },
+  {
+    "location": "chakan",
+    "configuration": "new-launch-projects",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "chakan",
+    "configuration": "penthouses",
+    "topic": "resale-value"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-gated-communities",
+    "topic": "future-growth"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-gated-communities",
+    "topic": "resale-value"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-gated-communities",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-homes",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-residential-projects",
+    "topic": "best-builder"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-residential-projects",
+    "topic": "masterplan"
+  },
+  {
+    "location": "chakan",
+    "configuration": "premium-residential-projects",
+    "topic": "top-builders"
+  },
+  {
+    "location": "chakan",
+    "configuration": "residential-property",
+    "topic": "location-benefits"
+  },
+  {
+    "location": "chakan",
+    "configuration": "sky-duplex",
+    "topic": "construction-update"
+  },
+  {
+    "location": "chakan",
+    "configuration": "sky-duplex",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "chakan",
+    "configuration": "top-luxury-apartments",
+    "topic": "sustainable-living"
+  },
+  {
+    "location": "chakan",
+    "configuration": "under-construction-projects",
+    "topic": "urban-lifestyle"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "2bhk-flats",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "2bhk-flats",
+    "topic": "price-trends"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "3bhk-apartments",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "joyville-homes-pune"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "3bhk-in-mahalunge",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "4-bhk-premium-apartments",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "4-bhk-premium-apartments",
+    "topic": "project-specifications"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "construction-update"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "4bhk-in-mahalunge",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "5bhk-sky-villas",
+    "topic": "vs-lodha"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "buy-flat",
+    "topic": "possession-date"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "high-roi-investment",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "joyville-homes",
+    "topic": "amenities"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "joyville-homes",
+    "topic": "best-area-to-buy-flat"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "joyville-homes",
+    "topic": "real-estate-investment"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "joyville-homes",
+    "topic": "rental-yield"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "joyville-homes",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-lifestyle-apartments",
+    "topic": "floor-plans"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-real-estate",
+    "topic": "vs-godrej"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-sky-villas",
+    "topic": "sustainable-living"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-sky-villas",
+    "topic": "vs-kolte-patil"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-townships",
+    "topic": "future-infrastructure"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-townships",
+    "topic": "masterplan"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "luxury-townships",
+    "topic": "sustainable-living"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "new-launch-projects",
+    "topic": "capital-appreciation"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "new-launch-projects",
+    "topic": "shapoorji-pallonji-pune-projects"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "penthouses",
+    "topic": "brochure-download"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "penthouses",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "premium-flats",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "premium-homes",
+    "topic": "vs-joyville-sensorium"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "premium-residential-projects",
+    "topic": "vs-joyville-hadapsar"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "residential-property",
+    "topic": "payment-plan"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "residential-property",
+    "topic": "possession-date"
+  },
+  {
+    "location": "cognizant-hinjewadi",
+    "configuration": "shapoorji-pallonji-projects",
+    "topic": "future-infrastructure"
+  }
+]

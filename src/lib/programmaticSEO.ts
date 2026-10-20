@@ -9,7 +9,7 @@ export const SEOLocations = [
   // IT Corridor Granular Hubs & Roads
   "hinjewadi-phase-1", "hinjewadi-phase-2", "hinjewadi-phase-3", 
   "rajiv-gandhi-infotech-park", "maan-road", "marunji", "marunji-road", "infosys-circle-hinjewadi", 
-  "wipro-circle-hinjewadi", "tcs-hinjewadi", "tech-mahindra-hinjewadi", "cognizant-hinjewadi", 
+  "wipro-circle-hinjewadi", "wipro-hinjewadi", "tcs-hinjewadi", "tech-mahindra-hinjewadi", "cognizant-hinjewadi", 
   "hinjewadi-metro", "bhumkar-chowk", "wakad-bridge", "baner-pashan-link-road", 
   "balewadi-high-street", "sus-road", "bavdhan-khurd", "tathawade-ravet-corridor",
   "mahalunge-township", "baner-road", "pune-ring-road", "mumbai-pune-expressway-corridor",
@@ -67,134 +67,9 @@ export const SEOTopics = [
   "cost-sheet", "all-projects-in-pune", "official-website", "sales-office", "property-enquiry"
 ];
 
-// Curated High-Intent Combinations for Static Pre-Rendering & Verified Sitemap Indexation
-export const TOP_CURATED_MARKET_COMBOS = [
-  // Hinjewadi Phase 1 Core Queries
-  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "floor-plans" },
-  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "possession-date" },
-  { location: "hinjewadi-phase-1", configuration: "2bhk-in-hinjewadi", topic: "rera-details" },
-  { location: "hinjewadi-phase-1", configuration: "3bhk-apartments", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "3bhk-apartments", topic: "floor-plans" },
-  { location: "hinjewadi-phase-1", configuration: "3bhk-apartments", topic: "possession-date" },
-  { location: "hinjewadi-phase-1", configuration: "sky-duplex", topic: "floor-plans" },
-  { location: "hinjewadi-phase-1", configuration: "sky-duplex", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "new-launch-projects", topic: "brochure-download" },
-  { location: "hinjewadi-phase-1", configuration: "luxury-apartments", topic: "amenities" },
-
-  // Hinjewadi Main Market
-  { location: "hinjewadi", configuration: "2bhk-in-hinjewadi", topic: "price-trends" },
-  { location: "hinjewadi", configuration: "2bhk-in-hinjewadi", topic: "floor-plans" },
-  { location: "hinjewadi", configuration: "2bhk-in-hinjewadi", topic: "possession-date" },
-  { location: "hinjewadi", configuration: "3bhk-apartments", topic: "price-trends" },
-  { location: "hinjewadi", configuration: "3bhk-apartments", topic: "floor-plans" },
-  { location: "hinjewadi", configuration: "4bhk-luxury-homes", topic: "floor-plans" },
-  { location: "hinjewadi", configuration: "sky-duplex", topic: "price-trends" },
-  { location: "hinjewadi", configuration: "new-launch-projects", topic: "price-trends" },
-  { location: "hinjewadi", configuration: "joyville-homes", topic: "rera-details" },
-
-  // Mahalunge High-Intent
-  { location: "mahalunge", configuration: "3bhk-in-mahalunge", topic: "price-trends" },
-  { location: "mahalunge", configuration: "3bhk-in-mahalunge", topic: "floor-plans" },
-  { location: "mahalunge", configuration: "3bhk-in-mahalunge", topic: "possession-date" },
-  { location: "mahalunge", configuration: "2bhk-flats", topic: "price-trends" },
-  { location: "mahalunge", configuration: "4bhk-in-mahalunge", topic: "floor-plans" },
-  { location: "mahalunge", configuration: "luxury-townships", topic: "amenities" },
-
-  // Baner High-Intent
-  { location: "baner", configuration: "4bhk-in-baner", topic: "price-trends" },
-  { location: "baner", configuration: "4bhk-in-baner", topic: "floor-plans" },
-  { location: "baner", configuration: "3bhk-apartments", topic: "price-trends" },
-  { location: "baner", configuration: "sky-duplex", topic: "floor-plans" },
-
-  // Wakad & Balewadi Connectivity
-  { location: "wakad", configuration: "2bhk-flats", topic: "price-trends" },
-  { location: "wakad", configuration: "3bhk-apartments", topic: "connectivity" },
-  { location: "balewadi", configuration: "3bhk-apartments", topic: "price-trends" },
-  { location: "balewadi", configuration: "4bhk-luxury-homes", topic: "floor-plans" },
-
-  // Rajiv Gandhi Infotech Park & Maan Road
-  { location: "rajiv-gandhi-infotech-park", configuration: "2bhk-in-hinjewadi", topic: "connectivity" },
-  { location: "rajiv-gandhi-infotech-park", configuration: "best-flats-for-it-professionals", topic: "rental-yield" },
-  { location: "maan-road", configuration: "new-launch-projects", topic: "price-trends" },
-  { location: "maan-road", configuration: "2bhk-in-hinjewadi", topic: "floor-plans" },
-
-  // Pune West & Highway Corridor
-  { location: "pune-west", configuration: "luxury-apartments", topic: "price-trends" },
-  { location: "pune-west", configuration: "sky-duplex", topic: "floor-plans" },
-  { location: "pune-mumbai-highway", configuration: "investment-property", topic: "capital-appreciation" },
-
-  // Global NRI High Yield
-  { location: "dubai", configuration: "high-roi-investment", topic: "nri-investment" },
-  { location: "usa", configuration: "high-roi-investment", topic: "nri-investment" },
-  { location: "singapore", configuration: "luxury-sky-villas", topic: "nri-investment" },
-  { location: "london", configuration: "sky-duplex", topic: "nri-investment" },
-
-  // Dedicated Shapoorji Pallonji Pune & Joyville Permutations
-  { location: "pune", configuration: "shapoorji-pallonji-pune", topic: "price-trends" },
-  { location: "pune", configuration: "shapoorji-pallonji-pune", topic: "all-projects-in-pune" },
-  { location: "pune", configuration: "shapoorji-pallonji-pune", topic: "brochure-download" },
-  { location: "pune", configuration: "joyville-homes-pune", topic: "price-trends" },
-  { location: "pune", configuration: "joyville-homes-pune", topic: "all-projects-in-pune" },
-  { location: "pune-west", configuration: "shapoorji-pallonji-projects", topic: "amenities" },
-  { location: "pune-east", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
-  { location: "hinjewadi", configuration: "shapoorji-pallonji-projects", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "shapoorji-pallonji-projects", topic: "floor-plans" },
-
-  // Dedicated Vanaha & Golfland Bavdhan Permutations
-  { location: "bavdhan", configuration: "shapoorji-vanaha", topic: "price-trends" },
-  { location: "bavdhan", configuration: "shapoorji-vanaha", topic: "floor-plans" },
-  { location: "bavdhan", configuration: "shapoorji-vanaha", topic: "brochure-download" },
-  { location: "bavdhan", configuration: "vanaha-golfland", topic: "price-trends" },
-  { location: "bavdhan", configuration: "vanaha-golfland", topic: "floor-plans" },
-  { location: "bavdhan", configuration: "vanaha-golfland", topic: "brochure-download" },
-  { location: "bavdhan", configuration: "vanaha-verdant", topic: "price-trends" },
-  { location: "bavdhan", configuration: "vanaha-springs", topic: "floor-plans" },
-  { location: "bavdhan", configuration: "golf-course-facing-homes", topic: "price-trends" },
-
-  // Dedicated Joyville Hinjewadi, Vyomora & Sensorium Permutations
-  { location: "hinjewadi-phase-1", configuration: "joyville-vyomora", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "joyville-vyomora", topic: "floor-plans" },
-  { location: "hinjewadi-phase-1", configuration: "joyville-vyomora", topic: "brochure-download" },
-  { location: "hinjewadi-phase-1", configuration: "joy-3.0-hinjewadi", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "joyville-sensorium", topic: "price-trends" },
-  { location: "hinjewadi-phase-1", configuration: "joyville-sensorium", topic: "floor-plans" },
-  { location: "hinjewadi-phase-1", configuration: "joyville-sensorium", topic: "amenities" },
-  { location: "maan-road", configuration: "joyville-vyomora", topic: "connectivity" },
-  { location: "maan-road", configuration: "joyville-sensorium", topic: "price-trends" },
-
-  // Dedicated Joyville Hadapsar Annexe & East Pune Permutations
-  { location: "hadapsar", configuration: "joyville-hadapsar-annexe", topic: "price-trends" },
-  { location: "hadapsar", configuration: "joyville-hadapsar-annexe", topic: "floor-plans" },
-  { location: "hadapsar", configuration: "joyville-hadapsar-annexe", topic: "brochure-download" },
-  { location: "hadapsar", configuration: "joyville-celestia", topic: "price-trends" },
-  { location: "hadapsar", configuration: "wildernest-sp-kingstown", topic: "price-trends" },
-  { location: "hadapsar", configuration: "wildernest-sp-kingstown", topic: "floor-plans" },
-  { location: "manjri", configuration: "joyville-hadapsar-annexe", topic: "price-trends" },
-  { location: "hadapsar", configuration: "joyville-homes", topic: "investment-roi" },
-
-  // HTML Sitemap Hub Links (100% Pre-rendered Coverage)
-  { location: "hinjewadi", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "mahalunge", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "baner", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "wakad", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "balewadi", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "pimpri-chinchwad", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "aundh", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "pashan", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "bavdhan", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "sus", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "punawale", configuration: "luxury-apartments", topic: "investment-roi" },
-  { location: "tathawade", configuration: "luxury-apartments", topic: "investment-roi" },
-
-  // NRI Investor Portals
-  { location: "dubai", configuration: "luxury-apartments", topic: "nri-investment" },
-  { location: "usa", configuration: "luxury-apartments", topic: "nri-investment" },
-  { location: "singapore", configuration: "luxury-apartments", topic: "nri-investment" },
-  { location: "uk", configuration: "luxury-apartments", topic: "nri-investment" },
-  { location: "london", configuration: "luxury-apartments", topic: "nri-investment" },
-  { location: "kuwait", configuration: "luxury-apartments", topic: "nri-investment" },
-];
+// Complete Curated & Historical High-Intent Combinations for Static Pre-Rendering
+import marketCombosData from "@/data/marketCombos.json";
+export const TOP_CURATED_MARKET_COMBOS = marketCombosData as { location: string; configuration: string; topic: string }[];
 
 function pseudoRandom(seed: string): number {
   let hash = 0;

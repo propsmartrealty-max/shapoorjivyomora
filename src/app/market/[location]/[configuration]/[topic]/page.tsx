@@ -26,11 +26,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Validate to prevent spam/junk URLs from hurting SEO
   if (!allLocations.includes(location) || !SEOConfigurations.includes(configuration) || !SEOTopics.includes(topic)) {
-    return {};
+    return {
+      title: "Market Insights | Shapoorji Pallonji Real Estate",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
   }
 
   const content = generateSEOContent(location, configuration, topic);
-
+  const pageCanonical = `https://www.shapoorji-vyomora.com/market/${location}/${configuration}/${topic}`;
   const ogImageUrl = `https://www.shapoorji-vyomora.com/api/og?title=${encodeURIComponent(content.h1)}&subtitle=${encodeURIComponent(content.description)}`;
 
   return {
@@ -39,7 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: content.title,
       description: content.description,
-      url: `https://www.shapoorji-vyomora.com/market/${location}/${configuration}/${topic}`,
+      url: pageCanonical,
+      siteName: "Shapoorji Pallonji Joyville Vyomora",
+      locale: "en_IN",
+      type: "website",
       images: [
         {
           url: ogImageUrl,
@@ -56,8 +65,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [ogImageUrl],
     },
     alternates: {
-      canonical: `https://www.shapoorji-vyomora.com/market/${location}/${configuration}/${topic}`,
-    }
+      canonical: pageCanonical,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 
@@ -107,6 +127,18 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
       }
     ]
   };
+
+  // Find related combinations for semantic internal linking mesh
+  const relatedCombos = TOP_CURATED_MARKET_COMBOS
+    .filter(c => c.location === location && (c.configuration !== configuration || c.topic !== topic))
+    .slice(0, 4);
+
+  if (relatedCombos.length < 4) {
+    const fallbackCombos = TOP_CURATED_MARKET_COMBOS
+      .filter(c => c.location !== location)
+      .slice(0, 4 - relatedCombos.length);
+    relatedCombos.push(...fallbackCombos);
+  }
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-32 pb-24">
@@ -195,6 +227,35 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
                 <p className="text-gray-600 font-light leading-relaxed">{faq.answer}</p>
               </div>
             ))}
+          </div>
+
+          {/* Related Micro-Market Insights */}
+          <div className="not-prose my-12 p-8 bg-white rounded-2xl border border-black/5 shadow-md">
+            <h3 className="text-lg font-serif text-[#0A192F] mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#C5A059]" />
+              Related Pune Real Estate & Typology Insights
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {relatedCombos.map((rel, idx) => {
+                const relLoc = rel.location.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+                const relCfg = rel.configuration.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+                const relTop = rel.topic.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+                return (
+                  <a
+                    key={idx}
+                    href={`/market/${rel.location}/${rel.configuration}/${rel.topic}`}
+                    className="p-4 rounded-xl border border-gray-100 hover:border-[#C5A059]/40 hover:bg-[#FDFBF7] transition-all group flex flex-col justify-between"
+                  >
+                    <span className="text-sm font-semibold text-[#0A192F] group-hover:text-[#C5A059] transition-colors">
+                      {relCfg} in {relLoc}
+                    </span>
+                    <span className="text-xs text-gray-500 mt-1 capitalize">
+                      {relTop} &rarr;
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Contextual Internal Links Hub */}

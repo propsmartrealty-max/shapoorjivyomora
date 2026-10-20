@@ -89,36 +89,87 @@ async function run() {
     }
   }
 
-  // 3. Search Performance Highlights (Last 28 Days)
-  console.log('\n📈 3. Search Impressions & Top Queries (Last 28 Days):');
+  // 3. Search Performance Highlights (Last 90 Days & Daily Trend)
+  console.log('\n📈 3. Search Impressions & Daily Trend (Last 90 Days):');
   const today = new Date();
   const endDate = new Date(today.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
-  const startDate = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const startDate90 = new Date(today.getTime() - 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
   try {
-    const analytics = await sc.searchanalytics.query({
+    // 3a. Daily Trend
+    const dailyAnalytics = await sc.searchanalytics.query({
       siteUrl,
       requestBody: {
-        startDate,
+        startDate: startDate90,
         endDate,
-        dimensions: ['query'],
-        rowLimit: 10
+        dimensions: ['date'],
+        rowLimit: 90
       }
     });
 
-    if (analytics.data.rows && analytics.data.rows.length > 0) {
-      for (const row of analytics.data.rows) {
-        console.log(`  • "${row.keys?.[0]}" -> Impressions: ${row.impressions} | Clicks: ${row.clicks} | Avg Pos: ${row.position?.toFixed(1)}`);
+    if (dailyAnalytics.data.rows && dailyAnalytics.data.rows.length > 0) {
+      console.log('  Date       | Impr | Clicks | CTR    | Avg Pos');
+      console.log('  -----------+------+--------+--------+--------');
+      // Show latest 15 days and sampled history
+      const rows = dailyAnalytics.data.rows;
+      for (const row of rows.slice(-20)) {
+        const d = row.keys?.[0];
+        const imp = row.impressions || 0;
+        const clk = row.clicks || 0;
+        const ctr = ((row.ctr || 0) * 100).toFixed(1) + '%';
+        const pos = (row.position || 0).toFixed(1);
+        console.log(`  ${d} | ${String(imp).padStart(4)} | ${String(clk).padStart(6)} | ${String(ctr).padStart(6)} | ${String(pos).padStart(7)}`);
       }
     } else {
-      console.log('  ℹ️ Property is new; performance metrics will accumulate as crawling completes.');
+      console.log('  ℹ️ No daily data available yet.');
+    }
+
+    // 3b. Top Pages (Last 90 Days)
+    console.log('\n📄 Top Pages by Impressions (Last 90 Days):');
+    const pageAnalytics = await sc.searchanalytics.query({
+      siteUrl,
+      requestBody: {
+        startDate: startDate90,
+        endDate,
+        dimensions: ['page'],
+        rowLimit: 25
+      }
+    });
+
+    if (pageAnalytics.data.rows && pageAnalytics.data.rows.length > 0) {
+      for (const row of pageAnalytics.data.rows) {
+        console.log(`  • ${row.keys?.[0]}`);
+        console.log(`    Impr: ${row.impressions} | Clicks: ${row.clicks} | CTR: ${((row.ctr || 0) * 100).toFixed(1)}% | Avg Pos: ${row.position?.toFixed(1)}`);
+      }
+    } else {
+      console.log('  ℹ️ No page breakdown available.');
+    }
+
+    // 3c. Top Queries (Last 90 Days)
+    console.log('\n🔍 Top Queries by Impressions (Last 90 Days):');
+    const queryAnalytics = await sc.searchanalytics.query({
+      siteUrl,
+      requestBody: {
+        startDate: startDate90,
+        endDate,
+        dimensions: ['query'],
+        rowLimit: 25
+      }
+    });
+
+    if (queryAnalytics.data.rows && queryAnalytics.data.rows.length > 0) {
+      for (const row of queryAnalytics.data.rows) {
+        console.log(`  • "${row.keys?.[0]}" -> Impr: ${row.impressions} | Clicks: ${row.clicks} | Avg Pos: ${row.position?.toFixed(1)}`);
+      }
+    } else {
+      console.log('  ℹ️ No query breakdown available.');
     }
   } catch (e: any) {
     console.error('  ❌ Analytics query failed:', e.message);
   }
 
   console.log('\n====================================================');
-  console.log('✅ AUDIT COMPLETE - SERVICE ACCOUNT IS VERIFIED SITE OWNER');
+  console.log('✅ AUDIT COMPLETE');
   console.log('====================================================');
 }
 

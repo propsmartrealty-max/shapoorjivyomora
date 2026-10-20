@@ -90,6 +90,18 @@ function processNextServerDir(currentDir, targetBase) {
         // Also keep direct amenities.html for direct URL matching
         const directDest = path.join(distDir, parentDir, `${baseName}.html`);
         fs.writeFileSync(directDest, content, 'utf8');
+
+        // Ensure Cloudflare Pages root 404.html exists and is strictly noindexed
+        if (entry.name === '_not-found.html' || entry.name === 'not-found.html' || baseName === '404') {
+          let notFoundContent = content;
+          notFoundContent = notFoundContent.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/gi, '');
+          if (!notFoundContent.includes('noindex')) {
+            notFoundContent = notFoundContent.replace('</head>', '<meta name="robots" content="noindex, nofollow" />\n</head>');
+          }
+          const notFoundDest = path.join(distDir, '404.html');
+          fs.writeFileSync(notFoundDest, notFoundContent, 'utf8');
+          console.log(`  🚨 Output Cloudflare Pages 404 handler: dist/404.html (${notFoundContent.length} bytes)`);
+        }
       }
     } else if (entry.name.endsWith('.body')) {
       // e.g. sitemap.xml.body -> dist/sitemap.xml
