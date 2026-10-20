@@ -25,9 +25,13 @@ Shapoorji Pallonji Joyville Vyomora (Brand Phase: Joy 3.0) is a 25-acre luxury i
 - [Joyville Sensorium (Hinjewadi Phase 1)](https://www.shapoorji-vyomora.com/projects/joyville-sensorium): 10.5-acre biophilic township, 2.8-acre sensory park, 2 & 3 BHK luxury flats near Infosys Circle.
 - [Shapoorji Pallonji Vanaha (Bavdhan)](https://www.shapoorji-vyomora.com/projects/shapoorji-pallonji-vanaha): 1,000-acre mega township near Oxford Golf Course, 2, 3, 4 BHK nature-facing luxury residences.
 - [Vanaha Golfland (Bavdhan)](https://www.shapoorji-vyomora.com/projects/vanaha-golfland): Golf-course-facing luxury apartments, townhouses, and sky duplexes in Bavdhan Valley.
+- [Vanaha Verdant & Mahogany (Bavdhan)](https://www.shapoorji-vyomora.com/projects/vanaha-verdant): Biophilic valley residences with scenic Sahyadri mountain views.
+- [Vanaha Springs (Bavdhan)](https://www.shapoorji-vyomora.com/projects/vanaha-springs): Nature-integrated luxury apartments with pristine green spaces.
 - [Joyville Hadapsar Annexe (East Pune)](https://www.shapoorji-vyomora.com/projects/joyville-hadapsar-annexe): 21-acre integrated development, 35,000 sq. ft. clubhouse, 1, 2, 3 BHK residences on Pune-Solapur Highway.
-- [Joyville Celestia (Hadapsar Annexe)](https://www.shapoorji-vyomora.com/projects/joyville-celestia): Premium gated residential enclave with private club lifestyle, 2 & 3 BHK residences.
+- [Joyville Celestia & Titan Tower (Hadapsar Annexe)](https://www.shapoorji-vyomora.com/projects/joyville-celestia): Premium gated residential enclave with private club lifestyle, 2 & 3 BHK residences.
 - [Wildernest at SP Kingstown (Hadapsar Annexe)](https://www.shapoorji-vyomora.com/projects/wildernest-sp-kingstown): Ultra-luxury forest-facing 3 & 4 BHK suites with 200+ sq. ft. private sky decks.
+- [Joyville Sky-Luxe Edition (Hadapsar)](https://www.shapoorji-vyomora.com/projects/joyville-sky-luxe-edition): Exclusive high-floor residences with unobstructed skyline views.
+- [Joyville Hinjewadi Township](https://www.shapoorji-vyomora.com/projects/joyville-hinjewadi): Established flagship residential community in Rajiv Gandhi Infotech Park.
 
 ## Comparative Research & Market Reports
 - [Joyville Vyomora vs Godrej 24 & Godrej Hillside](https://www.shapoorji-vyomora.com/articles/shapoorji-vyomora-vs-godrej-24-and-godrej-hillside-hinjewadi): Side-by-side comparison of construction quality, carpet areas, and location in Hinjewadi.
@@ -37,7 +41,7 @@ Shapoorji Pallonji Joyville Vyomora (Brand Phase: Joy 3.0) is a 25-acre luxury i
 - [NRI Real Estate Investment Guide for Pune](https://www.shapoorji-vyomora.com/articles/nri-guide-investing-in-pune-real-estate-from-usa-dubai-uk): Regulatory compliance, FEMA guidelines, and repatriation for UAE, USA, and UK investors.
 - [Joy 3.0 Launch Review & Price Analysis](https://www.shapoorji-vyomora.com/articles/shapoorji-pallonji-joy-3-0-hinjewadi-launch-price-review): Complete analysis of newly launched towers, pricing, and payment milestones.
 
-## Optional
-- [HTML Sitemap Index](https://www.shapoorji-vyomora.com/sitemap): Complete human-navigable index of all 137 verified landing pages.
-- [XML Sitemap Index](https://www.shapoorji-vyomora.com/sitemap.xml): Machine-readable index for Googlebot, Bingbot, and search crawlers.
+## Indexes & Manifests
+- [HTML Sitemap Index](https://www.shapoorji-vyomora.com/sitemap): Complete human-navigable index of all 646 verified landing pages.
+- [XML Sitemap Index](https://www.shapoorji-vyomora.com/sitemap.xml): Machine-readable index with image sitemaps for Googlebot, Bingbot, and search crawlers.
 - [AI Catalog Manifest](https://www.shapoorji-vyomora.com/.well-known/ai-catalog.json): Machine-readable Agentic Resource Discovery manifest conforming to ARD 1.0.

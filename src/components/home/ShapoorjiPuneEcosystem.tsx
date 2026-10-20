@@ -13,7 +13,7 @@ const puneDevelopments = [
     price: "₹84.99 Lakhs – ₹2.16 Cr*",
     rera: "PR1260002600999",
     featured: true,
-    href: "/",
+    href: "/projects/joyville-vyomora-hinjewadi",
     ctaText: "Explore Vyomora Details",
     highlights: [
       "Monumental 32,000+ sq. ft. Luxury Clubhouse",
@@ -32,12 +32,48 @@ const puneDevelopments = [
     price: "₹75 Lakhs – ₹1.25 Cr*",
     rera: "P52100024965",
     featured: false,
-    href: "/articles/joyville-sensorium-vs-joyville-vyomora-hinjewadi",
-    ctaText: "Compare Sensorium vs Vyomora",
+    href: "/projects/joyville-sensorium",
+    ctaText: "Explore Sensorium Hinjewadi",
     highlights: [
       "2.8-acre multi-sensory park & interactive zones",
       "Walk-to-work proximity for Hinjewadi IT employees",
       "Over 75% open landscaped greenery"
+    ]
+  },
+  {
+    id: "vanaha",
+    name: "Shapoorji Pallonji Vanaha",
+    tag: "1,000+ Acre Mega Valley",
+    location: "Near Bavdhan, Pune West",
+    typologies: "1, 2, 3, 4 BHK & Nature Residences",
+    carpetArea: "500 – 2,200 sq. ft.",
+    price: "₹55 Lakhs – ₹2.80 Cr*",
+    rera: "P52100028033",
+    featured: false,
+    href: "/projects/shapoorji-pallonji-vanaha",
+    ctaText: "Explore Vanaha Township",
+    highlights: [
+      "Nestled beside 1,000-acre lush green valley",
+      "Over 50,000 native trees and perennial streams",
+      "Quick access to Chandani Chowk and Kothrud"
+    ]
+  },
+  {
+    id: "golfland",
+    name: "Vanaha Golfland at Bavdhan",
+    tag: "Golf-Course Facing Homes",
+    location: "Oxford Golf Resort Valley, Bavdhan",
+    typologies: "2, 3, 4 BHK & Luxury Golf Duplexes",
+    carpetArea: "850 – 2,400 sq. ft.",
+    price: "₹1.15 Cr – ₹3.80 Cr+*",
+    rera: "P52100030012",
+    featured: false,
+    href: "/projects/vanaha-golfland",
+    ctaText: "View Golfland Residences",
+    highlights: [
+      "Spectacular championship 18-hole golf course views",
+      "Signature townhouses & double-height sky duplexes",
+      "Biophilic clubhouse & infinity mountain-view pool"
     ]
   },
   {
@@ -50,7 +86,7 @@ const puneDevelopments = [
     price: "₹45 Lakhs – ₹95 Lakhs*",
     rera: "P52100026451",
     featured: false,
-    href: "/articles/shapoorji-pallonji-pune-projects-master-portfolio-guide",
+    href: "/projects/joyville-hadapsar-annexe",
     ctaText: "View Hadapsar Details",
     highlights: [
       "60+ lifestyle amenities spread over 8.8 acres",
@@ -59,57 +95,21 @@ const puneDevelopments = [
     ]
   },
   {
-    id: "wildstone",
-    name: "Shapoorji Pallonji Wildstone",
-    tag: "Hillside Nature Living",
-    location: "Bavdhan – Oxford Valley, West Pune",
-    typologies: "2 & 3 BHK Hillside Apartments",
-    carpetArea: "750 – 1,120 sq. ft.",
-    price: "₹85 Lakhs – ₹1.45 Cr*",
-    rera: "P52100030012",
+    id: "celestia",
+    name: "Joyville Celestia & Titan Tower",
+    tag: "High-Rise Luxury Tower",
+    location: "Hadapsar Annexe, East Pune",
+    typologies: "2 & 3 BHK Premium Residences",
+    carpetArea: "650 – 1,100 sq. ft.",
+    price: "₹65 Lakhs – ₹1.25 Cr*",
+    rera: "P52100031517",
     featured: false,
-    href: "/shapoorji-pallonji-pune-projects",
-    ctaText: "View Bavdhan Portfolio",
+    href: "/projects/joyville-celestia",
+    ctaText: "View Celestia & Titan Tower",
     highlights: [
-      "Nestled beside pristine Oxford Golf & Forest Valley",
-      "Fresh micro-climate with zero city congestion",
-      "5 minutes to Chandani Chowk & Mumbai-Bangalore Highway"
-    ]
-  },
-  {
-    id: "vanaha",
-    name: "Shapoorji Pallonji Vanaha & Golfland",
-    tag: "1,000+ Acre Mega Valley",
-    location: "Near Bavdhan, Pune West",
-    typologies: "1, 2, 3, 4 BHK & Luxury Golf Villas",
-    carpetArea: "500 – 2,200 sq. ft.",
-    price: "₹55 Lakhs – ₹3.80 Cr+*",
-    rera: "P52100028033",
-    featured: false,
-    href: "/shapoorji-pallonji-pune-projects",
-    ctaText: "Explore Vanaha Township",
-    highlights: [
-      "Access to championship 18-hole golf course",
-      "Over 50,000 native trees and perennial natural streams",
-      "One of the largest master-planned valley townships in India"
-    ]
-  },
-  {
-    id: "celestian",
-    name: "Shapoorji Pallonji Celestian",
-    tag: "Ultra-Luxury Skyline Residences",
-    location: "Bavdhan, Pune West",
-    typologies: "3 & 4 BHK Sky Mansions",
-    carpetArea: "1,050 – 1,450 sq. ft.",
-    price: "₹1.20 Cr – ₹2.10 Cr*",
-    rera: "P52100029544",
-    featured: false,
-    href: "/shapoorji-pallonji-pune-projects",
-    ctaText: "View Celestian Details",
-    highlights: [
-      "Low-density, boutique residential tower architecture",
-      "Private sky lounges and high-speed transit access",
-      "Sweeping Western Ghats panoramic views"
+      "Titan Tower: High-rise panoramic skyline views",
+      "Dedicated multi-tier clubhouse & sports arena",
+      "Convenient proximity to Pune-Solapur Highway"
     ]
   }
 ];
@@ -229,11 +229,27 @@ export default function ShapoorjiPuneEcosystem() {
           <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/shapoorji-pallonji-pune-projects"
+                href="/projects"
                 prefetch={false}
                 className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
               >
-                View Complete Pune Projects Portfolio →
+                All 11 Pune Projects Directory →
+              </Link>
+              <span className="text-white/30">•</span>
+              <Link
+                href="/developers/shapoorji-pallonji-pune"
+                prefetch={false}
+                className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
+              >
+                Developer Profile &amp; Legacy →
+              </Link>
+              <span className="text-white/30">•</span>
+              <Link
+                href="/guides/shapoorji-pallonji-projects-pune-comparison"
+                prefetch={false}
+                className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
+              >
+                Projects Comparison Guide →
               </Link>
               <span className="text-white/30">•</span>
               <Link
@@ -242,14 +258,6 @@ export default function ShapoorjiPuneEcosystem() {
                 className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
               >
                 West Pune Real Estate 2026 Guide →
-              </Link>
-              <span className="text-white/30">•</span>
-              <Link
-                href="/articles"
-                prefetch={false}
-                className="text-xs text-[#C5A059] hover:text-white underline font-medium transition-colors"
-              >
-                Market Research &amp; Articles Hub →
               </Link>
             </div>
             <EcosystemCTA />
