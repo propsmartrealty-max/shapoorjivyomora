@@ -46,7 +46,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Add deterministic cache bucket parameters so Bots and NRIs receive tailored edge variants
   cacheKeyUrl.searchParams.set('__edge_bot', isSearchBot ? '1' : '0');
   cacheKeyUrl.searchParams.set('__edge_nri', isNri ? country : '0');
-  cacheKeyUrl.searchParams.set('__v', 'v10'); // Edge cache version invalidation bucket
+  cacheKeyUrl.searchParams.set('__v', 'v11'); // Edge cache version invalidation bucket
   const cacheKey = new Request(cacheKeyUrl.toString(), {
     method: 'GET',
     headers: request.headers,
