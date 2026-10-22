@@ -54,6 +54,7 @@ export default function Footer() {
                 { label: "Developer Profile", href: "/developers/shapoorji-pallonji-pune" },
                 { label: "Projects Comparison", href: "/guides/shapoorji-pallonji-projects-pune-comparison" },
                 { label: "West Pune Real Estate Hub", href: "/west-pune-real-estate" },
+                { label: "Market Intelligence Hub", href: "/market" },
                 { label: "ROI & EMI Calculator", href: "/investment-calculator" },
                 { label: "Real Estate Articles", href: "/articles" }
               ].map((item) => (
@@ -168,6 +169,7 @@ export default function Footer() {
               <div className="flex space-x-4 justify-center md:justify-end">
                 <Link href="/privacy-policy" prefetch={false} className="hover:text-white transition-colors">Privacy Policy</Link>
                 <Link href="/terms" prefetch={false} className="hover:text-white transition-colors">Terms of Service</Link>
+                <Link href="/market" prefetch={false} className="hover:text-white transition-colors text-[#C5A059]">Market Index</Link>
                 <Link href="/sitemap" prefetch={false} className="hover:text-white transition-colors text-[#C5A059]">HTML Sitemap</Link>
                 <a href="#disclaimer" className="hover:text-white transition-colors">RERA Disclaimers</a>
               </div>
