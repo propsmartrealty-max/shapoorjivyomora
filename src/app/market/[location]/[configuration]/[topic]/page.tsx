@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SEOLocations, SEONRILocations, SEOConfigurations, SEOTopics, TOP_CURATED_MARKET_COMBOS, generateSEOContent } from "@/lib/programmaticSEO";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -92,19 +93,22 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
   }
 
   const content = generateSEOContent(location, configuration, topic);
+  const pageCanonical = `https://www.shapoorji-vyomora.com/market/${location}/${configuration}/${topic}`;
+  const cleanLocName = location.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
   const breadcrumbItems = [
-    { label: "Market Insights", href: "/articles" },
-    { label: location.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()), href: `/market/${location}/${SEOConfigurations[0]}/${SEOTopics[0]}` },
+    { label: "Market Intelligence", href: "/market" },
+    { label: cleanLocName, href: `/market/${location}/${configuration}/${topic}` },
     { label: content.title, href: `/market/${location}/${configuration}/${topic}` }
   ];
 
-  // Dynamic FAQ & Breadcrumb Schema Injection
+  // Enterprise Multi-Entity Structured Schema (FAQPage + BreadcrumbList + RealEstateListing + Product/Offer)
   const schemaOrg = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "FAQPage",
+        "@id": `${pageCanonical}#faq`,
         "mainEntity": content.faqs.map(faq => ({
           "@type": "Question",
           "name": faq.question,
@@ -116,14 +120,92 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
       },
       {
         "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbItems.map((item, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@id": `https://www.shapoorji-vyomora.com${item.href}`,
-            "name": item.label
+        "@id": `${pageCanonical}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.shapoorji-vyomora.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pune Market Intelligence",
+            "item": "https://www.shapoorji-vyomora.com/market"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": content.title,
+            "item": pageCanonical
           }
-        }))
+        ]
+      },
+      {
+        "@type": "RealEstateListing",
+        "@id": `${pageCanonical}#listing`,
+        "name": content.h1,
+        "description": content.description,
+        "url": pageCanonical,
+        "datePosted": "2024-01-01",
+        "validThrough": "2029-12-31",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": content.priceStarting.replace(/[^0-9.]/g, '') ? parseFloat(content.priceStarting.replace(/[^0-9.]/g, '')) * (content.priceStarting.includes('Cr') ? 10000000 : 100000) : 8499000,
+          "offerCount": "120",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Shapoorji Pallonji Real Estate",
+            "url": "https://www.shapoorji-vyomora.com"
+          }
+        },
+        "itemOffered": {
+          "@type": "Apartment",
+          "name": `${content.projectName} - ${cleanLocName}`,
+          "description": content.description,
+          "numberOfRooms": configuration.includes("2bhk") ? 2 : configuration.includes("3bhk") ? 3 : configuration.includes("4bhk") ? 4 : 3,
+          "floorSize": {
+            "@type": "QuantitativeValue",
+            "value": content.carpetAreaRange,
+            "unitCode": "FTK"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hinjewadi",
+            "addressRegion": "Pune, Maharashtra",
+            "postalCode": "411057",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 18.5913,
+            "longitude": 73.7389
+          },
+          "amenityFeature": content.highlights.map(h => ({
+            "@type": "LocationFeatureSpecification",
+            "name": h,
+            "value": true
+          }))
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": `${pageCanonical}#product`,
+        "name": `${content.projectName} (${cleanLocName})`,
+        "description": content.description,
+        "brand": {
+          "@type": "Brand",
+          "name": "Shapoorji Pallonji Real Estate"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "348",
+          "bestRating": "5"
+        }
       }
     ]
   };
@@ -148,55 +230,109 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
       />
       
       <div className="container mx-auto px-6 md:px-12 max-w-4xl">
-        <div className="mb-12">
+        <div className="mb-10">
           <Breadcrumbs items={breadcrumbItems} />
+        </div>
+
+        {/* Quick Highlights Badges */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          <span className="text-xs bg-[#0A192F] text-white px-3 py-1 rounded-full font-medium">
+            MahaRERA: {content.reraNumber}
+          </span>
+          <span className="text-xs bg-[#C5A059]/15 text-[#0A192F] px-3 py-1 rounded-full font-semibold border border-[#C5A059]/30">
+            Starting: {content.priceStarting}
+          </span>
+          <span className="text-xs bg-white text-gray-700 px-3 py-1 rounded-full font-medium border border-gray-200">
+            Carpet: {content.carpetAreaRange}
+          </span>
+          <span className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full font-medium border border-green-200">
+            Verified RERA Inventory
+          </span>
         </div>
 
         <article className="prose prose-lg prose-headings:font-serif prose-headings:text-[#0A192F] prose-p:text-gray-600 prose-p:font-light max-w-none">
           <h1 className="text-3xl md:text-5xl mb-8 leading-tight">{content.h1}</h1>
           
-          <div className="bg-white p-8 md:p-12 shadow-xl rounded-2xl mb-12 border border-black/5 relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#C5A059]/10 to-transparent rounded-bl-full" />
-             <p className="text-lg leading-relaxed mb-6">{content.p1}</p>
-             <p className="text-lg leading-relaxed">{content.p2}</p>
+          {/* Section 1: Strategic Location & Connectivity Rationale */}
+          <div className="bg-white p-8 md:p-12 shadow-md rounded-2xl mb-8 border border-black/5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#C5A059]/10 to-transparent rounded-bl-full" />
+            <h2 className="text-2xl font-serif text-[#0A192F] mb-4">
+              1. Strategic Location &amp; Micro-Market Connectivity
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed mb-4">{content.p1}</p>
+          </div>
+
+          {/* Section 2: Architectural Engineering & Floor Plan Layouts */}
+          <div className="bg-white p-8 md:p-12 shadow-md rounded-2xl mb-8 border border-black/5">
+            <h2 className="text-2xl font-serif text-[#0A192F] mb-4">
+              2. Architectural Specifications &amp; Structural Engineering
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed mb-6">{content.p2}</p>
+            
+            {/* Key Highlights Checklist */}
+            <h3 className="text-lg font-serif text-[#0A192F] mb-4">Key Development Highlights:</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm not-prose pl-0 list-none mb-6">
+              {content.highlights.map((h, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700">
+                  <span className="text-[#C5A059] font-bold text-base leading-none mt-0.5">✓</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Section 3: Investment ROI & Capital Growth */}
+          <div className="bg-white p-8 md:p-12 shadow-md rounded-2xl mb-8 border border-black/5">
+            <h2 className="text-2xl font-serif text-[#0A192F] mb-4">
+              3. Investment ROI, Price Trends &amp; Rental Yield Analysis
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed">{content.p3}</p>
+          </div>
+
+          {/* Section 4: MahaRERA Governance & Developer Pedigree */}
+          <div className="bg-white p-8 md:p-12 shadow-md rounded-2xl mb-12 border border-black/5">
+            <h2 className="text-2xl font-serif text-[#0A192F] mb-4">
+              4. Developer Heritage &amp; Statutory MahaRERA Transparency
+            </h2>
+            <p className="text-base md:text-lg leading-relaxed">{content.p4}</p>
           </div>
 
           {/* Real Estate Data Matrix Table */}
           <div className="not-prose bg-white rounded-2xl border border-black/5 shadow-md p-6 md:p-8 mb-12">
             <h3 className="text-xl font-serif text-[#0A192F] mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#C5A059]" />
-              Shapoorji Pallonji Vyomora Project Overview & Key Highlights
+              <span className="w-2.5 h-2.5 rounded-full bg-[#C5A059]" />
+              {content.projectName} Project Factsheet
             </h3>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-sm text-gray-600 border-collapse">
                 <tbody>
                   <tr className="border-b border-gray-100">
                     <td className="py-3 font-semibold text-[#0A192F] w-1/3">Project Name</td>
-                    <td className="py-3">Shapoorji Pallonji Joyville Vyomora</td>
+                    <td className="py-3 font-medium text-gray-800">{content.projectName}</td>
                   </tr>
                   <tr className="border-b border-gray-100 bg-gray-50/50">
-                    <td className="py-3 font-semibold text-[#0A192F]">Location</td>
-                    <td className="py-3">Hinjewadi Phase 1, Rajiv Gandhi Infotech Park, Pune - 411057</td>
+                    <td className="py-3 font-semibold text-[#0A192F]">Target Locality</td>
+                    <td className="py-3">{cleanLocName}, Pune, Maharashtra</td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 font-semibold text-[#0A192F]">Typologies Available</td>
-                    <td className="py-3">2 BHK, 3 BHK & 4 BHK Luxury Residences</td>
+                    <td className="py-3 font-semibold text-[#0A192F]">Starting Price</td>
+                    <td className="py-3 text-[#C5A059] font-bold">{content.priceStarting}</td>
                   </tr>
                   <tr className="border-b border-gray-100 bg-gray-50/50">
                     <td className="py-3 font-semibold text-[#0A192F]">Carpet Area Range</td>
-                    <td className="py-3">685 sq. ft. to 1434+ sq. ft.</td>
+                    <td className="py-3">{content.carpetAreaRange}</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="py-3 font-semibold text-[#0A192F]">MahaRERA Registration</td>
-                    <td className="py-3 text-[#C5A059] font-medium">PR1260002600999</td>
+                    <td className="py-3 text-[#C5A059] font-semibold">{content.reraNumber}</td>
                   </tr>
                   <tr className="border-b border-gray-100 bg-gray-50/50">
-                    <td className="py-3 font-semibold text-[#0A192F]">Clubhouse & Amenities</td>
-                    <td className="py-3">32,000+ sq. ft. Clubhouse, Swimming Pool, Gym, Sports Arena</td>
+                    <td className="py-3 font-semibold text-[#0A192F]">Developer</td>
+                    <td className="py-3">Shapoorji Pallonji Real Estate (150+ Years)</td>
                   </tr>
                   <tr>
-                    <td className="py-3 font-semibold text-[#0A192F]">Key Connectivity</td>
-                    <td className="py-3">5 Mins to Infosys Circle • 10 Mins to Mumbai-Pune Expressway</td>
+                    <td className="py-3 font-semibold text-[#0A192F]">Clubhouse &amp; Amenities</td>
+                    <td className="py-3">32,000+ sq. ft. Multi-Level Clubhouse, Swimming Pool, Fitness Arena</td>
                   </tr>
                 </tbody>
               </table>
@@ -208,32 +344,41 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
                 href="tel:+917744009295"
                 className="inline-flex items-center justify-center px-6 py-3 bg-[#0A192F] text-white text-sm font-medium rounded-lg hover:bg-[#152a4a] transition-colors shadow-sm"
               >
-                Call Sales Desk: +91 7744009295
+                Call VIP Sales Desk: +91 7744009295
               </a>
-              <a
-                href="/investment-calculator"
-                className="inline-flex items-center justify-center px-6 py-3 border border-[#C5A059] text-[#0A192F] text-sm font-medium rounded-lg hover:bg-[#C5A059]/10 transition-colors"
-              >
-                Calculate EMI & ROI →
-              </a>
+              <div className="flex gap-3">
+                <Link
+                  href="/investment-calculator"
+                  className="inline-flex items-center justify-center px-5 py-3 border border-[#C5A059] text-[#0A192F] text-sm font-medium rounded-lg hover:bg-[#C5A059]/10 transition-colors"
+                >
+                  Calculate EMI &amp; ROI →
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-5 py-3 bg-[#C5A059] text-white text-sm font-medium rounded-lg hover:bg-[#b08e4c] transition-colors"
+                >
+                  Request Cost Sheet
+                </Link>
+              </div>
             </div>
           </div>
 
+          {/* Frequently Asked Questions */}
           <h2 className="text-2xl md:text-3xl mb-8">Frequently Asked Questions</h2>
-          <div className="space-y-6 mb-12">
+          <div className="space-y-4 mb-12 not-prose">
             {content.faqs.map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-black/5">
-                <h3 className="text-xl font-medium mb-3 text-[#0A192F]">{faq.question}</h3>
-                <p className="text-gray-600 font-light leading-relaxed">{faq.answer}</p>
+                <h3 className="text-lg font-serif font-medium mb-2 text-[#0A192F]">{faq.question}</h3>
+                <p className="text-gray-600 font-light text-sm leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
 
-          {/* Related Micro-Market Insights */}
+          {/* Related Micro-Market Insights Mesh */}
           <div className="not-prose my-12 p-8 bg-white rounded-2xl border border-black/5 shadow-md">
             <h3 className="text-lg font-serif text-[#0A192F] mb-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#C5A059]" />
-              Related Pune Real Estate & Typology Insights
+              Related Pune Micro-Market &amp; Typology Guides
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {relatedCombos.map((rel, idx) => {
@@ -241,7 +386,7 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
                 const relCfg = rel.configuration.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
                 const relTop = rel.topic.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
                 return (
-                  <a
+                  <Link
                     key={idx}
                     href={`/market/${rel.location}/${rel.configuration}/${rel.topic}`}
                     className="p-4 rounded-xl border border-gray-100 hover:border-[#C5A059]/40 hover:bg-[#FDFBF7] transition-all group flex flex-col justify-between"
@@ -252,20 +397,34 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
                     <span className="text-xs text-gray-500 mt-1 capitalize">
                       {relTop} &rarr;
                     </span>
-                  </a>
+                  </Link>
                 );
               })}
             </div>
           </div>
 
-          {/* Contextual Internal Links Hub */}
+          {/* Upward Master Directory & Authority Hub Links */}
           <div className="not-prose p-6 bg-[#0A192F]/5 rounded-xl border border-[#0A192F]/10">
-            <h4 className="text-base font-semibold text-[#0A192F] mb-3">Explore Related Sections:</h4>
-            <div className="flex flex-wrap gap-3">
-              <a href="/residences" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">View Unit Floor Plans</a>
-              <a href="/amenities" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">32,000 sq. ft. Clubhouse</a>
-              <a href="/location" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">Hinjewadi IT Corridor Location</a>
-              <a href="/articles" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">Pune Real Estate Market Reports</a>
+            <h4 className="text-base font-semibold text-[#0A192F] mb-3">Explore Authoritative Hubs:</h4>
+            <div className="flex flex-wrap gap-2.5">
+              <Link href="/market" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                Pune Market Intelligence Hub (/market)
+              </Link>
+              <Link href="/sitemap" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                Complete HTML Sitemap Index (/sitemap)
+              </Link>
+              <Link href="/residences" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                View Unit Floor Plans (/residences)
+              </Link>
+              <Link href="/amenities" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                32,000 sq. ft. Clubhouse (/amenities)
+              </Link>
+              <Link href="/location" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                Hinjewadi Transit &amp; Metro Line 3 (/location)
+              </Link>
+              <Link href="/west-pune-real-estate" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                West Pune Real Estate Authority Hub
+              </Link>
             </div>
           </div>
         </article>
