@@ -86,6 +86,19 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // 4. Fetch the response from the Pages static asset store
   const response = await context.next();
 
+  // Explicit Edge Hardening for 404 Not Found to prevent soft 404s
+  if (response.status === 404) {
+    const headers404 = new Headers(response.headers);
+    headers404.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+    headers404.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+    headers404.set('X-Edge-Status', 'Hardened-404-Noindex');
+    return new Response(response.body, {
+      status: 404,
+      statusText: 'Not Found',
+      headers: headers404,
+    });
+  }
+
   // Only apply HTMLRewriter on successful HTML responses
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html') || response.status !== 200) {
@@ -192,11 +205,16 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   headers.set('Cross-Origin-Resource-Policy', 'cross-origin');
   headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), browsing-topics=()');
   headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
-  headers.set('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+  if (isSearchBot) {
+    headers.set('Cache-Control', 'public, max-age=86400, s-maxage=604800, stale-while-revalidate=2592000');
+  } else {
+    headers.set('Cache-Control', 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800');
+  }
   headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   headers.set('X-AI-Context', 'https://www.shapoorji-vyomora.com/llms.txt');
   headers.set('X-AI-Knowledge-Base', 'https://www.shapoorji-vyomora.com/llms-full.txt');
-  headers.set('Link', '</llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="service-doc"; type="application/json", </images/hero_bg_mobile.webp>; rel=preload; as=image; type="image/webp"; media="(max-width: 768px)", </images/hero_bg.webp>; rel=preload; as=image; type="image/webp"; media="(min-width: 769px)"');
+  headers.set('Link', '</sitemap.xml>; rel="sitemap"; type="application/xml", </llms.txt>; rel="describedby"; type="text/plain", </llms-full.txt>; rel="describedby"; type="text/plain", </.well-known/ai-catalog.json>; rel="service-doc"; type="application/json", </images/hero_bg_mobile.webp>; rel=preload; as=image; type="image/webp"; media="(max-width: 768px)", </images/hero_bg.webp>; rel=preload; as=image; type="image/webp"; media="(min-width: 769px)"');
+
 
   // Read transformed body to cache and return cleanly
   const bodyText = await transformedResponse.text();
