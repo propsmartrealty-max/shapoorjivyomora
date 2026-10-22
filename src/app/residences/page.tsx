@@ -5,7 +5,9 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ShieldCheck, CheckCircle2, ArrowRight, Building2, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "2, 3, 4 BHK & Sky Duplexes | Shapoorji Vyomora Hinjewadi | Joyville Homes",
+  title: {
+    absolute: "2, 3 & 4 BHK Residences & Sky Duplexes | Shapoorji Vyomora",
+  },
   description: "Official floor plans, carpet areas & pricing for 2 BHK, 3 BHK, 4 BHK & Sky Duplex residences from ₹84.99 L* at Shapoorji Vyomora Hinjewadi (Joy 3.0). Near Rajiv Gandhi IT Park Phase 1. MahaRERA: PR1260002600999.",
   keywords: [
     "shapoorji vyomora hinjewadi",

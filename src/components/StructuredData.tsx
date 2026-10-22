@@ -134,9 +134,16 @@ export default function StructuredData() {
       {
         "@type": "WebSite",
         "@id": "https://www.shapoorji-vyomora.com/#website",
-        "url": "https://www.shapoorji-vyomora.com",
-        "name": "Shapoorji Pallonji Joyville Vyomora (Joy 3.0)",
-        "description": "Official portal for Shapoorji Pallonji Joyville Vyomora Hinjewadi Phase 1 & Mahalunge Pune luxury apartments.",
+        "url": "https://www.shapoorji-vyomora.com/",
+        "name": "Shapoorji Vyomora Hinjewadi",
+        "alternateName": [
+          "Shapoorji Vyomora",
+          "Joyville Vyomora Hinjewadi",
+          "Joyville Homes Hinjewadi",
+          "Vyomora Hinjewadi",
+          "Shapoorji Pallonji Vyomora"
+        ],
+        "description": "Official portal for Shapoorji Vyomora Hinjewadi by Joyville Homes & Shapoorji Pallonji. Luxury 2, 3, 4 BHK & Sky Duplex residences in Hinjewadi Phase 1, Pune. MahaRERA: PR1260002600999.",
         "publisher": {
           "@id": "https://www.shapoorji-vyomora.com/#organization"
         },

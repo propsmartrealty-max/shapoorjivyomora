@@ -3,8 +3,10 @@ import MasterLayout from "@/components/home/MasterLayout";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Masterplan | Shapoorji Pallonji Joyville Vyomora",
-  description: "View the masterplan and layout of the premium township Joyville Vyomora in Pune.",
+  title: {
+    absolute: "Masterplan & Site Layout | Shapoorji Vyomora Hinjewadi",
+  },
+  description: "View the 25-acre riverfront masterplan and tower layout of Shapoorji Vyomora Hinjewadi (Joy 3.0) near Rajiv Gandhi IT Park Phase 1, Pune. MahaRERA: PR1260002600999.",
   alternates: {
     canonical: "https://www.shapoorji-vyomora.com/masterplan",
   }

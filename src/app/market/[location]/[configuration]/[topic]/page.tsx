@@ -44,7 +44,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cleanTopic = topic.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
   return {
-    title: content.title,
+    title: {
+      absolute: content.title,
+    },
     description: content.description,
     keywords: [
       `${cleanConfig} in ${cleanLocation}`,

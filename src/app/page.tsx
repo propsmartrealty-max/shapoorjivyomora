@@ -14,6 +14,10 @@ import HomeFAQ from "@/components/home/HomeFAQ";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: {
+    absolute: "Shapoorji Vyomora Hinjewadi | Official Joyville Homes Portal",
+  },
+  description: "Official portal for Shapoorji Vyomora Hinjewadi by Joyville Homes & Shapoorji Pallonji. Luxury 2, 3, 4 BHK & Sky Duplexes from ₹84.99 L* in Hinjewadi Phase 1, Pune. MahaRERA: PR1260002600999.",
   alternates: {
     canonical: "https://www.shapoorji-vyomora.com/",
     languages: {

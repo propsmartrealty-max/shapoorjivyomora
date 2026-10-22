@@ -6,7 +6,9 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { MapPin, Navigation, Train, Building, ShieldCheck, ArrowRight, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Location & Metro Connectivity | Shapoorji Vyomora Hinjewadi Phase 1",
+  title: {
+    absolute: "Location & Metro Connectivity | Shapoorji Vyomora Hinjewadi",
+  },
   description: "Explore the prime location of Shapoorji Vyomora Hinjewadi on Maan Road, 5 mins from Rajiv Gandhi Infotech Park Phase 1 & Pune Metro Line 3. Near Infosys, Wipro, TCS & Baner-Mahalunge.",
   keywords: [
     "shapoorji vyomora hinjewadi location",

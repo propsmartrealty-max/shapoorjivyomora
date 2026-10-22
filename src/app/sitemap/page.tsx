@@ -5,16 +5,18 @@ import { seoArticles } from "@/data/seoArticles";
 import marketCombosData from "@/data/marketCombos.json";
 
 export const metadata: Metadata = {
-  title: "HTML Sitemap & Master Pune Real Estate Index | Shapoorji Pallonji Vyomora",
+  title: {
+    absolute: "Master HTML Sitemap & Pune Real Estate Index | Shapoorji Vyomora",
+  },
   description: "Exhaustive HTML sitemap and real estate index for Shapoorji Pallonji Joyville Vyomora. Complete crawl directory for all residences, micro-market reports, and floor plans.",
   alternates: {
     canonical: "https://www.shapoorji-vyomora.com/sitemap",
   },
   openGraph: {
-    title: "HTML Sitemap & Master Pune Real Estate Index | Shapoorji Pallonji Vyomora",
+    title: "Master HTML Sitemap & Pune Real Estate Index | Shapoorji Vyomora",
     description: "Complete crawl directory for all residences, micro-market reports, and floor plans.",
     url: "https://www.shapoorji-vyomora.com/sitemap",
-    siteName: "Shapoorji Pallonji Joyville Vyomora",
+    siteName: "Shapoorji Vyomora Hinjewadi",
     locale: "en_IN",
     type: "website",
   },

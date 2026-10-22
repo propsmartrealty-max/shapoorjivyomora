@@ -5,16 +5,18 @@ import { SEOLocations, SEONRILocations, SEOConfigurations } from "@/lib/programm
 import marketCombosData from "@/data/marketCombos.json";
 
 export const metadata: Metadata = {
-  title: "Pune Real Estate Market Intelligence Hub | Shapoorji Pallonji Vyomora",
+  title: {
+    absolute: "Pune Real Estate Market Intelligence Hub | Shapoorji Vyomora",
+  },
   description: "Comprehensive Pune real estate market intelligence directory. Access micro-market trends, 2BHK, 3BHK, 4BHK pricing, and floor plans across Hinjewadi, Mahalunge, Baner, and Bavdhan.",
   alternates: {
     canonical: "https://www.shapoorji-vyomora.com/market",
   },
   openGraph: {
-    title: "Pune Real Estate Market Intelligence Hub | Shapoorji Pallonji Vyomora",
+    title: "Pune Real Estate Market Intelligence Hub | Shapoorji Vyomora",
     description: "Access micro-market trends, 2BHK, 3BHK, 4BHK pricing, and floor plans across Hinjewadi, Mahalunge, Baner, and Bavdhan.",
     url: "https://www.shapoorji-vyomora.com/market",
-    siteName: "Shapoorji Pallonji Joyville Vyomora",
+    siteName: "Shapoorji Vyomora Hinjewadi",
     locale: "en_IN",
     type: "website",
   },

@@ -3,8 +3,10 @@ import Specifications from "@/components/home/Specifications";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Specifications | Shapoorji Pallonji Joyville Vyomora",
-  description: "Detailed specifications for Shapoorji Pallonji Joyville Vyomora luxury residences in Pune.",
+  title: {
+    absolute: "Specifications & Mivan Engineering | Shapoorji Vyomora",
+  },
+  description: "Detailed construction and luxury finishing specifications for Shapoorji Vyomora Hinjewadi: aluminium Mivan formwork, vitrified marble flooring & smart home tech.",
   alternates: {
     canonical: "https://www.shapoorji-vyomora.com/specifications",
   }
