@@ -135,7 +135,7 @@ if (!fs.existsSync(distSitemapPath) || fs.statSync(distSitemapPath).size < 100) 
     '/residences', '/amenities', '/masterplan', '/specifications',
     '/location', '/locations',
     '/investment-calculator', '/vision', '/lifestyle', '/gallery',
-    '/sustainability', '/updates', '/contact', '/articles', '/sitemap',
+    '/sustainability', '/updates', '/contact', '/articles', '/market', '/sitemap',
     '/privacy-policy', '/terms'
   ];
   let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;

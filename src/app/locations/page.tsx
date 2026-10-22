@@ -51,9 +51,17 @@ export default function LocationsPage() {
             Explore Pune Hubs & <br/>
             <span className="text-[#1e2338]/60">Luxury Typologies.</span>
           </h1>
-          <p className="text-lg text-[#1e2338]/70 font-light leading-relaxed">
+          <p className="text-lg text-[#1e2338]/70 font-light leading-relaxed mb-6">
             Discover why <strong>Shapoorji Pallonji Vyomora (Mahalunge-Hinjewadi)</strong> is the top real estate project in Pune across every targeted micro-market and configuration.
           </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/market" className="text-xs bg-[#0A192F] text-white px-4 py-2 rounded-sm font-medium hover:bg-[#C5A059] transition-colors">
+              Market Intelligence Hub (/market) →
+            </Link>
+            <Link href="/sitemap" className="text-xs bg-white text-[#0A192F] border border-gray-300 px-4 py-2 rounded-sm font-medium hover:border-[#C5A059] transition-colors">
+              Master 637-Page Sitemap Index (/sitemap) →
+            </Link>
+          </div>
         </div>
 
         {/* Featured High-Intent Typologies Grid */}
