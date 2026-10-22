@@ -39,10 +39,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const content = generateSEOContent(location, configuration, topic);
   const pageCanonical = `https://www.shapoorji-vyomora.com/market/${location}/${configuration}/${topic}`;
   const ogImageUrl = `https://www.shapoorji-vyomora.com/api/og?title=${encodeURIComponent(content.h1)}&subtitle=${encodeURIComponent(content.description)}`;
+  const cleanLocation = location.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  const cleanConfig = configuration.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  const cleanTopic = topic.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
   return {
     title: content.title,
     description: content.description,
+    keywords: [
+      `${cleanConfig} in ${cleanLocation}`,
+      `${cleanConfig} ${cleanTopic}`,
+      `${cleanConfig} in ${cleanLocation} ${cleanTopic}`,
+      "shapoorji vyomora hinjewadi",
+      "joyville homes hinjewadi",
+      "shapoorji vyomora",
+      "vyomora hinjewadi",
+      "joyville vyomora hinjewadi",
+      "shapoorji pallonji vyomora",
+      "joy 3.0 hinjewadi",
+      "shapoorji pune",
+      "shapoorji pallonji pune",
+      "flats in hinjewadi phase 1",
+      "pune real estate market",
+      "maharera pr1260002600999",
+      "shapoorji vyomorar",
+      "vyomorar hinjewadi"
+    ],
     openGraph: {
       title: content.title,
       description: content.description,
@@ -95,6 +117,8 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
   const content = generateSEOContent(location, configuration, topic);
   const pageCanonical = `https://www.shapoorji-vyomora.com/market/${location}/${configuration}/${topic}`;
   const cleanLocName = location.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  const cleanConfig = configuration.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  const cleanTopic = topic.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
   const breadcrumbItems = [
     { label: "Market Intelligence", href: "/market" },
@@ -150,6 +174,7 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
         "url": pageCanonical,
         "datePosted": "2024-01-01",
         "validThrough": "2029-12-31",
+        "keywords": `shapoorji vyomora hinjewadi, joyville homes hinjewadi, shapoorji pune, vyomora hinjewadi, joy 3.0 hinjewadi, ${cleanConfig} in ${cleanLocName}`,
         "offers": {
           "@type": "AggregateOffer",
           "priceCurrency": "INR",
@@ -165,6 +190,13 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
         "itemOffered": {
           "@type": "Apartment",
           "name": `${content.projectName} - ${cleanLocName}`,
+          "alternateName": [
+            "Shapoorji Vyomora Hinjewadi",
+            "Joyville Homes Hinjewadi",
+            "Vyomora Hinjewadi",
+            "Joy 3.0 Hinjewadi",
+            "Shapoorji Pune"
+          ],
           "description": content.description,
           "numberOfRooms": configuration.includes("2bhk") ? 2 : configuration.includes("3bhk") ? 3 : configuration.includes("4bhk") ? 4 : 3,
           "floorSize": {
@@ -407,6 +439,12 @@ export default async function ProgrammaticSEOPage({ params }: Props) {
           <div className="not-prose p-6 bg-[#0A192F]/5 rounded-xl border border-[#0A192F]/10">
             <h4 className="text-base font-semibold text-[#0A192F] mb-3">Explore Authoritative Hubs:</h4>
             <div className="flex flex-wrap gap-2.5">
+              <Link href="/projects/joyville-vyomora-hinjewadi" className="text-xs bg-[#0A192F] px-3.5 py-2 rounded-md text-white hover:bg-[#C5A059] shadow-sm font-semibold transition-colors">
+                Shapoorji Vyomora Hinjewadi (Joy 3.0) →
+              </Link>
+              <Link href="/shapoorji-pallonji-pune-projects" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
+                All Shapoorji Pune Projects
+              </Link>
               <Link href="/market" className="text-xs bg-white px-3 py-2 rounded-md text-[#0A192F] hover:text-[#C5A059] shadow-sm font-medium border border-gray-200">
                 Pune Market Intelligence Hub (/market)
               </Link>

@@ -266,41 +266,41 @@ export function generateSEOContent(location: string, configuration: string, topi
 
   // Default Flagship: Shapoorji Vyomora Hinjewadi Core Context
   return {
-    title: `${cleanConfig} in ${cleanLocation} | ${cleanTopic} | Vyomora Hinjewadi`,
-    description: `Official guide to ${cleanConfig} in ${cleanLocation}. Explore ${cleanTopic}, 32,000 sq. ft. clubhouse, riverfront living, and MahaRERA PR1260002600999 at Shapoorji Vyomora.`,
+    title: `${cleanConfig} in ${cleanLocation} | ${cleanTopic} | Shapoorji Vyomora Hinjewadi`,
+    description: `Official guide to ${cleanConfig} in ${cleanLocation}. Explore ${cleanTopic}, 32,000 sq. ft. clubhouse, 2/3/4 BHK floor plans, and MahaRERA PR1260002600999 at Shapoorji Vyomora Hinjewadi (Joy 3.0).`,
     h1: `${cleanConfig} in ${cleanLocation}: Complete ${cleanTopic} & Project Insights`,
     projectName: "Shapoorji Pallonji Joyville Vyomora",
     priceStarting: "₹84.99 Lakhs*",
-    carpetAreaRange: "685 to 1,434+ sq. ft.",
+    carpetAreaRange: "685 to 1,467+ sq. ft.",
     reraNumber: "PR1260002600999",
     highlights: [
-      "West Pune's flagship 25-acre riverfront luxury township in Hinjewadi Phase 1",
+      "West Pune's flagship 25-acre riverfront luxury township: Shapoorji Vyomora Hinjewadi (Joy 3.0)",
       "Monumental 32,000+ sq. ft. multi-level clubhouse with temperature-controlled indoor pool",
-      "Double-height signature Sky Duplexes and premium 2, 3 & 4 BHK residences",
-      "Just 5 minutes from Rajiv Gandhi Infotech Park Phase 1 & upcoming Metro Line 3",
-      "Direct frontage onto pristine Mula River promenade with landscaped linear parks",
-      "Registered under MahaRERA PR1260002600999 with scheduled possession December 2029"
+      "Signature Sky Duplexes and premium 2, 3 & 4 BHK residences with expansive sun decks",
+      "Just 5 minutes from Rajiv Gandhi Infotech Park Phase 1 & upcoming Pune Metro Line 3",
+      "Direct frontage onto pristine Mula River promenade with landscaped linear eco-parks",
+      "Verified MahaRERA PR1260002600999 with scheduled possession starting December 2029"
     ],
-    p1: `The Pune Real Estate Market in ${cleanLocation} and the Mahalunge-Hinjewadi growth corridor is witnessing record demand for ${cleanConfig}. Shapoorji Pallonji Joyville Vyomora (Joy 3.0) represents the flagship luxury benchmark in West Pune, spanning 25 acres along the serene Mula riverfront just 5 minutes from Rajiv Gandhi Infotech Park Phase 1 and the upcoming Pune Metro Line 3 station. Homeowners seeking ${cleanConfig} benefit from unmatched proximity to tech giants including Infosys, Wipro, Tata Consultancy Services, and Tech Mahindra.`,
-    p2: `Architecturally engineered with monolithic aluminium Mivan shuttering, residences at Joyville Vyomora are crafted for high thermal efficiency, seismic resilience, and acoustic quiet. Each apartment features expansive floor-to-ceiling double-glazed windows, private sun decks overlooking riverfront linear parks, vitrified marble flooring, and Vastu-compliant layouts. The signature Sky Duplexes boast majestic 20-foot double-height ceilings that redefine high-rise luxury living in West Pune.`,
-    p3: `When evaluating ${cleanTopic} for ${cleanConfig} in ${cleanLocation}, Vyomora delivers compelling investment fundamentals. Driven by the confluence of the upcoming Pune Ring Road, the Mahalunge-Maan Hi-Tech City masterplan, and Metro Line 3 connecting Hinjewadi directly to Shivajinagar, West Pune real estate values have generated an annual capital appreciation of 8.8% to 11.4%. Coupled with strong rental demand from 300+ multinational corporate employers, rental yields average an exceptional 4.8% to 5.5% per annum.`,
-    p4: `Operating under strict statutory governance with verified MahaRERA registration PR1260002600999, Shapoorji Pallonji Joyville Vyomora ensures 100% escrow account safety, transparent customer communication, and scheduled completion by December 2029. Backed by Shapoorji Pallonji's 150-year engineering legacy, homeowners and investors gain lifetime peace of mind. Schedule an exclusive VIP site visit or download the official price sheet and floor plans today.`,
+    p1: `In the thriving Pune Real Estate Market, ${cleanLocation} and the Mahalunge-Hinjewadi IT corridor are experiencing unprecedented demand for ${cleanConfig}. As the flagship development in West Pune, Shapoorji Vyomora Hinjewadi (marketed by Joyville Homes Hinjewadi as Joy 3.0) redefines high-end gated community living across 25 master-planned riverfront acres. Strategically located on Maan Road in Hinjewadi Phase 1, Vyomora delivers walk-to-work convenience within 5 minutes of Rajiv Gandhi Infotech Park and the upcoming Pune Metro Line 3 station. Tech professionals from Infosys, Wipro, TCS, Cognizant, and Tech Mahindra consider Shapoorji Vyomora the benchmark choice for ${cleanConfig} due to its unmatched balance of tranquil nature and corporate transit.`,
+    p2: `Architecturally engineered with monolithic aluminium Mivan shuttering, residences at Shapoorji Vyomora Hinjewadi are crafted for lifetime structural integrity, high thermal comfort, and acoustic quiet. Each apartment features floor-to-ceiling double-glazed windows, private sun decks overlooking riverfront linear parks, vitrified marble flooring, and Vastu-compliant layouts. The signature 3 & 4 BHK Sky Duplexes boast majestic 20-foot double-height living ceilings and private panoramic terraces, representing the ultimate high-rise luxury experience in West Pune. Complementing the residences is a monumental 32,000+ sq. ft. clubhouse featuring an indoor infinity pool, gymnasium, co-working pods, and sports courts.`,
+    p3: `When evaluating ${cleanTopic} for ${cleanConfig} in ${cleanLocation}, Shapoorji Vyomora Hinjewadi delivers remarkable capital growth and investment fundamentals. Driven by the upcoming Pune Ring Road, the high-speed Hinjewadi-Shivajinagar Metro Line 3, and the PMRDA Mahalunge Hi-Tech City masterplan, property values in Hinjewadi Phase 1 have demonstrated an annual appreciation rate of 8.8% to 11.4%. Coupled with continuous rental demand from over 300 global technology enterprises, Joyville Homes Hinjewadi residences deliver premier rental yields averaging 4.8% to 5.5% per annum, outperforming broader Pune real estate market benchmarks.`,
+    p4: `Operating under rigorous statutory governance with verified MahaRERA registration number PR1260002600999, Shapoorji Vyomora Hinjewadi ensures 100% escrow account security, transparent construction updates, and guaranteed delivery by December 2029. Backed by the 150+ year global engineering pedigree of Shapoorji Pallonji Real Estate and institutional backing from Actis (UK), ADB, and IFC, buyers and NRI investors benefit from total security and peace of mind. Schedule an exclusive VIP site visit or download the official price sheet and floor plans today.`,
     faqs: [
       {
-        question: `Why is ${cleanLocation} the top destination for ${cleanConfig}?`,
-        answer: `${cleanLocation} offers prime transit connectivity to the Mumbai-Pune Expressway, Baner, and the Rajiv Gandhi IT corridor, coupled with high rental yields (4.8%–5.5%) driven by over 300 multinational technology employers.`
+        question: `Why is Shapoorji Vyomora Hinjewadi the top choice for ${cleanConfig} in ${cleanLocation}?`,
+        answer: `Shapoorji Vyomora Hinjewadi (Joy 3.0) by Joyville Homes provides premium 2, 3, 4 BHK and Sky Duplex residences with 32,000+ sq. ft. clubhouse amenities, walk-to-work access to Hinjewadi Phase 1 IT Park, and exceptional 4.8%–5.5% rental yields.`
       },
       {
-        question: `How does Shapoorji Vyomora compare to other developments in West Pune?`,
-        answer: `Joyville Vyomora offers larger 2, 3, 4 BHK and Sky Duplex carpet areas, a monumental 32,000+ sq. ft. clubhouse, direct riverfront promenade frontage, and the backing of Shapoorji Pallonji's 150-year engineering heritage.`
+        question: `How does Shapoorji Vyomora compare to other residential projects in West Pune?`,
+        answer: `Compared to competing developments in Hinjewadi and Mahalunge, Vyomora delivers larger carpet layouts with zero space wastage, direct Mula riverfront frontage, Mivan construction, and the trusted 150-year engineering pedigree of Shapoorji Pallonji Real Estate.`
       },
       {
-        question: `What is the MahaRERA registration number and possession date for Vyomora?`,
-        answer: `Shapoorji Pallonji Joyville Vyomora is registered under MahaRERA registration number PR1260002600999 with scheduled possession starting December 2029.`
+        question: `What is the MahaRERA registration number and possession date for Vyomora Hinjewadi?`,
+        answer: `Shapoorji Pallonji Joyville Vyomora is registered under MahaRERA registration number PR1260002600999 with scheduled possession beginning December 2029.`
       },
       {
-        question: `What configurations and starting prices are available at Vyomora Hinjewadi?`,
-        answer: `Vyomora offers luxury 2 BHK apartments starting from ₹84.99 Lakhs*, 3 BHK residences from ₹1.28 Cr*, 4 BHK sky suites from ₹1.85 Cr*, and signature Sky Duplexes starting from ₹2.16 Cr*.`
+        question: `What configurations and starting prices are available at Shapoorji Vyomora?`,
+        answer: `Residences at Shapoorji Vyomora Hinjewadi start from ₹84.99 Lakhs* for 2 BHK Luxe, ₹1.00 Cr* for 2 BHK Grande, ₹1.32 Cr* for 3 BHK Select, and ₹1.89 Cr* to ₹2.16 Cr* for signature Sky Duplexes.`
       }
     ]
   };
