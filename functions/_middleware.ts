@@ -60,7 +60,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // Add deterministic cache bucket parameters so Bots and NRIs receive tailored edge variants
   cacheKeyUrl.searchParams.set('__edge_bot', isSearchBot ? '1' : '0');
   cacheKeyUrl.searchParams.set('__edge_nri', isNri ? country : '0');
-  cacheKeyUrl.searchParams.set('__v', 'v16'); // Edge cache version invalidation bucket
+  cacheKeyUrl.searchParams.set('__v', 'v17'); // Edge cache version invalidation bucket
   const cacheKey = new Request(cacheKeyUrl.toString(), {
     method: 'GET',
     headers: request.headers,
@@ -114,6 +114,8 @@ export const onRequest: PagesFunction<Env> = async (context) => {
           `<link rel="icon" href="/favicon.ico" sizes="any" />
            <link rel="icon" href="/icon.svg" type="image/svg+xml" />
            <link rel="apple-touch-icon" href="/icon.svg" />
+           <meta name="application-name" content="Shapoorji Vyomora Hinjewadi" />
+           <meta property="og:site_name" content="Shapoorji Vyomora Hinjewadi" />
            <meta name="cf-edge-processed" content="true" />
            <meta name="cf-edge-location" content="${country}" />`,
           { html: true }
@@ -172,17 +174,17 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         }
       }
     })
-    // B. Title Entity Optimization for Global #1 Ranking
+    // B. Title Entity Optimization for Google Search Results & Site Name Alignment
     .on('title', {
       element(title) {
         if (url.pathname === '/') {
           if (isNri && !isSearchBot) {
             title.setInnerContent(
-              'Shapoorji Vyomora Hinjewadi | Official NRI Investor Portal | Shapoorji Pallonji Pune'
+              'Shapoorji Vyomora Hinjewadi | NRI Investment Portal | Joyville Homes'
             );
           } else {
             title.setInnerContent(
-              'Shapoorji Vyomora Hinjewadi | Joyville Homes Hinjewadi | Shapoorji Pune Real Estate'
+              'Shapoorji Vyomora Hinjewadi | Official Joyville Homes Portal'
             );
           }
         }
