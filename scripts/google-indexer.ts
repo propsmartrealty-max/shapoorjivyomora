@@ -196,11 +196,27 @@ async function main() {
   }
   console.log(`🔑 Initialized ${authAccounts.length} authenticated Google Service Account(s) for indexing pipeline.`);
 
-  // 3. Submit sitemap via Google Search Console API (Primary Account)
+  // 3. Submit all sitemaps & discovery feeds via Google Search Console API
   try {
     const sc = google.searchconsole({ version: 'v1', auth: authAccounts[0].client as any });
-    await sc.sitemaps.submit({ siteUrl: 'https://www.shapoorji-vyomora.com/', feedpath: `${BASE_URL}/sitemap.xml` });
-    console.log("✅ Successfully registered sitemap with Google Search Console API.");
+    const sitemapsToSubmit = [
+      `${BASE_URL}/sitemap.xml`,
+      `${BASE_URL}/sitemap-index.xml`,
+      `${BASE_URL}/sitemap-core.xml`,
+      `${BASE_URL}/sitemap-projects.xml`,
+      `${BASE_URL}/sitemap-articles.xml`,
+      `${BASE_URL}/sitemap-market.xml`,
+      `${BASE_URL}/feed.xml`,
+      `${BASE_URL}/google-merchant-feed.xml`
+    ];
+    for (const sm of sitemapsToSubmit) {
+      try {
+        await sc.sitemaps.submit({ siteUrl: 'https://www.shapoorji-vyomora.com/', feedpath: sm });
+        console.log(`  ✅ [GSC API] Registered sitemap: ${sm}`);
+      } catch (e: any) {
+        console.warn(`  ⚠️ [GSC API] Notice for ${sm}:`, e?.message || e);
+      }
+    }
   } catch (err: any) {
     console.warn("⚠️ GSC sitemap registration notice:", err?.message || err);
   }

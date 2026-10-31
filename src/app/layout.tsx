@@ -199,6 +199,9 @@ export default function RootLayout({
       <head>
         <link rel="preload" as="image" href="/images/hero_bg_mobile.webp" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
         <link rel="preload" as="image" href="/images/hero_bg.webp" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
+        <link rel="sitemap" type="application/xml" title="Master Sitemap" href="/sitemap.xml" />
+        <link rel="sitemap" type="application/xml" title="Master Sitemap Index" href="/sitemap-index.xml" />
+        <link rel="sitemap" type="application/xml" title="Core Project Sitemap" href="/sitemap-core.xml" />
         <link rel="alternate" type="application/rss+xml" title="Shapoorji Pallonji Joyville Vyomora RSS Feed" href="/feed.xml" />
         <link rel="alternate" type="application/xml" title="Google Merchant Product Feed" href="/google-merchant-feed.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Documentation" />

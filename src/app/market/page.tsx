@@ -95,7 +95,7 @@ export default function MarketIndexPage() {
             Access targeted market intelligence guides, unit floor plans, price sheets, and RERA disclosures for every covered locality.
           </p>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-12">
             {Object.keys(locationGroups).sort().map((loc) => (
               <Link
                 key={loc}
@@ -106,6 +106,39 @@ export default function MarketIndexPage() {
                 <span className="text-[#C5A059] text-[10px] opacity-70 group-hover:opacity-100">({locationGroups[loc].length})</span>
               </Link>
             ))}
+          </div>
+
+          {/* Full Crawl Matrix: Direct In-Content Links for All 584 Market Combinations */}
+          <div className="border-t border-gray-100 pt-10">
+            <h3 className="text-xl font-serif text-[#0A192F] mb-3">
+              Complete Pune Micro-Market &amp; Configuration Intelligence Matrix
+            </h3>
+            <p className="text-xs text-gray-500 mb-8">
+              Explore exhaustive research reports, floor plan analyses, price trends, and developer track records across every covered micro-market.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.keys(locationGroups).sort().map((loc) => (
+                <div key={loc} className="bg-[#FDFBF7] p-5 rounded-xl border border-gray-200/60 shadow-xs">
+                  <h4 className="text-sm font-serif font-bold text-[#0A192F] capitalize mb-3 pb-2 border-b border-gray-200/40 flex items-center justify-between">
+                    <span>{loc.replace(/-/g, " ")}</span>
+                    <span className="text-[11px] font-sans font-medium text-[#C5A059]">{locationGroups[loc].length} Reports</span>
+                  </h4>
+                  <ul className="space-y-1.5 text-xs">
+                    {locationGroups[loc].map((c, i) => (
+                      <li key={i}>
+                        <Link
+                          href={`/market/${c.location}/${c.configuration}/${c.topic}`}
+                          prefetch={false}
+                          className="text-gray-600 hover:text-[#0A192F] hover:underline capitalize block truncate transition-colors"
+                        >
+                          • {c.configuration.replace(/-/g, " ")}: {c.topic.replace(/-/g, " ")}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

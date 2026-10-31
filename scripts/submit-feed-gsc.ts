@@ -28,6 +28,11 @@ async function main() {
 
   const feedsToSubmit = [
     `${baseUrl}/sitemap.xml`,
+    `${baseUrl}/sitemap-index.xml`,
+    `${baseUrl}/sitemap-core.xml`,
+    `${baseUrl}/sitemap-projects.xml`,
+    `${baseUrl}/sitemap-articles.xml`,
+    `${baseUrl}/sitemap-market.xml`,
     `${baseUrl}/feed.xml`,
     `${baseUrl}/google-merchant-feed.xml`
   ];

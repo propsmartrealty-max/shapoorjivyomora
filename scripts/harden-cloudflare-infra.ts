@@ -128,6 +128,7 @@ async function hardenCloudflare() {
   // Comprehensive multi-engine & social bot bypass expression
   const fullBotBypassExpression = [
     'cf.client.bot',
+    'ip.geoip.asnum in {15169 8075 396982}', // Google LLC (15169, 396982) & Microsoft Corporation (8075)
     'http.user_agent contains "Google"',
     'http.user_agent contains "Googlebot"',
     'http.user_agent contains "GoogleOther"',
@@ -225,7 +226,7 @@ async function hardenCloudflare() {
       },
       description: 'Search Discovery Feeds: Cache sitemap.xml, feed.xml, robots.txt at Edge for 1 Hour',
       enabled: true,
-      expression: 'http.request.uri.path in {"/sitemap.xml" "/feed.xml" "/robots.txt" "/llms.txt" "/llms-full.txt" "/google-merchant-feed.xml"}'
+      expression: 'http.request.uri.path in {"/sitemap.xml" "/sitemap-index.xml" "/sitemap-core.xml" "/sitemap-projects.xml" "/sitemap-articles.xml" "/sitemap-market.xml" "/feed.xml" "/robots.txt" "/llms.txt" "/llms-full.txt" "/google-merchant-feed.xml"}'
     },
     // Rule B: Immutable Static Assets (1 Year Edge & Browser Cache)
     {
