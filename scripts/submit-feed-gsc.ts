@@ -28,7 +28,8 @@ async function main() {
 
   const feedsToSubmit = [
     `${baseUrl}/sitemap.xml`,
-    `${baseUrl}/feed.xml`
+    `${baseUrl}/feed.xml`,
+    `${baseUrl}/google-merchant-feed.xml`
   ];
 
   for (const feed of feedsToSubmit) {
