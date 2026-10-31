@@ -1,4 +1,5 @@
-import { Waves, Dumbbell, Trophy, Film } from "lucide-react";
+import Link from "next/link";
+import { Waves, Dumbbell, Trophy, Film, ArrowRight } from "lucide-react";
 import { detailedAmenities } from "./amenitiesData";
 
 const amenitiesList = [
@@ -117,6 +118,17 @@ export default function Amenities() {
                 </ul>
               </div>
             ))}
+          </div>
+
+          <div className="mt-14 text-center">
+            <Link
+              href="/amenities"
+              prefetch={false}
+              className="inline-flex items-center text-xs md:text-sm font-semibold tracking-wider text-[#8A6B2D] hover:text-[#0A192F] transition-colors gap-2 uppercase group border-b border-[#8A6B2D]/40 pb-0.5"
+            >
+              <span>Explore Complete 32,000+ Sq. Ft. Luxury Clubhouse &amp; All 60+ World-Class Amenities</span>
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,8 @@ import { puneProjectsMasterList } from '@/data/puneProjectsData';
 
 export async function GET() {
   const baseUrl = 'https://www.shapoorji-vyomora.com';
-  const currentDate = new Date().toISOString();
+  // Stable release date prevents Googlebot from distrusting sitemap lastmod timestamps
+  const currentDate = '2026-10-31T12:00:00.000Z';
 
   const coreRoutes = [
     { path: '/', priority: '1.0', changefreq: 'daily' },

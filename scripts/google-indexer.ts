@@ -23,7 +23,16 @@ interface IndexerState {
   lastDailySuccessCount: number;
 }
 
-async function getAuthClient() {
+interface AuthAccount {
+  client: any;
+  email: string;
+  projectId: string;
+}
+
+async function getAuthClients(): Promise<AuthAccount[]> {
+  const accounts: AuthAccount[] = [];
+
+  // 1. Primary Service Account
   let credentialsJson = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
   const serviceAccountFile = path.resolve(process.cwd(), 'service_account.json');
   
@@ -31,25 +40,59 @@ async function getAuthClient() {
     credentialsJson = fs.readFileSync(serviceAccountFile, 'utf8');
   }
 
-  if (!credentialsJson) {
-    console.warn("⚠️ GOOGLE_SERVICE_ACCOUNT_JSON or service_account.json not found. Skipping Google Indexing API.");
-    return null;
+  if (credentialsJson) {
+    try {
+      const credentials = JSON.parse(credentialsJson);
+      const auth = new google.auth.GoogleAuth({
+        credentials,
+        scopes: [
+          'https://www.googleapis.com/auth/indexing',
+          'https://www.googleapis.com/auth/webmasters'
+        ],
+      });
+      accounts.push({
+        client: await auth.getClient(),
+        email: credentials.client_email,
+        projectId: credentials.project_id
+      });
+    } catch (error: any) {
+      console.error("❌ Failed to parse primary GOOGLE_SERVICE_ACCOUNT_JSON", error?.message || error);
+    }
   }
 
-  try {
-    const credentials = JSON.parse(credentialsJson);
-    const auth = new google.auth.GoogleAuth({
-      credentials,
-      scopes: [
-        'https://www.googleapis.com/auth/indexing',
-        'https://www.googleapis.com/auth/webmasters'
-      ],
-    });
-    return auth.getClient();
-  } catch (error) {
-    console.error("❌ Failed to parse GOOGLE_SERVICE_ACCOUNT_JSON", error);
-    return null;
+  // 2. Secondary Service Account (Optional Multiplier)
+  let credentialsJson2 = process.env.GOOGLE_SERVICE_ACCOUNT_JSON_2;
+  const serviceAccountFile2 = path.resolve(process.cwd(), 'service_account_2.json');
+  
+  if (!credentialsJson2 && fs.existsSync(serviceAccountFile2)) {
+    credentialsJson2 = fs.readFileSync(serviceAccountFile2, 'utf8');
   }
+
+  if (credentialsJson2) {
+    try {
+      const credentials = JSON.parse(credentialsJson2);
+      const auth = new google.auth.GoogleAuth({
+        credentials,
+        scopes: [
+          'https://www.googleapis.com/auth/indexing',
+          'https://www.googleapis.com/auth/webmasters'
+        ],
+      });
+      accounts.push({
+        client: await auth.getClient(),
+        email: credentials.client_email,
+        projectId: credentials.project_id
+      });
+    } catch (error: any) {
+      console.error("❌ Failed to parse secondary GOOGLE_SERVICE_ACCOUNT_JSON_2", error?.message || error);
+    }
+  }
+
+  if (accounts.length === 0) {
+    console.warn("⚠️ No valid Google Service Accounts found. Skipping Google Indexing API.");
+  }
+
+  return accounts;
 }
 
 async function pingSitemaps() {
@@ -145,16 +188,17 @@ async function main() {
   // 1. Ping Search Engine Sitemap Gateways
   await pingSitemaps();
 
-  // 2. Setup Google Auth Client
-  const authClient = await getAuthClient();
-  if (!authClient) {
+  // 2. Setup Google Auth Accounts
+  const authAccounts = await getAuthClients();
+  if (authAccounts.length === 0) {
     console.log("🛑 Exiting Indexing API workflow due to missing credentials.");
     return;
   }
+  console.log(`🔑 Initialized ${authAccounts.length} authenticated Google Service Account(s) for indexing pipeline.`);
 
-  // 3. Submit sitemap via Google Search Console API
+  // 3. Submit sitemap via Google Search Console API (Primary Account)
   try {
-    const sc = google.searchconsole({ version: 'v1', auth: authClient as any });
+    const sc = google.searchconsole({ version: 'v1', auth: authAccounts[0].client as any });
     await sc.sitemaps.submit({ siteUrl: 'https://www.shapoorji-vyomora.com/', feedpath: `${BASE_URL}/sitemap.xml` });
     console.log("✅ Successfully registered sitemap with Google Search Console API.");
   } catch (err: any) {
@@ -233,15 +277,18 @@ async function main() {
   console.log(`   • Core Hubs Queued: ${coreHubsToRefresh.length}`);
   console.log(`   • Unsubmitted URLs (Never Indexed): ${neverSubmitted.length}`);
   console.log(`   • Refresh / Maintenance Queue: ${previouslySubmitted.length}`);
-  console.log(`   • Daily Batch Size: up to ${QUOTA_LIMIT} URLs\n`);
+  const totalDailyQuota = QUOTA_LIMIT * authAccounts.length;
+  console.log(`   • Daily Batch Size: up to ${totalDailyQuota} URLs (${QUOTA_LIMIT}/account)\n`);
 
-  const batchToSubmit = queue.slice(0, QUOTA_LIMIT);
-  const indexing = google.indexing({ version: 'v3', auth: authClient as any });
+  const batchToSubmit = queue.slice(0, totalDailyQuota);
+  let accountIndex = 0;
+  let indexing = google.indexing({ version: 'v3', auth: authAccounts[accountIndex].client as any });
 
   let successCount = 0;
   let quotaReached = false;
 
-  for (const url of batchToSubmit) {
+  for (let i = 0; i < batchToSubmit.length; i++) {
+    const url = batchToSubmit[i];
     try {
       await indexing.urlNotifications.publish({
         requestBody: {
@@ -255,17 +302,26 @@ async function main() {
         status: 'SUCCESS',
         attempts: (state.submittedUrls[url]?.attempts || 0) + 1,
       };
-      process.stdout.write(`  ✅ [Google Indexing API] ${url}\n`);
+      process.stdout.write(`  ✅ [Google Indexing API] [${authAccounts[accountIndex].email.split('@')[0]}] ${url}\n`);
       
       // 200ms pacing to avoid Google burst rate limiting
       await new Promise(r => setTimeout(r, 200));
     } catch (error: any) {
       if (error?.message?.includes('Quota exceeded') || error?.code === 429) {
-        console.log(`\n⏳ Daily Google Indexing API quota (200 requests/day) reached.`);
-        console.log(`   ${successCount} URLs were accepted in this batch.`);
-        console.log(`   Next quota reset occurs at midnight PST (Google quota window).`);
-        quotaReached = true;
-        break;
+        console.log(`\n⏳ Daily Google Indexing API quota (200 requests/day) reached for account ${authAccounts[accountIndex].email}.`);
+        if (accountIndex + 1 < authAccounts.length) {
+          accountIndex++;
+          console.log(`🔄 Switching to secondary account: ${authAccounts[accountIndex].email}...`);
+          indexing = google.indexing({ version: 'v3', auth: authAccounts[accountIndex].client as any });
+          i--; // Retry this URL with the new account
+          continue;
+        } else {
+          console.log(`   All available accounts have reached daily quota.`);
+          console.log(`   ${successCount} URLs were accepted in this batch.`);
+          console.log(`   Next quota reset occurs at midnight PST (Google quota window).`);
+          quotaReached = true;
+          break;
+        }
       } else {
         console.error(`  ❌ Failed to submit ${url}:`, error.message || error);
         state.submittedUrls[url] = {

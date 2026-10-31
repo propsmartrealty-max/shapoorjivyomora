@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import PricingCTA from "./PricingCTA";
 
 const pricingData = [
@@ -64,6 +66,17 @@ export default function Pricing() {
                 </tbody>
               </table>
             </div>
+          </div>
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-center">
+            <Link
+              href="/residences"
+              prefetch={false}
+              className="inline-flex items-center text-xs md:text-sm font-semibold tracking-wider text-[#8A6B2D] hover:text-[#0A192F] transition-colors gap-2 uppercase group border-b border-[#8A6B2D]/40 pb-0.5"
+            >
+              <span>Explore Detailed Floor Plans, Usable Carpet Areas &amp; Sky Duplex Blueprints</span>
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#0A192F]/80 font-normal gap-4 px-2">

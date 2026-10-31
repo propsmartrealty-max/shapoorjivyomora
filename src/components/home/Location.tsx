@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import Link from "next/link";
 import { Train, Bus, ArrowRight, GraduationCap, Building2, ShoppingBag, TreePine, Map, PlusSquare } from "lucide-react";
 import dynamic from "next/dynamic";
 
@@ -140,6 +141,17 @@ export default function Location() {
               <p className="text-right text-[10px] text-[#0A192F]/75 mt-2 font-normal uppercase tracking-widest">
                 Map not to scale
               </p>
+            </div>
+
+            <div className="mt-8 text-center lg:text-left">
+              <Link
+                href="/location"
+                prefetch={false}
+                className="inline-flex items-center text-xs md:text-sm font-semibold tracking-wider text-[#8A6B2D] hover:text-[#0A192F] transition-colors gap-2 uppercase group border-b border-[#8A6B2D]/40 pb-0.5"
+              >
+                <span>Explore Full Hinjewadi Phase 1 &amp; Metro Line 3 Connectivity Guide</span>
+                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 

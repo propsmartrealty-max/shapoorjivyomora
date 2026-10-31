@@ -5,17 +5,22 @@ on:
     branches:
       - main
   schedule:
-    # Run every day at midnight UTC
-    - cron: '0 0 * * *'
+    # Run daily at 08:15 UTC (01:15 AM PT) - right after Google Cloud's daily quota window resets at midnight PT (07:00 UTC)
+    - cron: '15 8 * * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:
   run-indexer:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,15 +34,18 @@ jobs:
       - name: Run Multi-Engine SEO Indexer
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SERVICE_ACCOUNT_JSON_2: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON_2 }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+          CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
         run: |
           npx tsx scripts/google-indexer.ts
           node scripts/submit-indexnow.mjs
 
       - name: Commit State File
-        if: success()
+        if: always()
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .seo-indexer-state.json
-          git commit -m "chore(seo): update indexer state [skip ci]" || echo "No changes to commit"
-          git push
+          git diff --staged --quiet || (git commit -m "chore(seo): update indexer state [skip ci]" && git pull --rebase origin main && git push)
